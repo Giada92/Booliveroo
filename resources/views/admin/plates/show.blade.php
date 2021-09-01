@@ -4,7 +4,7 @@
     <div class="container">
         {{-- @dd($plate->types) --}}
         <h5>Nome Del Piatto: {{ $plate->name }}</h5>
-        <img src="{{ $plate->img }}" alt="{{ $plate->name }}">
+        <img src="{{ asset('storage/' . $plate->img) }}" alt="{{ $plate->name }}" style="width: 150px">
         <h6>Prezzo: {{ $plate->price }}€</h6>
         <p>
             Vegeariano: 

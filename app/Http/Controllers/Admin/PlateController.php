@@ -110,7 +110,6 @@ class PlateController extends Controller
      */
     public function show(Plate $plate)
     {
-        
         return view('admin.plates.show', compact('plate'));
     }
 
@@ -120,9 +119,10 @@ class PlateController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function edit($id)
+    public function edit(Plate $plate)
     {
-        //
+        $types = Type::all();
+        return view('admin.plates.edit', compact('plate', 'types'));
     }
 
     /**
@@ -132,9 +132,57 @@ class PlateController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, $id)
+    public function update(Request $request, Plate $plate)
     {
-        //
+        $data = $request->all();
+        $request->validate([
+            'name'=> 'required|min:2|max:80',
+            'description'=> 'nullable|min:5',
+            'price'=> 'required',
+            'img' => 'nullable|mimes:jpg,jpeg,png,bmp,svg|max:5000',
+        ],
+        [
+            'required'=> 'Questo campo è obbligatorio',
+            'name.max'=> 'Massimo :max caratteri concessi',
+            'min'=> 'Minimo :min caratteri richiesti',
+            'mimes' => 'I formati supportati sono: jpg,jpeg,png,bmp,svg',
+            'img.max' => 'Il file inserito eccede le misure massime consentite(5000kb )',
+        ]);
+
+        /* $newPlate = new Plate(); */
+        $data['slug'] = Str::slug($data['name'], '-');
+
+        if(array_key_exists('img', $data )){
+
+            if($plate->img) {
+               Storage::delete($plate->img);
+            }
+            $data['img'] = Storage::put('post_covers', $data['img']);
+        }
+
+        if(!array_key_exists('veg', $data)) {
+            $data['veg'] = 0;
+        } else {
+            $data['veg'] = 1;
+        }
+
+        if(array_key_exists('availability', $data)){
+            $data['availability'] = Storage::put('availability', $data['availability']);
+        }
+
+
+        $plate->update($data);
+
+        if(array_key_exists('type', $data )){
+            $plate->types()->sync($data["type"]);
+        }else {
+            $plate->types()->detach();
+        }
+
+        return redirect()
+            ->route('admin.plates.show', $plate->id)
+            ->with('message', 'La modifica è avvenuta con successo!');
+        
     }
 
     /**

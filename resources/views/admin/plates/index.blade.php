@@ -11,7 +11,7 @@
         @foreach ($plates as $plate)
             <div class="cards text-center m-5">
                 <h5>{{ $plate->name }}</h5>
-                <img src="{{ $plate->img }}" alt="{{ $plate->name }}">
+                <img src="{{ asset('storage/' . $plate->img) }}" alt="{{ $plate->name }}" style="width: 100px">
                 <h6>{{ $plate->price }}</h6>
                 <a href="{{ route('admin.plates.show', $plate->id) }}" class="btn btn-info">Visualizza</a>
             </div>
