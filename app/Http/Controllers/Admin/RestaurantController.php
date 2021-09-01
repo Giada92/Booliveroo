@@ -81,7 +81,9 @@ class RestaurantController extends Controller
             $newRestaurant->categories()->attach($data["category"]);
         }
 
-        return redirect()->route('admin.restaurants.index', $newRestaurant->id);
+        return redirect()
+            ->route('admin.restaurants.index', $newRestaurant->id)
+            ->with('message', 'La creazione è avvenuta con successo!');
     }
     
 

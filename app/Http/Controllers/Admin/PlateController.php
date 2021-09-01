@@ -22,9 +22,10 @@ class PlateController extends Controller
      */
     public function index()
     {
-        /* $newRestaurant = Restaurant::find('user_id');
-        dd($newRestaurant); */
-        return view('admin.plates.index');
+        
+        $plates = Plate::all();
+
+        return view('admin.plates.index', compact('plates'));
     }
 
     /**
@@ -95,7 +96,9 @@ class PlateController extends Controller
             $newPlate->types()->attach($data["type"]);
         }
 
-        return redirect()->route('admin.plates.index', $newPlate->id);
+        return redirect()
+            ->route('admin.plates.index', $newPlate->id)
+            ->with('message', 'La creazione è avvenuta con successo!');
         
     }
 
@@ -105,9 +108,10 @@ class PlateController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function show($id)
+    public function show(Plate $plate)
     {
-        //
+        
+        return view('admin.plates.show', compact('plate'));
     }
 
     /**
