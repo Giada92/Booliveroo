@@ -47,7 +47,7 @@ class RestaurantController extends Controller
     public function store(Request $request)
     {
         $data = $request->all();
-        //dd($data);
+        // dd($data);
 
         $request->validate([
             'name'=> 'required|min:2|max:80',

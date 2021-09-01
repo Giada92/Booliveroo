@@ -23,12 +23,24 @@
         @enderror
 
         <div class="form-group">
-            <label for="price">Prezzo</label>
-            <input type="number" class="form-control" id="price"  min="0.01" step="0.01" max="999"  placeholder="Inserisci il prezzo" name="price">
-          </div>
-          @error('price')
-                <small class="text-danger">{{ $message }}</small>
-          @enderror
+          <label for="price">Prezzo</label>
+          <input type="number" class="form-control" id="price"  min="0.01" step="0.01" max="999"  placeholder="Inserisci il prezzo" name="price">
+        </div>
+        @error('price')
+          <small class="text-danger">{{ $message }}</small>
+        @enderror
+
+        {{-- Tipologie di Piatto --}}
+        <div class="form-group">
+          <label for="type">Tipologia</label>
+          <select class="form-control" id="type" name="type">
+            @foreach ($types as $item)
+              <option value="{{$item->id}}">{{ $item->name }}</option>
+            @endforeach
+            
+          </select>
+        </div>
+        {{-- Tipologie di Piatto --}}
 
         {{-- Vegetariano --}}
         <h6>Vegetariano</h6>

@@ -1,9 +1,17 @@
 <?php
 
 namespace App\Http\Controllers\Admin;
+use Illuminate\Validation\Rule;
 
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
+
+use Illuminate\Support\Str;
+use Illuminate\Support\Facades\Storage;
+use App\Type;
+use App\Plate;
+use App\Restaurant;
 
 class PlateController extends Controller
 {
@@ -24,7 +32,10 @@ class PlateController extends Controller
      */
     public function create()
     {        
-        return view('admin.plates.create');
+        $types = Type::all();
+        $restaurants = Restaurant::all();
+
+        return view('admin.plates.create', compact('types', 'restaurants'));
     }
 
     /**
@@ -36,6 +47,45 @@ class PlateController extends Controller
     public function store(Request $request)
     {
         $data = $request->all();
+        // dd(request()->all());
+
+        $request->validate([
+            'name'=> 'required|min:2|max:80',
+            'description'=> 'nullable|min:5',
+            'price'=> 'required',
+            'img' => 'nullable|mimes:jpg,jpeg,png,bmp,svg|max:5000',
+        ],
+        [
+            'required'=> 'Questo campo è obbligatorio',
+            'name.max'=> 'Massimo :max caratteri concessi',
+            'min'=> 'Minimo :min caratteri richiesti',
+            'mimes' => 'I formati supportati sono: jpg,jpeg,png,bmp,svg',
+            'img.max' => 'Il file inserito eccede le misure massime consentite(5000kb )',
+        ]);
+
+        $newPlate = new Plate();
+        $newPlate->slug = Str::slug($data['name'], '-');
+
+        if(array_key_exists('img', $data )){
+            $data['img'] = Storage::put('img', $data['img']);
+        }
+
+        if(!array_key_exists('veg', $data)) {
+            $data['veg'] = 0;
+        } else {
+            $data['veg'] = 1;
+        }
+
+        if(array_key_exists('availability', $data)){
+            $data['availability'] = Storage::put('availability', $data['availability']);
+        }
+        $newPlate->fill($data);
+        // $newPlate->restaurant_id = Auth::restaurant()->id;
+        // $newPlate->user_id = Auth::user()->id;
+
+        $newPlate->save();
+
+        return redirect()->route('admin.plates.index', $newPlate->id);
         
     }
 
