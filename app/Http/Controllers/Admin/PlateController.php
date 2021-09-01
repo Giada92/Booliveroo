@@ -196,8 +196,15 @@ class PlateController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function destroy($id)
+    public function destroy(Plate $plate)
     {
-        //
+        if($plate->img) {
+            Storage::delete($plate->img);
+        }
+
+        $plate->delete();
+        return redirect()
+            ->route('admin.plates.index')
+            ->with('deleted', $plate->name);
     }
 }

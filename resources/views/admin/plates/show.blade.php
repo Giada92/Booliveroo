@@ -28,5 +28,10 @@
             <p>Tipo: {{ $type->name}}</p>
         @endforeach
         <a href="{{ route('admin.plates.edit', $plate->id) }}" class="btn btn-info">Modifica</a>
+        <form action="{{ route('admin.plates.destroy', $plate->id) }}" method="POST" onSubmit="return confirm('Sei sicuro di voler eliminare questo Piatto?')">
+            @csrf
+            @method('DELETE')
+            <button type="submit" class="btn btn-danger">DELETE</button>
+        </form>
     </div>
 @endsection

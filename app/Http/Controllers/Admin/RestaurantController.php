@@ -185,8 +185,15 @@ class RestaurantController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function destroy($id)
+    public function destroy(Restaurant $restaurant)
     {
-        //
+        if($restaurant->cover) {
+            Storage::delete($restaurant->cover);
+        }
+
+        $restaurant->delete();
+        return redirect()
+            ->route('admin.restaurants.index')
+            ->with('deleted', $restaurant->name);
     }
 }
