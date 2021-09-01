@@ -25,4 +25,8 @@ class Plate extends Model
     public function types(){
         return $this->belongsToMany('App\Type');
     }
+
+    public function orders(){
+        return $this->belongsToMany('App\Order');
+    }
 }
