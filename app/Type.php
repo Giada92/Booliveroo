@@ -7,7 +7,7 @@ use Illuminate\Database\Eloquent\Model;
 
 class Type extends Model
 {
-    public function Plates(){
+    public function plates(){
         return $this->belongsToMany('App\Plate');
     }
 }

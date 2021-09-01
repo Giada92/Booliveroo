@@ -17,8 +17,8 @@ class CreatePlatesTable extends Migration
             $table->id();
             $table->unsignedBigInteger('restaurant_id');
             $table->foreign('restaurant_id')->references('id')->on('restaurants')->onDelete('CASCADE');
-            $table->unsignedBigInteger('type_id');
-            $table->foreign('type_id')->references('id')->on('types')->onDelete('CASCADE');
+            /* $table->unsignedBigInteger('type_id');
+            $table->foreign('type_id')->references('id')->on('types')->onDelete('CASCADE'); */
             $table->string('name');
             $table->string('slug');
             $table->text('description')->nullable();

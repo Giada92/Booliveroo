@@ -22,7 +22,7 @@ class Plate extends Model
         return $this->belongsTo('App\Restaurant');
     }
 
-    public function type(){
-        return $this->belongsTo('App\Type');
+    public function types(){
+        return $this->belongsToMany('App\Type');
     }
 }

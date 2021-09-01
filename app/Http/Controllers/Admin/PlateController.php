@@ -22,6 +22,8 @@ class PlateController extends Controller
      */
     public function index()
     {
+        /* $newRestaurant = Restaurant::find('user_id');
+        dd($newRestaurant); */
         return view('admin.plates.index');
     }
 
@@ -33,9 +35,8 @@ class PlateController extends Controller
     public function create()
     {        
         $types = Type::all();
-        $restaurants = Restaurant::all();
-
-        return view('admin.plates.create', compact('types', 'restaurants'));
+        /* dd($restaurants); */
+        return view('admin.plates.create', compact('types'));
     }
 
     /**
@@ -47,7 +48,7 @@ class PlateController extends Controller
     public function store(Request $request)
     {
         $data = $request->all();
-        // dd(request()->all());
+        /* dd(request()->all()); */
 
         $request->validate([
             'name'=> 'required|min:2|max:80',
@@ -79,11 +80,20 @@ class PlateController extends Controller
         if(array_key_exists('availability', $data)){
             $data['availability'] = Storage::put('availability', $data['availability']);
         }
+
+        
         $newPlate->fill($data);
-        // $newPlate->restaurant_id = Auth::restaurant()->id;
-        // $newPlate->user_id = Auth::user()->id;
+        $id_ristorante = Auth::user()->restaurant->id;
+        $newPlate->restaurant_id = $id_ristorante;
+        
+        //$newPlate->restaurant_id = Auth::restaurant()->id;
+        //$newPlate->user_id = Auth::user()->id;
 
         $newPlate->save();
+
+        if(array_key_exists('type', $data )){
+            $newPlate->types()->attach($data["type"]);
+        }
 
         return redirect()->route('admin.plates.index', $newPlate->id);
         
