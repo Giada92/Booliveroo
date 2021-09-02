@@ -77,6 +77,7 @@
           {{-- /File  --}}
         <button type="submit" class="btn btn-primary">Modifica</button>
     </form>
+    <a href="{{ route('admin.restaurants.index') }}" class="btn btn-info">Torna al Ristorante</a>
 </div>
 
 <script>

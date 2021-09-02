@@ -5,6 +5,7 @@
         {{-- @dd($plate->types) --}}
         <h5>Nome Del Piatto: {{ $plate->name }}</h5>
         <img src="{{ asset('storage/' . $plate->img) }}" alt="{{ $plate->name }}" style="width: 150px">
+        {{-- <img src="{{ $plate->img }}" alt="{{ $plate->name }}" style="width: 150px"> --}}
         <h6>Prezzo: {{ $plate->price }}€</h6>
         <p>
             Vegeariano: 
@@ -33,5 +34,6 @@
             @method('DELETE')
             <button type="submit" class="btn btn-danger">DELETE</button>
         </form>
+        <a href="{{ route('admin.plates.index') }}" class="btn btn-info">Torna al Menù</a>
     </div>
 @endsection

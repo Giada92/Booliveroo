@@ -5,6 +5,7 @@
     <div class="text-center">
         <h1>Il tuo Menù</h1>
         <a href="{{ route('admin.plates.create') }}" class="btn btn-info">Crea Piatto</a>
+        <a href="{{ route('admin.restaurants.index') }}" class="btn btn-secondary">Torna al Ristorante</a>
     </div>
 
     <div class="row my-5">
