@@ -2,6 +2,10 @@
     <div class="container">
       <div class="wrapper">
           <h2>Ristorante menu</h2>
+          <div v-for="plate in plates" :key="plate.id">
+            <p>{{ plate.description }}</p>
+            <img :src="plate.img" :alt="plate.name">
+          </div>
       </div>
     </div>
 </template>
@@ -11,7 +15,7 @@ export default {
     name: 'Restaurant',
     data(){
       return{
-        restaurant: []
+        plates: [],
       }
     },
     methods: {
@@ -19,8 +23,8 @@ export default {
         axios.
         get(`http://127.0.0.1:8000/api/restaurant/${slug}`)
         .then((res)=>{
-          console.log(res.data);
-          //this.restaurants = res.data.data;
+          console.log(res.data[0].plates);
+          this.plates = res.data[0].plates;
         })
         .catch((err)=>{
            console.log(err);
