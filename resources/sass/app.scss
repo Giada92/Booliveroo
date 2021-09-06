@@ -13,10 +13,18 @@
 @import '~bootstrap/scss/bootstrap';
 
 
-.form_head {
-    background-color: yellow;
+.form_color {
+    background-image: url('../img/sfondo-jumbotron.png');
+    color: white;
+    background-size: cover;
 }
 
-.fa-envelope, .fa-lock{
-    font-size: 30px;
+.fa-envelope, .fa-lock, .fa-user{
+    font-size: 20px;
+}
+
+.card-body  input {
+    border-top: none;
+    border-right: none;
+    border-left: none;
 }

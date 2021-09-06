@@ -17082,12 +17082,21 @@ a.text-dark:focus {
   }
 }
 
-.form_head {
-  background-color: yellow;
+.form_color {
+  background-image: url(/images/sfondo-jumbotron.png?330a5d167e8f82fe428a9fd6f6259d04);
+  color: white;
+  background-size: cover;
 }
 
 .fa-envelope,
-.fa-lock {
-  font-size: 30px;
+.fa-lock,
+.fa-user {
+  font-size: 20px;
+}
+
+.card-body input {
+  border-top: none;
+  border-right: none;
+  border-left: none;
 }
 
