@@ -32,7 +32,7 @@
         </form>
     @else
         <p>Non ci sono ristoranti</p>
-        <a href="{{ route('admin.restaurants.create') }}" class="btn btn-info">Crea</a>
+        <a href="{{ route('admin.restaurants.create') }}" class="btn btn_color">Crea</a>
     @endif
     
     
