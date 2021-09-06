@@ -15,6 +15,7 @@ class RestaurantController extends Controller
 
         /* $categories = Category::all(); */
 
+
         $restaurants->each(function ($restaurant) {
             if($restaurant->cover) {
                 $restaurant->cover = url('storage/' . $restaurant->cover);
@@ -42,7 +43,7 @@ class RestaurantController extends Controller
             'restaurant' => $restaurant2,
             'piatti' => $piatti
         ];
- */
+        */
         return response()->json($restaurant);
     }
 }

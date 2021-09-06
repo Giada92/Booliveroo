@@ -18,6 +18,7 @@
 
     <!-- Styles -->
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
+    <link rel="stylesheet" href="{{ asset('sass/app') }}">
 </head>
 <body>
     <div id="app">
@@ -78,3 +79,12 @@
     </div>
 </body>
 </html>
+
+
+<style>
+    body {
+        background-color: #fc8237;
+    }
+</style>
+</html>
+
