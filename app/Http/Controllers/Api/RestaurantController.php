@@ -42,7 +42,7 @@ class RestaurantController extends Controller
             'restaurant' => $restaurant2,
             'piatti' => $piatti
         ];
- */
+        */
         return response()->json($restaurant);
     }
 }
