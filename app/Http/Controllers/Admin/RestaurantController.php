@@ -82,7 +82,7 @@ class RestaurantController extends Controller
         }
 
         return redirect()
-            ->route('admin.restaurants.index', $newRestaurant->id)
+            ->route('admin.restaurants.index')
             ->with('message', 'La creazione è avvenuta con successo!');
     }
     
@@ -176,7 +176,7 @@ class RestaurantController extends Controller
         }else {
             $restaurant->categories()->detach();
         }
-        return redirect()->route('admin.restaurants.index', $restaurant->id);
+        return redirect()->route('admin.restaurants.index');
     }
 
     /**

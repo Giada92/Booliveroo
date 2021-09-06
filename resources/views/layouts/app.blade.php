@@ -77,4 +77,10 @@
         </main>
     </div>
 </body>
+
+<style>
+    body {
+        background-color: #fc8237;
+    }
+</style>
 </html>
