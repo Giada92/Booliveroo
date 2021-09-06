@@ -1,23 +1,61 @@
 @extends('layouts.app')
 
 @section('content')
-<div class="container">
-    <div class="text-center">
-        <h1>Il tuo Menù</h1>
-        <a href="{{ route('admin.plates.create') }}" class="btn btn-info">Crea Piatto</a>
-        <a href="{{ route('admin.restaurants.index') }}" class="btn btn-secondary">Torna al Ristorante</a>
+<div class="container ">
+    <div class=" d-flex flex-column align-items-center justify-content-center">
+        <img src="{{asset('img/h1-menu.png')}}" alt="title">
+        <a href="{{ route('admin.plates.create') }}" class="btn btn-create my-3">Crea Piatto</a>
+        <a href="{{ route('admin.restaurants.index') }}" class="btn btn-go-back">Torna al Ristorante</a>
     </div>
 
-    <div class="row my-5">
+    <div class="my-3 d-flex justify-content-around align-items-center flex-wrap">
         @foreach ($plates as $plate)
-            <div class="cards text-center m-5">
-                <h5>{{ $plate->name }}</h5>
+            <div class="cards text-center">
+                <h5 class="p-4">{{ $plate->name }}</h5>
                 <img src="{{ asset('storage/' . $plate->img) }}" alt="{{ $plate->name }}" style="width: 100px">
-                <h6>{{ $plate->price }}</h6>
-                <a href="{{ route('admin.plates.show', $plate->id) }}" class="btn btn-info">Visualizza</a>
+                <h6>{{ $plate->price }}€</h6>
+                <a href="{{ route('admin.plates.show', $plate->id) }}" class="btn btn-create">Visualizza</a>
             </div>
         @endforeach
     </div>
-</div>    
+</div>  
+
+<style lang="scss" scoped>
+    h1 {
+        margin: 30px;
+    }
+    .btn-create {
+        background-color:  #ee3c4a;
+        color: white;
+        font-weight: bold;
+    }
+
+    .btn-go-back {
+        background-color: #703d50;
+        color:  #fc8237;
+        font-weight: bold;
+    }
+    .btn-enter {
+        background-color: #ee3c4a;
+        color: white;
+        font-weight: bold;
+    }
+
+    .cards {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        align-items: center;
+        width: 25%;
+        min-width: 230px;
+        height: 330px;
+        margin: 80px 30px;
+        background-color: whitesmoke;
+        border: 2px solid #703d50;
+        border-radius: 10px;
+    }
+
+
+</style>
     
 @endsection

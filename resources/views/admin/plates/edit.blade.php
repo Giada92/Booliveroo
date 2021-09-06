@@ -2,9 +2,11 @@
 
 @section('content')
 <div class="container">
-    <h2>Modifica piatto</h2>
+  <div class="card">
+    <div class="card-header form_color"><h2>Modifica Piatto</h2></div>
     {{-- FORM --}}
-    <form action="{{ route('admin.plates.update', $plate->id) }}" method="POST" enctype="multipart/form-data">
+    <div class="card-body">
+      <form action="{{ route('admin.plates.update', $plate->id) }}" method="POST" enctype="multipart/form-data">
         @csrf
         @method('PATCH')
         <div class="form-group">
@@ -76,8 +78,11 @@
             @enderror
           </div>
           {{-- /File  --}}
-        <button type="submit" class="btn btn-primary">Modifica</button>
+        <button type="submit" class="btn btn_color">Modifica</button>
     </form>
+    </div>
+    
+  </div>
 </div>
 
 <script>
