@@ -2337,7 +2337,7 @@ exports = module.exports = __webpack_require__(/*! ../../../node_modules/css-loa
 
 
 // module
-exports.push([module.i, ".footer[data-v-61a7c374] {\n  background-color: #1D1D1D;\n  color: white;\n}\n.col_background[data-v-61a7c374] {\n  padding: 30px 5px;\n  /* background-color: rgba(255,255,255, 0.1); */\n  width: calc(100% / 4 - 15px);\n  border-radius: 3px;\n  margin: 10px;\n  min-width: 224px;\n}\n.col_background[data-v-61a7c374]:first-child {\n  margin-left: 0px;\n}\n.col_background[data-v-61a7c374]:last-child {\n  margin-right: 0px;\n}\nimg[data-v-61a7c374] {\n  width: 60%;\n}\nul[data-v-61a7c374] {\n  list-style: none;\n}", ""]);
+exports.push([module.i, ".footer[data-v-61a7c374] {\n  background-color: #1D1D1D;\n  color: white;\n}\n.col_background[data-v-61a7c374] {\n  padding: 30px 5px;\n  /* background-color: rgba(255,255,255, 0.1); */\n  width: calc(100% / 4 - 15px);\n  border-radius: 3px;\n  margin: 10px;\n  min-width: 224px;\n}\n.col_background[data-v-61a7c374]:first-child {\n  margin-left: 0px;\n}\n.col_background[data-v-61a7c374]:last-child {\n  margin-right: 0px;\n}\nimg[data-v-61a7c374] {\n  width: 60%;\n}\nul[data-v-61a7c374] {\n  list-style: none;\n  padding-left: 0;\n}", ""]);
 
 // exports
 
@@ -20008,7 +20008,6 @@ var router = new vue_router__WEBPACK_IMPORTED_MODULE_1__["default"]({
 /***/ (function(module, exports, __webpack_require__) {
 
 module.exports = __webpack_require__(/*! C:\Users\windows\Desktop\laravel-qualcosa\resources\js\front.js */"./resources/js/front.js");
-
 
 
 /***/ })
