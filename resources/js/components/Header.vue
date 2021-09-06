@@ -37,33 +37,6 @@
                 </li>
             </ul>
         </header> -->
-        <!-- <nav class="navbar navbar-expand-lg navbar-light">
-            <div class="container-fluid">
-                <span class="navbar-brand" id="boot-logo"></span>
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-                </button>
-                <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                    <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-                        <li>
-                            <router-link :to="{ name: 'home'}">Home</router-link>
-                        </li>
-                        <li>
-                            <a href="http://127.0.0.1:8000/login">Ristoratori</a>
-                        </li>
-                        <li>
-                            <a href="#">Contatti</a>
-                        </li>
-                        <li>
-                            <a href="#">Chi siano</a>
-                        </li>
-                        <li>
-                            <a href="#">Contattaci</a>
-                        </li>
-                    </ul>
-                </div>
-            </div>
-        </nav>   -->
         <nav class="navbar navbar-expand-lg navbar-light">
             <span class="navbar-brand" id="boot-logo" ></span>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
