@@ -2147,17 +2147,24 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
+//
+//
 /* harmony default export */ __webpack_exports__["default"] = ({
   name: 'Restaurant',
   data: function data() {
     return {
-      restaurant: []
+      plates: []
     };
   },
   methods: {
     getRestaurant: function getRestaurant(slug) {
+      var _this = this;
+
       axios.get("http://127.0.0.1:8000/api/restaurant/".concat(slug)).then(function (res) {
-        console.log(res.data); //this.restaurants = res.data.data;
+        console.log(res.data[0].plates);
+        _this.plates = res.data[0].plates;
       })["catch"](function (err) {
         console.log(err);
       });
@@ -3641,20 +3648,26 @@ var render = function() {
   var _vm = this
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
-  return _vm._m(0)
+  return _c("div", { staticClass: "container" }, [
+    _c(
+      "div",
+      { staticClass: "wrapper" },
+      [
+        _c("h2", [_vm._v("Ristorante menu")]),
+        _vm._v(" "),
+        _vm._l(_vm.plates, function(plate) {
+          return _c("div", { key: plate.id }, [
+            _c("p", [_vm._v(_vm._s(plate.description))]),
+            _vm._v(" "),
+            _c("img", { attrs: { src: plate.img, alt: plate.name } })
+          ])
+        })
+      ],
+      2
+    )
+  ])
 }
-var staticRenderFns = [
-  function() {
-    var _vm = this
-    var _h = _vm.$createElement
-    var _c = _vm._self._c || _h
-    return _c("div", { staticClass: "container" }, [
-      _c("div", { staticClass: "wrapper" }, [
-        _c("h2", [_vm._v("Ristorante menu")])
-      ])
-    ])
-  }
-]
+var staticRenderFns = []
 render._withStripped = true
 
 
