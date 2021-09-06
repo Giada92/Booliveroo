@@ -1,6 +1,8 @@
 <template>
-    <div class="container mt-5">
-        <h2>Ristorante menu</h2>
+    <div class="container">
+      <div class="wrapper">
+          <h2>Ristorante menu</h2>
+      </div>
     </div>
 </template>
 
@@ -31,6 +33,10 @@ export default {
 }
 </script>
 
-<style>
+<style lang="scss" scoped>
+
+.wrapper {
+  margin-top: 100px;
+}
 
 </style>

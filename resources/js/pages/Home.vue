@@ -47,8 +47,10 @@ export default {
 <style lang="scss" scoped>
 
 .sfondo {
-  height: 100vh;
-  background-color: bisque;
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    background-color: bisque;
 }
 
 </style>
