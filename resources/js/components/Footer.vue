@@ -36,9 +36,9 @@
                     <div class="col_background">
                         <h3>Seguici</h3>
                         <ul class="my-ul">
-                            <li v-for="(link, index) in seguici" :key="index">
-                                <a href="#">{{link}}</a>
-                            </li>
+                            <a href="#"><i class="fab fa-facebook-square"></i></a>
+                            <a href="#"><i class="fab fa-instagram-square"></i></a>
+                            <a href="#"><i class="fab fa-twitter-square"></i></a>
                             <li>
                                 <a href="#">
                                     <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/5f/Google_Play_Store_badge_IT.svg/1024px-Google_Play_Store_badge_IT.svg.png" alt="">
@@ -112,4 +112,7 @@ export default {
         width: 60%;
     }
 
+    ul{
+        list-style: none;
+    }
 </style>
