@@ -2,9 +2,11 @@
     <div class="container">
       <div class="wrapper">
           <h2>Ristorante menu</h2>
-          <div v-for="plate in plates" :key="plate.id">
-            <p>{{ plate.description }}</p>
-            <img :src="plate.img" :alt="plate.name">
+          <div>
+            <div v-for="plate in plates" :key="plate.id">
+              <p>{{ plate.description }}</p>
+              <img :src="plate.img" :alt="plate.name">
+            </div>
           </div>
       </div>
     </div>

@@ -2151,6 +2151,8 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
 /* harmony default export */ __webpack_exports__["default"] = ({
   name: 'Restaurant',
   data: function data() {
@@ -3649,22 +3651,21 @@ var render = function() {
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
   return _c("div", { staticClass: "container" }, [
-    _c(
-      "div",
-      { staticClass: "wrapper" },
-      [
-        _c("h2", [_vm._v("Ristorante menu")]),
-        _vm._v(" "),
+    _c("div", { staticClass: "wrapper" }, [
+      _c("h2", [_vm._v("Ristorante menu")]),
+      _vm._v(" "),
+      _c(
+        "div",
         _vm._l(_vm.plates, function(plate) {
           return _c("div", { key: plate.id }, [
             _c("p", [_vm._v(_vm._s(plate.description))]),
             _vm._v(" "),
             _c("img", { attrs: { src: plate.img, alt: plate.name } })
           ])
-        })
-      ],
-      2
-    )
+        }),
+        0
+      )
+    ])
   ])
 }
 var staticRenderFns = []
@@ -19496,7 +19497,7 @@ var router = new vue_router__WEBPACK_IMPORTED_MODULE_1__["default"]({
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__(/*! C:\Users\Giada\Desktop\laravel-qualcosa\resources\js\front.js */"./resources/js/front.js");
+module.exports = __webpack_require__(/*! C:\Users\damy1\boolean-php\laravel-qualcosa\resources\js\front.js */"./resources/js/front.js");
 
 
 /***/ })
