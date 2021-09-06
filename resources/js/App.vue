@@ -25,4 +25,7 @@ export default {
 
 <style>
 
+    /* body {
+        background: url('~/img/jumbotron-gradientred.jpg') fixed no-repeat;
+    } */
 </style>
