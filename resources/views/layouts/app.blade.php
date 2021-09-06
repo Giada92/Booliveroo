@@ -78,6 +78,8 @@
         </main>
     </div>
 </body>
+</html>
+
 
 <style>
     body {
@@ -85,3 +87,4 @@
     }
 </style>
 </html>
+

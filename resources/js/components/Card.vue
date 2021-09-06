@@ -1,7 +1,7 @@
 <template>
     <div class="col-4 my-4 d-flex">
         <router-link :to="{ name: 'restaurant', params: { slug: item.slug } }">
-            <div class="card w-100">
+            <div class="card">
                 <img :src="item.cover" alt="item.name" class="img">
                 <div class="container_name">
                     <h4 class="card-title">{{ item.name }}</h4>
@@ -29,14 +29,18 @@ export default {
 
 .card{
     .img {
-        height: 200px;
         transition: all 0.8s ease-in-out;
+        position: absolute;
+        height: 100%;
+        width: 100%;
     }
 }
 
 .card {
     position: relative;
-    height: 80%;
+    height: 200px;
+    width: 300px;
+    object-fit: cover;
     border-radius: 5%;
     overflow: hidden;
     &:hover{
@@ -48,6 +52,7 @@ export default {
 
     .container_name {
         background-color: rgba(0, 0, 0, 0.3);
+        border-radius: 10px;
         /* width: 100%;
         height: 100%; */
         position: absolute;
