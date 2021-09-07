@@ -12,7 +12,7 @@
               <img :src="plate.img" :alt="plate.name">
               <button @click="AddToCart(plate)">Add</button>
             </div>
-          </div>
+        </div>
       </div>
     </div>
 </template>
@@ -96,7 +96,12 @@ export default {
 
 <style lang="scss" scoped>
 
+.back-white {
+  background-color: white;
+}
+
 .wrapper {
+  height: 100vh;
   margin-top: 100px;
 }
 
