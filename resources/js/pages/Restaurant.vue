@@ -1,20 +1,46 @@
 <template>
-    <div class="container">
-      <div class="wrapper">
-        <div v-for="(x, n) in cart" :key="n">
-        <h3 >{{ x.name }}</h3>
-        <p>{{ x.quantity }}</p>
-        <button @click="RemoveFromCart(n)">Remove</button>
+    <div class="sfondo">
+      <div class="wrapper container">
+        <div class="cart w-400">
+          <h3>Il tuo carello</h3>
+          <table class="table table-striped">
+            <thead>
+              <tr>
+                <th>Piatto</th>
+                <th>Prezzo</th>
+                <th>Azione</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr
+              v-for="(x, n) in cart" 
+              :key="n"
+              >
+                <td>{{ x.name }}</td>
+                <td>{{ x.price }}0€</td>
+                <td>
+                  <button @click="RemoveFromCart(n)">Remove</button>
+                </td>
+              </tr>
+            </tbody>
+          </table>
         </div>
-          <h2>Ristorante menu</h2>
-          <div>
-            <div v-for="plate in plates" :key="plate.id">
-              <p>{{ plate.description }}</p>
+        
+        <div class="my-4 text-center">
+          <h2>Menu</h2>
+          <div class="d-flex flex-wrap justify-content-center">
+            <div 
+            v-for="plate in plates" 
+            :key="plate.id"
+            class="card"
+            >
+              <h5>{{ plate.name }}</h5>
               <img :src="plate.img" :alt="plate.name">
               <Button @counter='CounterListener'></Button>
               <p> {{counter}} </p>
               <button @click="AddToCart(plate)">Add</button>
             </div>
+          </div>
         </div>
       </div>
     </div>
@@ -110,13 +136,32 @@ export default {
 
 <style lang="scss" scoped>
 
-.back-white {
-  background-color: white;
-}
+  .sfondo {
+    height: 100vh;
+    background-color: white;
+  }
+  
+  .wrapper {
+    margin-top: 100px;
+  }
 
-.wrapper {
-  height: 100vh;
-  margin-top: 100px;
-}
+  .card {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    width: calc(20% - 30px);
+    height: 200px;
+    margin: 30px;
+  }
 
+
+  .cart {
+    position: absolute;
+    right: 0;
+    top: 20%;
+    transform: translateY(-20%);
+    width: 500px;
+    padding: 0 50px;
+  }
 </style>

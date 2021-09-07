@@ -37491,6 +37491,7 @@ __webpack_require__(/*! C:\Users\windows\Desktop\laravel-qualcosa\resources\js\a
 module.exports = __webpack_require__(/*! C:\Users\windows\Desktop\laravel-qualcosa\resources\sass\app.scss */"./resources/sass/app.scss");
 
 
+
 /***/ })
 
 /******/ });
