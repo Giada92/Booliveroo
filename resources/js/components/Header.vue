@@ -88,7 +88,7 @@ export default {
     methods: {
         getYPosition: function(){
         var top  = window.pageYOffset || document.documentElement.scrollTop
-        console.log(top);
+        // console.log(top);
         return top;
         }
     }

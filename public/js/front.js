@@ -1980,6 +1980,30 @@ __webpack_require__.r(__webpack_exports__);
 
 /***/ }),
 
+/***/ "./node_modules/babel-loader/lib/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/components/Button-Counter.vue?vue&type=script&lang=js&":
+/*!*************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/babel-loader/lib??ref--4-0!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/components/Button-Counter.vue?vue&type=script&lang=js& ***!
+  \*************************************************************************************************************************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+//
+//
+//
+//
+/* harmony default export */ __webpack_exports__["default"] = ({
+  name: 'Button-counter',
+  data: function data() {
+    return {
+      count: 0
+    };
+  }
+});
+
+/***/ }),
+
 /***/ "./node_modules/babel-loader/lib/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/components/Card.vue?vue&type=script&lang=js&":
 /*!***************************************************************************************************************************************************************!*\
   !*** ./node_modules/babel-loader/lib??ref--4-0!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/components/Card.vue?vue&type=script&lang=js& ***!
@@ -2192,8 +2216,8 @@ __webpack_require__.r(__webpack_exports__);
   },
   methods: {
     getYPosition: function getYPosition() {
-      var top = window.pageYOffset || document.documentElement.scrollTop;
-      console.log(top);
+      var top = window.pageYOffset || document.documentElement.scrollTop; // console.log(top);
+
       return top;
     }
   }
@@ -2279,6 +2303,7 @@ __webpack_require__.r(__webpack_exports__);
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _components_Button_Counter__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../components/Button-Counter */ "./resources/js/components/Button-Counter.vue");
 //
 //
 //
@@ -2298,8 +2323,15 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
+//
+
 /* harmony default export */ __webpack_exports__["default"] = ({
   name: 'Restaurant',
+  components: {
+    Button: _components_Button_Counter__WEBPACK_IMPORTED_MODULE_0__["default"]
+  },
   data: function data() {
     return {
       plates: [],
@@ -2312,7 +2344,7 @@ __webpack_require__.r(__webpack_exports__);
       var _this = this;
 
       axios.get("http://127.0.0.1:8000/api/restaurant/".concat(slug)).then(function (res) {
-        console.log(res.data[0].plates);
+        // console.log(res.data[0].plates);
         _this.plates = res.data[0].plates;
       })["catch"](function (err) {
         console.log(err);
@@ -2321,18 +2353,22 @@ __webpack_require__.r(__webpack_exports__);
     AddToCart: function AddToCart(plate) {
       var _this2 = this;
 
-      if (this.cart.length == 0) {
-        // this.cart=[];
-        this.cart.push(plate); // console.log(this.cart);
+      if (!plate.quantity) {
+        plate.quantity = this.CounterListener();
+      }
 
-        console.log(plate);
+      ;
+
+      if (this.cart.length == 0) {
+        this.cart.push(plate); // console.log(this.cart);
+        // console.log(plate);
+
         this.SavePlate();
       } else {
         // console.log(this.cart);
         this.cart.forEach(function (element) {
           if (element.id == plate.id) {
-            _this2.added = true;
-            console.log(element.id);
+            _this2.added = true; // console.log(element.id)
           }
 
           ;
@@ -2344,6 +2380,8 @@ __webpack_require__.r(__webpack_exports__);
         } else {
           this.added = false;
         }
+
+        console.log(plate);
       }
     },
     SavePlate: function SavePlate() {
@@ -2353,6 +2391,9 @@ __webpack_require__.r(__webpack_exports__);
     RemoveFromCart: function RemoveFromCart(n) {
       this.cart.splice(n, 1);
       this.SavePlate();
+    },
+    CounterListener: function CounterListener(count) {
+      console.log(count);
     }
   },
   created: function created() {
@@ -2482,7 +2523,7 @@ exports = module.exports = __webpack_require__(/*! ../../node_modules/css-loader
 
 
 // module
-exports.push([module.i, "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n/* body {\n    background: url('~/img/jumbotron-gradientred.jpg') fixed no-repeat;\n} */\n", ""]);
+exports.push([module.i, "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n/* body {\n    background: url('~/img/jumbotron-gradientred.jpg') fixed no-repeat;\n} */\n", ""]);
 
 // exports
 
@@ -3767,6 +3808,40 @@ render._withStripped = true
 
 /***/ }),
 
+/***/ "./node_modules/vue-loader/lib/loaders/templateLoader.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/components/Button-Counter.vue?vue&type=template&id=27b1ee28&":
+/*!*****************************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/components/Button-Counter.vue?vue&type=template&id=27b1ee28& ***!
+  \*****************************************************************************************************************************************************************************************************************/
+/*! exports provided: render, staticRenderFns */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "render", function() { return render; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "staticRenderFns", function() { return staticRenderFns; });
+var render = function() {
+  var _vm = this
+  var _h = _vm.$createElement
+  var _c = _vm._self._c || _h
+  return _c(
+    "button",
+    {
+      on: {
+        click: function($event) {
+          _vm.count++, _vm.$emit("counter", _vm.count)
+        }
+      }
+    },
+    [_vm._v(" " + _vm._s(_vm.count))]
+  )
+}
+var staticRenderFns = []
+render._withStripped = true
+
+
+
+/***/ }),
+
 /***/ "./node_modules/vue-loader/lib/loaders/templateLoader.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/components/Card.vue?vue&type=template&id=b9bc2c0a&scoped=true&":
 /*!*******************************************************************************************************************************************************************************************************************!*\
   !*** ./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/components/Card.vue?vue&type=template&id=b9bc2c0a&scoped=true& ***!
@@ -4150,6 +4225,8 @@ var render = function() {
           return _c("div", { key: n }, [
             _c("h3", [_vm._v(_vm._s(x.name))]),
             _vm._v(" "),
+            _c("p", [_vm._v(_vm._s(x.quantity))]),
+            _vm._v(" "),
             _c(
               "button",
               {
@@ -4169,23 +4246,32 @@ var render = function() {
         _c(
           "div",
           _vm._l(_vm.plates, function(plate) {
-            return _c("div", { key: plate.id }, [
-              _c("p", [_vm._v(_vm._s(plate.description))]),
-              _vm._v(" "),
-              _c("img", { attrs: { src: plate.img, alt: plate.name } }),
-              _vm._v(" "),
-              _c(
-                "button",
-                {
-                  on: {
-                    click: function($event) {
-                      return _vm.AddToCart(plate)
+            return _c(
+              "div",
+              { key: plate.id },
+              [
+                _c("p", [_vm._v(_vm._s(plate.description))]),
+                _vm._v(" "),
+                _c("img", { attrs: { src: plate.img, alt: plate.name } }),
+                _vm._v(" "),
+                _c("Button", { on: { counter: _vm.CounterListener } }),
+                _vm._v(" "),
+                _c("p", [_vm._v(" " + _vm._s(_vm.counter) + " ")]),
+                _vm._v(" "),
+                _c(
+                  "button",
+                  {
+                    on: {
+                      click: function($event) {
+                        return _vm.AddToCart(plate)
+                      }
                     }
-                  }
-                },
-                [_vm._v("Add")]
-              )
-            ])
+                  },
+                  [_vm._v("Add")]
+                )
+              ],
+              1
+            )
           }),
           0
         )
@@ -19623,6 +19709,75 @@ __webpack_require__.r(__webpack_exports__);
 
 /***/ }),
 
+/***/ "./resources/js/components/Button-Counter.vue":
+/*!****************************************************!*\
+  !*** ./resources/js/components/Button-Counter.vue ***!
+  \****************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _Button_Counter_vue_vue_type_template_id_27b1ee28___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./Button-Counter.vue?vue&type=template&id=27b1ee28& */ "./resources/js/components/Button-Counter.vue?vue&type=template&id=27b1ee28&");
+/* harmony import */ var _Button_Counter_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./Button-Counter.vue?vue&type=script&lang=js& */ "./resources/js/components/Button-Counter.vue?vue&type=script&lang=js&");
+/* empty/unused harmony star reexport *//* harmony import */ var _node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../../node_modules/vue-loader/lib/runtime/componentNormalizer.js */ "./node_modules/vue-loader/lib/runtime/componentNormalizer.js");
+
+
+
+
+
+/* normalize component */
+
+var component = Object(_node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_2__["default"])(
+  _Button_Counter_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__["default"],
+  _Button_Counter_vue_vue_type_template_id_27b1ee28___WEBPACK_IMPORTED_MODULE_0__["render"],
+  _Button_Counter_vue_vue_type_template_id_27b1ee28___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"],
+  false,
+  null,
+  null,
+  null
+  
+)
+
+/* hot reload */
+if (false) { var api; }
+component.options.__file = "resources/js/components/Button-Counter.vue"
+/* harmony default export */ __webpack_exports__["default"] = (component.exports);
+
+/***/ }),
+
+/***/ "./resources/js/components/Button-Counter.vue?vue&type=script&lang=js&":
+/*!*****************************************************************************!*\
+  !*** ./resources/js/components/Button-Counter.vue?vue&type=script&lang=js& ***!
+  \*****************************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _node_modules_babel_loader_lib_index_js_ref_4_0_node_modules_vue_loader_lib_index_js_vue_loader_options_Button_Counter_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../node_modules/babel-loader/lib??ref--4-0!../../../node_modules/vue-loader/lib??vue-loader-options!./Button-Counter.vue?vue&type=script&lang=js& */ "./node_modules/babel-loader/lib/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/components/Button-Counter.vue?vue&type=script&lang=js&");
+/* empty/unused harmony star reexport */ /* harmony default export */ __webpack_exports__["default"] = (_node_modules_babel_loader_lib_index_js_ref_4_0_node_modules_vue_loader_lib_index_js_vue_loader_options_Button_Counter_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__["default"]); 
+
+/***/ }),
+
+/***/ "./resources/js/components/Button-Counter.vue?vue&type=template&id=27b1ee28&":
+/*!***********************************************************************************!*\
+  !*** ./resources/js/components/Button-Counter.vue?vue&type=template&id=27b1ee28& ***!
+  \***********************************************************************************/
+/*! exports provided: render, staticRenderFns */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_Button_Counter_vue_vue_type_template_id_27b1ee28___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!../../../node_modules/vue-loader/lib??vue-loader-options!./Button-Counter.vue?vue&type=template&id=27b1ee28& */ "./node_modules/vue-loader/lib/loaders/templateLoader.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/components/Button-Counter.vue?vue&type=template&id=27b1ee28&");
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "render", function() { return _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_Button_Counter_vue_vue_type_template_id_27b1ee28___WEBPACK_IMPORTED_MODULE_0__["render"]; });
+
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "staticRenderFns", function() { return _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_Button_Counter_vue_vue_type_template_id_27b1ee28___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"]; });
+
+
+
+/***/ }),
+
 /***/ "./resources/js/components/Card.vue":
 /*!******************************************!*\
   !*** ./resources/js/components/Card.vue ***!
@@ -20128,7 +20283,8 @@ var router = new vue_router__WEBPACK_IMPORTED_MODULE_1__["default"]({
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__(/*! C:\Users\Ale\Desktop\Progetto Finale\laravel-qualcosa\resources\js\front.js */"./resources/js/front.js");
+module.exports = __webpack_require__(/*! C:\Users\windows\Desktop\laravel-qualcosa\resources\js\front.js */"./resources/js/front.js");
+
 
 /***/ })
 

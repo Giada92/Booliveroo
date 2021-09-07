@@ -3,6 +3,7 @@
       <div class="wrapper">
         <div v-for="(x, n) in cart" :key="n">
         <h3 >{{ x.name }}</h3>
+        <p>{{ x.quantity }}</p>
         <button @click="RemoveFromCart(n)">Remove</button>
         </div>
           <h2>Ristorante menu</h2>
@@ -10,6 +11,8 @@
             <div v-for="plate in plates" :key="plate.id">
               <p>{{ plate.description }}</p>
               <img :src="plate.img" :alt="plate.name">
+              <Button @counter='CounterListener'></Button>
+              <p> {{counter}} </p>
               <button @click="AddToCart(plate)">Add</button>
             </div>
           </div>
@@ -18,13 +21,17 @@
 </template>
 
 <script>
+import Button from '../components/Button-Counter';
 export default {
     name: 'Restaurant',
+    components:{
+        Button,
+    },
     data(){
       return{
         plates: [],
         cart: [],
-        added: false
+        added: false,
       }
     },
     methods: {
@@ -32,7 +39,7 @@ export default {
         axios.
         get(`http://127.0.0.1:8000/api/restaurant/${slug}`)
         .then((res)=>{
-          console.log(res.data[0].plates);
+          // console.log(res.data[0].plates);
           this.plates = res.data[0].plates;
         })
         .catch((err)=>{
@@ -40,11 +47,14 @@ export default {
         });
       },
       AddToCart: function(plate) {
+        if (!plate.quantity) {
+          plate.quantity = this.CounterListener();
+        };
         if (this.cart.length == 0) {
-          // this.cart=[];
           this.cart.push(plate);
+
           // console.log(this.cart);
-          console.log(plate);
+          // console.log(plate);
           this.SavePlate();
         } else {
           // console.log(this.cart);
@@ -61,6 +71,7 @@ export default {
               } else {
                 this.added = false;
               }
+              console.log(plate)
         }
       },
       SavePlate: function() {
@@ -70,6 +81,9 @@ export default {
       RemoveFromCart(n) {
         this.cart.splice(n, 1);
         this.SavePlate();
+      },
+      CounterListener: function(count) {
+        console.log(count);
       }
     },
 
