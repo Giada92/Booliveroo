@@ -1,55 +1,59 @@
 <template>
-  <div class="footer">
-        <div class="container py-4">
-            <div class="row">
-                <div class="col">
-                     <div class="col_background">
-                        <h3>Scopri Deliveboo</h3>
-                        <ul class="my-ul">
-                            <li v-for="(link, index) in scopri" :key="index">
+    <div>
+        <div class="curvy">
+        </div>
+        <div class="footer">
+            <div class="container py-4">
+                <div class="row">
+                    <div class="col">
+                        <div class="col_background">
+                            <h3>Scopri Deliveboo</h3>
+                            <ul class="my-ul">
+                                <li v-for="(link, index) in scopri" :key="index">
+                                    <a href="#">{{link}}</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="col_background">
+                            <h3>Note legali</h3>
+                            <ul class="my-ul">
+                            <li v-for="(link, index) in note" :key="index">
                                 <a href="#">{{link}}</a>
                             </li>
-                        </ul>
+                            </ul>
+                        </div>
                     </div>
-                </div>
-                <div class="col">
-                    <div class="col_background">
-                        <h3>Note legali</h3>
-                        <ul class="my-ul">
-                        <li v-for="(link, index) in note" :key="index">
-                            <a href="#">{{link}}</a>
-                        </li>
-                        </ul>
-                    </div>
-                </div>
-                <div class="col">
-                    <div class="col_background">
-                        <h3>Aiuto</h3>
-                        <ul class="my-ul">
-                        <li v-for="(link, index) in interesse" :key="index">
-                            <a href="#">{{link}}</a>
-                        </li>
-                        </ul>
-                    </div>
-                </div>
-                <div class="col">
-                    <div class="col_background">
-                        <h3>Seguici</h3>
-                        <ul class="my-ul">
-                            <a href="#"><i class="fab fa-facebook-square"></i></a>
-                            <a href="#"><i class="fab fa-instagram-square"></i></a>
-                            <a href="#"><i class="fab fa-twitter-square"></i></a>
-                            <li>
-                                <a href="#">
-                                    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/5f/Google_Play_Store_badge_IT.svg/1024px-Google_Play_Store_badge_IT.svg.png" alt="">
-                                </a>
+                    <div class="col">
+                        <div class="col_background">
+                            <h3>Aiuto</h3>
+                            <ul class="my-ul">
+                            <li v-for="(link, index) in interesse" :key="index">
+                                <a href="#">{{link}}</a>
                             </li>
-                        </ul>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="col_background">
+                            <h3>Seguici</h3>
+                            <ul class="my-ul">
+                                <a href="#"><i class="fab fa-facebook-square"></i></a>
+                                <a href="#"><i class="fab fa-instagram-square"></i></a>
+                                <a href="#"><i class="fab fa-twitter-square"></i></a>
+                                <li>
+                                    <a href="#">
+                                        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/5f/Google_Play_Store_badge_IT.svg/1024px-Google_Play_Store_badge_IT.svg.png" alt="">
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
-  </div>
+    </div>
 </template>
 
 <script>
@@ -87,6 +91,14 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+
+    .curvy {
+        background-image: url('~/img/footer-wave.png');
+        height: 100px;
+        width: 100%;
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
 
     .footer {
         background-color: #1D1D1D;

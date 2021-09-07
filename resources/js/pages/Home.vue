@@ -10,12 +10,15 @@
 		    <a href=""><i class="fas fa-search"></i></a>
       </div>
     </div>
-    <div class="container my-4">
-      <h1>I Nostri Preferiti</h1>
-      <div class="row">
-          <Card 
-        :item="restaurant"
-        v-for="restaurant in restaurants" :key="restaurant.id"/>
+    <div class="curvy"></div>
+    <div class="back-white">
+      <div class="container main-page">
+        <h1>I Nostri Preferiti</h1>
+        <div class="row">
+            <Card 
+          :item="restaurant"
+          v-for="restaurant in restaurants" :key="restaurant.id"/>
+        </div>
       </div>
     </div>
   </div>
@@ -60,12 +63,33 @@ export default {
 
 <style lang="scss" scoped>
 
+.main-page {
+  //padding-bottom: 250px;
+  height: 100vh;
+}
+
+.curvy {
+  background-image: url('~/img/main-wave.png');
+  height: 100px;
+  width: 100%;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.back-white {
+  background-color: white;
+}
+
 .jumbotron {
   padding: 0;
+  margin: 0;
   position: relative;
   width: 100%;
   height: 100vh;
-  background: url('~/img/jumbotron-gradientred.jpg') no-repeat;
+  //background: url('~/img/jumbotron-gradientred.jpg') no-repeat;
+  //background-attachment: fixed;
+  background-color: transparent;
+  background-size: cover;
   display: flex;
   flex-direction: column-reverse;
   align-items: center;
