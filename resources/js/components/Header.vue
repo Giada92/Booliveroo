@@ -75,6 +75,7 @@
 <script>
 export default {
     name: 'Header',
+
     beforeMount() {
     window.addEventListener('scroll', function(){
         var nav = this.document.querySelector('nav');
