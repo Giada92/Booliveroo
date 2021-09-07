@@ -65,6 +65,10 @@
         <section id="logo" class="pt-3">
             LOGO
         </section>
+        <section id='research'>
+            <input type="text" class="search-input" placeholder="Search...">
+		    <a href=""><i class="fas fa-search"></i></a>
+        </section>
     </div>
 </template>
 
@@ -75,13 +79,58 @@ export default {
     window.addEventListener('scroll', function(){
         var nav = this.document.querySelector('nav');
         var logo = this.document.getElementById('logo');
+        var research = this.document.getElementById('research');
         nav.classList.toggle('sticky', this.window.scrollY > 0)
+        research.classList.toggle('sticky', this.window.scrollY > 430)
         logo.classList.toggle('sticky', this.window.scrollY > 0)})
     },
+    methods: {
+        getYPosition: function(){
+        var top  = window.pageYOffset || document.documentElement.scrollTop
+        console.log(top);
+        return top;
+        }
+    }
 }
 </script>
 
 <style lang="scss" scoped>
+
+#research {
+  position: fixed;
+  background:white;
+  opacity: 0;
+  transition: 0.2s;
+  top: 10px;
+  left: 50%;
+  transform: translateX(-50%);
+	padding: 0.5rem;
+	box-shadow: 0 0 30px 2px linear-gradient(90deg, #ee3c4a, #fc8237); 
+	border-radius: 50px;
+	width: 35%;
+    z-index: 11;
+  i {
+    position: absolute;
+    top: 50%;
+    right: 3%;
+    transform: translateY(-50%);
+    color : #fc8237;
+    font-size: 25px;
+  }
+}
+#research.sticky {
+    opacity: 1;
+}
+.search-input {
+  width: 90%;
+  border: none;
+  font-size: 18px;
+}
+.search-input:focus {
+  border: none;
+  outline: none;
+}
+
 #boot-logo {
     opacity: 0;
 }
@@ -109,7 +158,7 @@ nav {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    transition: 0.6s;
+    transition: 0.8s;
     padding: 40px 100px;
     opacity: 0;
     z-index: 10;
@@ -153,7 +202,7 @@ nav ul {
 nav.sticky {
     opacity: 1;
     padding: 10px 100px;
-    background-color: rgba(#f13d49 , 1);
+    background-image: linear-gradient(90deg, #ee3c4a, #fc8237);
 }
 
 #logo.sticky {

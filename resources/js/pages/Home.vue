@@ -65,7 +65,7 @@ export default {
   position: relative;
   width: 100%;
   height: 100vh;
-  background-image: url('~/img/jumbotron-gradientred.jpg');
+  background: url('~/img/jumbotron-gradientred.jpg') no-repeat;
   display: flex;
   flex-direction: column-reverse;
   align-items: center;
@@ -98,7 +98,7 @@ export default {
 	padding: 1rem;
 	box-shadow: 0 0 30px 2px linear-gradient(90deg, #ee3c4a, #fc8237); 
 	border-radius: 50px;
-	width: 40%;
+	width: 35%;
   i {
     position: absolute;
     top: 50%;
