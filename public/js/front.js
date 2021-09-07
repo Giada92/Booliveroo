@@ -2280,11 +2280,18 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
+//
+//
+//
 /* harmony default export */ __webpack_exports__["default"] = ({
   name: 'Restaurant',
   data: function data() {
     return {
-      plates: []
+      plates: [],
+      cart: [],
+      added: false
     };
   },
   methods: {
@@ -2297,10 +2304,59 @@ __webpack_require__.r(__webpack_exports__);
       })["catch"](function (err) {
         console.log(err);
       });
+    },
+    AddToCart: function AddToCart(plate) {
+      var _this2 = this;
+
+      if (this.cart.length == 0) {
+        // this.cart=[];
+        this.cart.push(plate); // console.log(this.cart);
+
+        console.log(plate);
+        this.SavePlate();
+      } else {
+        // console.log(this.cart);
+        this.cart.forEach(function (element) {
+          if (element.id == plate.id) {
+            _this2.added = true;
+            console.log(element.id);
+          }
+
+          ;
+        });
+
+        if (this.added == false) {
+          this.cart.push(plate);
+          this.SavePlate();
+        } else {
+          this.added = false;
+        }
+      }
+    },
+    SavePlate: function SavePlate() {
+      var parsed = JSON.stringify(this.cart);
+      localStorage.setItem('cart', parsed);
+    },
+    RemoveFromCart: function RemoveFromCart(n) {
+      this.cart.splice(n, 1);
+      this.SavePlate();
     }
   },
   created: function created() {
     this.getRestaurant(this.$route.params.slug);
+    console.log(this.cart);
+  },
+  mounted: function mounted() {
+    if (localStorage.getItem('cart')) {
+      try {
+        this.cart = JSON.parse(localStorage.getItem('cart'));
+      } catch (e) {
+        localStorage.removeItem('cart');
+      }
+    }
+  },
+  updated: function updated() {
+    console.log(this.cart);
   }
 });
 
@@ -4056,21 +4112,56 @@ var render = function() {
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
   return _c("div", { staticClass: "container" }, [
-    _c("div", { staticClass: "wrapper" }, [
-      _c("h2", [_vm._v("Ristorante menu")]),
-      _vm._v(" "),
-      _c(
-        "div",
-        _vm._l(_vm.plates, function(plate) {
-          return _c("div", { key: plate.id }, [
-            _c("p", [_vm._v(_vm._s(plate.description))]),
+    _c(
+      "div",
+      { staticClass: "wrapper" },
+      [
+        _vm._l(_vm.cart, function(x, n) {
+          return _c("div", { key: n }, [
+            _c("h3", [_vm._v(_vm._s(x.name))]),
             _vm._v(" "),
-            _c("img", { attrs: { src: plate.img, alt: plate.name } })
+            _c(
+              "button",
+              {
+                on: {
+                  click: function($event) {
+                    return _vm.RemoveFromCart(n)
+                  }
+                }
+              },
+              [_vm._v("Remove")]
+            )
           ])
         }),
-        0
-      )
-    ])
+        _vm._v(" "),
+        _c("h2", [_vm._v("Ristorante menu")]),
+        _vm._v(" "),
+        _c(
+          "div",
+          _vm._l(_vm.plates, function(plate) {
+            return _c("div", { key: plate.id }, [
+              _c("p", [_vm._v(_vm._s(plate.description))]),
+              _vm._v(" "),
+              _c("img", { attrs: { src: plate.img, alt: plate.name } }),
+              _vm._v(" "),
+              _c(
+                "button",
+                {
+                  on: {
+                    click: function($event) {
+                      return _vm.AddToCart(plate)
+                    }
+                  }
+                },
+                [_vm._v("Add")]
+              )
+            ])
+          }),
+          0
+        )
+      ],
+      2
+    )
   ])
 }
 var staticRenderFns = []
