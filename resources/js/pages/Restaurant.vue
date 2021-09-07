@@ -1,5 +1,5 @@
 <template>
-    <div class="">
+    <div class="sfondo">
       <div class="wrapper container">
         <div class="cart w-400">
           <h3>Il tuo carello</h3>
@@ -123,6 +123,11 @@ export default {
 
 <style lang="scss" scoped>
 
+  .sfondo {
+    height: 100vh;
+    background-color: white;
+  }
+  
   .wrapper {
     margin-top: 100px;
   }

@@ -2496,7 +2496,7 @@ exports = module.exports = __webpack_require__(/*! ../../../node_modules/css-loa
 
 
 // module
-exports.push([module.i, ".wrapper[data-v-25de3706] {\n  margin-top: 100px;\n}\n.card[data-v-25de3706] {\n  display: flex;\n  flex-direction: column;\n  justify-content: space-around;\n  align-items: center;\n  width: calc(20% - 30px);\n  height: 200px;\n  margin: 30px;\n}\n.cart[data-v-25de3706] {\n  position: absolute;\n  right: 0;\n  top: 20%;\n  transform: translateY(-20%);\n  width: 500px;\n  padding: 0 50px;\n}", ""]);
+exports.push([module.i, ".sfondo[data-v-25de3706] {\n  height: 100vh;\n  background-color: white;\n}\n.wrapper[data-v-25de3706] {\n  margin-top: 100px;\n}\n.card[data-v-25de3706] {\n  display: flex;\n  flex-direction: column;\n  justify-content: space-around;\n  align-items: center;\n  width: calc(20% - 30px);\n  height: 200px;\n  margin: 30px;\n}\n.cart[data-v-25de3706] {\n  position: absolute;\n  right: 0;\n  top: 20%;\n  transform: translateY(-20%);\n  width: 500px;\n  padding: 0 50px;\n}", ""]);
 
 // exports
 
@@ -4185,7 +4185,7 @@ var render = function() {
   var _vm = this
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
-  return _c("div", {}, [
+  return _c("div", { staticClass: "sfondo" }, [
     _c("div", { staticClass: "wrapper container" }, [
       _c("div", { staticClass: "cart w-400" }, [
         _c("h3", [_vm._v("Il tuo carello")]),
