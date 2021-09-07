@@ -137,6 +137,7 @@ export default {
     margin: 30px;
   }
 
+
   .cart {
     position: absolute;
     right: 0;
