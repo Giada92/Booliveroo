@@ -1,13 +1,15 @@
 <template>
-    <div class="container">
-      <div class="wrapper">
-          <h2>Ristorante menu</h2>
-          <div>
-            <div v-for="plate in plates" :key="plate.id">
-              <p>{{ plate.description }}</p>
-              <img :src="plate.img" :alt="plate.name">
+    <div class="back-white">
+      <div class="container">
+        <div class="wrapper">
+            <h2>Ristorante menu</h2>
+            <div>
+              <div v-for="plate in plates" :key="plate.id">
+                <p>{{ plate.description }}</p>
+                <img :src="plate.img" :alt="plate.name">
+              </div>
             </div>
-          </div>
+        </div>
       </div>
     </div>
 </template>
@@ -41,7 +43,12 @@ export default {
 
 <style lang="scss" scoped>
 
+.back-white {
+  background-color: white;
+}
+
 .wrapper {
+  height: 100vh;
   margin-top: 100px;
 }
 
