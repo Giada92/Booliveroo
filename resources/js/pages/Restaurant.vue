@@ -1,79 +1,57 @@
 <template>
-<div class="my_plates">
-  <div class="row mt-2 mb-2">
-    <div class="col md-10">
-      <div class="col md-2 text-right">
-        <button class="btn btn-primary">
-          {{ badge }}
-        </button>
-        <div>
-          <h5>Cart</h5>
-          <button>&times;</button>
-        </div>
-
-        <table>
-          <tbody>
-              <tr v-for="(cart, n) in carts" :key="cart.id">
-                  <td>{{ cart.name }}</td>
-                  <td>{{ cart.price }}</td>
-                  <td></td>
-                  <td>
-                    <button @click="removeCart(n)"> X </button>
-                  </td>
-              </tr>
-          </tbody>
-        </table>
-
-        <div>
-          Totale Prezzo: {{ totalPrice }}
-          <button>Checkout</button>
-        </div>
-      </div>
-    </div>
-
-  </div>
-  <div class="sfondo">
-      <div class="wrapper container">
-        <!-- <div class="cart w-400">
-          <h3>Il tuo carello</h3>
-          <table class="table table-striped">
-            <thead>
-              <tr>
-                <th>Piatto</th>
-                <th>Prezzo</th>
-                <th>Azione</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr
-              v-for="(x, n) in cart" 
-              :key="n"
+  <div class="">
+      <div class="wrapper container-fluid">
+        <div class="row">
+          <div class="my-4 text-center col-lg-6 offset-lg-3">
+            <h2>{{ restaurant.name }}</h2>
+            <div class="d-flex flex-wrap justify-content-center">
+              <div 
+              v-for="plate in restaurant.plates" 
+              :key="plate.id"
+              class="card"
               >
-                <td>{{ x.name }}</td>
-                <td>{{ x.price }}0€</td>
-                <td>
-                  <button @click="RemoveFromCart(n)">Remove</button>
-                </td>
-              </tr>
-            </tbody>
-          </table>
-        </div> -->
-        
-        <div class="text-center main_page">
-          <h2>Menu</h2>
-          <div class="d-flex flex-wrap justify-content-center">
-
-              <div v-for="plate in plates" :key="plate.id" class="card">
-                  <h5>{{ plate.name }}</h5>
-                  <img :src="plate.img" :alt="plate.name">
-                  <button @click="addCart(plate)">Aggiungi al carrello</button>
+                <h5>{{ plate.name }}</h5>
+                <img :src="plate.img" :alt="plate.name">
+                <button @click="addCart(plate)">Aggiungi al carrello</button>
               </div>
+            </div>
+          </div>
 
+          <div class="cart col-lg-3">
+            <h3>Il tuo carello</h3>
+            <button class="btn btn-primary">
+                    {{ badge }}
+            </button>
+            <div>
+                <h5>Cart</h5>
+            </div>
+            <table class="table table-striped">
+              <thead>
+                <tr>
+                  <th>Piatto</th>
+                  <th>Prezzo</th>
+                  <th>Azione</th>
+                </tr>
+              </thead>
+              <tbody>
+                    <tr v-for="(cart, n) in carts" :key="cart.id">
+                        <td>{{ cart.name }}</td>
+                        <td>{{ cart.price }}</td>
+                        <td></td>
+                        <td>
+                            <button @click="removeCart(n)"> X </button>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+            <div>
+                Totale Prezzo: {{ totalPrice }}
+                <button>Checkout</button>
+            </div>
           </div>
         </div>
       </div>
     </div>
-</div>
 
 </template>
 
@@ -86,8 +64,7 @@ export default {
     },
     data(){
       return{
-        plates: [],
-
+        restaurant: [],
         plate: {
           id: '',
           name: '',
@@ -143,8 +120,9 @@ export default {
         get(`http://127.0.0.1:8000/api/restaurant/${slug}`)
         .then((res)=>{
           // console.log(res.data[0].plates);
-          this.plates = res.data[0].plates;
-          this.plates.forEach(element => {
+          //this.plates = res.data[0].plates;
+          this.restaurant = res.data[0];
+          this.restaurant.plates.forEach(element => {
               element['quantity'] = 0;
           });
           //console.log(this.plates);
@@ -224,13 +202,7 @@ export default {
     margin: 30px;
   }
 
-
   .cart {
-    position: absolute;
-    right: 0;
-    top: 20%;
-    transform: translateY(-20%);
-    width: 500px;
     padding: 0 50px;
   }
 

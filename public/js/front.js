@@ -2333,67 +2333,42 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
 
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
 /* harmony default export */ __webpack_exports__["default"] = ({
   name: 'Restaurant',
   components: {
@@ -2401,7 +2376,7 @@ __webpack_require__.r(__webpack_exports__);
   },
   data: function data() {
     return {
-      plates: [],
+      restaurant: [],
       plate: {
         id: '',
         name: '',
@@ -2428,7 +2403,6 @@ __webpack_require__.r(__webpack_exports__);
     viewCart: function viewCart() {
       var _this = this;
 
-
       if (localStorage.getItem('carts')) {
         this.carts = JSON.parse(localStorage.getItem('carts'));
         this.badge = this.carts.length;
@@ -2444,7 +2418,6 @@ __webpack_require__.r(__webpack_exports__);
       this.cartAdd.quantity = plate.quantity;
       this.carts.push(this.cartAdd);
       this.storeCart();
-
     },
     removeCart: function removeCart(plate) {
       this.carts.splice(plate, 1);
@@ -2458,21 +2431,63 @@ __webpack_require__.r(__webpack_exports__);
     getRestaurant: function getRestaurant(slug) {
       var _this2 = this;
 
-
       axios.get("http://127.0.0.1:8000/api/restaurant/".concat(slug)).then(function (res) {
-        console.log(res.data[0].plates);
-        _this2.plates = res.data[0].plates;
+        // console.log(res.data[0].plates);
+        //this.plates = res.data[0].plates;
+        _this2.restaurant = res.data[0];
 
-
-        _this2.plates.forEach(function (element) {
+        _this2.restaurant.plates.forEach(function (element) {
           element['quantity'] = 0;
         }); //console.log(this.plates);
-
 
       })["catch"](function (err) {
         console.log(err);
       });
+    },
+    AddToCart: function AddToCart(plate) {
+      var _this3 = this;
 
+      if (!plate.quantity) {
+        plate.quantity = this.CounterListener();
+      }
+
+      ;
+
+      if (this.cart.length == 0) {
+        this.cart.push(plate); // console.log(this.cart);
+        // console.log(plate);
+
+        this.SavePlate();
+      } else {
+        // console.log(this.cart);
+        this.cart.forEach(function (element) {
+          if (element.id == plate.id) {
+            _this3.added = true; // console.log(element.id)
+          }
+
+          ;
+        });
+
+        if (this.added == false) {
+          this.cart.push(plate);
+          this.SavePlate();
+        } else {
+          this.added = false;
+        }
+
+        console.log(plate);
+      }
+    },
+    SavePlate: function SavePlate() {
+      var parsed = JSON.stringify(this.cart);
+      localStorage.setItem('cart', parsed);
+    },
+    RemoveFromCart: function RemoveFromCart(n) {
+      this.cart.splice(n, 1);
+      this.SavePlate();
+    },
+    CounterListener: function CounterListener(count) {
+      console.log(count);
     }
   },
   created: function created() {
@@ -2571,7 +2586,7 @@ exports = module.exports = __webpack_require__(/*! ../../../node_modules/css-loa
 
 
 // module
-exports.push([module.i, ".sfondo[data-v-25de3706] {\n  height: auto;\n  background-color: white;\n}\n.wrapper[data-v-25de3706] {\n  margin-top: 100px;\n}\n.card[data-v-25de3706] {\n  display: flex;\n  flex-direction: column;\n  justify-content: space-around;\n  align-items: center;\n  width: calc(20% - 30px);\n  height: 200px;\n  margin: 30px;\n}\n.cart[data-v-25de3706] {\n  position: absolute;\n  right: 0;\n  top: 20%;\n  transform: translateY(-20%);\n  width: 500px;\n  padding: 0 50px;\n}\n.main_page[data-v-25de3706] {\n  padding-bottom: 50px;\n}", ""]);
+exports.push([module.i, ".sfondo[data-v-25de3706] {\n  height: auto;\n  background-color: white;\n}\n.wrapper[data-v-25de3706] {\n  margin-top: 100px;\n}\n.card[data-v-25de3706] {\n  display: flex;\n  flex-direction: column;\n  justify-content: space-around;\n  align-items: center;\n  width: calc(20% - 30px);\n  height: 200px;\n  margin: 30px;\n}\n.cart[data-v-25de3706] {\n  padding: 0 50px;\n}\n.main_page[data-v-25de3706] {\n  padding-bottom: 50px;\n}", ""]);
 
 // exports
 
@@ -4294,17 +4309,50 @@ var render = function() {
   var _vm = this
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
-  return _c("div", { staticClass: "my_plates" }, [
-    _c("div", { staticClass: "row mt-2 mb-2" }, [
-      _c("div", { staticClass: "col md-10" }, [
-        _c("div", { staticClass: "col md-2 text-right" }, [
+  return _c("div", {}, [
+    _c("div", { staticClass: "wrapper container-fluid" }, [
+      _c("div", { staticClass: "row" }, [
+        _c("div", { staticClass: "my-4 text-center col-lg-6 offset-lg-3" }, [
+          _c("h2", [_vm._v(_vm._s(_vm.restaurant.name))]),
+          _vm._v(" "),
+          _c(
+            "div",
+            { staticClass: "d-flex flex-wrap justify-content-center" },
+            _vm._l(_vm.restaurant.plates, function(plate) {
+              return _c("div", { key: plate.id, staticClass: "card" }, [
+                _c("h5", [_vm._v(_vm._s(plate.name))]),
+                _vm._v(" "),
+                _c("img", { attrs: { src: plate.img, alt: plate.name } }),
+                _vm._v(" "),
+                _c(
+                  "button",
+                  {
+                    on: {
+                      click: function($event) {
+                        return _vm.addCart(plate)
+                      }
+                    }
+                  },
+                  [_vm._v("Aggiungi al carrello")]
+                )
+              ])
+            }),
+            0
+          )
+        ]),
+        _vm._v(" "),
+        _c("div", { staticClass: "cart col-lg-3" }, [
+          _c("h3", [_vm._v("Il tuo carello")]),
+          _vm._v(" "),
           _c("button", { staticClass: "btn btn-primary" }, [
-            _vm._v("\r\n          " + _vm._s(_vm.badge) + "\r\n        ")
+            _vm._v("\n                  " + _vm._s(_vm.badge) + "\n          ")
           ]),
           _vm._v(" "),
           _vm._m(0),
           _vm._v(" "),
-          _c("table", [
+          _c("table", { staticClass: "table table-striped" }, [
+            _vm._m(1),
+            _vm._v(" "),
             _c(
               "tbody",
               _vm._l(_vm.carts, function(cart, n) {
@@ -4336,45 +4384,12 @@ var render = function() {
           _vm._v(" "),
           _c("div", [
             _vm._v(
-              "\r\n          Totale Prezzo: " +
+              "\n              Totale Prezzo: " +
                 _vm._s(_vm.totalPrice) +
-                "\r\n          "
+                "\n              "
             ),
             _c("button", [_vm._v("Checkout")])
           ])
-        ])
-      ])
-    ]),
-    _vm._v(" "),
-    _c("div", { staticClass: "sfondo" }, [
-      _c("div", { staticClass: "wrapper container" }, [
-        _c("div", { staticClass: "text-center main_page" }, [
-          _c("h2", [_vm._v("Menu")]),
-          _vm._v(" "),
-          _c(
-            "div",
-            { staticClass: "d-flex flex-wrap justify-content-center" },
-            _vm._l(_vm.plates, function(plate) {
-              return _c("div", { key: plate.id, staticClass: "card" }, [
-                _c("h5", [_vm._v(_vm._s(plate.name))]),
-                _vm._v(" "),
-                _c("img", { attrs: { src: plate.img, alt: plate.name } }),
-                _vm._v(" "),
-                _c(
-                  "button",
-                  {
-                    on: {
-                      click: function($event) {
-                        return _vm.addCart(plate)
-                      }
-                    }
-                  },
-                  [_vm._v("Aggiungi al carrello")]
-                )
-              ])
-            }),
-            0
-          )
         ])
       ])
     ])
@@ -4385,10 +4400,20 @@ var staticRenderFns = [
     var _vm = this
     var _h = _vm.$createElement
     var _c = _vm._self._c || _h
-    return _c("div", [
-      _c("h5", [_vm._v("Cart")]),
-      _vm._v(" "),
-      _c("button", [_vm._v("×")])
+    return _c("div", [_c("h5", [_vm._v("Cart")])])
+  },
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("thead", [
+      _c("tr", [
+        _c("th", [_vm._v("Piatto")]),
+        _vm._v(" "),
+        _c("th", [_vm._v("Prezzo")]),
+        _vm._v(" "),
+        _c("th", [_vm._v("Azione")])
+      ])
     ])
   }
 ]
