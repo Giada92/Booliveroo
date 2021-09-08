@@ -29,4 +29,9 @@ export default {
     body {
         background: url('~/img/jumbotron-gradientred.jpg') fixed no-repeat;
     }
+
+    .btn-gradient {
+        background: linear-gradient(90deg, #ee3c4a, #fc8237);
+        color: white;
+    }
 </style>
