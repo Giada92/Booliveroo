@@ -43,12 +43,15 @@
                         <td>{{ cart.name }}</td>
 
                         <td>{{ cart.price }} €</td>
-                        <td><button @click="upQuantity(cart, n)">+</button></td>
-                        <td>{{ cart.quantity }}</td>
-                        <td><button @click="removeQuantity(cart, n)">-</button></td>
-                        <td class="d-flex justify-content-center align-items-center">
-                            <i @click="removeCart(n)" class="fas fa-times"></i>
 
+                        <td class="d-flex justify-content-around align-items-center">
+                          <button class="btn btn-quantita btn-sm" @click="upQuantity(cart, n)">+</button>
+                          <span class="num">{{ cart.quantity }}</span>
+                          <button class="btn btn-quantita btn-sm" @click="removeQuantity(cart, n)">-</button>
+                        </td>
+                        
+                        <td>
+                            <i @click="removeCart(n)" class="fas fa-times"></i>
                         </td>
                     </tr>
                 </tbody>
@@ -184,7 +187,14 @@ export default {
 
 <style lang="scss" scoped>
 
-.back-white {
+.num {
+  margin: 0 5px;
+}
+.btn-quantita {
+  border: none;
+  background-color: white;
+}
+.sfondo {
   height: auto;
   background-color: white;
 }
@@ -192,6 +202,7 @@ export default {
   color: red;
   font-size: 23px;
   cursor: pointer;
+  margin-left: 15px;
 }
 
 .wrapper {
