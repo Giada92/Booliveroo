@@ -2368,6 +2368,9 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
+//
 
 /* harmony default export */ __webpack_exports__["default"] = ({
   name: 'Restaurant',
@@ -2382,7 +2385,7 @@ __webpack_require__.r(__webpack_exports__);
         name: '',
         description: '',
         price: '',
-        quantity: ''
+        quantity: 2
       },
       add: true,
       edit: false,
@@ -2392,32 +2395,66 @@ __webpack_require__.r(__webpack_exports__);
         name: '',
         description: '',
         price: '',
-        quantity: ''
+        quantity: 1
       },
       badge: '0',
-      quantity: 1,
-      totalPrice: 0
+      quantity: 2,
+      totalPrice: 0,
+      esistente: false
     };
   },
   methods: {
     viewCart: function viewCart() {
-      var _this = this;
-
       if (localStorage.getItem('carts')) {
         this.carts = JSON.parse(localStorage.getItem('carts'));
         this.badge = this.carts.length;
-        this.totalPrice = this.carts.reduce(function (total, item) {
-          return total + _this.quantity * item.price;
+        this.totalPrice = this.carts.reduce(function (totalPrice, item) {
+          //console.log(this.carts)
+          //console.log(item);
+          return totalPrice + item.quantity * item.price;
         }, 0);
       }
+    },
+    upQuantity: function upQuantity(cart) {
+      //console.log(cart);
+      //console.log(n);
+      cart.quantity++;
+      this.storeCart();
+    },
+    removeQuantity: function removeQuantity(cart) {
+      //console.log(cart);
+      //console.log(n);
+      if (cart.quantity > 1) {
+        cart.quantity--;
+      } else {
+        this.removeCart(cart);
+      }
+
+      this.storeCart();
     },
     addCart: function addCart(plate) {
       this.cartAdd.id = plate.id;
       this.cartAdd.name = plate.name;
       this.cartAdd.price = plate.price;
-      this.cartAdd.quantity = plate.quantity;
+      this.cartAdd.quantity = 1;
       this.carts.push(this.cartAdd);
       this.storeCart();
+    },
+    controlla: function controlla(plate) {
+      var _this = this;
+
+      this.carts.forEach(function (el) {
+        if (el.id == plate.id) {
+          _this.esistente = true;
+        }
+      });
+
+      if (this.esistente == false) {
+        this.addCart(plate);
+      } else {
+        alert('Cambia la quantità dal carrello');
+        this.esistente = false;
+      }
     },
     removeCart: function removeCart(plate) {
       this.carts.splice(plate, 1);
@@ -2443,51 +2480,6 @@ __webpack_require__.r(__webpack_exports__);
       })["catch"](function (err) {
         console.log(err);
       });
-    },
-    AddToCart: function AddToCart(plate) {
-      var _this3 = this;
-
-      if (!plate.quantity) {
-        plate.quantity = this.CounterListener();
-      }
-
-      ;
-
-      if (this.cart.length == 0) {
-        this.cart.push(plate); // console.log(this.cart);
-        // console.log(plate);
-
-        this.SavePlate();
-      } else {
-        // console.log(this.cart);
-        this.cart.forEach(function (element) {
-          if (element.id == plate.id) {
-            _this3.added = true; // console.log(element.id)
-          }
-
-          ;
-        });
-
-        if (this.added == false) {
-          this.cart.push(plate);
-          this.SavePlate();
-        } else {
-          this.added = false;
-        }
-
-        console.log(plate);
-      }
-    },
-    SavePlate: function SavePlate() {
-      var parsed = JSON.stringify(this.cart);
-      localStorage.setItem('cart', parsed);
-    },
-    RemoveFromCart: function RemoveFromCart(n) {
-      this.cart.splice(n, 1);
-      this.SavePlate();
-    },
-    CounterListener: function CounterListener(count) {
-      console.log(count);
     }
   },
   created: function created() {
@@ -4309,7 +4301,9 @@ var render = function() {
   var _vm = this
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
-  return _c("div", { staticClass: "back-white" }, [
+
+  return _c("div", { staticClass: "sfondo" }, [
+
     _c("div", { staticClass: "wrapper container-fluid" }, [
       _c("div", { staticClass: "row" }, [
         _c("div", { staticClass: "my-4 text-center col-lg-6 offset-lg-3" }, [
@@ -4329,7 +4323,7 @@ var render = function() {
                   {
                     on: {
                       click: function($event) {
-                        return _vm.addCart(plate)
+                        return _vm.controlla(plate)
                       }
                     }
                   },
@@ -4361,7 +4355,35 @@ var render = function() {
                   _vm._v(" "),
                   _c("td", [_vm._v(_vm._s(cart.price))]),
                   _vm._v(" "),
-                  _c("td"),
+                  _c("td", [
+                    _c(
+                      "button",
+                      {
+                        on: {
+                          click: function($event) {
+                            return _vm.upQuantity(cart, n)
+                          }
+                        }
+                      },
+                      [_vm._v("+")]
+                    )
+                  ]),
+                  _vm._v(" "),
+                  _c("td", [_vm._v(_vm._s(cart.quantity))]),
+                  _vm._v(" "),
+                  _c("td", [
+                    _c(
+                      "button",
+                      {
+                        on: {
+                          click: function($event) {
+                            return _vm.removeQuantity(cart, n)
+                          }
+                        }
+                      },
+                      [_vm._v("-")]
+                    )
+                  ]),
                   _vm._v(" "),
                   _c("td", [
                     _c(
@@ -4411,6 +4433,8 @@ var staticRenderFns = [
         _c("th", [_vm._v("Piatto")]),
         _vm._v(" "),
         _c("th", [_vm._v("Prezzo")]),
+        _vm._v(" "),
+        _c("th", [_vm._v("Quantità")]),
         _vm._v(" "),
         _c("th", [_vm._v("Azione")])
       ])

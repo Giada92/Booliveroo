@@ -1,5 +1,6 @@
 <template>
-  <div class="back-white">
+  <div class="sfondo">
+
       <div class="wrapper container-fluid">
         <div class="row">
           <div class="my-4 text-center col-lg-6 offset-lg-3">
@@ -12,7 +13,7 @@
               >
                 <h5>{{ plate.name }}</h5>
                 <img :src="plate.img" :alt="plate.name">
-                <button @click="addCart(plate)">Aggiungi al carrello</button>
+                <button @click="controlla(plate)">Aggiungi al carrello</button>
               </div>
             </div>
           </div>
@@ -30,6 +31,7 @@
                 <tr>
                   <th>Piatto</th>
                   <th>Prezzo</th>
+                  <th>Quantità</th>
                   <th>Azione</th>
                 </tr>
               </thead>
@@ -37,7 +39,9 @@
                     <tr v-for="(cart, n) in carts" :key="cart.id">
                         <td>{{ cart.name }}</td>
                         <td>{{ cart.price }}</td>
-                        <td></td>
+                        <td><button @click="upQuantity(cart, n)">+</button></td>
+                        <td>{{ cart.quantity }}</td>
+                        <td><button @click="removeQuantity(cart, n)">-</button></td>
                         <td>
                             <button @click="removeCart(n)"> X </button>
                         </td>
@@ -70,7 +74,7 @@ export default {
           name: '',
           description: '',
           price: '',
-          quantity: ''
+          quantity: 2
         },
         add: true,
         edit: false,
@@ -80,11 +84,12 @@ export default {
           name: '',
           description: '',
           price: '',
-          quantity: ''
+          quantity: 1
         },
         badge: '0',
-        quantity: 1,
-        totalPrice: 0
+        quantity: 2,
+        totalPrice: 0,
+        esistente: false
 
       }
     },
@@ -93,18 +98,50 @@ export default {
           if(localStorage.getItem('carts')){
             this.carts = JSON.parse(localStorage.getItem('carts'));
             this.badge = this.carts.length;
-            this.totalPrice = this.carts.reduce((total, item)=>{
-                return total + this.quantity * item.price;
+            this.totalPrice = this.carts.reduce((totalPrice, item)=>{
+                //console.log(this.carts)
+                //console.log(item);
+                return totalPrice + item.quantity * item.price;
             }, 0)
           }
+      },
+      upQuantity(cart){
+            //console.log(cart);
+            //console.log(n);
+            cart.quantity++;
+            this.storeCart(); 
+      },
+      removeQuantity(cart){
+            //console.log(cart);
+            //console.log(n);
+            if(cart.quantity > 1) {
+              cart.quantity--;
+            }else {
+              this.removeCart(cart);
+            }
+            this.storeCart(); 
       },
       addCart(plate){
           this.cartAdd.id = plate.id;
           this.cartAdd.name = plate.name;
           this.cartAdd.price = plate.price;
-          this.cartAdd.quantity = plate.quantity;
+          this.cartAdd.quantity = 1;
           this.carts.push(this.cartAdd);
           this.storeCart();
+      },
+      controlla(plate){
+        this.carts.forEach(el=>{
+            if(el.id == plate.id){
+              this.esistente = true;
+            }
+          });
+
+        if(this.esistente == false){
+            this.addCart(plate);
+        }else {
+          alert('Cambia la quantità dal carrello');
+          this.esistente = false;
+        }
       },
       removeCart(plate){
         this.carts.splice(plate, 1);
@@ -130,47 +167,6 @@ export default {
         .catch((err)=>{
            console.log(err);
         });
-
-      },
-      AddToCart: function(plate) {
-        if (!plate.quantity) {
-          plate.quantity = this.CounterListener();
-        };
-        if (this.cart.length == 0) {
-          this.cart.push(plate);
-
-          // console.log(this.cart);
-          // console.log(plate);
-          this.SavePlate();
-        } else {
-          // console.log(this.cart);
-            this.cart.forEach(element => {
-              if (element.id == plate.id) {
-                this.added = true;
-                // console.log(element.id)
-              };
-              
-            });
-            if (this.added == false) {
-                this.cart.push(plate);
-                this.SavePlate();
-              } else {
-                this.added = false;
-              }
-              console.log(plate)
-        }
-      },
-      SavePlate: function() {
-        const parsed = JSON.stringify(this.cart);
-        localStorage.setItem('cart', parsed);
-      },
-      RemoveFromCart(n) {
-        this.cart.splice(n, 1);
-        this.SavePlate();
-      },
-      CounterListener: function(count) {
-        console.log(count);
-
       }
     },
     created: function(){
