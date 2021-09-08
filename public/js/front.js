@@ -2081,6 +2081,10 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
+//
+//
 /* harmony default export */ __webpack_exports__["default"] = ({
   name: 'Footer',
   data: function data() {
@@ -2234,6 +2238,9 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
+//
 
 /* harmony default export */ __webpack_exports__["default"] = ({
   name: 'Home',
@@ -2279,36 +2286,6 @@ __webpack_require__.r(__webpack_exports__);
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
 //
 //
 //
@@ -2432,7 +2409,7 @@ exports = module.exports = __webpack_require__(/*! ../../../node_modules/css-loa
 
 
 // module
-exports.push([module.i, ".footer[data-v-61a7c374] {\n  background-color: #1D1D1D;\n  color: white;\n}\n.col_background[data-v-61a7c374] {\n  padding: 30px 5px;\n  /* background-color: rgba(255,255,255, 0.1); */\n  width: calc(100% / 4 - 15px);\n  border-radius: 3px;\n  margin: 10px;\n  min-width: 224px;\n}\n.col_background[data-v-61a7c374]:first-child {\n  margin-left: 0px;\n}\n.col_background[data-v-61a7c374]:last-child {\n  margin-right: 0px;\n}\nimg[data-v-61a7c374] {\n  width: 60%;\n}\nul[data-v-61a7c374] {\n  list-style: none;\n  padding-left: 0;\n}", ""]);
+exports.push([module.i, ".curvy[data-v-61a7c374] {\n  background-image: url(\"/img/footer-wave.png\");\n  height: 100px;\n  width: 100%;\n  background-repeat: no-repeat;\n  background-size: cover;\n}\n.footer[data-v-61a7c374] {\n  background-color: #1D1D1D;\n  color: white;\n}\n.col_background[data-v-61a7c374] {\n  padding: 30px 5px;\n  /* background-color: rgba(255,255,255, 0.1); */\n  width: calc(100% / 4 - 15px);\n  border-radius: 3px;\n  margin: 10px;\n  min-width: 224px;\n}\n.col_background[data-v-61a7c374]:first-child {\n  margin-left: 0px;\n}\n.col_background[data-v-61a7c374]:last-child {\n  margin-right: 0px;\n}\nimg[data-v-61a7c374] {\n  width: 60%;\n}\nul[data-v-61a7c374] {\n  list-style: none;\n  padding-left: 0;\n}", ""]);
 
 // exports
 
@@ -2470,7 +2447,7 @@ exports = module.exports = __webpack_require__(/*! ../../../node_modules/css-loa
 
 
 // module
-exports.push([module.i, ".jumbotron[data-v-b3c5cf30] {\n  padding: 0;\n  position: relative;\n  width: 100%;\n  height: 100vh;\n  background: url(\"/img/jumbotron-gradientred.jpg\") no-repeat;\n  display: flex;\n  flex-direction: column-reverse;\n  align-items: center;\n}\n#scroll[data-v-b3c5cf30] {\n  margin-top: 380px;\n  opacity: 1;\n  transition: 0.8s;\n  display: flex;\n  flex-direction: column;\n  align-items: center;\n  color: white;\n}\n#scroll i[data-v-b3c5cf30] {\n  font-size: 60px;\n}\n#scroll.sticky[data-v-b3c5cf30] {\n  opacity: 0;\n}\n.search-bar[data-v-b3c5cf30] {\n  position: relative;\n  background: white;\n  padding: 1rem;\n  box-shadow: 0 0 30px 2px linear-gradient(90deg, #ee3c4a, #fc8237);\n  border-radius: 50px;\n  width: 35%;\n}\n.search-bar i[data-v-b3c5cf30] {\n  position: absolute;\n  top: 50%;\n  right: 3%;\n  transform: translateY(-50%);\n  color: #fc8237;\n  font-size: 25px;\n}\n.search-input[data-v-b3c5cf30] {\n  width: 90%;\n  border: none;\n  font-size: 18px;\n}\n.search-input[data-v-b3c5cf30]:focus {\n  border: none;\n  outline: none;\n}", ""]);
+exports.push([module.i, ".main-page[data-v-b3c5cf30] {\n  height: 100vh;\n}\n.curvy[data-v-b3c5cf30] {\n  background-image: url(\"/img/main-wave.png\");\n  height: 100px;\n  width: 100%;\n  background-repeat: no-repeat;\n  background-size: cover;\n}\n.back-white[data-v-b3c5cf30] {\n  background-color: white;\n}\n.jumbotron[data-v-b3c5cf30] {\n  padding: 0;\n  margin: 0;\n  position: relative;\n  width: 100%;\n  height: 100vh;\n  background-color: transparent;\n  background-size: cover;\n  display: flex;\n  flex-direction: column-reverse;\n  align-items: center;\n}\n#scroll[data-v-b3c5cf30] {\n  margin-top: 380px;\n  opacity: 1;\n  transition: 0.8s;\n  display: flex;\n  flex-direction: column;\n  align-items: center;\n  color: white;\n}\n#scroll i[data-v-b3c5cf30] {\n  font-size: 60px;\n}\n#scroll.sticky[data-v-b3c5cf30] {\n  opacity: 0;\n}\n.search-bar[data-v-b3c5cf30] {\n  position: relative;\n  background: white;\n  padding: 1rem;\n  box-shadow: 0 0 30px 2px linear-gradient(90deg, #ee3c4a, #fc8237);\n  border-radius: 50px;\n  width: 35%;\n}\n.search-bar i[data-v-b3c5cf30] {\n  position: absolute;\n  top: 50%;\n  right: 3%;\n  transform: translateY(-50%);\n  color: #fc8237;\n  font-size: 25px;\n}\n.search-input[data-v-b3c5cf30] {\n  width: 90%;\n  border: none;\n  font-size: 18px;\n}\n.search-input[data-v-b3c5cf30]:focus {\n  border: none;\n  outline: none;\n}", ""]);
 
 // exports
 
@@ -2491,6 +2468,7 @@ exports = module.exports = __webpack_require__(/*! ../../../node_modules/css-loa
 // module
 exports.push([module.i, ".wrapper[data-v-25de3706] {\n  margin-top: 100px;\n}\n.card[data-v-25de3706] {\n  display: flex;\n  flex-direction: column;\n  justify-content: space-around;\n  align-items: center;\n  width: calc(20% - 30px);\n  height: 200px;\n  margin: 30px;\n}\n.cart[data-v-25de3706] {\n  position: absolute;\n  right: 0;\n  top: 20%;\n  transform: translateY(-20%);\n  width: 500px;\n  padding: 0 50px;\n}", ""]);
 
+
 // exports
 
 
@@ -2508,7 +2486,7 @@ exports = module.exports = __webpack_require__(/*! ../../node_modules/css-loader
 
 
 // module
-exports.push([module.i, "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n/* body {\n    background: url('~/img/jumbotron-gradientred.jpg') fixed no-repeat;\n} */\n", ""]);
+exports.push([module.i, "\nbody {\n    background: url('/img/jumbotron-gradientred.jpg') fixed no-repeat;\n}\n", ""]);
 
 // exports
 
@@ -3860,61 +3838,65 @@ var render = function() {
   var _vm = this
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
-  return _c("div", { staticClass: "footer" }, [
-    _c("div", { staticClass: "container py-4" }, [
-      _c("div", { staticClass: "row" }, [
-        _c("div", { staticClass: "col" }, [
-          _c("div", { staticClass: "col_background" }, [
-            _c("h3", [_vm._v("Scopri Deliveboo")]),
-            _vm._v(" "),
-            _c(
-              "ul",
-              { staticClass: "my-ul" },
-              _vm._l(_vm.scopri, function(link, index) {
-                return _c("li", { key: index }, [
-                  _c("a", { attrs: { href: "#" } }, [_vm._v(_vm._s(link))])
-                ])
-              }),
-              0
-            )
-          ])
-        ]),
-        _vm._v(" "),
-        _c("div", { staticClass: "col" }, [
-          _c("div", { staticClass: "col_background" }, [
-            _c("h3", [_vm._v("Note legali")]),
-            _vm._v(" "),
-            _c(
-              "ul",
-              { staticClass: "my-ul" },
-              _vm._l(_vm.note, function(link, index) {
-                return _c("li", { key: index }, [
-                  _c("a", { attrs: { href: "#" } }, [_vm._v(_vm._s(link))])
-                ])
-              }),
-              0
-            )
-          ])
-        ]),
-        _vm._v(" "),
-        _c("div", { staticClass: "col" }, [
-          _c("div", { staticClass: "col_background" }, [
-            _c("h3", [_vm._v("Aiuto")]),
-            _vm._v(" "),
-            _c(
-              "ul",
-              { staticClass: "my-ul" },
-              _vm._l(_vm.interesse, function(link, index) {
-                return _c("li", { key: index }, [
-                  _c("a", { attrs: { href: "#" } }, [_vm._v(_vm._s(link))])
-                ])
-              }),
-              0
-            )
-          ])
-        ]),
-        _vm._v(" "),
-        _vm._m(0)
+  return _c("div", [
+    _c("div", { staticClass: "curvy" }),
+    _vm._v(" "),
+    _c("div", { staticClass: "footer" }, [
+      _c("div", { staticClass: "container py-4" }, [
+        _c("div", { staticClass: "row" }, [
+          _c("div", { staticClass: "col" }, [
+            _c("div", { staticClass: "col_background" }, [
+              _c("h3", [_vm._v("Scopri Deliveboo")]),
+              _vm._v(" "),
+              _c(
+                "ul",
+                { staticClass: "my-ul" },
+                _vm._l(_vm.scopri, function(link, index) {
+                  return _c("li", { key: index }, [
+                    _c("a", { attrs: { href: "#" } }, [_vm._v(_vm._s(link))])
+                  ])
+                }),
+                0
+              )
+            ])
+          ]),
+          _vm._v(" "),
+          _c("div", { staticClass: "col" }, [
+            _c("div", { staticClass: "col_background" }, [
+              _c("h3", [_vm._v("Note legali")]),
+              _vm._v(" "),
+              _c(
+                "ul",
+                { staticClass: "my-ul" },
+                _vm._l(_vm.note, function(link, index) {
+                  return _c("li", { key: index }, [
+                    _c("a", { attrs: { href: "#" } }, [_vm._v(_vm._s(link))])
+                  ])
+                }),
+                0
+              )
+            ])
+          ]),
+          _vm._v(" "),
+          _c("div", { staticClass: "col" }, [
+            _c("div", { staticClass: "col_background" }, [
+              _c("h3", [_vm._v("Aiuto")]),
+              _vm._v(" "),
+              _c(
+                "ul",
+                { staticClass: "my-ul" },
+                _vm._l(_vm.interesse, function(link, index) {
+                  return _c("li", { key: index }, [
+                    _c("a", { attrs: { href: "#" } }, [_vm._v(_vm._s(link))])
+                  ])
+                }),
+                0
+              )
+            ])
+          ]),
+          _vm._v(" "),
+          _vm._m(0)
+        ])
       ])
     ])
   ])
@@ -4107,17 +4089,24 @@ var render = function() {
   return _c("div", [
     _vm._m(0),
     _vm._v(" "),
-    _c("div", { staticClass: "container my-4" }, [
-      _c("h1", [_vm._v("I Nostri Preferiti")]),
-      _vm._v(" "),
-      _c(
-        "div",
-        { staticClass: "row" },
-        _vm._l(_vm.restaurants, function(restaurant) {
-          return _c("Card", { key: restaurant.id, attrs: { item: restaurant } })
-        }),
-        1
-      )
+    _c("div", { staticClass: "curvy" }),
+    _vm._v(" "),
+    _c("div", { staticClass: "back-white" }, [
+      _c("div", { staticClass: "container main-page" }, [
+        _c("h1", [_vm._v("I Nostri Preferiti")]),
+        _vm._v(" "),
+        _c(
+          "div",
+          { staticClass: "row" },
+          _vm._l(_vm.restaurants, function(restaurant) {
+            return _c("Card", {
+              key: restaurant.id,
+              attrs: { item: restaurant }
+            })
+          }),
+          1
+        )
+      ])
     ])
   ])
 }
@@ -4213,6 +4202,9 @@ var render = function() {
             return _c("div", { key: plate.id, staticClass: "card" }, [
               _c("h5", [_vm._v(_vm._s(plate.name))]),
               _vm._v(" "),
+
+              _c("img", { attrs: { src: plate.img, alt: plate.name } })
+
               _c("img", { attrs: { src: plate.img, alt: plate.name } }),
               _vm._v(" "),
               _c(
@@ -4226,6 +4218,7 @@ var render = function() {
                 },
                 [_vm._v("Add")]
               )
+
             ])
           }),
           0
@@ -20184,6 +20177,7 @@ var router = new vue_router__WEBPACK_IMPORTED_MODULE_1__["default"]({
 /***/ (function(module, exports, __webpack_require__) {
 
 module.exports = __webpack_require__(/*! C:\Users\Andrea Gorno\Desktop\laravel-prova\laravel-qualcosa\resources\js\front.js */"./resources/js/front.js");
+
 
 
 /***/ })

@@ -83,7 +83,11 @@
 
 <style>
     body {
-        background-color: #fc8237;
+        background-image: linear-gradient(90deg, #ee3c4a, #fc8237);
+    }
+    .card {
+        border-radius: 15px;
+        overflow: hidden;
     }
 
     .color {
