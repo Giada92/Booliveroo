@@ -83,7 +83,7 @@
 
 <style>
     body {
-        background-image: linear-gradient(90deg, #ee3c4a, #fc8237);
+        background-color: white;
     }
     .card {
         border-radius: 15px;
