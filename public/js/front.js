@@ -2380,7 +2380,6 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
-//
 
 /* harmony default export */ __webpack_exports__["default"] = ({
   name: 'Restaurant',
@@ -2588,7 +2587,7 @@ exports = module.exports = __webpack_require__(/*! ../../../node_modules/css-loa
 
 
 // module
-exports.push([module.i, ".num[data-v-25de3706] {\n  margin: 0 5px;\n}\n.btn-quantita[data-v-25de3706] {\n  border: none;\n  background-color: white;\n}\n.sfondo[data-v-25de3706] {\n  height: auto;\n  background-color: white;\n}\n.fa-times[data-v-25de3706] {\n  color: red;\n  font-size: 23px;\n  cursor: pointer;\n  margin-left: 15px;\n}\n.wrapper[data-v-25de3706] {\n  margin-top: 100px;\n}\n.card[data-v-25de3706] {\n  display: flex;\n  padding: 5px;\n  flex-direction: column;\n  justify-content: space-between;\n  align-items: center;\n  width: calc(30% - 30px);\n  height: 325px;\n  margin: 30px;\n  border: 2px solid orangered;\n  border-radius: 15px;\n}\n.card button[data-v-25de3706] {\n  background: linear-gradient(90deg, #ee3c4a, #fc8237);\n  border: none;\n  color: white;\n}\nimg[data-v-25de3706] {\n  width: 100%;\n  height: 80%;\n  -o-object-fit: cover;\n     object-fit: cover;\n}\n.cart[data-v-25de3706] {\n  padding: 0 50px;\n  margin-top: 100px;\n}\n.main_page[data-v-25de3706] {\n  padding-bottom: 50px;\n}\n.fa-leaf[data-v-25de3706] {\n  color: green;\n}", ""]);
+exports.push([module.i, ".num[data-v-25de3706] {\n  margin: 0 5px;\n}\n.btn-quantita[data-v-25de3706] {\n  border: none;\n  background-color: white;\n}\n.sfondo[data-v-25de3706] {\n  height: auto;\n  background-color: white;\n}\n.fa-times[data-v-25de3706] {\n  color: red;\n  font-size: 23px;\n  cursor: pointer;\n  margin-left: 15px;\n}\n.wrapper[data-v-25de3706] {\n  margin-top: 100px;\n}\n.card[data-v-25de3706] {\n  display: flex;\n  padding: 5px;\n  flex-direction: column;\n  justify-content: space-between;\n  align-items: center;\n  width: calc(30% - 30px);\n  height: 325px;\n  margin: 30px;\n  border: 2px solid orangered;\n  border-radius: 15px;\n}\n.card button[data-v-25de3706] {\n  background: linear-gradient(90deg, #ee3c4a, #fc8237);\n  border: none;\n  color: white;\n}\nimg[data-v-25de3706] {\n  width: 100%;\n  height: 80%;\n  -o-object-fit: cover;\n     object-fit: cover;\n}\n.cart[data-v-25de3706] {\n  padding: 0 50px;\n  margin-top: 100px;\n}\n.main_page[data-v-25de3706] {\n  padding-bottom: 50px;\n}\n.foglia[data-v-25de3706] {\n  color: green;\n}", ""]);
 
 // exports
 
@@ -2607,7 +2606,7 @@ exports = module.exports = __webpack_require__(/*! ../../node_modules/css-loader
 
 
 // module
-exports.push([module.i, "\nbody {\n    background: url('/img/jumbotron-gradientred.jpg') fixed no-repeat;\n}\n.btn-gradient {\n    background: linear-gradient(90deg, #ee3c4a, #fc8237);\n    color: white;\n}\n", ""]);
+exports.push([module.i, "\nbody {\n    background: url('/img/jumbotron-gradientred.jpg') fixed no-repeat;\n    background-size: cover;\n}\n.btn-gradient {\n    background: linear-gradient(90deg, #ee3c4a, #fc8237);\n    color: white;\n}\n", ""]);
 
 // exports
 
@@ -4322,13 +4321,14 @@ var render = function() {
             { staticClass: "d-flex flex-wrap justify-content-center" },
             _vm._l(_vm.restaurant.plates, function(plate) {
               return _c("div", { key: plate.id, staticClass: "card" }, [
-                _c("h5", [_vm._v(_vm._s(plate.name))]),
+                _c("h5", [
+                  _vm._v(_vm._s(plate.name) + "  "),
+                  plate.veg == 1
+                    ? _c("i", { staticClass: "fas fa-leaf foglia" })
+                    : _vm._e()
+                ]),
                 _vm._v(" "),
                 _c("img", { attrs: { src: plate.img, alt: plate.name } }),
-                _vm._v(" "),
-                plate.veg == 1
-                  ? _c("div", [_c("i", { staticClass: "fas fa-leaf" })])
-                  : _vm._e(),
                 _vm._v(" "),
                 _c(
                   "button",
