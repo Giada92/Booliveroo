@@ -11,10 +11,9 @@
               :key="plate.id"
               class="card"
               >
-                <h5>{{ plate.name }}</h5>
+                <h5>{{ plate.name }}  <i class="fas fa-leaf foglia" v-if="plate.veg == 1"></i></h5>
                 <img :src="plate.img" :alt="plate.name">
 
-                <div v-if="plate.veg == 1"><i class="fas fa-leaf"></i></div>
                 <button class="btn btn-sm" @click="controlla(plate)">Aggiungi al carrello</button>
 
               </div>
@@ -232,7 +231,8 @@ img {
   padding-bottom: 50px;
 }
 
-.fa-leaf {
+.foglia {
   color: green;
 }
+
 </style>
