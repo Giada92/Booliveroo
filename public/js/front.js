@@ -2578,7 +2578,7 @@ exports = module.exports = __webpack_require__(/*! ../../../node_modules/css-loa
 
 
 // module
-exports.push([module.i, ".sfondo[data-v-25de3706] {\n  height: auto;\n  background-color: white;\n}\n.wrapper[data-v-25de3706] {\n  margin-top: 100px;\n}\n.card[data-v-25de3706] {\n  display: flex;\n  flex-direction: column;\n  justify-content: space-around;\n  align-items: center;\n  width: calc(20% - 30px);\n  height: 200px;\n  margin: 30px;\n}\n.cart[data-v-25de3706] {\n  padding: 0 50px;\n}\n.main_page[data-v-25de3706] {\n  padding-bottom: 50px;\n}", ""]);
+exports.push([module.i, ".back-white[data-v-25de3706] {\n  height: auto;\n  background-color: white;\n}\n.wrapper[data-v-25de3706] {\n  margin-top: 100px;\n}\n.card[data-v-25de3706] {\n  display: flex;\n  flex-direction: column;\n  justify-content: space-around;\n  align-items: center;\n  width: calc(20% - 30px);\n  height: 200px;\n  margin: 30px;\n}\n.cart[data-v-25de3706] {\n  padding: 0 50px;\n}\n.main_page[data-v-25de3706] {\n  padding-bottom: 50px;\n}", ""]);
 
 // exports
 
@@ -4301,7 +4301,9 @@ var render = function() {
   var _vm = this
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
+
   return _c("div", { staticClass: "sfondo" }, [
+
     _c("div", { staticClass: "wrapper container-fluid" }, [
       _c("div", { staticClass: "row" }, [
         _c("div", { staticClass: "my-4 text-center col-lg-6 offset-lg-3" }, [
@@ -4333,7 +4335,7 @@ var render = function() {
           )
         ]),
         _vm._v(" "),
-        _c("div", { staticClass: "cart col-lg-3" }, [
+        _c("div", { staticClass: "cart col-lg-3 mt-5" }, [
           _c("h3", [_vm._v("Il tuo carello")]),
           _vm._v(" "),
           _c("button", { staticClass: "btn btn-primary" }, [
@@ -20441,7 +20443,7 @@ var router = new vue_router__WEBPACK_IMPORTED_MODULE_1__["default"]({
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__(/*! C:\Users\Giada\Desktop\laravel-qualcosa\resources\js\front.js */"./resources/js/front.js");
+module.exports = __webpack_require__(/*! C:\Users\Ale\Desktop\Progetto Finale\laravel-qualcosa\resources\js\front.js */"./resources/js/front.js");
 
 
 /***/ })

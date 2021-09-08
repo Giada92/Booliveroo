@@ -1,5 +1,6 @@
 <template>
   <div class="sfondo">
+
       <div class="wrapper container-fluid">
         <div class="row">
           <div class="my-4 text-center col-lg-6 offset-lg-3">
@@ -17,7 +18,7 @@
             </div>
           </div>
 
-          <div class="cart col-lg-3">
+          <div class="cart col-lg-3 mt-5">
             <h3>Il tuo carello</h3>
             <button class="btn btn-primary">
                     {{ badge }}
@@ -178,30 +179,30 @@ export default {
 
 <style lang="scss" scoped>
 
-  .sfondo {
-    height: auto;
-    background-color: white;
-  }
-  
-  .wrapper {
-    margin-top: 100px;
-  }
+.back-white {
+  height: auto;
+  background-color: white;
+}
 
-  .card {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-around;
-    align-items: center;
-    width: calc(20% - 30px);
-    height: 200px;
-    margin: 30px;
-  }
+.wrapper {
+  margin-top: 100px;
+}
 
-  .cart {
-    padding: 0 50px;
-  }
+.card {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  width: calc(20% - 30px);
+  height: 200px;
+  margin: 30px;
+}
 
-  .main_page {
-    padding-bottom: 50px;
-  }
+.cart {
+  padding: 0 50px;
+}
+
+.main_page {
+  padding-bottom: 50px;
+}
 </style>
