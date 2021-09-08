@@ -1,5 +1,5 @@
 <template>
-    <div class="wrapper">
+    <div class="container">
         <h2>Chi siamo</h2>
         <p>Siamo un'azienda di delivery, specializzata nella vendita al dettaglio di cibo consegnato a domicilio.
             La nostra chiave di forza è la celerità nelle consegne, correlata ad ottimi prezzi e continue offerte settimanali.
@@ -8,3 +8,14 @@
         </p>
     </div>
 </template>
+
+<script>
+export default({
+    name: 'Chisiamo',
+})
+</script>
+
+<style lang="scss" scoped>
+
+
+</style>
