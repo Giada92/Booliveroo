@@ -2368,6 +2368,8 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
 
 /* harmony default export */ __webpack_exports__["default"] = ({
   name: 'Restaurant',
@@ -2410,6 +2412,18 @@ __webpack_require__.r(__webpack_exports__);
           return total + _this.quantity * item.price;
         }, 0);
       }
+    },
+    upQuantity: function upQuantity(index, prodotto) {
+      console.log(index);
+      console.log(prodotto); // se la quantità del prodotto è minore di 20
+
+      if (prodotto[index].quantita < 20) {
+        // aumenta la quantità del prodotto 
+        prodotto[index].quantita++;
+      }
+
+      this.prezzo_prodotti = this.calcoloTotale();
+      this.sincronizza_carrello();
     },
     addCart: function addCart(plate) {
       this.cartAdd.id = plate.id;
@@ -4361,7 +4375,21 @@ var render = function() {
                   _vm._v(" "),
                   _c("td", [_vm._v(_vm._s(cart.price))]),
                   _vm._v(" "),
-                  _c("td"),
+                  _c("td", [
+                    _c(
+                      "button",
+                      {
+                        on: {
+                          click: function($event) {
+                            return _vm.upQuantity(_vm.index, cart.products)
+                          }
+                        }
+                      },
+                      [_vm._v("+")]
+                    )
+                  ]),
+                  _vm._v(" "),
+                  _c("td", [_vm._v(_vm._s(cart.quantity))]),
                   _vm._v(" "),
                   _c("td", [
                     _c(
@@ -4411,6 +4439,8 @@ var staticRenderFns = [
         _c("th", [_vm._v("Piatto")]),
         _vm._v(" "),
         _c("th", [_vm._v("Prezzo")]),
+        _vm._v(" "),
+        _c("th", [_vm._v("Quantità")]),
         _vm._v(" "),
         _c("th", [_vm._v("Azione")])
       ])

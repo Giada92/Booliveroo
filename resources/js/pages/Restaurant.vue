@@ -30,6 +30,7 @@
                 <tr>
                   <th>Piatto</th>
                   <th>Prezzo</th>
+                  <th>Quantità</th>
                   <th>Azione</th>
                 </tr>
               </thead>
@@ -37,7 +38,8 @@
                     <tr v-for="(cart, n) in carts" :key="cart.id">
                         <td>{{ cart.name }}</td>
                         <td>{{ cart.price }}</td>
-                        <td></td>
+                        <td><button @click="upQuantity(index, cart.products)">+</button></td>
+                        <td>{{ cart.quantity }}</td>
                         <td>
                             <button @click="removeCart(n)"> X </button>
                         </td>
@@ -97,6 +99,18 @@ export default {
                 return total + this.quantity * item.price;
             }, 0)
           }
+      },
+      upQuantity(index , prodotto){
+            console.log(index);
+            console.log(prodotto);
+            // se la quantità del prodotto è minore di 20
+            if(prodotto[index].quantita < 20){
+                // aumenta la quantità del prodotto 
+                prodotto[index].quantita++;
+            }
+            this.prezzo_prodotti = this.calcoloTotale();
+            this.sincronizza_carrello();
+            
       },
       addCart(plate){
           this.cartAdd.id = plate.id;
