@@ -62,11 +62,13 @@
         <div class="text-center main_page">
           <h2>Menu</h2>
           <div class="d-flex flex-wrap justify-content-center">
+
               <div v-for="plate in plates" :key="plate.id" class="card">
                   <h5>{{ plate.name }}</h5>
                   <img :src="plate.img" :alt="plate.name">
                   <button @click="addCart(plate)">Aggiungi al carrello</button>
               </div>
+
           </div>
         </div>
       </div>
@@ -76,11 +78,16 @@
 </template>
 
 <script>
+import Button from '../components/Button-Counter';
 export default {
     name: 'Restaurant',
+    components:{
+        Button,
+    },
     data(){
       return{
         plates: [],
+
         plate: {
           id: '',
           name: '',
@@ -101,6 +108,7 @@ export default {
         badge: '0',
         quantity: 1,
         totalPrice: 0
+
       }
     },
     methods: {
@@ -134,7 +142,7 @@ export default {
         axios.
         get(`http://127.0.0.1:8000/api/restaurant/${slug}`)
         .then((res)=>{
-          console.log(res.data[0].plates);
+          // console.log(res.data[0].plates);
           this.plates = res.data[0].plates;
           this.plates.forEach(element => {
               element['quantity'] = 0;
@@ -144,6 +152,47 @@ export default {
         .catch((err)=>{
            console.log(err);
         });
+
+      },
+      AddToCart: function(plate) {
+        if (!plate.quantity) {
+          plate.quantity = this.CounterListener();
+        };
+        if (this.cart.length == 0) {
+          this.cart.push(plate);
+
+          // console.log(this.cart);
+          // console.log(plate);
+          this.SavePlate();
+        } else {
+          // console.log(this.cart);
+            this.cart.forEach(element => {
+              if (element.id == plate.id) {
+                this.added = true;
+                // console.log(element.id)
+              };
+              
+            });
+            if (this.added == false) {
+                this.cart.push(plate);
+                this.SavePlate();
+              } else {
+                this.added = false;
+              }
+              console.log(plate)
+        }
+      },
+      SavePlate: function() {
+        const parsed = JSON.stringify(this.cart);
+        localStorage.setItem('cart', parsed);
+      },
+      RemoveFromCart(n) {
+        this.cart.splice(n, 1);
+        this.SavePlate();
+      },
+      CounterListener: function(count) {
+        console.log(count);
+
       }
     },
     created: function(){
