@@ -1,7 +1,40 @@
 <template>
-    <div class="sfondo">
+<div class="my_plates">
+  <div class="row mt-2 mb-2">
+    <div class="col md-10">
+      <div class="col md-2 text-right">
+        <button class="btn btn-primary">
+          {{ badge }}
+        </button>
+        <div>
+          <h5>Cart</h5>
+          <button>&times;</button>
+        </div>
+
+        <table>
+          <tbody>
+              <tr v-for="(cart, n) in carts" :key="cart.id">
+                  <td>{{ cart.name }}</td>
+                  <td>{{ cart.price }}</td>
+                  <td></td>
+                  <td>
+                    <button @click="removeCart(n)"> X </button>
+                  </td>
+              </tr>
+          </tbody>
+        </table>
+
+        <div>
+          Totale Prezzo: {{ totalPrice }}
+          <button>Checkout</button>
+        </div>
+      </div>
+    </div>
+
+  </div>
+  <div class="sfondo">
       <div class="wrapper container">
-        <div class="cart w-400">
+        <!-- <div class="cart w-400">
           <h3>Il tuo carello</h3>
           <table class="table table-striped">
             <thead>
@@ -24,24 +57,22 @@
               </tr>
             </tbody>
           </table>
-        </div>
+        </div> -->
         
-        <div class="my-4 text-center">
+        <div class="text-center main_page">
           <h2>Menu</h2>
           <div class="d-flex flex-wrap justify-content-center">
-            <div 
-            v-for="plate in plates" 
-            :key="plate.id"
-            class="card"
-            >
-              <h5>{{ plate.name }}</h5>
-              <img :src="plate.img" :alt="plate.name">
-              <button @click="AddToCart(plate)">Add</button>
-            </div>
+              <div v-for="plate in plates" :key="plate.id" class="card">
+                  <h5>{{ plate.name }}</h5>
+                  <img :src="plate.img" :alt="plate.name">
+                  <button @click="addCart(plate)">Aggiungi al carrello</button>
+              </div>
           </div>
         </div>
       </div>
     </div>
+</div>
+
 </template>
 
 <script>
@@ -50,73 +81,75 @@ export default {
     data(){
       return{
         plates: [],
-        cart: [],
-        added: false
+        plate: {
+          id: '',
+          name: '',
+          description: '',
+          price: '',
+          quantity: ''
+        },
+        add: true,
+        edit: false,
+        carts: [],
+        cartAdd: {
+          id: '',
+          name: '',
+          description: '',
+          price: '',
+          quantity: ''
+        },
+        badge: '0',
+        quantity: 1,
+        totalPrice: 0
       }
     },
     methods: {
+      viewCart(){
+          if(localStorage.getItem('carts')){
+            this.carts = JSON.parse(localStorage.getItem('carts'));
+            this.badge = this.carts.length;
+            this.totalPrice = this.carts.reduce((total, item)=>{
+                return total + this.quantity * item.price;
+            }, 0)
+          }
+      },
+      addCart(plate){
+          this.cartAdd.id = plate.id;
+          this.cartAdd.name = plate.name;
+          this.cartAdd.price = plate.price;
+          this.cartAdd.quantity = plate.quantity;
+          this.carts.push(this.cartAdd);
+          this.storeCart();
+      },
+      removeCart(plate){
+        this.carts.splice(plate, 1);
+        this.storeCart();
+      },
+      storeCart(){
+          let parsed = JSON.stringify(this.carts);
+          localStorage.setItem('carts', parsed);
+          this.viewCart();
+      },
       getRestaurant: function(slug){
         axios.
         get(`http://127.0.0.1:8000/api/restaurant/${slug}`)
         .then((res)=>{
           console.log(res.data[0].plates);
           this.plates = res.data[0].plates;
+          this.plates.forEach(element => {
+              element['quantity'] = 0;
+          });
+          //console.log(this.plates);
         })
         .catch((err)=>{
            console.log(err);
         });
-      },
-      AddToCart: function(plate) {
-        if (this.cart.length == 0) {
-          // this.cart=[];
-          this.cart.push(plate);
-          // console.log(this.cart);
-          console.log(plate);
-          this.SavePlate();
-        } else {
-          // console.log(this.cart);
-            this.cart.forEach(element => {
-              if (element.id == plate.id) {
-                this.added = true;
-                // console.log(element.id)
-              };
-              
-            });
-            if (this.added == false) {
-                this.cart.push(plate);
-                this.SavePlate();
-              } else {
-                this.added = false;
-              }
-        }
-      },
-      SavePlate: function() {
-        const parsed = JSON.stringify(this.cart);
-        localStorage.setItem('cart', parsed);
-      },
-      RemoveFromCart(n) {
-        this.cart.splice(n, 1);
-        this.SavePlate();
       }
     },
-
     created: function(){
       this.getRestaurant(this.$route.params.slug);
-      console.log(this.cart)
-    },
-
-    mounted: function() {
-        if (localStorage.getItem('cart')) {
-        try {
-          this.cart = JSON.parse(localStorage.getItem('cart'));
-        } catch(e) {
-          localStorage.removeItem('cart');
-        }
-      }
-    },
-
-    updated() {
-        console.log(this.cart)
+      this.viewCart();
+      //console.log(this.cart)
     }
 }
 </script>
@@ -124,7 +157,7 @@ export default {
 <style lang="scss" scoped>
 
   .sfondo {
-    height: 100vh;
+    height: auto;
     background-color: white;
   }
   
@@ -150,5 +183,9 @@ export default {
     transform: translateY(-20%);
     width: 500px;
     padding: 0 50px;
+  }
+
+  .main_page {
+    padding-bottom: 50px;
   }
 </style>
