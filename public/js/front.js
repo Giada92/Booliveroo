@@ -2370,6 +2370,7 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 
+
 /* harmony default export */ __webpack_exports__["default"] = ({
   name: 'Restaurant',
   components: {
@@ -2383,7 +2384,7 @@ __webpack_require__.r(__webpack_exports__);
         name: '',
         description: '',
         price: '',
-        quantity: ''
+        quantity: 2
       },
       add: true,
       edit: false,
@@ -2393,32 +2394,66 @@ __webpack_require__.r(__webpack_exports__);
         name: '',
         description: '',
         price: '',
-        quantity: ''
+        quantity: 1
       },
       badge: '0',
-      quantity: 1,
-      totalPrice: 0
+      quantity: 2,
+      totalPrice: 0,
+      esistente: false
     };
   },
   methods: {
     viewCart: function viewCart() {
-      var _this = this;
-
       if (localStorage.getItem('carts')) {
         this.carts = JSON.parse(localStorage.getItem('carts'));
         this.badge = this.carts.length;
-        this.totalPrice = this.carts.reduce(function (total, item) {
-          return total + _this.quantity * item.price;
+        this.totalPrice = this.carts.reduce(function (totalPrice, item) {
+          //console.log(this.carts)
+          //console.log(item);
+          return totalPrice + item.quantity * item.price;
         }, 0);
       }
+    },
+    upQuantity: function upQuantity(cart) {
+      //console.log(cart);
+      //console.log(n);
+      cart.quantity++;
+      this.storeCart();
+    },
+    removeQuantity: function removeQuantity(cart) {
+      //console.log(cart);
+      //console.log(n);
+      if (cart.quantity > 1) {
+        cart.quantity--;
+      } else {
+        this.removeCart(cart);
+      }
+
+      this.storeCart();
     },
     addCart: function addCart(plate) {
       this.cartAdd.id = plate.id;
       this.cartAdd.name = plate.name;
       this.cartAdd.price = plate.price;
-      this.cartAdd.quantity = plate.quantity;
+      this.cartAdd.quantity = 1;
       this.carts.push(this.cartAdd);
       this.storeCart();
+    },
+    controlla: function controlla(plate) {
+      var _this = this;
+
+      this.carts.forEach(function (el) {
+        if (el.id == plate.id) {
+          _this.esistente = true;
+        }
+      });
+
+      if (this.esistente == false) {
+        this.addCart(plate);
+      } else {
+        alert('Cambia la quantità dal carrello');
+        this.esistente = false;
+      }
     },
     removeCart: function removeCart(plate) {
       this.carts.splice(plate, 1);
@@ -2444,51 +2479,6 @@ __webpack_require__.r(__webpack_exports__);
       })["catch"](function (err) {
         console.log(err);
       });
-    },
-    AddToCart: function AddToCart(plate) {
-      var _this3 = this;
-
-      if (!plate.quantity) {
-        plate.quantity = this.CounterListener();
-      }
-
-      ;
-
-      if (this.cart.length == 0) {
-        this.cart.push(plate); // console.log(this.cart);
-        // console.log(plate);
-
-        this.SavePlate();
-      } else {
-        // console.log(this.cart);
-        this.cart.forEach(function (element) {
-          if (element.id == plate.id) {
-            _this3.added = true; // console.log(element.id)
-          }
-
-          ;
-        });
-
-        if (this.added == false) {
-          this.cart.push(plate);
-          this.SavePlate();
-        } else {
-          this.added = false;
-        }
-
-        console.log(plate);
-      }
-    },
-    SavePlate: function SavePlate() {
-      var parsed = JSON.stringify(this.cart);
-      localStorage.setItem('cart', parsed);
-    },
-    RemoveFromCart: function RemoveFromCart(n) {
-      this.cart.splice(n, 1);
-      this.SavePlate();
-    },
-    CounterListener: function CounterListener(count) {
-      console.log(count);
     }
   },
   created: function created() {
@@ -2549,7 +2539,7 @@ exports = module.exports = __webpack_require__(/*! ../../../node_modules/css-loa
 
 
 // module
-exports.push([module.i, "#research[data-v-1f42fb90] {\n  position: fixed;\n  background: white;\n  opacity: 0;\n  transition: 0.2s;\n  top: 10px;\n  left: 50%;\n  transform: translateX(-50%);\n  padding: 0.5rem;\n  box-shadow: 0 0 30px 2px linear-gradient(90deg, #ee3c4a, #fc8237);\n  border-radius: 50px;\n  width: 35%;\n  z-index: 11;\n}\n#research i[data-v-1f42fb90] {\n  position: absolute;\n  top: 50%;\n  right: 3%;\n  transform: translateY(-50%);\n  color: #fc8237;\n  font-size: 25px;\n}\n#research.sticky[data-v-1f42fb90] {\n  opacity: 1;\n}\n.search-input[data-v-1f42fb90] {\n  width: 90%;\n  border: none;\n  font-size: 18px;\n}\n.search-input[data-v-1f42fb90]:focus {\n  border: none;\n  outline: none;\n}\n#boot-logo[data-v-1f42fb90] {\n  opacity: 0;\n}\n#logo[data-v-1f42fb90] {\n  color: white;\n  position: absolute;\n  top: 0;\n  left: 50%;\n  transform: translateX(-50%);\n  z-index: 11;\n  font-weight: 700;\n  color: white;\n  text-decoration: none;\n  font-size: 2em;\n  text-transform: uppercase;\n  letter-spacing: 2px;\n  transition: 2s;\n}\nnav[data-v-1f42fb90] {\n  position: fixed;\n  top: 0;\n  left: 0;\n  width: 100%;\n  height: 65px;\n  display: flex;\n  justify-content: space-between;\n  align-items: center;\n  transition: 0.8s;\n  padding: 40px 100px;\n  opacity: 0;\n  z-index: 10;\n}\nnav .logo[data-v-1f42fb90] {\n  position: relative;\n  font-weight: 700;\n  color: white;\n  text-decoration: none;\n  font-size: 2em;\n  text-transform: uppercase;\n  letter-spacing: 2px;\n  transition: 0.6s;\n  opacity: 0;\n}\nnav ul[data-v-1f42fb90] {\n  position: relative;\n  display: flex;\n  justify-content: center;\n  align-items: center;\n  margin: 0;\n}\nnav ul li[data-v-1f42fb90] {\n  position: relative;\n  list-style: none;\n}\nnav ul li a[data-v-1f42fb90] {\n  position: relative;\n  margin: 0 15px;\n  text-decoration: none;\n  color: white;\n  letter-spacing: 2px;\n  font-weight: 500px;\n  transition: 0.6s;\n}\nnav.sticky[data-v-1f42fb90] {\n  opacity: 1;\n  padding: 10px 100px;\n  background-image: linear-gradient(90deg, #ee3c4a, #fc8237);\n}\n#logo.sticky[data-v-1f42fb90] {\n  position: fixed;\n  top: -0.5%;\n  left: 7.5%;\n}", ""]);
+exports.push([module.i, "#research[data-v-1f42fb90] {\n  position: fixed;\n  background: white;\n  opacity: 0;\n  transition: 0.2s;\n  top: 10px;\n  left: 50%;\n  transform: translateX(-50%);\n  padding: 0.5rem;\n  box-shadow: 0 0 30px 2px linear-gradient(90deg, #ee3c4a, #fc8237);\n  border-radius: 50px;\n  width: 35%;\n  z-index: 11;\n}\n#research i[data-v-1f42fb90] {\n  position: absolute;\n  top: 50%;\n  right: 3%;\n  transform: translateY(-50%);\n  color: #fc8237;\n  font-size: 25px;\n}\n#research.sticky[data-v-1f42fb90] {\n  opacity: 1;\n}\n.search-input[data-v-1f42fb90] {\n  width: 90%;\n  border: none;\n  font-size: 18px;\n}\n.search-input[data-v-1f42fb90]:focus {\n  border: none;\n  outline: none;\n}\n#boot-logo[data-v-1f42fb90] {\n  opacity: 0;\n}\n#logo[data-v-1f42fb90] {\n  color: white;\n  position: absolute;\n  top: 0;\n  left: 50%;\n  transform: translateX(-50%);\n  z-index: 11;\n  font-weight: 700;\n  color: white;\n  text-decoration: none;\n  font-size: 2em;\n  text-transform: uppercase;\n  letter-spacing: 2px;\n  transition: 2s;\n}\nnav[data-v-1f42fb90] {\n  position: fixed;\n  top: 0;\n  left: 0;\n  width: 100%;\n  height: 65px;\n  display: flex;\n  justify-content: space-between;\n  align-items: center;\n  transition: 0.8s;\n  padding: 40px 100px;\n  opacity: 0;\n  z-index: 10;\n}\nnav .logo[data-v-1f42fb90] {\n  position: relative;\n  font-weight: 700;\n  color: white;\n  text-decoration: none;\n  font-size: 2em;\n  text-transform: uppercase;\n  letter-spacing: 2px;\n  transition: 0.6s;\n  opacity: 0;\n}\nnav ul[data-v-1f42fb90] {\n  position: relative;\n  display: flex;\n  justify-content: center;\n  align-items: center;\n  margin: 0;\n}\nnav ul li[data-v-1f42fb90] {\n  position: relative;\n  list-style: none;\n}\nnav ul li a[data-v-1f42fb90] {\n  position: relative;\n  margin: 0 15px;\n  text-decoration: none;\n  color: whitesmoke;\n  letter-spacing: 2px;\n  font-weight: 500px;\n  transition: 0.6s;\n}\nnav.sticky[data-v-1f42fb90] {\n  opacity: 1;\n  padding: 10px 100px;\n  background-image: linear-gradient(90deg, #ee3c4a, #fc8237);\n}\n#logo.sticky[data-v-1f42fb90] {\n  position: fixed;\n  top: -0.5%;\n  left: 7.5%;\n}", ""]);
 
 // exports
 
@@ -4310,7 +4300,7 @@ var render = function() {
   var _vm = this
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
-  return _c("div", { staticClass: "back-white" }, [
+  return _c("div", { staticClass: "sfondo" }, [
     _c("div", { staticClass: "wrapper container-fluid" }, [
       _c("div", { staticClass: "row" }, [
         _c("div", { staticClass: "my-4 text-center col-lg-6 offset-lg-3" }, [
@@ -4331,7 +4321,7 @@ var render = function() {
                     staticClass: "btn btn-sm",
                     on: {
                       click: function($event) {
-                        return _vm.addCart(plate)
+                        return _vm.controlla(plate)
                       }
                     }
                   },
@@ -4374,7 +4364,37 @@ var render = function() {
                   _vm._v(" "),
                   _c("td", [_vm._v(_vm._s(cart.price) + " €")]),
                   _vm._v(" "),
-                  _c("td", [_vm._v("1")]),
+
+                  _c("td", [
+                    _c(
+                      "button",
+                      {
+                        on: {
+                          click: function($event) {
+                            return _vm.upQuantity(cart, n)
+                          }
+                        }
+                      },
+                      [_vm._v("+")]
+                    )
+                  ]),
+                  _vm._v(" "),
+                  _c("td", [_vm._v(_vm._s(cart.quantity))]),
+                  _vm._v(" "),
+                  _c("td", [
+                    _c(
+                      "button",
+                      {
+                        on: {
+                          click: function($event) {
+                            return _vm.removeQuantity(cart, n)
+                          }
+                        }
+                      },
+                      [_vm._v("-")]
+                    )
+                  ]),
+
                   _vm._v(" "),
                   _c(
                     "td",
@@ -4432,9 +4452,11 @@ var staticRenderFns = [
         _vm._v(" "),
         _c("th", [_vm._v("Prezzo")]),
         _vm._v(" "),
+
         _c("th", [_vm._v("Quantita")]),
         _vm._v(" "),
         _c("th", [_vm._v("Elimina")])
+
       ])
     ])
   }
@@ -20441,7 +20463,7 @@ var router = new vue_router__WEBPACK_IMPORTED_MODULE_1__["default"]({
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__(/*! C:\Users\Ale\Desktop\Progetto Finale\laravel-qualcosa\resources\js\front.js */"./resources/js/front.js");
+module.exports = __webpack_require__(/*! C:\Users\damy1\boolean-php\laravel-qualcosa\resources\js\front.js */"./resources/js/front.js");
 
 
 /***/ })

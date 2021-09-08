@@ -8,7 +8,7 @@
         <h3>{{ $plate->name }}</h3>
 
         <span>Immagine di Copertina</span>
-        <img src="{{ asset('storage/' . $plate->img) }}" alt="{{ $plate->name }}" style="width: 300px">
+        <img src="{{ asset('storage/' . $plate->img) }}" alt="{{ $plate->name }}" style="width: 200px">
         {{-- <img src="{{ $plate->img }}" alt="{{ $plate->name }}" style="width: 150px"> --}}
 
         <span>Prezzo</span>
