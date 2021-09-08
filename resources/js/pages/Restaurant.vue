@@ -13,45 +13,50 @@
               >
                 <h5>{{ plate.name }}</h5>
                 <img :src="plate.img" :alt="plate.name">
+
                 <div v-if="plate.veg == 1"><i class="fas fa-leaf"></i></div>
-                <button @click="controlla(plate)">Aggiungi al carrello</button>
+                <button class="btn btn-sm" @click="controlla(plate)">Aggiungi al carrello</button>
+
               </div>
             </div>
           </div>
 
-          <div class="cart col-lg-3 mt-5">
-            <h3>Il tuo carello</h3>
-            <button class="btn btn-primary">
-                    {{ badge }}
-            </button>
-            <div>
-                <h5>Cart</h5>
+          <div class="cart col-lg-3">
+            <div class="d-flex justify-content-between align-items-center mb-1">
+              <h3>Il tuo carello</h3>
+              <button class="btn btn-gradient">
+                      {{ badge }}
+              </button>
             </div>
-            <table class="table table-striped">
+            <table class="table">
               <thead>
                 <tr>
                   <th>Piatto</th>
                   <th>Prezzo</th>
-                  <th>Quantità</th>
-                  <th>Azione</th>
+
+                  <th>Quantita</th>
+                  <th>Elimina</th>
+
                 </tr>
               </thead>
               <tbody>
                     <tr v-for="(cart, n) in carts" :key="cart.id">
                         <td>{{ cart.name }}</td>
-                        <td>{{ cart.price }}</td>
+
+                        <td>{{ cart.price }} €</td>
                         <td><button @click="upQuantity(cart, n)">+</button></td>
                         <td>{{ cart.quantity }}</td>
                         <td><button @click="removeQuantity(cart, n)">-</button></td>
-                        <td>
-                            <button @click="removeCart(n)"> X </button>
+                        <td class="d-flex justify-content-center align-items-center">
+                            <i @click="removeCart(n)" class="fas fa-times"></i>
+
                         </td>
                     </tr>
                 </tbody>
             </table>
-            <div>
-                Totale Prezzo: {{ totalPrice }}
-                <button>Checkout</button>
+            <div class="d-flex justify-content-between align-items-center">
+                <h4>Totale Prezzo: {{ totalPrice.toFixed(2) }} €</h4>
+                <button class="btn btn-gradient btn-sm">Paga</button>
             </div>
           </div>
         </div>
@@ -184,6 +189,11 @@ export default {
   height: auto;
   background-color: white;
 }
+.fa-times{
+  color: red;
+  font-size: 23px;
+  cursor: pointer;
+}
 
 .wrapper {
   margin-top: 100px;
@@ -191,16 +201,31 @@ export default {
 
 .card {
   display: flex;
+  padding: 5px;
   flex-direction: column;
-  justify-content: space-around;
+  justify-content: space-between;
   align-items: center;
-  width: calc(20% - 30px);
-  height: 200px;
+  width: calc(30% - 30px);
+  height: 325px;
   margin: 30px;
+  border: 2px solid orangered;
+  border-radius: 15px;
+  button {
+    background: linear-gradient(90deg, #ee3c4a, #fc8237);
+    border: none;
+    color: white;
+  }
+}
+
+img {
+  width: 100%;
+  height: 80%;
+  object-fit: cover;
 }
 
 .cart {
   padding: 0 50px;
+  margin-top: 100px;
 }
 
 .main_page {

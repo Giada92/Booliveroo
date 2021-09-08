@@ -2369,10 +2369,6 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
-//
-//
-//
-//
 
 /* harmony default export */ __webpack_exports__["default"] = ({
   name: 'Restaurant',
@@ -2580,7 +2576,9 @@ exports = module.exports = __webpack_require__(/*! ../../../node_modules/css-loa
 
 
 // module
-exports.push([module.i, ".back-white[data-v-25de3706] {\n  height: auto;\n  background-color: white;\n}\n.wrapper[data-v-25de3706] {\n  margin-top: 100px;\n}\n.card[data-v-25de3706] {\n  display: flex;\n  flex-direction: column;\n  justify-content: space-around;\n  align-items: center;\n  width: calc(20% - 30px);\n  height: 200px;\n  margin: 30px;\n}\n.cart[data-v-25de3706] {\n  padding: 0 50px;\n}\n.main_page[data-v-25de3706] {\n  padding-bottom: 50px;\n}\n.fa-leaf[data-v-25de3706] {\n  color: green;\n}", ""]);
+
+exports.push([module.i, ".back-white[data-v-25de3706] {\n  height: auto;\n  background-color: white;\n}\n.fa-times[data-v-25de3706] {\n  color: red;\n  font-size: 23px;\n  cursor: pointer;\n}\n.wrapper[data-v-25de3706] {\n  margin-top: 100px;\n}\n.card[data-v-25de3706] {\n  display: flex;\n  padding: 5px;\n  flex-direction: column;\n  justify-content: space-between;\n  align-items: center;\n  width: calc(30% - 30px);\n  height: 325px;\n  margin: 30px;\n  border: 2px solid orangered;\n  border-radius: 15px;\n}\n.card button[data-v-25de3706] {\n  background: linear-gradient(90deg, #ee3c4a, #fc8237);\n  border: none;\n  color: white;\n}\nimg[data-v-25de3706] {\n  width: 100%;\n  height: 80%;\n  -o-object-fit: cover;\n     object-fit: cover;\n}\n.cart[data-v-25de3706] {\n  padding: 0 50px;\n  margin-top: 100px;\n}\n.main_page[data-v-25de3706] {\n  padding-bottom: 50px;\n}", ""]);
+
 
 // exports
 
@@ -2599,7 +2597,7 @@ exports = module.exports = __webpack_require__(/*! ../../node_modules/css-loader
 
 
 // module
-exports.push([module.i, "\nbody {\n    background: url('/img/jumbotron-gradientred.jpg') fixed no-repeat;\n}\n", ""]);
+exports.push([module.i, "\nbody {\n    background: url('/img/jumbotron-gradientred.jpg') fixed no-repeat;\n}\n.btn-gradient {\n    background: linear-gradient(90deg, #ee3c4a, #fc8237);\n    color: white;\n}\n", ""]);
 
 // exports
 
@@ -4325,6 +4323,7 @@ var render = function() {
                 _c(
                   "button",
                   {
+                    staticClass: "btn btn-sm",
                     on: {
                       click: function($event) {
                         return _vm.controlla(plate)
@@ -4339,17 +4338,28 @@ var render = function() {
           )
         ]),
         _vm._v(" "),
-        _c("div", { staticClass: "cart col-lg-3 mt-5" }, [
-          _c("h3", [_vm._v("Il tuo carello")]),
+        _c("div", { staticClass: "cart col-lg-3" }, [
+          _c(
+            "div",
+            {
+              staticClass:
+                "d-flex justify-content-between align-items-center mb-1"
+            },
+            [
+              _c("h3", [_vm._v("Il tuo carello")]),
+              _vm._v(" "),
+              _c("button", { staticClass: "btn btn-gradient" }, [
+                _vm._v(
+                  "\n                    " +
+                    _vm._s(_vm.badge) +
+                    "\n            "
+                )
+              ])
+            ]
+          ),
           _vm._v(" "),
-          _c("button", { staticClass: "btn btn-primary" }, [
-            _vm._v("\n                  " + _vm._s(_vm.badge) + "\n          ")
-          ]),
-          _vm._v(" "),
-          _vm._m(0),
-          _vm._v(" "),
-          _c("table", { staticClass: "table table-striped" }, [
-            _vm._m(1),
+          _c("table", { staticClass: "table" }, [
+            _vm._m(0),
             _vm._v(" "),
             _c(
               "tbody",
@@ -4357,8 +4367,9 @@ var render = function() {
                 return _c("tr", { key: cart.id }, [
                   _c("td", [_vm._v(_vm._s(cart.name))]),
                   _vm._v(" "),
-                  _c("td", [_vm._v(_vm._s(cart.price))]),
+                  _c("td", [_vm._v(_vm._s(cart.price) + " €")]),
                   _vm._v(" "),
+
                   _c("td", [
                     _c(
                       "button",
@@ -4388,34 +4399,48 @@ var render = function() {
                       [_vm._v("-")]
                     )
                   ]),
+
                   _vm._v(" "),
-                  _c("td", [
-                    _c(
-                      "button",
-                      {
+                  _c(
+                    "td",
+                    {
+                      staticClass:
+                        "d-flex justify-content-center align-items-center"
+                    },
+                    [
+                      _c("i", {
+                        staticClass: "fas fa-times",
                         on: {
                           click: function($event) {
                             return _vm.removeCart(n)
                           }
                         }
-                      },
-                      [_vm._v(" X ")]
-                    )
-                  ])
+                      })
+                    ]
+                  )
                 ])
               }),
               0
             )
           ]),
           _vm._v(" "),
-          _c("div", [
-            _vm._v(
-              "\n              Totale Prezzo: " +
-                _vm._s(_vm.totalPrice) +
-                "\n              "
-            ),
-            _c("button", [_vm._v("Checkout")])
-          ])
+          _c(
+            "div",
+            {
+              staticClass: "d-flex justify-content-between align-items-center"
+            },
+            [
+              _c("h4", [
+                _vm._v(
+                  "Totale Prezzo: " + _vm._s(_vm.totalPrice.toFixed(2)) + " €"
+                )
+              ]),
+              _vm._v(" "),
+              _c("button", { staticClass: "btn btn-gradient btn-sm" }, [
+                _vm._v("Paga")
+              ])
+            ]
+          )
         ])
       ])
     ])
@@ -4426,21 +4451,17 @@ var staticRenderFns = [
     var _vm = this
     var _h = _vm.$createElement
     var _c = _vm._self._c || _h
-    return _c("div", [_c("h5", [_vm._v("Cart")])])
-  },
-  function() {
-    var _vm = this
-    var _h = _vm.$createElement
-    var _c = _vm._self._c || _h
     return _c("thead", [
       _c("tr", [
         _c("th", [_vm._v("Piatto")]),
         _vm._v(" "),
         _c("th", [_vm._v("Prezzo")]),
         _vm._v(" "),
-        _c("th", [_vm._v("Quantità")]),
+
+        _c("th", [_vm._v("Quantita")]),
         _vm._v(" "),
-        _c("th", [_vm._v("Azione")])
+        _c("th", [_vm._v("Elimina")])
+
       ])
     ])
   }

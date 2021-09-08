@@ -55,6 +55,9 @@
         border-radius: 10px;
     }
 
+    body {
+        background-image: linear-gradient(90deg, #ee3c4a, #fc8237);
+    }
 
 </style>
     

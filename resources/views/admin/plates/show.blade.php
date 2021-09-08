@@ -57,32 +57,36 @@
 
     <style scoped>
 
-        span {
-            margin-top: 40px;
-            color: #703d50;
-            font-style: italic;
-        }
+    span {
+        margin-top: 40px;
+        color: #703d50;
+        font-style: italic;
+    }
 
-        .btn-create {
-        background-color:  #ee3c4a;
-        color: white;
-        font-weight: bold;
-        }
+    .btn-create {
+    background-color:  #ee3c4a;
+    color: white;
+    font-weight: bold;
+    }
 
-        .btn-go-back {
-        background-color: #703d50;
-        color:  white;
-        font-weight: bold;
-        }
-        .btn-enter {
-        background-color: #ee3c4a;
-        color: white;
-        font-weight: bold;
-        }
+    .btn-go-back {
+    background-color: #703d50;
+    color:  white;
+    font-weight: bold;
+    }
+    .btn-enter {
+    background-color: #ee3c4a;
+    color: white;
+    font-weight: bold;
+    }
 
-        p {
-            font-size: 18px;
-        }
+    p {
+        font-size: 18px;
+    }
+
+    body {
+    background-image: linear-gradient(90deg, #ee3c4a, #fc8237);
+    }
 
     </style>
 @endsection
