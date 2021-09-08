@@ -192,7 +192,7 @@ nav ul {
             position: relative;
             margin: 0 15px;
             text-decoration: none;
-            color: white;
+            color: whitesmoke;
             letter-spacing: 2px;
             font-weight: 500px;
             transition: 0.6s;
