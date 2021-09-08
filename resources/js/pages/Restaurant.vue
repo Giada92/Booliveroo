@@ -13,6 +13,7 @@
               >
                 <h5>{{ plate.name }}</h5>
                 <img :src="plate.img" :alt="plate.name">
+                <div v-if="plate.veg == 1"><i class="fas fa-leaf"></i></div>
                 <button @click="controlla(plate)">Aggiungi al carrello</button>
               </div>
             </div>
@@ -204,5 +205,9 @@ export default {
 
 .main_page {
   padding-bottom: 50px;
+}
+
+.fa-leaf {
+  color: green;
 }
 </style>

@@ -2372,6 +2372,7 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
 
 /* harmony default export */ __webpack_exports__["default"] = ({
   name: 'Restaurant',
@@ -2579,7 +2580,7 @@ exports = module.exports = __webpack_require__(/*! ../../../node_modules/css-loa
 
 
 // module
-exports.push([module.i, ".back-white[data-v-25de3706] {\n  height: auto;\n  background-color: white;\n}\n.wrapper[data-v-25de3706] {\n  margin-top: 100px;\n}\n.card[data-v-25de3706] {\n  display: flex;\n  flex-direction: column;\n  justify-content: space-around;\n  align-items: center;\n  width: calc(20% - 30px);\n  height: 200px;\n  margin: 30px;\n}\n.cart[data-v-25de3706] {\n  padding: 0 50px;\n}\n.main_page[data-v-25de3706] {\n  padding-bottom: 50px;\n}", ""]);
+exports.push([module.i, ".back-white[data-v-25de3706] {\n  height: auto;\n  background-color: white;\n}\n.wrapper[data-v-25de3706] {\n  margin-top: 100px;\n}\n.card[data-v-25de3706] {\n  display: flex;\n  flex-direction: column;\n  justify-content: space-around;\n  align-items: center;\n  width: calc(20% - 30px);\n  height: 200px;\n  margin: 30px;\n}\n.cart[data-v-25de3706] {\n  padding: 0 50px;\n}\n.main_page[data-v-25de3706] {\n  padding-bottom: 50px;\n}\n.fa-leaf[data-v-25de3706] {\n  color: green;\n}", ""]);
 
 // exports
 
@@ -4316,6 +4317,10 @@ var render = function() {
                 _c("h5", [_vm._v(_vm._s(plate.name))]),
                 _vm._v(" "),
                 _c("img", { attrs: { src: plate.img, alt: plate.name } }),
+                _vm._v(" "),
+                plate.veg == 1
+                  ? _c("div", [_c("i", { staticClass: "fas fa-leaf" })])
+                  : _vm._e(),
                 _vm._v(" "),
                 _c(
                   "button",
@@ -20442,7 +20447,7 @@ var router = new vue_router__WEBPACK_IMPORTED_MODULE_1__["default"]({
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__(/*! C:\Users\damy1\boolean-php\laravel-qualcosa\resources\js\front.js */"./resources/js/front.js");
+module.exports = __webpack_require__(/*! C:\Users\windows\Desktop\laravel-qualcosa\resources\js\front.js */"./resources/js/front.js");
 
 
 /***/ })
