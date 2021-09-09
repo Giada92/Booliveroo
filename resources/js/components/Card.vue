@@ -40,6 +40,9 @@ export default {
     position: relative;
     height: 200px;
     width: 300px;
+    margin-top: 30px;
+    margin-right: 15px;
+    margin-left: 15px;
     object-fit: cover;
     border-radius: 5%;
     overflow: hidden;

@@ -30,7 +30,9 @@ export default {
         background: url('~/img/jumbotron-gradientred.jpg') fixed no-repeat;
         background-size: cover;
     }
-
+    html {   
+        scroll-behavior: smooth;
+    }
     .btn-gradient {
         background: linear-gradient(90deg, #ee3c4a, #fc8237);
         color: white;
