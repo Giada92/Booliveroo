@@ -54,7 +54,7 @@
                         <a href="#">Contatti</a>
                     </li>
                     <li>
-                        <a href="#">Chi siano</a>
+                        <router-link  :to="{ name: 'Chisiamo' }">Chi Siamo</router-link>
                     </li>
                     <li>
                         <a href="#">Contattaci</a>

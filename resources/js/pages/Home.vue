@@ -19,6 +19,27 @@
           :item="restaurant"
           v-for="restaurant in restaurants" :key="restaurant.id"/>
         </div>
+
+        <h2>Scegli per categoria</h2>
+        <div class="badge badge-primary" v-for="category, index in categories" :key="index" @click="selectCategory(category.name)">
+          {{ category.name }}
+        </div>
+
+        <div>
+            <div v-for="item in ristoranti_categorie" :key="`${item.id}-al`">
+              <!-- {{ item.name }}
+              {{ item.categories.name }} -->
+              <span v-for="category,index in item.categories" :key="index">
+                <!-- {{ category.name }} -->
+                <div v-show="categoriaScelta == category.name">
+                    {{ item.name }}
+                </div>
+              </span>
+            </div>
+        </div>
+        
+
+
       </div>
     </div>
   </div>
@@ -39,25 +60,44 @@ export default {
     },
     data(){
       return{
-        restaurants: []
+        restaurants: [],
+        categories: [],
+        categoriaScelta: '',
+        ristoranti_categorie: []
       }
     },
     methods: {
+        selectCategory(index){
+          this.categoriaScelta = index;
+      },
       getRestaurants: function(){
         axios.
         get('http://127.0.0.1:8000/api/restaurants')
         .then((res)=>{
-          //console.log(res.data.data);
-          this.restaurants = res.data.data;
+          console.log(res.data.prova);
+          this.ristoranti_categorie = res.data.prova;
+          this.restaurants = res.data.restaurants.data;
         })
         .catch((err)=>{
            console.log(err);
         });
+      },
+      getCategory: function(){
+          axios.
+          get('http://127.0.0.1:8000/api/categories')
+          .then((res)=>{
+            //console.log(res.data);
+            this.categories = res.data;
+          })
+          .catch((err)=>{
+            console.log(err);
+          });
+        }
+      },
+      created: function(){
+        this.getRestaurants();
+        this.getCategory();
       }
-    },
-    created: function(){
-      this.getRestaurants();
-    }
 }
 </script>
 
@@ -140,6 +180,10 @@ export default {
 .search-input:focus {
   border: none;
   outline: none;
+}
+
+.badge {
+  cursor: pointer;
 }
 
 </style>
