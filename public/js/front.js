@@ -2312,6 +2312,29 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
 
 /* harmony default export */ __webpack_exports__["default"] = ({
   name: 'Home',
@@ -2334,6 +2357,7 @@ __webpack_require__.r(__webpack_exports__);
   },
   methods: {
     selectCategory: function selectCategory(index) {
+      console.log(index);
       this.categoriaScelta = index;
     },
     getRestaurants: function getRestaurants() {
@@ -2608,7 +2632,7 @@ exports = module.exports = __webpack_require__(/*! ../../../node_modules/css-loa
 
 
 // module
-exports.push([module.i, ".card .img[data-v-b9bc2c0a] {\n  transition: all 0.8s ease-in-out;\n  position: absolute;\n  height: 100%;\n  width: 100%;\n}\n.card[data-v-b9bc2c0a] {\n  position: relative;\n  height: 200px;\n  width: 300px;\n  -o-object-fit: cover;\n     object-fit: cover;\n  border-radius: 5%;\n  overflow: hidden;\n}\n.card[data-v-b9bc2c0a]:hover {\n  cursor: pointer;\n}\n.card:hover .img[data-v-b9bc2c0a] {\n  transform: scale(1.1);\n}\n.card .container_name[data-v-b9bc2c0a] {\n  background-color: rgba(0, 0, 0, 0.3);\n  border-radius: 10px;\n  /* width: 100%;\n  height: 100%; */\n  position: absolute;\n  top: 50%;\n  left: 50%;\n  transform: translate(-50%, -50%);\n}\n.card .container_name h4[data-v-b9bc2c0a] {\n  /* opacity: 15%; */\n  color: white;\n  font-weight: 900;\n  font-size: 22px;\n  line-height: 22px;\n  margin: 0;\n  padding: 5px;\n}", ""]);
+exports.push([module.i, ".card .img[data-v-b9bc2c0a] {\n  transition: all 0.8s ease-in-out;\n  position: absolute;\n  height: 100%;\n  width: 100%;\n}\n.card[data-v-b9bc2c0a] {\n  position: relative;\n  height: 200px;\n  width: 300px;\n  margin-top: 30px;\n  margin-right: 15px;\n  margin-left: 15px;\n  -o-object-fit: cover;\n     object-fit: cover;\n  border-radius: 5%;\n  overflow: hidden;\n}\n.card[data-v-b9bc2c0a]:hover {\n  cursor: pointer;\n}\n.card:hover .img[data-v-b9bc2c0a] {\n  transform: scale(1.1);\n}\n.card .container_name[data-v-b9bc2c0a] {\n  background-color: rgba(0, 0, 0, 0.3);\n  border-radius: 10px;\n  /* width: 100%;\n  height: 100%; */\n  position: absolute;\n  top: 50%;\n  left: 50%;\n  transform: translate(-50%, -50%);\n}\n.card .container_name h4[data-v-b9bc2c0a] {\n  /* opacity: 15%; */\n  color: white;\n  font-weight: 900;\n  font-size: 22px;\n  line-height: 22px;\n  margin: 0;\n  padding: 5px;\n}", ""]);
 
 // exports
 
@@ -2665,7 +2689,7 @@ exports = module.exports = __webpack_require__(/*! ../../../node_modules/css-loa
 
 
 // module
-exports.push([module.i, ".main-page[data-v-b3c5cf30] {\n  height: 100vh;\n}\n.curvy[data-v-b3c5cf30] {\n  background-image: url(\"/img/main-wave.png\");\n  height: 100px;\n  width: 100%;\n  background-repeat: no-repeat;\n  background-size: cover;\n}\n.back-white[data-v-b3c5cf30] {\n  background-color: white;\n}\n.jumbotron[data-v-b3c5cf30] {\n  padding: 0;\n  margin: 0;\n  position: relative;\n  width: 100%;\n  height: 100vh;\n  background-color: transparent;\n  background-size: cover;\n  display: flex;\n  flex-direction: column-reverse;\n  align-items: center;\n}\n#scroll[data-v-b3c5cf30] {\n  margin-top: 380px;\n  opacity: 1;\n  transition: 0.8s;\n  display: flex;\n  flex-direction: column;\n  align-items: center;\n  color: white;\n}\n#scroll i[data-v-b3c5cf30] {\n  font-size: 60px;\n}\n#scroll.sticky[data-v-b3c5cf30] {\n  opacity: 0;\n}\n.search-bar[data-v-b3c5cf30] {\n  position: relative;\n  background: white;\n  padding: 1rem;\n  box-shadow: 0 0 30px 2px linear-gradient(90deg, #ee3c4a, #fc8237);\n  border-radius: 50px;\n  width: 35%;\n}\n.search-bar i[data-v-b3c5cf30] {\n  position: absolute;\n  top: 50%;\n  right: 3%;\n  transform: translateY(-50%);\n  color: #fc8237;\n  font-size: 25px;\n}\n.search-input[data-v-b3c5cf30] {\n  width: 90%;\n  border: none;\n  font-size: 18px;\n}\n.search-input[data-v-b3c5cf30]:focus {\n  border: none;\n  outline: none;\n}\n.badge[data-v-b3c5cf30] {\n  cursor: pointer;\n}", ""]);
+exports.push([module.i, "#categorie[data-v-b3c5cf30] {\n  margin-top: 100px;\n}\n.main-page[data-v-b3c5cf30] {\n  padding-bottom: 150px;\n  height: auto;\n}\n.curvy[data-v-b3c5cf30] {\n  background-image: url(\"/img/main-wave.png\");\n  height: 100px;\n  width: 100%;\n  background-repeat: no-repeat;\n  background-size: cover;\n}\n.back-white[data-v-b3c5cf30] {\n  background-color: white;\n}\n.jumbotron[data-v-b3c5cf30] {\n  padding: 0;\n  margin: 0;\n  position: relative;\n  width: 100%;\n  height: 100vh;\n  background-color: transparent;\n  background-size: cover;\n  display: flex;\n  flex-direction: column-reverse;\n  align-items: center;\n}\n#scroll[data-v-b3c5cf30] {\n  margin-top: 260px;\n  opacity: 1;\n  transition: 0.8s;\n  display: flex;\n  flex-direction: column;\n  align-items: center;\n  color: white;\n}\n#scroll i[data-v-b3c5cf30] {\n  font-size: 60px;\n}\n#scroll.sticky[data-v-b3c5cf30] {\n  opacity: 0;\n}\n.central-jumbo[data-v-b3c5cf30] {\n  width: 100%;\n}\n.central-jumbo h3[data-v-b3c5cf30] {\n  text-transform: uppercase;\n  color: white;\n}\n.search-bar[data-v-b3c5cf30] {\n  position: relative;\n  background: white;\n  padding: 1rem;\n  box-shadow: 0 0 30px 2px linear-gradient(90deg, #ee3c4a, #fc8237);\n  border-radius: 50px;\n  width: 35%;\n  margin-bottom: 30px;\n}\n.search-bar i[data-v-b3c5cf30] {\n  position: absolute;\n  top: 50%;\n  right: 3%;\n  transform: translateY(-50%);\n  color: #fc8237;\n  font-size: 25px;\n}\n.sushi[data-v-b3c5cf30] {\n  margin-top: 25px;\n}\n.category-selection[data-v-b3c5cf30] {\n  width: 30%;\n}\n.category-selection a[data-v-b3c5cf30] {\n  width: 100px;\n  height: 100px;\n}\n.category-selection img[data-v-b3c5cf30] {\n  width: 100%;\n  -o-object-fit: cover;\n     object-fit: cover;\n  -o-object-position: center;\n     object-position: center;\n}\n.search-input[data-v-b3c5cf30] {\n  width: 90%;\n  border: none;\n  font-size: 18px;\n}\n.search-input[data-v-b3c5cf30]:focus {\n  border: none;\n  outline: none;\n}\n.badge[data-v-b3c5cf30] {\n  cursor: pointer;\n}\n.card .img[data-v-b3c5cf30] {\n  transition: all 0.8s ease-in-out;\n  position: absolute;\n  height: 100%;\n  width: 100%;\n}\n.card[data-v-b3c5cf30] {\n  position: relative;\n  height: 200px;\n  width: 300px;\n  -o-object-fit: cover;\n     object-fit: cover;\n  border-radius: 5%;\n  margin-top: 30px;\n  margin-right: 30px;\n  margin-left: 30px;\n  overflow: hidden;\n}\n.card[data-v-b3c5cf30]:hover {\n  cursor: pointer;\n}\n.card:hover .img[data-v-b3c5cf30] {\n  transform: scale(1.1);\n}\n.card .container_name[data-v-b3c5cf30] {\n  background-color: rgba(0, 0, 0, 0.3);\n  border-radius: 10px;\n  /* width: 100%;\n  height: 100%; */\n  position: absolute;\n  top: 50%;\n  left: 50%;\n  transform: translate(-50%, -50%);\n}\n.card .container_name h4[data-v-b3c5cf30] {\n  /* opacity: 15%; */\n  color: white;\n  font-weight: 900;\n  font-size: 22px;\n  line-height: 22px;\n  margin: 0;\n  padding: 5px;\n}", ""]);
 
 // exports
 
@@ -2703,7 +2727,7 @@ exports = module.exports = __webpack_require__(/*! ../../node_modules/css-loader
 
 
 // module
-exports.push([module.i, "\nbody {\n    background: url('/img/jumbotron-gradientred.jpg') fixed no-repeat;\n    background-size: cover;\n}\n.btn-gradient {\n    background: linear-gradient(90deg, #ee3c4a, #fc8237);\n    color: white;\n}\n", ""]);
+exports.push([module.i, "\nbody {\n    background: url('/img/jumbotron-gradientred.jpg') fixed no-repeat;\n    background-size: cover;\n}\nhtml {   \n    scroll-behavior: smooth;\n}\n.btn-gradient {\n    background: linear-gradient(90deg, #ee3c4a, #fc8237);\n    color: white;\n}\n", ""]);
 
 // exports
 
@@ -4402,7 +4426,9 @@ var render = function() {
             1
           ),
           _vm._v(" "),
-          _c("h2", [_vm._v("Scegli per categoria")]),
+          _c("h2", { attrs: { id: "categorie" } }, [
+            _vm._v("Scegli per categoria")
+          ]),
           _vm._v(" "),
           _vm._l(_vm.categories, function(category, index) {
             return _c(
@@ -4416,12 +4442,13 @@ var render = function() {
                   }
                 }
               },
-              [_vm._v("\n          " + _vm._s(category.name) + "\n        ")]
+              [_c("span", [_vm._v(_vm._s(category.name))])]
             )
           }),
           _vm._v(" "),
           _c(
             "div",
+            { staticClass: "d-flex" },
             _vm._l(_vm.ristoranti_categorie, function(item) {
               return _c(
                 "div",
@@ -4441,12 +4468,36 @@ var render = function() {
                         ]
                       },
                       [
-                        _vm._v(
-                          "\n                    " +
-                            _vm._s(item.name) +
-                            "\n                "
+                        _c(
+                          "router-link",
+                          {
+                            attrs: {
+                              to: {
+                                name: "restaurant",
+                                params: { slug: item.slug }
+                              }
+                            }
+                          },
+                          [
+                            _c("div", { staticClass: "card" }, [
+                              _c("img", {
+                                staticClass: "img",
+                                attrs: {
+                                  src: "storage/" + item.cover,
+                                  alt: "item.name"
+                                }
+                              }),
+                              _vm._v(" "),
+                              _c("div", { staticClass: "container_name" }, [
+                                _c("h4", { staticClass: "card-title" }, [
+                                  _vm._v(_vm._s(item.name))
+                                ])
+                              ])
+                            ])
+                          ]
                         )
-                      ]
+                      ],
+                      1
                     )
                   ])
                 }),
@@ -4473,16 +4524,26 @@ var staticRenderFns = [
         _c("i", { staticClass: "fas fa-chevron-down" })
       ]),
       _vm._v(" "),
-      _c("div", { staticClass: "search-bar" }, [
-        _c("input", {
-          staticClass: "search-input",
-          attrs: { type: "text", placeholder: "Search..." }
-        }),
-        _vm._v(" "),
-        _c("a", { attrs: { href: "" } }, [
-          _c("i", { staticClass: "fas fa-search" })
-        ])
-      ])
+      _c(
+        "div",
+        { staticClass: "central-jumbo d-flex flex-column align-items-center" },
+        [
+          _c("div", { staticClass: "search-bar" }, [
+            _c("input", {
+              staticClass: "search-input",
+              attrs: { type: "text", placeholder: "Search..." }
+            }),
+            _vm._v(" "),
+            _c("a", { attrs: { href: "" } }, [
+              _c("i", { staticClass: "fas fa-search" })
+            ])
+          ]),
+          _vm._v(" "),
+          _c("a", { attrs: { href: "#categorie" } }, [
+            _c("h3", [_vm._v("vai alle categorie")])
+          ])
+        ]
+      )
     ])
   }
 ]
@@ -4589,11 +4650,11 @@ var render = function() {
                           staticClass: "btn btn-quantita btn-sm",
                           on: {
                             click: function($event) {
-                              return _vm.upQuantity(cart, n)
+                              return _vm.removeQuantity(cart, n)
                             }
                           }
                         },
-                        [_vm._v("+")]
+                        [_vm._v("-")]
                       ),
                       _vm._v(" "),
                       _c("span", { staticClass: "num" }, [
@@ -4606,11 +4667,11 @@ var render = function() {
                           staticClass: "btn btn-quantita btn-sm",
                           on: {
                             click: function($event) {
-                              return _vm.removeQuantity(cart, n)
+                              return _vm.upQuantity(cart, n)
                             }
                           }
                         },
-                        [_vm._v("-")]
+                        [_vm._v("+")]
                       )
                     ]
                   ),
@@ -20748,7 +20809,7 @@ var router = new vue_router__WEBPACK_IMPORTED_MODULE_1__["default"]({
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__(/*! C:\Users\Giada\Desktop\laravel-qualcosa\resources\js\front.js */"./resources/js/front.js");
+module.exports = __webpack_require__(/*! C:\Users\Ale\Desktop\Progetto Finale\laravel-qualcosa\resources\js\front.js */"./resources/js/front.js");
 
 
 /***/ })

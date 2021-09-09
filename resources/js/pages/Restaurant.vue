@@ -45,9 +45,9 @@
                         <td>{{ cart.price }} €</td>
 
                         <td class="d-flex justify-content-around align-items-center">
-                          <button class="btn btn-quantita btn-sm" @click="upQuantity(cart, n)">+</button>
-                          <span class="num">{{ cart.quantity }}</span>
                           <button class="btn btn-quantita btn-sm" @click="removeQuantity(cart, n)">-</button>
+                          <span class="num">{{ cart.quantity }}</span>
+                          <button class="btn btn-quantita btn-sm" @click="upQuantity(cart, n)">+</button>
                         </td>
                         
                         <td>

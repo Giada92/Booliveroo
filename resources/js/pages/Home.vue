@@ -5,9 +5,24 @@
         <h4>SCROLL DOWN</h4>
         <i class="fas fa-chevron-down"></i>
       </div>
-      <div class="search-bar">
-        <input type="text" class="search-input" placeholder="Search...">
-		    <a href=""><i class="fas fa-search"></i></a>
+      <div class="central-jumbo d-flex flex-column align-items-center">
+        <div class="search-bar">
+          <input type="text" class="search-input" placeholder="Search...">
+          <a href=""><i class="fas fa-search"></i></a>
+        </div>
+        <!-- v-if="category.name =='Fast-Food' || category.name =='Pizza' || category.name =='Sushi' -->
+        <!-- <div class="category-selection d-flex justify-content-around">
+          <a href="#categorie" >
+            <img src="../../../public/img/pizza-categoria.png" alt="pizza">
+          </a>
+          <a href="#categorie" ">
+            <img src="../../../public/img/burger-categoria.png" alt="burger">
+          </a>
+          <a href="#categorie" >
+            <img class="sushi" src="../../../public/img/sushi-categoria.png" alt="sushi">
+          </a>
+        </div> -->
+        <a href='#categorie'><h3>vai alle categorie</h3></a>
       </div>
     </div>
     <div class="curvy"></div>
@@ -20,19 +35,27 @@
           v-for="restaurant in restaurants" :key="restaurant.id"/>
         </div>
 
-        <h2>Scegli per categoria</h2>
+        <h2 id="categorie">Scegli per categoria</h2>
         <div class="badge badge-primary" v-for="category, index in categories" :key="index" @click="selectCategory(category.name)">
-          {{ category.name }}
+          <span>{{ category.name }}</span>
         </div>
 
-        <div>
+        <div class="d-flex">
             <div v-for="item in ristoranti_categorie" :key="`${item.id}-al`">
               <!-- {{ item.name }}
               {{ item.categories.name }} -->
               <span v-for="category,index in item.categories" :key="index">
                 <!-- {{ category.name }} -->
                 <div v-show="categoriaScelta == category.name">
-                    {{ item.name }}
+                    <!-- {{ item.name }} -->
+                  <router-link :to="{ name: 'restaurant', params: { slug: item.slug } }">
+                      <div class="card">
+                        <img :src="'storage/'+ item.cover" alt="item.name" class="img">
+                        <div class="container_name">
+                            <h4 class="card-title">{{ item.name }}</h4>
+                        </div>
+                      </div>
+                  </router-link>  
                 </div>
               </span>
             </div>
@@ -63,11 +86,12 @@ export default {
         restaurants: [],
         categories: [],
         categoriaScelta: '',
-        ristoranti_categorie: []
+        ristoranti_categorie: [],
       }
     },
     methods: {
         selectCategory(index){
+          console.log(index);
           this.categoriaScelta = index;
       },
       getRestaurants: function(){
@@ -103,9 +127,12 @@ export default {
 
 <style lang="scss" scoped>
 
+#categorie {
+  margin-top: 100px;
+}
 .main-page {
-  //padding-bottom: 250px;
-  height: 100vh;
+  padding-bottom: 150px;
+  height: auto;
 }
 
 .curvy {
@@ -140,7 +167,7 @@ export default {
   // bottom: 0%;
   // left: 50%;
   // transform: translateX(-50%);
-  margin-top: 380px;
+  margin-top: 260px;
   opacity: 1;
   transition: 0.8s;
   display: flex;
@@ -155,7 +182,13 @@ export default {
 #scroll.sticky {
   opacity: 0;
 }
-
+.central-jumbo {
+  width: 100%;
+  h3 {
+    text-transform: uppercase;
+    color: white;
+  }
+}
 .search-bar {
   position: relative;
   background:white;
@@ -163,6 +196,7 @@ export default {
 	box-shadow: 0 0 30px 2px linear-gradient(90deg, #ee3c4a, #fc8237); 
 	border-radius: 50px;
 	width: 35%;
+  margin-bottom: 30px;
   i {
     position: absolute;
     top: 50%;
@@ -170,6 +204,22 @@ export default {
     transform: translateY(-50%);
     color : #fc8237;
     font-size: 25px;
+  }
+}
+.sushi {
+  margin-top: 25px;
+}
+.category-selection {
+  width: 30%;
+  a {
+    width: 100px;
+    height: 100px;
+  }
+  img {
+    width: 100%;
+    //height: 100%;
+    object-fit: cover;
+    object-position: center;
   }
 }
 .search-input {
@@ -184,6 +234,54 @@ export default {
 
 .badge {
   cursor: pointer;
+}
+
+.card{
+    .img {
+        transition: all 0.8s ease-in-out;
+        position: absolute;
+        height: 100%;
+        width: 100%;
+    }
+}
+
+.card {
+    position: relative;
+    height: 200px;
+    width: 300px;
+    object-fit: cover;
+    border-radius: 5%;
+    margin-top: 30px;
+    margin-right: 30px;
+    margin-left: 30px;
+    overflow: hidden;
+    &:hover{
+        cursor: pointer;
+        .img {
+            transform: scale(1.1);
+        }
+    }
+
+    .container_name {
+        background-color: rgba(0, 0, 0, 0.3);
+        border-radius: 10px;
+        /* width: 100%;
+        height: 100%; */
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+
+        h4 {
+            /* opacity: 15%; */
+            color: white;
+            font-weight: 900;
+            font-size: 22px;
+            line-height: 22px;
+            margin: 0;
+            padding: 5px;
+        }
+    }
 }
 
 </style>
