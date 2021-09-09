@@ -28,6 +28,7 @@ export default {
 
     body {
         background: url('~/img/jumbotron-gradientred.jpg') fixed no-repeat;
+        background-size: cover;
     }
 
     .btn-gradient {
