@@ -82,6 +82,7 @@ export default {
           name: '',
           description: '',
           price: '',
+          restaurant_id: '',
           quantity: 2
         },
         add: true,
@@ -92,6 +93,7 @@ export default {
           name: '',
           description: '',
           price: '',
+          restaurant_id: '',
           quantity: 1
         },
         badge: '0',
@@ -130,12 +132,41 @@ export default {
             this.storeCart(); 
       },
       addCart(plate){
+        console.log(this.restaurant.id);
+        console.log(this.restaurant.plates[1].restaurant_id);
+        if(this.carts.length == 0){
           this.cartAdd.id = plate.id;
           this.cartAdd.name = plate.name;
           this.cartAdd.price = plate.price;
           this.cartAdd.quantity = 1;
+          this.cartAdd.restaurant_id = plate.restaurant_id;
           this.carts.push(this.cartAdd);
           this.storeCart();
+        }else if(this.carts.length != 0 && this.restaurant.plates[0].restaurant_id == this.carts[0].restaurant_id){
+              this.cartAdd.id = plate.id;
+              this.cartAdd.name = plate.name;
+              this.cartAdd.price = plate.price;
+              this.cartAdd.quantity = 1;
+              this.cartAdd.restaurant_id = plate.restaurant_id;
+              this.carts.push(this.cartAdd);
+              this.storeCart();
+        }else {
+            var domanda = confirm('Se aggiungi un piatto da un diverso ristorante, si svuoterà il carrello!');
+            if(domanda == true){
+                this.carts = [];
+                this.totalPrice = 0;
+                this.cartAdd.id = plate.id;
+                this.cartAdd.name = plate.name;
+                this.cartAdd.price = plate.price;
+                this.cartAdd.quantity = 1;
+                this.cartAdd.restaurant_id = plate.restaurant_id;
+                this.carts.push(this.cartAdd);
+                this.storeCart();
+            }else {
+                alert('Torna al ristorante precedente');
+            }
+        }
+          
       },
       controlla(plate){
         this.carts.forEach(el=>{

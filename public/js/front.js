@@ -2265,6 +2265,27 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
 
 /* harmony default export */ __webpack_exports__["default"] = ({
   name: 'Home',
@@ -2279,16 +2300,33 @@ __webpack_require__.r(__webpack_exports__);
   },
   data: function data() {
     return {
-      restaurants: []
+      restaurants: [],
+      categories: [],
+      categoriaScelta: '',
+      ristoranti_categorie: []
     };
   },
   methods: {
+    selectCategory: function selectCategory(index) {
+      this.categoriaScelta = index;
+    },
     getRestaurants: function getRestaurants() {
       var _this = this;
 
       axios.get('http://127.0.0.1:8000/api/restaurants').then(function (res) {
-        //console.log(res.data.data);
-        _this.restaurants = res.data.data;
+        console.log(res.data.prova);
+        _this.ristoranti_categorie = res.data.prova;
+        _this.restaurants = res.data.restaurants.data;
+      })["catch"](function (err) {
+        console.log(err);
+      });
+    },
+    getCategory: function getCategory() {
+      var _this2 = this;
+
+      axios.get('http://127.0.0.1:8000/api/categories').then(function (res) {
+        //console.log(res.data);
+        _this2.categories = res.data;
       })["catch"](function (err) {
         console.log(err);
       });
@@ -2296,6 +2334,7 @@ __webpack_require__.r(__webpack_exports__);
   },
   created: function created() {
     this.getRestaurants();
+    this.getCategory();
   }
 });
 
@@ -2380,7 +2419,6 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
-//
 
 /* harmony default export */ __webpack_exports__["default"] = ({
   name: 'Restaurant',
@@ -2395,6 +2433,7 @@ __webpack_require__.r(__webpack_exports__);
         name: '',
         description: '',
         price: '',
+        restaurant_id: '',
         quantity: 2
       },
       add: true,
@@ -2405,6 +2444,7 @@ __webpack_require__.r(__webpack_exports__);
         name: '',
         description: '',
         price: '',
+        restaurant_id: '',
         quantity: 1
       },
       badge: '0',
@@ -2443,12 +2483,42 @@ __webpack_require__.r(__webpack_exports__);
       this.storeCart();
     },
     addCart: function addCart(plate) {
-      this.cartAdd.id = plate.id;
-      this.cartAdd.name = plate.name;
-      this.cartAdd.price = plate.price;
-      this.cartAdd.quantity = 1;
-      this.carts.push(this.cartAdd);
-      this.storeCart();
+      console.log(this.restaurant.id);
+      console.log(this.restaurant.plates[1].restaurant_id);
+
+      if (this.carts.length == 0) {
+        this.cartAdd.id = plate.id;
+        this.cartAdd.name = plate.name;
+        this.cartAdd.price = plate.price;
+        this.cartAdd.quantity = 1;
+        this.cartAdd.restaurant_id = plate.restaurant_id;
+        this.carts.push(this.cartAdd);
+        this.storeCart();
+      } else if (this.carts.length != 0 && this.restaurant.plates[0].restaurant_id == this.carts[0].restaurant_id) {
+        this.cartAdd.id = plate.id;
+        this.cartAdd.name = plate.name;
+        this.cartAdd.price = plate.price;
+        this.cartAdd.quantity = 1;
+        this.cartAdd.restaurant_id = plate.restaurant_id;
+        this.carts.push(this.cartAdd);
+        this.storeCart();
+      } else {
+        var domanda = confirm('Se aggiungi un piatto da un diverso ristorante, si svuoterà il carrello!');
+
+        if (domanda == true) {
+          this.carts = [];
+          this.totalPrice = 0;
+          this.cartAdd.id = plate.id;
+          this.cartAdd.name = plate.name;
+          this.cartAdd.price = plate.price;
+          this.cartAdd.quantity = 1;
+          this.cartAdd.restaurant_id = plate.restaurant_id;
+          this.carts.push(this.cartAdd);
+          this.storeCart();
+        } else {
+          alert('Torna al ristorante precedente');
+        }
+      }
     },
     controlla: function controlla(plate) {
       var _this = this;
@@ -2569,7 +2639,7 @@ exports = module.exports = __webpack_require__(/*! ../../../node_modules/css-loa
 
 
 // module
-exports.push([module.i, ".main-page[data-v-b3c5cf30] {\n  height: 100vh;\n}\n.curvy[data-v-b3c5cf30] {\n  background-image: url(\"/img/main-wave.png\");\n  height: 100px;\n  width: 100%;\n  background-repeat: no-repeat;\n  background-size: cover;\n}\n.back-white[data-v-b3c5cf30] {\n  background-color: white;\n}\n.jumbotron[data-v-b3c5cf30] {\n  padding: 0;\n  margin: 0;\n  position: relative;\n  width: 100%;\n  height: 100vh;\n  background-color: transparent;\n  background-size: cover;\n  display: flex;\n  flex-direction: column-reverse;\n  align-items: center;\n}\n#scroll[data-v-b3c5cf30] {\n  margin-top: 380px;\n  opacity: 1;\n  transition: 0.8s;\n  display: flex;\n  flex-direction: column;\n  align-items: center;\n  color: white;\n}\n#scroll i[data-v-b3c5cf30] {\n  font-size: 60px;\n}\n#scroll.sticky[data-v-b3c5cf30] {\n  opacity: 0;\n}\n.search-bar[data-v-b3c5cf30] {\n  position: relative;\n  background: white;\n  padding: 1rem;\n  box-shadow: 0 0 30px 2px linear-gradient(90deg, #ee3c4a, #fc8237);\n  border-radius: 50px;\n  width: 35%;\n}\n.search-bar i[data-v-b3c5cf30] {\n  position: absolute;\n  top: 50%;\n  right: 3%;\n  transform: translateY(-50%);\n  color: #fc8237;\n  font-size: 25px;\n}\n.search-input[data-v-b3c5cf30] {\n  width: 90%;\n  border: none;\n  font-size: 18px;\n}\n.search-input[data-v-b3c5cf30]:focus {\n  border: none;\n  outline: none;\n}", ""]);
+exports.push([module.i, ".main-page[data-v-b3c5cf30] {\n  height: 100vh;\n}\n.curvy[data-v-b3c5cf30] {\n  background-image: url(\"/img/main-wave.png\");\n  height: 100px;\n  width: 100%;\n  background-repeat: no-repeat;\n  background-size: cover;\n}\n.back-white[data-v-b3c5cf30] {\n  background-color: white;\n}\n.jumbotron[data-v-b3c5cf30] {\n  padding: 0;\n  margin: 0;\n  position: relative;\n  width: 100%;\n  height: 100vh;\n  background-color: transparent;\n  background-size: cover;\n  display: flex;\n  flex-direction: column-reverse;\n  align-items: center;\n}\n#scroll[data-v-b3c5cf30] {\n  margin-top: 380px;\n  opacity: 1;\n  transition: 0.8s;\n  display: flex;\n  flex-direction: column;\n  align-items: center;\n  color: white;\n}\n#scroll i[data-v-b3c5cf30] {\n  font-size: 60px;\n}\n#scroll.sticky[data-v-b3c5cf30] {\n  opacity: 0;\n}\n.search-bar[data-v-b3c5cf30] {\n  position: relative;\n  background: white;\n  padding: 1rem;\n  box-shadow: 0 0 30px 2px linear-gradient(90deg, #ee3c4a, #fc8237);\n  border-radius: 50px;\n  width: 35%;\n}\n.search-bar i[data-v-b3c5cf30] {\n  position: absolute;\n  top: 50%;\n  right: 3%;\n  transform: translateY(-50%);\n  color: #fc8237;\n  font-size: 25px;\n}\n.search-input[data-v-b3c5cf30] {\n  width: 90%;\n  border: none;\n  font-size: 18px;\n}\n.search-input[data-v-b3c5cf30]:focus {\n  border: none;\n  outline: none;\n}\n.badge[data-v-b3c5cf30] {\n  cursor: pointer;\n}", ""]);
 
 // exports
 
@@ -2588,7 +2658,7 @@ exports = module.exports = __webpack_require__(/*! ../../../node_modules/css-loa
 
 
 // module
-exports.push([module.i, ".num[data-v-25de3706] {\n  margin: 0 5px;\n}\n.btn-quantita[data-v-25de3706] {\n  border: none;\n  background-color: white;\n}\n.sfondo[data-v-25de3706] {\n  height: auto;\n  background-color: white;\n}\n.fa-times[data-v-25de3706] {\n  color: red;\n  font-size: 23px;\n  cursor: pointer;\n  margin-left: 15px;\n}\n.wrapper[data-v-25de3706] {\n  margin-top: 100px;\n}\n.card[data-v-25de3706] {\n  display: flex;\n  padding: 5px;\n  flex-direction: column;\n  justify-content: space-between;\n  align-items: center;\n  width: calc(30% - 30px);\n  height: 325px;\n  margin: 30px;\n  border: 2px solid orangered;\n  border-radius: 15px;\n}\n.card button[data-v-25de3706] {\n  background: linear-gradient(90deg, #ee3c4a, #fc8237);\n  border: none;\n  color: white;\n}\nimg[data-v-25de3706] {\n  width: 100%;\n  height: 80%;\n  -o-object-fit: cover;\n     object-fit: cover;\n}\n.cart[data-v-25de3706] {\n  padding: 0 50px;\n  margin-top: 100px;\n}\n.main_page[data-v-25de3706] {\n  padding-bottom: 50px;\n}\n.fa-leaf[data-v-25de3706] {\n  color: green;\n}", ""]);
+exports.push([module.i, ".num[data-v-25de3706] {\n  margin: 0 5px;\n}\n.btn-quantita[data-v-25de3706] {\n  border: none;\n  background-color: white;\n}\n.sfondo[data-v-25de3706] {\n  height: auto;\n  background-color: white;\n}\n.fa-times[data-v-25de3706] {\n  color: red;\n  font-size: 23px;\n  cursor: pointer;\n  margin-left: 15px;\n}\n.wrapper[data-v-25de3706] {\n  margin-top: 100px;\n}\n.card[data-v-25de3706] {\n  display: flex;\n  padding: 5px;\n  flex-direction: column;\n  justify-content: space-between;\n  align-items: center;\n  width: calc(30% - 30px);\n  height: 325px;\n  margin: 30px;\n  border: 2px solid orangered;\n  border-radius: 15px;\n}\n.card button[data-v-25de3706] {\n  background: linear-gradient(90deg, #ee3c4a, #fc8237);\n  border: none;\n  color: white;\n}\nimg[data-v-25de3706] {\n  width: 100%;\n  height: 80%;\n  -o-object-fit: cover;\n     object-fit: cover;\n}\n.cart[data-v-25de3706] {\n  padding: 0 50px;\n  margin-top: 100px;\n}\n.main_page[data-v-25de3706] {\n  padding-bottom: 50px;\n}\n.foglia[data-v-25de3706] {\n  color: green;\n}", ""]);
 
 // exports
 
@@ -4247,21 +4317,80 @@ var render = function() {
     _c("div", { staticClass: "curvy" }),
     _vm._v(" "),
     _c("div", { staticClass: "back-white" }, [
-      _c("div", { staticClass: "container main-page" }, [
-        _c("h1", [_vm._v("I Nostri Preferiti")]),
-        _vm._v(" "),
-        _c(
-          "div",
-          { staticClass: "row" },
-          _vm._l(_vm.restaurants, function(restaurant) {
-            return _c("Card", {
-              key: restaurant.id,
-              attrs: { item: restaurant }
-            })
+      _c(
+        "div",
+        { staticClass: "container main-page" },
+        [
+          _c("h1", [_vm._v("I Nostri Preferiti")]),
+          _vm._v(" "),
+          _c(
+            "div",
+            { staticClass: "row" },
+            _vm._l(_vm.restaurants, function(restaurant) {
+              return _c("Card", {
+                key: restaurant.id,
+                attrs: { item: restaurant }
+              })
+            }),
+            1
+          ),
+          _vm._v(" "),
+          _c("h2", [_vm._v("Scegli per categoria")]),
+          _vm._v(" "),
+          _vm._l(_vm.categories, function(category, index) {
+            return _c(
+              "div",
+              {
+                key: index,
+                staticClass: "badge badge-primary",
+                on: {
+                  click: function($event) {
+                    return _vm.selectCategory(category.name)
+                  }
+                }
+              },
+              [_vm._v("\n          " + _vm._s(category.name) + "\n        ")]
+            )
           }),
-          1
-        )
-      ])
+          _vm._v(" "),
+          _c(
+            "div",
+            _vm._l(_vm.ristoranti_categorie, function(item) {
+              return _c(
+                "div",
+                { key: item.id + "-al" },
+                _vm._l(item.categories, function(category, index) {
+                  return _c("span", { key: index }, [
+                    _c(
+                      "div",
+                      {
+                        directives: [
+                          {
+                            name: "show",
+                            rawName: "v-show",
+                            value: _vm.categoriaScelta == category.name,
+                            expression: "categoriaScelta == category.name"
+                          }
+                        ]
+                      },
+                      [
+                        _vm._v(
+                          "\n                    " +
+                            _vm._s(item.name) +
+                            "\n                "
+                        )
+                      ]
+                    )
+                  ])
+                }),
+                0
+              )
+            }),
+            0
+          )
+        ],
+        2
+      )
     ])
   ])
 }
@@ -4322,13 +4451,14 @@ var render = function() {
             { staticClass: "d-flex flex-wrap justify-content-center" },
             _vm._l(_vm.restaurant.plates, function(plate) {
               return _c("div", { key: plate.id, staticClass: "card" }, [
-                _c("h5", [_vm._v(_vm._s(plate.name))]),
+                _c("h5", [
+                  _vm._v(_vm._s(plate.name) + "  "),
+                  plate.veg == 1
+                    ? _c("i", { staticClass: "fas fa-leaf foglia" })
+                    : _vm._e()
+                ]),
                 _vm._v(" "),
                 _c("img", { attrs: { src: plate.img, alt: plate.name } }),
-                _vm._v(" "),
-                plate.veg == 1
-                  ? _c("div", [_c("i", { staticClass: "fas fa-leaf" })])
-                  : _vm._e(),
                 _vm._v(" "),
                 _c(
                   "button",
@@ -20476,7 +20606,7 @@ var router = new vue_router__WEBPACK_IMPORTED_MODULE_1__["default"]({
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__(/*! C:\Users\Ale\Desktop\Progetto Finale\laravel-qualcosa\resources\js\front.js */"./resources/js/front.js");
+module.exports = __webpack_require__(/*! C:\Users\Giada\Desktop\laravel-qualcosa\resources\js\front.js */"./resources/js/front.js");
 
 
 /***/ })

@@ -12,6 +12,7 @@ class RestaurantController extends Controller
 {
     public function index(){
         $restaurants = Restaurant::paginate(6);
+        $prova = Restaurant::with(['categories'])->get();
 
         /* $categories = Category::all(); */
 
@@ -24,12 +25,12 @@ class RestaurantController extends Controller
             }
         });
 
-       /*  $data = [
-            'categories' => $categories,
+        $data = [
+            'prova' => $prova,
             'restaurants' => $restaurants
-        ]; */
+        ];
 
-        return response()->json($restaurants);
+        return response()->json($data);
     }
     
     public function show(Request $request){
