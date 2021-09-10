@@ -1,21 +1,14 @@
 <template>
-    <div class="col-4 my-4 d-flex">
+    <div class="my-4 d-flex">
         <router-link :to="{ name: 'restaurant', params: { slug: item.slug } }">
             <div class="card">
                 <img :src="item.cover" alt="item.name" class="img">
                 <div class="container_name">
                     <h4 class="card-title">{{ item.name }}</h4>
                 </div>
-                    <div class="card-body">
-                        <!-- <h4 class="card-title">{{ item.name }}</h4> -->
-                        <!-- <p>{{ item.description }}</p> -->
-                        <!-- <a href="" class="card-link">Leggi</a> -->
-
-                        <!-- <router-link :to="{ name: 'single-post', params: { slug: item.slug } }">Leggi</router-link> -->
-                    </div>
             </div>
         </router-link>
-        </div>
+    </div>
 </template>
 
 <script>

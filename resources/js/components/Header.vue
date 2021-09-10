@@ -45,9 +45,6 @@
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="nav navbar-nav ml-auto">
                     <li>
-                        <router-link :to="{ name: 'home'}">Home</router-link>
-                    </li>
-                    <li>
                         <a href="http://127.0.0.1:8000/login">Ristoratori</a>
                     </li>
                     <li>
@@ -63,7 +60,9 @@
             </div>
         </nav>
         <section id="logo" class="pt-3">
-            LOGO
+            <router-link :to="{ name: 'home'}">
+                <img src="/img/logo.png" alt="logo">
+            </router-link>
         </section>
         <section id='research'>
             <input type="text" class="search-input" placeholder="Search...">
@@ -209,7 +208,21 @@ nav.sticky {
 #logo.sticky {
     position: fixed;
     top: -0.5%;
-    left: 7.5%;
+    left: 10.5%;
+}
+
+@media screen and (max-width: 1200px) {
+  #logo.sticky {
+    position: fixed;
+    top: -0.5%;
+    left: 16.5%;
+}
+}
+
+@media screen and (max-width: 1755px) {
+  #research {
+      display: none;
+  }
 }
 
 </style>

@@ -2026,13 +2026,6 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
-//
-//
-//
-//
-//
-//
-//
 /* harmony default export */ __webpack_exports__["default"] = ({
   name: 'Card',
   props: {
@@ -2132,7 +2125,6 @@ __webpack_require__.r(__webpack_exports__);
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-//
 //
 //
 //
@@ -2335,6 +2327,25 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
 
 /* harmony default export */ __webpack_exports__["default"] = ({
   name: 'Home',
@@ -2357,15 +2368,16 @@ __webpack_require__.r(__webpack_exports__);
   },
   methods: {
     selectCategory: function selectCategory(index) {
-      console.log(index);
+      // console.log(index);
       this.categoriaScelta = index;
     },
     getRestaurants: function getRestaurants() {
       var _this = this;
 
       axios.get('http://127.0.0.1:8000/api/restaurants').then(function (res) {
-        console.log(res.data.prova);
+        // console.log(res.data.prova);
         _this.ristoranti_categorie = res.data.prova;
+        console.log(_this.ristoranti_categorie);
         _this.restaurants = res.data.restaurants.data;
       })["catch"](function (err) {
         console.log(err);
@@ -2375,7 +2387,7 @@ __webpack_require__.r(__webpack_exports__);
       var _this2 = this;
 
       axios.get('http://127.0.0.1:8000/api/categories').then(function (res) {
-        //console.log(res.data);
+        // console.log(res.data);
         _this2.categories = res.data;
       })["catch"](function (err) {
         console.log(err);
@@ -2400,6 +2412,11 @@ __webpack_require__.r(__webpack_exports__);
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _components_Button_Counter__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../components/Button-Counter */ "./resources/js/components/Button-Counter.vue");
+//
+//
+//
+//
+//
 //
 //
 //
@@ -2533,9 +2550,8 @@ __webpack_require__.r(__webpack_exports__);
       this.storeCart();
     },
     addCart: function addCart(plate) {
-      console.log(this.restaurant.id);
-      console.log(this.restaurant.plates[1].restaurant_id);
-
+      // console.log(this.restaurant.id);
+      // console.log(this.restaurant.plates[1].restaurant_id);
       if (this.carts.length == 0) {
         this.cartAdd.id = plate.id;
         this.cartAdd.name = plate.name;
@@ -2670,7 +2686,7 @@ exports = module.exports = __webpack_require__(/*! ../../../node_modules/css-loa
 
 
 // module
-exports.push([module.i, "#research[data-v-1f42fb90] {\n  position: fixed;\n  background: white;\n  opacity: 0;\n  transition: 0.2s;\n  top: 10px;\n  left: 50%;\n  transform: translateX(-50%);\n  padding: 0.5rem;\n  box-shadow: 0 0 30px 2px linear-gradient(90deg, #ee3c4a, #fc8237);\n  border-radius: 50px;\n  width: 35%;\n  z-index: 11;\n}\n#research i[data-v-1f42fb90] {\n  position: absolute;\n  top: 50%;\n  right: 3%;\n  transform: translateY(-50%);\n  color: #fc8237;\n  font-size: 25px;\n}\n#research.sticky[data-v-1f42fb90] {\n  opacity: 1;\n}\n.search-input[data-v-1f42fb90] {\n  width: 90%;\n  border: none;\n  font-size: 18px;\n}\n.search-input[data-v-1f42fb90]:focus {\n  border: none;\n  outline: none;\n}\n#boot-logo[data-v-1f42fb90] {\n  opacity: 0;\n}\n#logo[data-v-1f42fb90] {\n  color: white;\n  position: absolute;\n  top: 0;\n  left: 50%;\n  transform: translateX(-50%);\n  z-index: 11;\n  font-weight: 700;\n  color: white;\n  text-decoration: none;\n  font-size: 2em;\n  text-transform: uppercase;\n  letter-spacing: 2px;\n  transition: 2s;\n}\nnav[data-v-1f42fb90] {\n  position: fixed;\n  top: 0;\n  left: 0;\n  width: 100%;\n  height: 65px;\n  display: flex;\n  justify-content: space-between;\n  align-items: center;\n  transition: 0.8s;\n  padding: 40px 100px;\n  opacity: 0;\n  z-index: 10;\n}\nnav .logo[data-v-1f42fb90] {\n  position: relative;\n  font-weight: 700;\n  color: white;\n  text-decoration: none;\n  font-size: 2em;\n  text-transform: uppercase;\n  letter-spacing: 2px;\n  transition: 0.6s;\n  opacity: 0;\n}\nnav ul[data-v-1f42fb90] {\n  position: relative;\n  display: flex;\n  justify-content: center;\n  align-items: center;\n  margin: 0;\n}\nnav ul li[data-v-1f42fb90] {\n  position: relative;\n  list-style: none;\n}\nnav ul li a[data-v-1f42fb90] {\n  position: relative;\n  margin: 0 15px;\n  text-decoration: none;\n  color: whitesmoke;\n  letter-spacing: 2px;\n  font-weight: 500px;\n  transition: 0.6s;\n}\nnav.sticky[data-v-1f42fb90] {\n  opacity: 1;\n  padding: 10px 100px;\n  background-image: linear-gradient(90deg, #ee3c4a, #fc8237);\n}\n#logo.sticky[data-v-1f42fb90] {\n  position: fixed;\n  top: -0.5%;\n  left: 7.5%;\n}", ""]);
+exports.push([module.i, "#research[data-v-1f42fb90] {\n  position: fixed;\n  background: white;\n  opacity: 0;\n  transition: 0.2s;\n  top: 10px;\n  left: 50%;\n  transform: translateX(-50%);\n  padding: 0.5rem;\n  box-shadow: 0 0 30px 2px linear-gradient(90deg, #ee3c4a, #fc8237);\n  border-radius: 50px;\n  width: 35%;\n  z-index: 11;\n}\n#research i[data-v-1f42fb90] {\n  position: absolute;\n  top: 50%;\n  right: 3%;\n  transform: translateY(-50%);\n  color: #fc8237;\n  font-size: 25px;\n}\n#research.sticky[data-v-1f42fb90] {\n  opacity: 1;\n}\n.search-input[data-v-1f42fb90] {\n  width: 90%;\n  border: none;\n  font-size: 18px;\n}\n.search-input[data-v-1f42fb90]:focus {\n  border: none;\n  outline: none;\n}\n#boot-logo[data-v-1f42fb90] {\n  opacity: 0;\n}\n#logo[data-v-1f42fb90] {\n  color: white;\n  position: absolute;\n  top: 0;\n  left: 50%;\n  transform: translateX(-50%);\n  z-index: 11;\n  font-weight: 700;\n  color: white;\n  text-decoration: none;\n  font-size: 2em;\n  text-transform: uppercase;\n  letter-spacing: 2px;\n  transition: 2s;\n}\nnav[data-v-1f42fb90] {\n  position: fixed;\n  top: 0;\n  left: 0;\n  width: 100%;\n  height: 65px;\n  display: flex;\n  justify-content: space-between;\n  align-items: center;\n  transition: 0.8s;\n  padding: 40px 100px;\n  opacity: 0;\n  z-index: 10;\n}\nnav .logo[data-v-1f42fb90] {\n  position: relative;\n  font-weight: 700;\n  color: white;\n  text-decoration: none;\n  font-size: 2em;\n  text-transform: uppercase;\n  letter-spacing: 2px;\n  transition: 0.6s;\n  opacity: 0;\n}\nnav ul[data-v-1f42fb90] {\n  position: relative;\n  display: flex;\n  justify-content: center;\n  align-items: center;\n  margin: 0;\n}\nnav ul li[data-v-1f42fb90] {\n  position: relative;\n  list-style: none;\n}\nnav ul li a[data-v-1f42fb90] {\n  position: relative;\n  margin: 0 15px;\n  text-decoration: none;\n  color: whitesmoke;\n  letter-spacing: 2px;\n  font-weight: 500px;\n  transition: 0.6s;\n}\nnav.sticky[data-v-1f42fb90] {\n  opacity: 1;\n  padding: 10px 100px;\n  background-image: linear-gradient(90deg, #ee3c4a, #fc8237);\n}\n#logo.sticky[data-v-1f42fb90] {\n  position: fixed;\n  top: -0.5%;\n  left: 10.5%;\n}\n@media screen and (max-width: 1200px) {\n#logo.sticky[data-v-1f42fb90] {\n    position: fixed;\n    top: -0.5%;\n    left: 16.5%;\n}\n}\n@media screen and (max-width: 1755px) {\n#research[data-v-1f42fb90] {\n    display: none;\n}\n}", ""]);
 
 // exports
 
@@ -2689,7 +2705,7 @@ exports = module.exports = __webpack_require__(/*! ../../../node_modules/css-loa
 
 
 // module
-exports.push([module.i, "#categorie[data-v-b3c5cf30] {\n  margin-top: 100px;\n}\n.main-page[data-v-b3c5cf30] {\n  padding-bottom: 150px;\n  height: auto;\n}\n.curvy[data-v-b3c5cf30] {\n  background-image: url(\"/img/main-wave.png\");\n  height: 100px;\n  width: 100%;\n  background-repeat: no-repeat;\n  background-size: cover;\n}\n.back-white[data-v-b3c5cf30] {\n  background-color: white;\n}\n.jumbotron[data-v-b3c5cf30] {\n  padding: 0;\n  margin: 0;\n  position: relative;\n  width: 100%;\n  height: 100vh;\n  background-color: transparent;\n  background-size: cover;\n  display: flex;\n  flex-direction: column-reverse;\n  align-items: center;\n}\n#scroll[data-v-b3c5cf30] {\n  margin-top: 260px;\n  opacity: 1;\n  transition: 0.8s;\n  display: flex;\n  flex-direction: column;\n  align-items: center;\n  color: white;\n}\n#scroll i[data-v-b3c5cf30] {\n  font-size: 60px;\n}\n#scroll.sticky[data-v-b3c5cf30] {\n  opacity: 0;\n}\n.central-jumbo[data-v-b3c5cf30] {\n  width: 100%;\n}\n.central-jumbo h3[data-v-b3c5cf30] {\n  text-transform: uppercase;\n  color: white;\n}\n.search-bar[data-v-b3c5cf30] {\n  position: relative;\n  background: white;\n  padding: 1rem;\n  box-shadow: 0 0 30px 2px linear-gradient(90deg, #ee3c4a, #fc8237);\n  border-radius: 50px;\n  width: 35%;\n  margin-bottom: 30px;\n}\n.search-bar i[data-v-b3c5cf30] {\n  position: absolute;\n  top: 50%;\n  right: 3%;\n  transform: translateY(-50%);\n  color: #fc8237;\n  font-size: 25px;\n}\n.sushi[data-v-b3c5cf30] {\n  margin-top: 25px;\n}\n.category-selection[data-v-b3c5cf30] {\n  width: 30%;\n}\n.category-selection a[data-v-b3c5cf30] {\n  width: 100px;\n  height: 100px;\n}\n.category-selection img[data-v-b3c5cf30] {\n  width: 100%;\n  -o-object-fit: cover;\n     object-fit: cover;\n  -o-object-position: center;\n     object-position: center;\n}\n.search-input[data-v-b3c5cf30] {\n  width: 90%;\n  border: none;\n  font-size: 18px;\n}\n.search-input[data-v-b3c5cf30]:focus {\n  border: none;\n  outline: none;\n}\n.badge[data-v-b3c5cf30] {\n  cursor: pointer;\n}\n.card .img[data-v-b3c5cf30] {\n  transition: all 0.8s ease-in-out;\n  position: absolute;\n  height: 100%;\n  width: 100%;\n}\n.card[data-v-b3c5cf30] {\n  position: relative;\n  height: 200px;\n  width: 300px;\n  -o-object-fit: cover;\n     object-fit: cover;\n  border-radius: 5%;\n  margin-top: 30px;\n  margin-right: 30px;\n  margin-left: 30px;\n  overflow: hidden;\n}\n.card[data-v-b3c5cf30]:hover {\n  cursor: pointer;\n}\n.card:hover .img[data-v-b3c5cf30] {\n  transform: scale(1.1);\n}\n.card .container_name[data-v-b3c5cf30] {\n  background-color: rgba(0, 0, 0, 0.3);\n  border-radius: 10px;\n  /* width: 100%;\n  height: 100%; */\n  position: absolute;\n  top: 50%;\n  left: 50%;\n  transform: translate(-50%, -50%);\n}\n.card .container_name h4[data-v-b3c5cf30] {\n  /* opacity: 15%; */\n  color: white;\n  font-weight: 900;\n  font-size: 22px;\n  line-height: 22px;\n  margin: 0;\n  padding: 5px;\n}", ""]);
+exports.push([module.i, ".badge-container[data-v-b3c5cf30] {\n  display: flex;\n  flex-direction: row;\n  overflow-x: scroll;\n}\n.badge-container .badge-category[data-v-b3c5cf30] {\n  display: flex;\n  flex-direction: row;\n  justify-content: center;\n  align-items: center;\n  width: 100px;\n  height: 50px;\n  padding: 0 30px;\n  border-radius: 10px;\n  background-color: #ee3c4a;\n  font-size: 18px;\n  color: white;\n  cursor: pointer;\n}\n#categorie[data-v-b3c5cf30] {\n  margin-top: 100px;\n}\n.main-page[data-v-b3c5cf30] {\n  padding-bottom: 150px;\n  height: auto;\n}\n.curvy[data-v-b3c5cf30] {\n  background-image: url(\"/img/main-wave.png\");\n  height: 100px;\n  width: 100%;\n  background-repeat: no-repeat;\n  background-size: cover;\n}\n.back-white[data-v-b3c5cf30] {\n  background-color: white;\n}\n.jumbotron[data-v-b3c5cf30] {\n  padding: 0;\n  margin: 0;\n  position: relative;\n  width: 100%;\n  height: 100vh;\n  background-color: transparent;\n  background-size: cover;\n  display: flex;\n  flex-direction: column-reverse;\n  align-items: center;\n}\n#scroll[data-v-b3c5cf30] {\n  margin-top: 260px;\n  opacity: 1;\n  transition: 0.8s;\n  display: flex;\n  flex-direction: column;\n  align-items: center;\n  color: white;\n}\n#scroll i[data-v-b3c5cf30] {\n  font-size: 60px;\n}\n#scroll.sticky[data-v-b3c5cf30] {\n  opacity: 0;\n}\n.central-jumbo[data-v-b3c5cf30] {\n  width: 100%;\n}\n.central-jumbo h3[data-v-b3c5cf30] {\n  text-transform: uppercase;\n  color: white;\n}\n.search-bar[data-v-b3c5cf30] {\n  position: relative;\n  background: white;\n  padding: 1rem;\n  box-shadow: 0 0 30px 2px linear-gradient(90deg, #ee3c4a, #fc8237);\n  border-radius: 50px;\n  width: 35%;\n  margin-bottom: 30px;\n}\n.search-bar i[data-v-b3c5cf30] {\n  position: absolute;\n  top: 50%;\n  right: 3%;\n  transform: translateY(-50%);\n  color: #fc8237;\n  font-size: 25px;\n}\n.sushi[data-v-b3c5cf30] {\n  margin-top: 25px;\n}\n.category-selection[data-v-b3c5cf30] {\n  width: 30%;\n}\n.category-selection a[data-v-b3c5cf30] {\n  width: 100px;\n  height: 100px;\n}\n.category-selection img[data-v-b3c5cf30] {\n  width: 100%;\n  -o-object-fit: cover;\n     object-fit: cover;\n  -o-object-position: center;\n     object-position: center;\n}\n.search-input[data-v-b3c5cf30] {\n  width: 90%;\n  border: none;\n  font-size: 18px;\n}\n.search-input[data-v-b3c5cf30]:focus {\n  border: none;\n  outline: none;\n}\n.card .img[data-v-b3c5cf30] {\n  transition: all 0.8s ease-in-out;\n  position: absolute;\n  height: 100%;\n  width: 100%;\n}\n.card[data-v-b3c5cf30] {\n  position: relative;\n  height: 200px;\n  width: 300px;\n  -o-object-fit: cover;\n     object-fit: cover;\n  border-radius: 5%;\n  margin-top: 30px;\n  margin-right: 30px;\n  margin-left: 30px;\n  overflow: hidden;\n}\n.card[data-v-b3c5cf30]:hover {\n  cursor: pointer;\n}\n.card:hover .img[data-v-b3c5cf30] {\n  transform: scale(1.1);\n}\n.card .container_name[data-v-b3c5cf30] {\n  background-color: rgba(0, 0, 0, 0.3);\n  border-radius: 10px;\n  /* width: 100%;\n  height: 100%; */\n  position: absolute;\n  top: 50%;\n  left: 50%;\n  transform: translate(-50%, -50%);\n}\n.card .container_name h4[data-v-b3c5cf30] {\n  /* opacity: 15%; */\n  color: white;\n  font-weight: 900;\n  font-size: 22px;\n  line-height: 22px;\n  margin: 0;\n  padding: 5px;\n}", ""]);
 
 // exports
 
@@ -2708,7 +2724,7 @@ exports = module.exports = __webpack_require__(/*! ../../../node_modules/css-loa
 
 
 // module
-exports.push([module.i, ".num[data-v-25de3706] {\n  margin: 0 5px;\n}\n.btn-quantita[data-v-25de3706] {\n  border: none;\n  background-color: white;\n}\n.sfondo[data-v-25de3706] {\n  height: auto;\n  background-color: white;\n}\n.fa-times[data-v-25de3706] {\n  color: red;\n  font-size: 23px;\n  cursor: pointer;\n  margin-left: 15px;\n}\n.wrapper[data-v-25de3706] {\n  margin-top: 100px;\n}\n.card[data-v-25de3706] {\n  display: flex;\n  padding: 5px;\n  flex-direction: column;\n  justify-content: space-between;\n  align-items: center;\n  width: calc(30% - 30px);\n  height: 325px;\n  margin: 30px;\n  border: 2px solid orangered;\n  border-radius: 15px;\n}\n.card button[data-v-25de3706] {\n  background: linear-gradient(90deg, #ee3c4a, #fc8237);\n  border: none;\n  color: white;\n}\nimg[data-v-25de3706] {\n  width: 100%;\n  height: 80%;\n  -o-object-fit: cover;\n     object-fit: cover;\n}\n.cart[data-v-25de3706] {\n  padding: 0 50px;\n  margin-top: 100px;\n}\n.main_page[data-v-25de3706] {\n  padding-bottom: 50px;\n}\n.foglia[data-v-25de3706] {\n  color: green;\n}", ""]);
+exports.push([module.i, "h2[data-v-25de3706] {\n  margin: 50px 0;\n  font-size: 46px;\n  text-transform: uppercase;\n}\n.num[data-v-25de3706] {\n  margin: 0 5px;\n}\n.btn-quantita[data-v-25de3706] {\n  border: none;\n  background-color: white;\n}\n.sfondo[data-v-25de3706] {\n  height: auto;\n  background-color: white;\n}\n.fa-times[data-v-25de3706] {\n  color: red;\n  font-size: 23px;\n  cursor: pointer;\n  margin-left: 15px;\n}\n.wrapper[data-v-25de3706] {\n  margin-top: 100px;\n}\n.card[data-v-25de3706] {\n  display: flex;\n  padding: 5px;\n  flex-direction: column;\n  justify-content: space-between;\n  align-items: center;\n  width: calc(30%);\n  height: 325px;\n  border: 2px solid orangered;\n  border-radius: 15px;\n}\n.card button[data-v-25de3706] {\n  background: linear-gradient(90deg, #ee3c4a, #fc8237);\n  border: none;\n  color: white;\n}\n.title-container[data-v-25de3706] {\n  height: 70px;\n}\nimg[data-v-25de3706] {\n  width: 100%;\n  height: 60%;\n  -o-object-fit: contain;\n     object-fit: contain;\n}\n.cart[data-v-25de3706] {\n  padding-right: 50px;\n  margin-top: 100px;\n}\n.main_page[data-v-25de3706] {\n  padding-bottom: 50px;\n}\n.foglia[data-v-25de3706] {\n  color: green;\n}\n@media screen and (max-width: 1200px) {\n.main-page[data-v-25de3706] {\n    display: flex;\n    flex-direction: column-reverse;\n}\n}\n@media screen and (max-width: 650px) {\n.card[data-v-25de3706] {\n    width: 45%;\n}\n}\n@media screen and (max-width: 415px) {\n.card[data-v-25de3706] {\n    width: 80%;\n}\n.card-container[data-v-25de3706] {\n    justify-content: center !important;\n}\n}", ""]);
 
 // exports
 
@@ -4063,7 +4079,7 @@ var render = function() {
   var _c = _vm._self._c || _h
   return _c(
     "div",
-    { staticClass: "col-4 my-4 d-flex" },
+    { staticClass: "my-4 d-flex" },
     [
       _c(
         "router-link",
@@ -4081,9 +4097,7 @@ var render = function() {
               _c("h4", { staticClass: "card-title" }, [
                 _vm._v(_vm._s(_vm.item.name))
               ])
-            ]),
-            _vm._v(" "),
-            _c("div", { staticClass: "card-body" })
+            ])
           ])
         ]
       )
@@ -4246,16 +4260,6 @@ var render = function() {
         { staticClass: "collapse navbar-collapse", attrs: { id: "navbarNav" } },
         [
           _c("ul", { staticClass: "nav navbar-nav ml-auto" }, [
-            _c(
-              "li",
-              [
-                _c("router-link", { attrs: { to: { name: "home" } } }, [
-                  _vm._v("Home")
-                ])
-              ],
-              1
-            ),
-            _vm._v(" "),
             _vm._m(1),
             _vm._v(" "),
             _vm._m(2),
@@ -4276,9 +4280,16 @@ var render = function() {
       )
     ]),
     _vm._v(" "),
-    _c("section", { staticClass: "pt-3", attrs: { id: "logo" } }, [
-      _vm._v("\n            LOGO\n        ")
-    ]),
+    _c(
+      "section",
+      { staticClass: "pt-3", attrs: { id: "logo" } },
+      [
+        _c("router-link", { attrs: { to: { name: "home" } } }, [
+          _c("img", { attrs: { src: "/img/logo.png", alt: "logo" } })
+        ])
+      ],
+      1
+    ),
     _vm._v(" "),
     _vm._m(4)
   ])
@@ -4408,107 +4419,105 @@ var render = function() {
     _c("div", { staticClass: "curvy" }),
     _vm._v(" "),
     _c("div", { staticClass: "back-white" }, [
-      _c(
-        "div",
-        { staticClass: "container main-page" },
-        [
-          _c("h1", [_vm._v("I Nostri Preferiti")]),
-          _vm._v(" "),
-          _c(
-            "div",
-            { staticClass: "row" },
-            _vm._l(_vm.restaurants, function(restaurant) {
-              return _c("Card", {
-                key: restaurant.id,
-                attrs: { item: restaurant }
-              })
-            }),
-            1
-          ),
-          _vm._v(" "),
-          _c("h2", { attrs: { id: "categorie" } }, [
-            _vm._v("Scegli per categoria")
-          ]),
-          _vm._v(" "),
+      _c("div", { staticClass: "container main-page" }, [
+        _vm._m(1),
+        _vm._v(" "),
+        _c(
+          "div",
+          { staticClass: "row justify-content-center" },
+          _vm._l(_vm.restaurants, function(restaurant) {
+            return _c("Card", {
+              key: restaurant.id,
+              attrs: { item: restaurant }
+            })
+          }),
+          1
+        ),
+        _vm._v(" "),
+        _vm._m(2),
+        _vm._v(" "),
+        _c(
+          "div",
+          { staticClass: "badge-container" },
           _vm._l(_vm.categories, function(category, index) {
             return _c(
               "div",
               {
                 key: index,
-                staticClass: "badge badge-primary",
+                staticClass: "badge-category m-4",
                 on: {
                   click: function($event) {
                     return _vm.selectCategory(category.name)
                   }
                 }
               },
-              [_c("span", [_vm._v(_vm._s(category.name))])]
+              [_vm._v("\n          " + _vm._s(category.name) + "\n        ")]
             )
           }),
-          _vm._v(" "),
-          _c(
-            "div",
-            { staticClass: "d-flex" },
-            _vm._l(_vm.ristoranti_categorie, function(item) {
-              return _c(
-                "div",
-                { key: item.id + "-al" },
-                _vm._l(item.categories, function(category, index) {
-                  return _c("span", { key: index }, [
-                    _c(
-                      "div",
-                      {
-                        directives: [
-                          {
-                            name: "show",
-                            rawName: "v-show",
-                            value: _vm.categoriaScelta == category.name,
-                            expression: "categoriaScelta == category.name"
-                          }
-                        ]
-                      },
-                      [
-                        _c(
-                          "router-link",
-                          {
-                            attrs: {
-                              to: {
-                                name: "restaurant",
-                                params: { slug: item.slug }
-                              }
+          0
+        ),
+        _vm._v(" "),
+        _c(
+          "div",
+          { staticClass: "d-flex" },
+          _vm._l(_vm.ristoranti_categorie, function(item) {
+            return _c(
+              "div",
+              { key: item.id + "-al" },
+              _vm._l(item.categories, function(category, index) {
+                return _c("span", { key: index }, [
+                  _c(
+                    "div",
+                    {
+                      directives: [
+                        {
+                          name: "show",
+                          rawName: "v-show",
+                          value: _vm.categoriaScelta == category.name,
+                          expression: "categoriaScelta == category.name"
+                        }
+                      ]
+                    },
+                    [
+                      _c(
+                        "router-link",
+                        {
+                          attrs: {
+                            to: {
+                              name: "restaurant",
+                              params: { slug: item.slug }
                             }
-                          },
-                          [
-                            _c("div", { staticClass: "card" }, [
-                              _c("img", {
-                                staticClass: "img",
-                                attrs: {
-                                  src: "storage/" + item.cover,
-                                  alt: "item.name"
-                                }
-                              }),
-                              _vm._v(" "),
-                              _c("div", { staticClass: "container_name" }, [
-                                _c("h4", { staticClass: "card-title" }, [
-                                  _vm._v(_vm._s(item.name))
-                                ])
+                          }
+                        },
+                        [
+                          _c("div", { staticClass: "card" }, [
+                            _c("img", {
+                              staticClass: "img",
+                              attrs: {
+                                src: "storage/" + item.cover,
+                                alt: "item.name"
+                              }
+                            }),
+                            _vm._v(" "),
+                            _c("div", { staticClass: "container_name" }, [
+                              _c("h4", { staticClass: "card-title" }, [
+                                _vm._v(_vm._s(item.name))
                               ])
                             ])
-                          ]
-                        )
-                      ],
-                      1
-                    )
-                  ])
-                }),
-                0
-              )
-            }),
-            0
-          )
-        ],
-        2
-      )
+                          ])
+                        ]
+                      )
+                    ],
+                    1
+                  )
+                ])
+              }),
+              0
+            )
+          }),
+          0
+        )
+      ])
     ])
   ])
 }
@@ -4545,6 +4554,28 @@ var staticRenderFns = [
         ]
       )
     ])
+  },
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("div", { staticClass: "text-center" }, [
+      _c("img", { attrs: { src: "/img/i-nostri-preferiti.png", alt: "logo" } })
+    ])
+  },
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c(
+      "div",
+      { staticClass: "text-center", attrs: { id: "categorie" } },
+      [
+        _c("img", {
+          attrs: { src: "/img/scegli-per-categoria.png", alt: "logo" }
+        })
+      ]
+    )
   }
 ]
 render._withStripped = true
@@ -4570,146 +4601,168 @@ var render = function() {
   var _c = _vm._self._c || _h
   return _c("div", { staticClass: "sfondo" }, [
     _c("div", { staticClass: "wrapper container-fluid" }, [
-      _c("div", { staticClass: "row" }, [
-        _c("div", { staticClass: "my-4 text-center col-lg-6 offset-lg-3" }, [
-          _c("h2", [_vm._v(_vm._s(_vm.restaurant.name))]),
-          _vm._v(" "),
-          _c(
-            "div",
-            { staticClass: "d-flex flex-wrap justify-content-center" },
-            _vm._l(_vm.restaurant.plates, function(plate) {
-              return _c("div", { key: plate.id, staticClass: "card" }, [
-                _c("h5", [
-                  _vm._v(_vm._s(plate.name) + "  "),
-                  plate.veg == 1
-                    ? _c("i", { staticClass: "fas fa-leaf foglia" })
-                    : _vm._e()
-                ]),
-                _vm._v(" "),
-                _c("img", { attrs: { src: plate.img, alt: plate.name } }),
-                _vm._v(" "),
-                _c(
-                  "button",
-                  {
-                    staticClass: "btn btn-sm",
-                    on: {
-                      click: function($event) {
-                        return _vm.controlla(plate)
-                      }
-                    }
-                  },
-                  [_vm._v("Aggiungi al carrello")]
-                )
-              ])
-            }),
-            0
-          )
-        ]),
-        _vm._v(" "),
-        _c("div", { staticClass: "cart col-lg-3" }, [
-          _c(
-            "div",
-            {
-              staticClass:
-                "d-flex justify-content-between align-items-center mb-1"
-            },
-            [
-              _c("h3", [_vm._v("Il tuo carello")]),
-              _vm._v(" "),
-              _c("button", { staticClass: "btn btn-gradient" }, [
-                _vm._v(
-                  "\n                    " +
-                    _vm._s(_vm.badge) +
-                    "\n            "
-                )
-              ])
-            ]
-          ),
-          _vm._v(" "),
-          _c("table", { staticClass: "table" }, [
-            _vm._m(0),
+      _c("div", { staticClass: "row main-page" }, [
+        _c(
+          "div",
+          {
+            staticClass:
+              "my-4 text-center col-xl-6 offset-xl-1 col-lg-8 offset-lg-2"
+          },
+          [
+            _c("h2", [_vm._v(_vm._s(_vm.restaurant.name))]),
             _vm._v(" "),
             _c(
-              "tbody",
-              _vm._l(_vm.carts, function(cart, n) {
-                return _c("tr", { key: cart.id }, [
-                  _c("td", [_vm._v(_vm._s(cart.name))]),
+              "div",
+              {
+                staticClass:
+                  "d-flex flex-wrap justify-content-between card-container"
+              },
+              _vm._l(_vm.restaurant.plates, function(plate) {
+                return _c("div", { key: plate.id, staticClass: "card mb-3 " }, [
+                  _c("div", { staticClass: "title-container" }, [
+                    _c("h3", [
+                      _vm._v(_vm._s(plate.name) + "  "),
+                      plate.veg == 1
+                        ? _c("i", { staticClass: "fas fa-leaf foglia" })
+                        : _vm._e()
+                    ])
+                  ]),
                   _vm._v(" "),
-                  _c("td", [_vm._v(_vm._s(cart.price) + " €")]),
+                  _c("img", {
+                    attrs: { src: "/storage/" + plate.img, alt: plate.name }
+                  }),
+                  _vm._v(" "),
+                  _c("div", { staticClass: "font-weight-bold" }, [
+                    _vm._v(_vm._s(plate.price.toFixed(2)) + " €")
+                  ]),
                   _vm._v(" "),
                   _c(
-                    "td",
+                    "button",
                     {
-                      staticClass:
-                        "d-flex justify-content-around align-items-center"
-                    },
-                    [
-                      _c(
-                        "button",
-                        {
-                          staticClass: "btn btn-quantita btn-sm",
-                          on: {
-                            click: function($event) {
-                              return _vm.removeQuantity(cart, n)
-                            }
-                          }
-                        },
-                        [_vm._v("-")]
-                      ),
-                      _vm._v(" "),
-                      _c("span", { staticClass: "num" }, [
-                        _vm._v(_vm._s(cart.quantity))
-                      ]),
-                      _vm._v(" "),
-                      _c(
-                        "button",
-                        {
-                          staticClass: "btn btn-quantita btn-sm",
-                          on: {
-                            click: function($event) {
-                              return _vm.upQuantity(cart, n)
-                            }
-                          }
-                        },
-                        [_vm._v("+")]
-                      )
-                    ]
-                  ),
-                  _vm._v(" "),
-                  _c("td", [
-                    _c("i", {
-                      staticClass: "fas fa-times",
+                      staticClass: "btn btn-sm",
                       on: {
                         click: function($event) {
-                          return _vm.removeCart(n)
+                          return _vm.controlla(plate)
                         }
                       }
-                    })
-                  ])
+                    },
+                    [_vm._v("Aggiungi al carrello")]
+                  )
                 ])
               }),
               0
             )
-          ]),
-          _vm._v(" "),
-          _c(
-            "div",
-            {
-              staticClass: "d-flex justify-content-between align-items-center"
-            },
-            [
-              _c("h4", [
-                _vm._v(
-                  "Totale Prezzo: " + _vm._s(_vm.totalPrice.toFixed(2)) + " €"
-                )
-              ]),
+          ]
+        ),
+        _vm._v(" "),
+        _c(
+          "div",
+          {
+            staticClass: "cart col-xl-4 offset-xl-1 col-lg-8 offset-lg-2 mb-5"
+          },
+          [
+            _c(
+              "div",
+              {
+                staticClass:
+                  "d-flex justify-content-between align-items-center mb-1"
+              },
+              [
+                _c("h3", [_vm._v("Il tuo carello")]),
+                _vm._v(" "),
+                _c("button", { staticClass: "btn btn-gradient" }, [
+                  _vm._v(
+                    "\n              " + _vm._s(_vm.badge) + "\n            "
+                  )
+                ])
+              ]
+            ),
+            _vm._v(" "),
+            _c("table", { staticClass: "table" }, [
+              _vm._m(0),
               _vm._v(" "),
-              _c("button", { staticClass: "btn btn-gradient btn-sm" }, [
-                _vm._v("Paga")
-              ])
-            ]
-          )
-        ])
+              _c(
+                "tbody",
+                _vm._l(_vm.carts, function(cart, n) {
+                  return _c("tr", { key: cart.id }, [
+                    _c("td", [_vm._v(_vm._s(cart.name))]),
+                    _vm._v(" "),
+                    _c("td", [_vm._v(_vm._s(cart.price) + " €")]),
+                    _vm._v(" "),
+                    _c(
+                      "td",
+                      {
+                        staticClass:
+                          "d-flex justify-content-around align-items-center"
+                      },
+                      [
+                        _c(
+                          "button",
+                          {
+                            staticClass: "btn btn-quantita btn-sm",
+                            on: {
+                              click: function($event) {
+                                return _vm.removeQuantity(cart, n)
+                              }
+                            }
+                          },
+                          [_vm._v("-")]
+                        ),
+                        _vm._v(" "),
+                        _c("span", { staticClass: "num" }, [
+                          _vm._v(_vm._s(cart.quantity))
+                        ]),
+                        _vm._v(" "),
+                        _c(
+                          "button",
+                          {
+                            staticClass: "btn btn-quantita btn-sm",
+                            on: {
+                              click: function($event) {
+                                return _vm.upQuantity(cart, n)
+                              }
+                            }
+                          },
+                          [_vm._v("+")]
+                        )
+                      ]
+                    ),
+                    _vm._v(" "),
+                    _c("td", [
+                      _c("i", {
+                        staticClass: "fas fa-times",
+                        on: {
+                          click: function($event) {
+                            return _vm.removeCart(n)
+                          }
+                        }
+                      })
+                    ])
+                  ])
+                }),
+                0
+              )
+            ]),
+            _vm._v(" "),
+            _c(
+              "div",
+              {
+                staticClass: "d-flex justify-content-between align-items-center"
+              },
+              [
+                _c("h4", [
+                  _vm._v(
+                    "Totale Prezzo: " + _vm._s(_vm.totalPrice.toFixed(2)) + " €"
+                  )
+                ]),
+                _vm._v(" "),
+                _c("button", { staticClass: "btn btn-gradient btn-sm" }, [
+                  _vm._v("Paga")
+                ])
+              ]
+            )
+          ]
+        )
       ])
     ])
   ])
@@ -4725,7 +4778,7 @@ var staticRenderFns = [
         _vm._v(" "),
         _c("th", [_vm._v("Prezzo")]),
         _vm._v(" "),
-        _c("th", [_vm._v("Quantita")]),
+        _c("th", [_vm._v("Quantità")]),
         _vm._v(" "),
         _c("th", [_vm._v("Elimina")])
       ])
@@ -20809,7 +20862,7 @@ var router = new vue_router__WEBPACK_IMPORTED_MODULE_1__["default"]({
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__(/*! C:\Users\Ale\Desktop\Progetto Finale\laravel-qualcosa\resources\js\front.js */"./resources/js/front.js");
+module.exports = __webpack_require__(/*! C:\Users\Andrea Gorno\Desktop\laravel-prova\laravel-qualcosa\resources\js\front.js */"./resources/js/front.js");
 
 
 /***/ })

@@ -14,8 +14,14 @@
                         </div>
                     @endif
 
-                    {{ __('You are logged in!') }}
+                    {{ __("Hai eseguito l'accesso!") }}
                 </div>
+
+                {{-- <div class="my-4">
+                    <button>
+                        <a href="{{ route('admin.restaurants.home') }}" class="btn bg">Il Tuo Locale</a>
+                    </button>
+                </div> --}}
             </div>
         </div>
     </div>
