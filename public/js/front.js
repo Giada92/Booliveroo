@@ -2469,6 +2469,8 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
 
 /* harmony default export */ __webpack_exports__["default"] = ({
   name: 'Restaurant',
@@ -2592,7 +2594,9 @@ __webpack_require__.r(__webpack_exports__);
     },
     storeCart: function storeCart() {
       var parsed = JSON.stringify(this.carts);
+      var total = JSON.stringify(this.totalPrice);
       localStorage.setItem('carts', parsed);
+      localStorage.setItem('totalPrice', total);
       this.viewCart();
     },
     getRestaurant: function getRestaurant(slug) {
@@ -4704,9 +4708,7 @@ var render = function() {
                 )
               ]),
               _vm._v(" "),
-              _c("button", { staticClass: "btn btn-gradient btn-sm" }, [
-                _vm._v("Paga")
-              ])
+              _vm._m(1)
             ]
           )
         ])
@@ -4730,6 +4732,20 @@ var staticRenderFns = [
         _c("th", [_vm._v("Elimina")])
       ])
     ])
+  },
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c(
+      "a",
+      { staticClass: "paga", attrs: { href: "http://127.0.0.1:8000/payment" } },
+      [
+        _c("button", { staticClass: "btn btn-gradient btn-sm" }, [
+          _vm._v("Paga")
+        ])
+      ]
+    )
   }
 ]
 render._withStripped = true

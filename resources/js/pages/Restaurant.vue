@@ -58,7 +58,9 @@
             </table>
             <div class="d-flex justify-content-between align-items-center">
                 <h4>Totale Prezzo: {{ totalPrice.toFixed(2) }} €</h4>
-                <button class="btn btn-gradient btn-sm">Paga</button>
+                <a href="http://127.0.0.1:8000/payment" class="paga">
+                  <button class="btn btn-gradient btn-sm">Paga</button>
+                </a>
             </div>
           </div>
         </div>
@@ -188,7 +190,9 @@ export default {
       },
       storeCart(){
           let parsed = JSON.stringify(this.carts);
+          let total = JSON.stringify(this.totalPrice);
           localStorage.setItem('carts', parsed);
+          localStorage.setItem('totalPrice', total);
           this.viewCart();
       },
       getRestaurant: function(slug){
