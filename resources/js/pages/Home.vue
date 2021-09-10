@@ -28,23 +28,42 @@
     <div class="curvy"></div>
     <div class="back-white">
       <div class="container main-page">
-        <h1>I Nostri Preferiti</h1>
-        <div class="row">
+        <div class="text-center">
+          <img src="/img/i-nostri-preferiti.png" alt="logo">
+        </div>
+        <div class="row justify-content-center">
             <Card 
-          :item="restaurant"
-          v-for="restaurant in restaurants" :key="restaurant.id"/>
+            :item="restaurant"
+            v-for="restaurant in restaurants" :key="restaurant.id"/>
         </div>
 
-        <h2 id="categorie">Scegli per categoria</h2>
-        <div class="badge badge-primary" v-for="category, index in categories" :key="index" @click="selectCategory(category.name)">
-          <span>{{ category.name }}</span>
+        <div id="categorie" class="text-center">
+          <img src="/img/scegli-per-categoria.png" alt="logo">
+        </div>
+
+        <div class="badge-container">
+          <div 
+          class="badge-category m-4" 
+          v-for="category, index in categories" 
+          :key="index" 
+          @click="selectCategory(category.name)"
+          >
+            {{ category.name }}
+          </div>
         </div>
 
         <div class="d-flex">
-            <div v-for="item in ristoranti_categorie" :key="`${item.id}-al`">
+            <div 
+            v-for="item in ristoranti_categorie"
+            :key="`${item.id}-al`"
+
+            >
               <!-- {{ item.name }}
               {{ item.categories.name }} -->
-              <span v-for="category,index in item.categories" :key="index">
+              <span 
+              v-for="category,index in item.categories" 
+              :key="index"
+              >
                 <!-- {{ category.name }} -->
                 <div v-show="categoriaScelta == category.name">
                     <!-- {{ item.name }} -->
@@ -91,15 +110,16 @@ export default {
     },
     methods: {
         selectCategory(index){
-          console.log(index);
+          // console.log(index);
           this.categoriaScelta = index;
       },
       getRestaurants: function(){
         axios.
         get('http://127.0.0.1:8000/api/restaurants')
         .then((res)=>{
-          console.log(res.data.prova);
+          // console.log(res.data.prova);
           this.ristoranti_categorie = res.data.prova;
+          console.log(this.ristoranti_categorie);
           this.restaurants = res.data.restaurants.data;
         })
         .catch((err)=>{
@@ -110,7 +130,7 @@ export default {
           axios.
           get('http://127.0.0.1:8000/api/categories')
           .then((res)=>{
-            //console.log(res.data);
+            // console.log(res.data);
             this.categories = res.data;
           })
           .catch((err)=>{
@@ -126,6 +146,28 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+.badge-container {
+  display: flex;
+  flex-direction: row;
+  overflow-x: scroll;
+
+  .badge-category {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    width: 100px;
+    height: 50px;
+    padding: 0 30px;
+    border-radius: 10px;
+    background-color: #ee3c4a;
+    font-size: 18px;
+    color: white;
+    cursor: pointer;
+    // padding: 20px 10px;
+  }
+  
+}
 
 #categorie {
   margin-top: 100px;
@@ -232,9 +274,6 @@ export default {
   outline: none;
 }
 
-.badge {
-  cursor: pointer;
-}
 
 .card{
     .img {
@@ -283,5 +322,7 @@ export default {
         }
     }
 }
+
+
 
 </style>
