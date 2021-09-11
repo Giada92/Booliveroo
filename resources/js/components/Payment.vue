@@ -1,0 +1,37 @@
+<template>
+    <div>
+        Pagamento
+        <v-braintree 
+            :authorization="authorization"
+            locale="it_IT"
+            @success="onSuccess"
+            @error="onError"
+        ></v-braintree>
+    </div>
+</template>
+
+<script>
+export default {
+    name: 'Payment',
+    props: {
+        authorization: {
+            required: true,
+            type: String
+        }
+    },
+    methods: {
+    onSuccess (payload) {
+        let nonce = payload.nonce;
+        // Do something great with the nonce...
+    },
+    onError (error) {
+        let message = error.message;
+        // Whoops, an error has occured while trying to get the nonce
+        }
+    }
+}
+</script>
+
+<style>
+
+</style>

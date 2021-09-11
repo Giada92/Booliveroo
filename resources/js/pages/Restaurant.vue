@@ -58,7 +58,7 @@
             </table>
             <div class="d-flex justify-content-between align-items-center">
                 <h4>Totale Prezzo: {{ totalPrice.toFixed(2) }} €</h4>
-                <button class="btn btn-gradient btn-sm">Paga</button>
+                <router-link class="btn btn-gradient btn-sm" :to="{ name: 'checkout' }">Paga</router-link>
             </div>
           </div>
         </div>

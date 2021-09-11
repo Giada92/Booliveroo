@@ -29,4 +29,11 @@ Route::namespace('Api')
         Route::get('posts/{slug}', 'PostController@show');
         Route::get('categories/{slug}', 'CategoryController@show'); */
 
+        Route::get('plates', 'PlateController@index');
+        Route::get('orders/generate', 'Orders\OrderController@generate');
+        Route::post('orders/make/payment', 'Orders\OrderController@makePayment');        
+
 });
+
+
+/* Route::get('products', 'Api\Products\ProductController@index'); */
