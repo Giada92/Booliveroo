@@ -45,29 +45,22 @@
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="nav navbar-nav ml-auto">
                     <li>
-                        <router-link :to="{ name: 'home'}">Home</router-link>
-                    </li>
-                    <li>
-                        <a href="http://127.0.0.1:8000/login">Ristoratori</a>
-                    </li>
-                    <li>
-                        <a href="#">Contatti</a>
+                        <a href="http://127.0.0.1:8000/login">Diventa Partner</a>
                     </li>
                     <li>
                         <router-link  :to="{ name: 'Chisiamo' }">Chi Siamo</router-link>
-                    </li>
-                    <li>
-                        <a href="#">Contattaci</a>
                     </li>
                 </ul>
             </div>
         </nav>
         <section id="logo" class="pt-3">
-            LOGO
+            <router-link :to="{ name: 'home'}">
+                <img src="/img/logo.png" alt="logo">
+            </router-link>
         </section>
         <section id='research'>
-            <input type="text" class="search-input" placeholder="Search...">
-		    <a href=""><i class="fas fa-search"></i></a>
+            <!-- <input type="text" class="search-input" placeholder="Search...">
+		    <a href=""><i class="fas fa-search"></i></a> -->
         </section>
     </div>
 </template>
@@ -99,7 +92,7 @@ export default {
 
 #research {
   position: fixed;
-  background:white;
+//   background:white;
   opacity: 0;
   transition: 0.2s;
   top: 10px;
@@ -136,6 +129,7 @@ export default {
     opacity: 0;
 }
 #logo {
+    display: none;
     color: white;
     position: absolute;
     top: 0;
@@ -164,17 +158,6 @@ nav {
     opacity: 0;
     z-index: 10;
 
-    .logo {
-        position: relative;
-        font-weight: 700;
-        color: white;
-        text-decoration: none;
-        font-size: 2em;
-        text-transform: uppercase;
-        letter-spacing: 2px;
-        transition: 0.6s;
-        opacity: 0;
-    }
 }
 
 nav ul {
@@ -207,9 +190,25 @@ nav.sticky {
 }
 
 #logo.sticky {
+    display: block;
     position: fixed;
     top: -0.5%;
-    left: 7.5%;
+    left: 10.5%;
+}
+
+@media screen and (max-width: 1200px) {
+  #logo.sticky {
+    
+    position: fixed;
+    top: -0.5%;
+    left: 16.5%;
+}
+}
+
+@media screen and (max-width: 1755px) {
+  #research {
+      display: none;
+  }
 }
 
 </style>

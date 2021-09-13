@@ -7,7 +7,7 @@
                 <div class="row">
                     <div class="col">
                         <div class="col_background">
-                            <h3>Scopri Deliveboo</h3>
+                            <h3>Scoprici</h3>
                             <ul class="my-ul">
                                 <li v-for="(link, index) in scopri" :key="index">
                                     <a href="#">{{link}}</a>
@@ -39,9 +39,11 @@
                         <div class="col_background">
                             <h3>Seguici</h3>
                             <ul class="my-ul">
-                                <a href="#"><i class="fab fa-facebook-square"></i></a>
-                                <a href="#"><i class="fab fa-instagram-square"></i></a>
-                                <a href="#"><i class="fab fa-twitter-square"></i></a>
+                                <li>
+                                    <a href="#"><i class="fab fa-facebook-square fa-2x"></i></a>
+                                    <a href="#"><i class="fab fa-instagram-square fa-2x"></i></a>
+                                    <a href="#"><i class="fab fa-twitter-square fa-2x"></i></a>
+                                </li>
                                 <li>
                                     <a href="#">
                                         <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/5f/Google_Play_Store_badge_IT.svg/1024px-Google_Play_Store_badge_IT.svg.png" alt="">
@@ -118,7 +120,18 @@ export default {
         &:last-child{
             margin-right: 0px;
         }
+
+        h3 {
+            font-style: italic;
+            text-transform: uppercase;
+            color: #ee3c4a;
+        }
+
+        a {
+            color: #f5f5f5;
+        }
     }
+
 
     img {
         width: 60%;

@@ -1,50 +1,62 @@
 <template>
   <div>
-    <div class="jumbotron">
+    <div class="jumbotron d-flex flex-column justify-content-center align-item-center">
+      
+      <div class="mb-3 logo text-center" >
+        <img src="/img/jumbo-logo.png" alt="logo">
+      </div>
+      <div class="mt-5">
+        <a href='#categorie' class="categorie">
+          <h3>Cerca per Categoria</h3>
+        </a>
+      </div>
+      
       <div id="scroll">
         <h4>SCROLL DOWN</h4>
         <i class="fas fa-chevron-down"></i>
       </div>
-      <div class="central-jumbo d-flex flex-column align-items-center">
-        <div class="search-bar">
-          <input type="text" class="search-input" placeholder="Search...">
-          <a href=""><i class="fas fa-search"></i></a>
-        </div>
-        <!-- v-if="category.name =='Fast-Food' || category.name =='Pizza' || category.name =='Sushi' -->
-        <!-- <div class="category-selection d-flex justify-content-around">
-          <a href="#categorie" >
-            <img src="../../../public/img/pizza-categoria.png" alt="pizza">
-          </a>
-          <a href="#categorie" ">
-            <img src="../../../public/img/burger-categoria.png" alt="burger">
-          </a>
-          <a href="#categorie" >
-            <img class="sushi" src="../../../public/img/sushi-categoria.png" alt="sushi">
-          </a>
-        </div> -->
-        <a href='#categorie'><h3>vai alle categorie</h3></a>
-      </div>
+
     </div>
+        
     <div class="curvy"></div>
     <div class="back-white">
       <div class="container main-page">
-        <h1>I Nostri Preferiti</h1>
-        <div class="row">
+        <div class="text-center">
+          <img src="/img/i-nostri-preferiti.png" alt="logo">
+        </div>
+        <div class="row justify-content-center">
             <Card 
-          :item="restaurant"
-          v-for="restaurant in restaurants" :key="restaurant.id"/>
+            :item="restaurant"
+            v-for="restaurant in restaurants" :key="restaurant.id"/>
         </div>
 
-        <h2 id="categorie">Scegli per categoria</h2>
-        <div class="badge badge-primary" v-for="category, index in categories" :key="index" @click="selectCategory(category.name)">
-          <span>{{ category.name }}</span>
+        <div id="categorie" class="text-center mb-5">
+          <img src="/img/scegli-per-categoria.png" alt="logo">
+        </div>
+
+        <div class="badge-container">
+          <div 
+          class="badge-category m-4" 
+          v-for="category, index in categories" 
+          :key="index" 
+          @click="selectCategory(category.name)"
+          >
+            {{ category.name }}
+          </div>
         </div>
 
         <div class="d-flex">
-            <div v-for="item in ristoranti_categorie" :key="`${item.id}-al`">
+            <div 
+            v-for="item in ristoranti_categorie"
+            :key="`${item.id}-al`"
+
+            >
               <!-- {{ item.name }}
               {{ item.categories.name }} -->
-              <span v-for="category,index in item.categories" :key="index">
+              <span 
+              v-for="category,index in item.categories" 
+              :key="index"
+              >
                 <!-- {{ category.name }} -->
                 <div v-show="categoriaScelta == category.name">
                     <!-- {{ item.name }} -->
@@ -91,15 +103,16 @@ export default {
     },
     methods: {
         selectCategory(index){
-          console.log(index);
+          // console.log(index);
           this.categoriaScelta = index;
       },
       getRestaurants: function(){
         axios.
         get('http://127.0.0.1:8000/api/restaurants')
         .then((res)=>{
-          console.log(res.data.prova);
+          // console.log(res.data.prova);
           this.ristoranti_categorie = res.data.prova;
+          console.log(this.ristoranti_categorie);
           this.restaurants = res.data.restaurants.data;
         })
         .catch((err)=>{
@@ -110,7 +123,7 @@ export default {
           axios.
           get('http://127.0.0.1:8000/api/categories')
           .then((res)=>{
-            //console.log(res.data);
+            // console.log(res.data);
             this.categories = res.data;
           })
           .catch((err)=>{
@@ -126,6 +139,40 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+.logo {
+  img {
+    width: 60%;
+    height: 150px;
+  }
+}
+
+.badge-container {
+  display: flex;
+  flex-direction: row;
+  overflow-x: scroll;
+
+  .badge-category {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    width: 100px;
+    height: 50px;
+    padding: 0 30px;
+    border-radius: 10px;
+    background-color: #ee3c4a;
+    font-size: 18px;
+    color: white;
+    cursor: pointer;
+    // padding: 20px 10px;
+  }
+  
+}
+
+.categorie {
+  color: #f5f5f5;
+  text-transform: uppercase;
+}
 
 #categorie {
   margin-top: 100px;
@@ -163,11 +210,11 @@ export default {
 }
 
 #scroll {
-  // position: absolute;
-  // bottom: 0%;
-  // left: 50%;
-  // transform: translateX(-50%);
-  margin-top: 260px;
+  position: absolute;
+  bottom: 0%;
+  left: 50%;
+  transform: translateX(-50%);
+  // margin-top: 260px;
   opacity: 1;
   transition: 0.8s;
   display: flex;
@@ -182,30 +229,24 @@ export default {
 #scroll.sticky {
   opacity: 0;
 }
-.central-jumbo {
-  width: 100%;
-  h3 {
-    text-transform: uppercase;
-    color: white;
-  }
-}
-.search-bar {
-  position: relative;
-  background:white;
-	padding: 1rem;
-	box-shadow: 0 0 30px 2px linear-gradient(90deg, #ee3c4a, #fc8237); 
-	border-radius: 50px;
-	width: 35%;
-  margin-bottom: 30px;
-  i {
-    position: absolute;
-    top: 50%;
-    right: 3%;
-    transform: translateY(-50%);
-    color : #fc8237;
-    font-size: 25px;
-  }
-}
+
+// .search-bar {
+//   position: relative;
+//   background:white;
+// 	padding: 1rem;
+// 	box-shadow: 0 0 30px 2px linear-gradient(90deg, #ee3c4a, #fc8237); 
+// 	border-radius: 50px;
+// 	width: 35%;
+//   margin-bottom: 30px;
+//   i {
+//     position: absolute;
+//     top: 50%;
+//     right: 3%;
+//     transform: translateY(-50%);
+//     color : #fc8237;
+//     font-size: 25px;
+//   }
+// }
 .sushi {
   margin-top: 25px;
 }
@@ -232,9 +273,6 @@ export default {
   outline: none;
 }
 
-.badge {
-  cursor: pointer;
-}
 
 .card{
     .img {
@@ -283,5 +321,7 @@ export default {
         }
     }
 }
+
+
 
 </style>

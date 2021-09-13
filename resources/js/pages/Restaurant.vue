@@ -2,17 +2,22 @@
   <div class="sfondo">
 
       <div class="wrapper container-fluid">
-        <div class="row">
-          <div class="my-4 text-center col-lg-6 offset-lg-3">
+        <div class="row main-page">
+          <div class="my-4 text-center col-xl-6 offset-xl-1 col-lg-8 offset-lg-2">
             <h2>{{ restaurant.name }}</h2>
-            <div class="d-flex flex-wrap justify-content-center">
+            <div class="d-flex flex-wrap justify-content-between card-container">
               <div 
               v-for="plate in restaurant.plates" 
               :key="plate.id"
-              class="card"
+              class="card mb-3 "
               >
-                <h5>{{ plate.name }}  <i class="fas fa-leaf foglia" v-if="plate.veg == 1"></i></h5>
-                <img :src="plate.img" :alt="plate.name">
+                <div class="title-container">
+                  <h3>{{ plate.name }}  <i class="fas fa-leaf foglia" v-if="plate.veg == 1"></i></h3>
+                </div>
+                
+                <img :src="'/storage/' +  plate.img" :alt="plate.name">
+
+                <div class="font-weight-bold">{{ plate.price.toFixed(2) }} €</div>
 
                 <button class="btn btn-sm" @click="controlla(plate)">Aggiungi al carrello</button>
 
@@ -20,11 +25,11 @@
             </div>
           </div>
 
-          <div class="cart col-lg-3">
+          <div class="cart col-xl-4 offset-xl-1 col-lg-8 offset-lg-2 mb-5">
             <div class="d-flex justify-content-between align-items-center mb-1">
               <h3>Il tuo carello</h3>
               <button class="btn btn-gradient">
-                      {{ badge }}
+                {{ badge }}
               </button>
             </div>
             <table class="table">
@@ -33,34 +38,36 @@
                   <th>Piatto</th>
                   <th>Prezzo</th>
 
-                  <th>Quantita</th>
+                  <th>Quantità</th>
                   <th>Elimina</th>
 
                 </tr>
               </thead>
               <tbody>
                     <tr v-for="(cart, n) in carts" :key="cart.id">
-                        <td>{{ cart.name }}</td>
+                      <td>{{ cart.name }}</td>
 
-                        <td>{{ cart.price }} €</td>
+                      <td>{{ cart.price }} €</td>
 
-                        <td class="d-flex justify-content-around align-items-center">
-                          <button class="btn btn-quantita btn-sm" @click="removeQuantity(cart, n)">-</button>
-                          <span class="num">{{ cart.quantity }}</span>
-                          <button class="btn btn-quantita btn-sm" @click="upQuantity(cart, n)">+</button>
-                        </td>
+                      <td class="d-flex justify-content-around align-items-center">
+                        <button class="btn btn-quantita btn-sm" @click="removeQuantity(cart, n)">-</button>
+                        <span class="num">{{ cart.quantity }}</span>
+                        <button class="btn btn-quantita btn-sm" @click="upQuantity(cart, n)">+</button>
+                      </td>
                         
-                        <td>
-                            <i @click="removeCart(n)" class="fas fa-times"></i>
-                        </td>
+                      <td>
+                        <i @click="removeCart(n)" class="fas fa-times"></i>
+                      </td>
                     </tr>
                 </tbody>
             </table>
             <div class="d-flex justify-content-between align-items-center">
+
                 <h4>Totale Prezzo: {{ totalPrice.toFixed(2) }} €</h4>
                 <a href="http://127.0.0.1:8000/payment" class="paga">
                   <button class="btn btn-gradient btn-sm">Paga</button>
                 </a>
+
             </div>
           </div>
         </div>
@@ -134,8 +141,8 @@ export default {
             this.storeCart(); 
       },
       addCart(plate){
-        console.log(this.restaurant.id);
-        console.log(this.restaurant.plates[1].restaurant_id);
+        // console.log(this.restaurant.id);
+        // console.log(this.restaurant.plates[1].restaurant_id);
         if(this.carts.length == 0){
           this.cartAdd.id = plate.id;
           this.cartAdd.name = plate.name;
@@ -225,6 +232,11 @@ export default {
 
 <style lang="scss" scoped>
 
+h2 {
+  margin: 50px 0;
+  font-size: 46px;
+  text-transform: uppercase;
+}
 .num {
   margin: 0 5px;
 }
@@ -253,11 +265,12 @@ export default {
   flex-direction: column;
   justify-content: space-between;
   align-items: center;
-  width: calc(30% - 30px);
+  width: calc(30%);
   height: 325px;
-  margin: 30px;
+  // margin: 3%;
   border: 2px solid orangered;
   border-radius: 15px;
+  
   button {
     background: linear-gradient(90deg, #ee3c4a, #fc8237);
     border: none;
@@ -265,14 +278,18 @@ export default {
   }
 }
 
+.title-container {
+  height: 70px;
+}
+
 img {
   width: 100%;
-  height: 80%;
-  object-fit: cover;
+  height: 60%;
+  object-fit: contain;
 }
 
 .cart {
-  padding: 0 50px;
+  padding-right: 50px;
   margin-top: 100px;
 }
 
@@ -282,6 +299,27 @@ img {
 
 .foglia {
   color: green;
+}
+
+@media screen and (max-width: 1200px) {
+  .main-page {
+    display: flex;
+    flex-direction: column-reverse;
+  }
+}
+@media screen and (max-width: 650px) {
+  .card {
+    width: 45%;
+  }
+}
+@media screen and (max-width: 415px) {
+  .card {
+    width: 80%;
+  }
+
+  .card-container {
+    justify-content: center !important;
+  }
 }
 
 </style>
