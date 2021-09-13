@@ -2594,9 +2594,7 @@ __webpack_require__.r(__webpack_exports__);
     },
     storeCart: function storeCart() {
       var parsed = JSON.stringify(this.carts);
-      var total = JSON.stringify(this.totalPrice);
       localStorage.setItem('carts', parsed);
-      localStorage.setItem('totalPrice', total);
       this.viewCart();
     },
     getRestaurant: function getRestaurant(slug) {
@@ -2619,6 +2617,10 @@ __webpack_require__.r(__webpack_exports__);
   created: function created() {
     this.getRestaurant(this.$route.params.slug);
     this.viewCart(); //console.log(this.cart)
+  },
+  updated: function updated() {
+    var total = JSON.stringify(this.totalPrice);
+    localStorage.setItem('totalPrice', total);
   }
 });
 

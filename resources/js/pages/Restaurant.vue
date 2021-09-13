@@ -101,7 +101,7 @@ export default {
         badge: '0',
         quantity: 2,
         totalPrice: 0,
-        esistente: false
+        esistente: false,
 
       }
     },
@@ -190,9 +190,8 @@ export default {
       },
       storeCart(){
           let parsed = JSON.stringify(this.carts);
-          let total = JSON.stringify(this.totalPrice);
+          
           localStorage.setItem('carts', parsed);
-          localStorage.setItem('totalPrice', total);
           this.viewCart();
       },
       getRestaurant: function(slug){
@@ -216,6 +215,10 @@ export default {
       this.getRestaurant(this.$route.params.slug);
       this.viewCart();
       //console.log(this.cart)
+    },
+    updated: function() {
+      let total = JSON.stringify(this.totalPrice);
+      localStorage.setItem('totalPrice', total);
     }
 }
 </script>

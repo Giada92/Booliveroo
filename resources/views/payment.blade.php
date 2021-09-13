@@ -19,7 +19,17 @@
                 height: 100vh;
                 margin: 0;
             }
-
+            #amount {
+                margin-left: 145px;
+                border: none;
+            }
+            #amount:hover {
+                cursor:auto;
+            }
+            #amount:focus {
+                border: none;
+                outline: none;
+            }
             .full-height {
                 height: 100vh;
             }
@@ -61,6 +71,10 @@
             .m-b-md {
                 margin-bottom: 30px;
             }
+            .width {
+                width: auto;
+                margin: 300px 500px
+            }
         </style>
     </head>
     <body>
@@ -70,14 +84,14 @@
                 <section>
                     <label for="amount">
                         <span class="input-label">Amount</span>
+                        
+
                         <div class="input-wrapper amount-wrapper">
-                            <?php 
-                                echo $totale;
-                            ?>
+                            <input id="amount" name="amount" type="tel" value="" readonly>
                         </div>
                     </label>
 
-                    <div class="bt-drop-in-wrapper">
+                    <div class="bt-drop-in-wrapper width">
                         <div id="bt-dropin"></div>
                     </div>
                 </section>
@@ -89,16 +103,19 @@
 
         <script src="https://js.braintreegateway.com/web/dropin/1.31.2/js/dropin.min.js"></script>
         <script>
+
             var form = document.querySelector('#payment-form');
             var client_token = "{{ $token }}";
-            var totale = localStorage.getItem('totalPrice');
+            
+            window.addEventListener('DOMContentLoaded', (event) => {
+                var totale = JSON.parse(localStorage.getItem('totalPrice'));
+                document.querySelector('#amount').value = totale.toFixed(2);
+            });
+            
 
             braintree.dropin.create({
             authorization: client_token,
             selector: '#bt-dropin',
-            paypal: {
-                flow: 'vault'
-            }
             }, function (createErr, instance) {
             if (createErr) {
                 console.log('Create Error', createErr);
