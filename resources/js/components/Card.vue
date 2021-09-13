@@ -36,6 +36,7 @@ export default {
     margin-top: 30px;
     margin-right: 15px;
     margin-left: 15px;
+    text-align: center;
     object-fit: cover;
     border-radius: 5%;
     overflow: hidden;

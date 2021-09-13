@@ -2102,6 +2102,8 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
 /* harmony default export */ __webpack_exports__["default"] = ({
   name: 'Footer',
   data: function data() {
@@ -2125,12 +2127,6 @@ __webpack_require__.r(__webpack_exports__);
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-//
-//
-//
-//
-//
-//
 //
 //
 //
@@ -2257,13 +2253,6 @@ __webpack_require__.r(__webpack_exports__);
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _components_Card_vue__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../components/Card.vue */ "./resources/js/components/Card.vue");
-//
-//
-//
-//
-//
-//
-//
 //
 //
 //
@@ -2648,7 +2637,7 @@ exports = module.exports = __webpack_require__(/*! ../../../node_modules/css-loa
 
 
 // module
-exports.push([module.i, ".card .img[data-v-b9bc2c0a] {\n  transition: all 0.8s ease-in-out;\n  position: absolute;\n  height: 100%;\n  width: 100%;\n}\n.card[data-v-b9bc2c0a] {\n  position: relative;\n  height: 200px;\n  width: 300px;\n  margin-top: 30px;\n  margin-right: 15px;\n  margin-left: 15px;\n  -o-object-fit: cover;\n     object-fit: cover;\n  border-radius: 5%;\n  overflow: hidden;\n}\n.card[data-v-b9bc2c0a]:hover {\n  cursor: pointer;\n}\n.card:hover .img[data-v-b9bc2c0a] {\n  transform: scale(1.1);\n}\n.card .container_name[data-v-b9bc2c0a] {\n  background-color: rgba(0, 0, 0, 0.3);\n  border-radius: 10px;\n  /* width: 100%;\n  height: 100%; */\n  position: absolute;\n  top: 50%;\n  left: 50%;\n  transform: translate(-50%, -50%);\n}\n.card .container_name h4[data-v-b9bc2c0a] {\n  /* opacity: 15%; */\n  color: white;\n  font-weight: 900;\n  font-size: 22px;\n  line-height: 22px;\n  margin: 0;\n  padding: 5px;\n}", ""]);
+exports.push([module.i, ".card .img[data-v-b9bc2c0a] {\n  transition: all 0.8s ease-in-out;\n  position: absolute;\n  height: 100%;\n  width: 100%;\n}\n.card[data-v-b9bc2c0a] {\n  position: relative;\n  height: 200px;\n  width: 300px;\n  margin-top: 30px;\n  margin-right: 15px;\n  margin-left: 15px;\n  text-align: center;\n  -o-object-fit: cover;\n     object-fit: cover;\n  border-radius: 5%;\n  overflow: hidden;\n}\n.card[data-v-b9bc2c0a]:hover {\n  cursor: pointer;\n}\n.card:hover .img[data-v-b9bc2c0a] {\n  transform: scale(1.1);\n}\n.card .container_name[data-v-b9bc2c0a] {\n  background-color: rgba(0, 0, 0, 0.3);\n  border-radius: 10px;\n  /* width: 100%;\n  height: 100%; */\n  position: absolute;\n  top: 50%;\n  left: 50%;\n  transform: translate(-50%, -50%);\n}\n.card .container_name h4[data-v-b9bc2c0a] {\n  /* opacity: 15%; */\n  color: white;\n  font-weight: 900;\n  font-size: 22px;\n  line-height: 22px;\n  margin: 0;\n  padding: 5px;\n}", ""]);
 
 // exports
 
@@ -2667,7 +2656,7 @@ exports = module.exports = __webpack_require__(/*! ../../../node_modules/css-loa
 
 
 // module
-exports.push([module.i, ".curvy[data-v-61a7c374] {\n  background-image: url(\"/img/footer-wave.png\");\n  height: 100px;\n  width: 100%;\n  background-repeat: no-repeat;\n  background-size: cover;\n}\n.footer[data-v-61a7c374] {\n  background-color: #1D1D1D;\n  color: white;\n}\n.col_background[data-v-61a7c374] {\n  padding: 30px 5px;\n  /* background-color: rgba(255,255,255, 0.1); */\n  width: calc(100% / 4 - 15px);\n  border-radius: 3px;\n  margin: 10px;\n  min-width: 224px;\n}\n.col_background[data-v-61a7c374]:first-child {\n  margin-left: 0px;\n}\n.col_background[data-v-61a7c374]:last-child {\n  margin-right: 0px;\n}\nimg[data-v-61a7c374] {\n  width: 60%;\n}\nul[data-v-61a7c374] {\n  list-style: none;\n  padding-left: 0;\n}", ""]);
+exports.push([module.i, ".curvy[data-v-61a7c374] {\n  background-image: url(\"/img/footer-wave.png\");\n  height: 100px;\n  width: 100%;\n  background-repeat: no-repeat;\n  background-size: cover;\n}\n.footer[data-v-61a7c374] {\n  background-color: #1D1D1D;\n  color: white;\n}\n.col_background[data-v-61a7c374] {\n  padding: 30px 5px;\n  /* background-color: rgba(255,255,255, 0.1); */\n  width: calc(100% / 4 - 15px);\n  border-radius: 3px;\n  margin: 10px;\n  min-width: 224px;\n}\n.col_background[data-v-61a7c374]:first-child {\n  margin-left: 0px;\n}\n.col_background[data-v-61a7c374]:last-child {\n  margin-right: 0px;\n}\n.col_background h3[data-v-61a7c374] {\n  font-style: italic;\n  text-transform: uppercase;\n  color: #ee3c4a;\n}\n.col_background a[data-v-61a7c374] {\n  color: #f5f5f5;\n}\nimg[data-v-61a7c374] {\n  width: 60%;\n}\nul[data-v-61a7c374] {\n  list-style: none;\n  padding-left: 0;\n}", ""]);
 
 // exports
 
@@ -2686,7 +2675,7 @@ exports = module.exports = __webpack_require__(/*! ../../../node_modules/css-loa
 
 
 // module
-exports.push([module.i, "#research[data-v-1f42fb90] {\n  position: fixed;\n  background: white;\n  opacity: 0;\n  transition: 0.2s;\n  top: 10px;\n  left: 50%;\n  transform: translateX(-50%);\n  padding: 0.5rem;\n  box-shadow: 0 0 30px 2px linear-gradient(90deg, #ee3c4a, #fc8237);\n  border-radius: 50px;\n  width: 35%;\n  z-index: 11;\n}\n#research i[data-v-1f42fb90] {\n  position: absolute;\n  top: 50%;\n  right: 3%;\n  transform: translateY(-50%);\n  color: #fc8237;\n  font-size: 25px;\n}\n#research.sticky[data-v-1f42fb90] {\n  opacity: 1;\n}\n.search-input[data-v-1f42fb90] {\n  width: 90%;\n  border: none;\n  font-size: 18px;\n}\n.search-input[data-v-1f42fb90]:focus {\n  border: none;\n  outline: none;\n}\n#boot-logo[data-v-1f42fb90] {\n  opacity: 0;\n}\n#logo[data-v-1f42fb90] {\n  color: white;\n  position: absolute;\n  top: 0;\n  left: 50%;\n  transform: translateX(-50%);\n  z-index: 11;\n  font-weight: 700;\n  color: white;\n  text-decoration: none;\n  font-size: 2em;\n  text-transform: uppercase;\n  letter-spacing: 2px;\n  transition: 2s;\n}\nnav[data-v-1f42fb90] {\n  position: fixed;\n  top: 0;\n  left: 0;\n  width: 100%;\n  height: 65px;\n  display: flex;\n  justify-content: space-between;\n  align-items: center;\n  transition: 0.8s;\n  padding: 40px 100px;\n  opacity: 0;\n  z-index: 10;\n}\nnav .logo[data-v-1f42fb90] {\n  position: relative;\n  font-weight: 700;\n  color: white;\n  text-decoration: none;\n  font-size: 2em;\n  text-transform: uppercase;\n  letter-spacing: 2px;\n  transition: 0.6s;\n  opacity: 0;\n}\nnav ul[data-v-1f42fb90] {\n  position: relative;\n  display: flex;\n  justify-content: center;\n  align-items: center;\n  margin: 0;\n}\nnav ul li[data-v-1f42fb90] {\n  position: relative;\n  list-style: none;\n}\nnav ul li a[data-v-1f42fb90] {\n  position: relative;\n  margin: 0 15px;\n  text-decoration: none;\n  color: whitesmoke;\n  letter-spacing: 2px;\n  font-weight: 500px;\n  transition: 0.6s;\n}\nnav.sticky[data-v-1f42fb90] {\n  opacity: 1;\n  padding: 10px 100px;\n  background-image: linear-gradient(90deg, #ee3c4a, #fc8237);\n}\n#logo.sticky[data-v-1f42fb90] {\n  position: fixed;\n  top: -0.5%;\n  left: 10.5%;\n}\n@media screen and (max-width: 1200px) {\n#logo.sticky[data-v-1f42fb90] {\n    position: fixed;\n    top: -0.5%;\n    left: 16.5%;\n}\n}\n@media screen and (max-width: 1755px) {\n#research[data-v-1f42fb90] {\n    display: none;\n}\n}", ""]);
+exports.push([module.i, "#research[data-v-1f42fb90] {\n  position: fixed;\n  opacity: 0;\n  transition: 0.2s;\n  top: 10px;\n  left: 50%;\n  transform: translateX(-50%);\n  padding: 0.5rem;\n  box-shadow: 0 0 30px 2px linear-gradient(90deg, #ee3c4a, #fc8237);\n  border-radius: 50px;\n  width: 35%;\n  z-index: 11;\n}\n#research i[data-v-1f42fb90] {\n  position: absolute;\n  top: 50%;\n  right: 3%;\n  transform: translateY(-50%);\n  color: #fc8237;\n  font-size: 25px;\n}\n#research.sticky[data-v-1f42fb90] {\n  opacity: 1;\n}\n.search-input[data-v-1f42fb90] {\n  width: 90%;\n  border: none;\n  font-size: 18px;\n}\n.search-input[data-v-1f42fb90]:focus {\n  border: none;\n  outline: none;\n}\n#boot-logo[data-v-1f42fb90] {\n  opacity: 0;\n}\n#logo[data-v-1f42fb90] {\n  display: none;\n  color: white;\n  position: absolute;\n  top: 0;\n  left: 50%;\n  transform: translateX(-50%);\n  z-index: 11;\n  font-weight: 700;\n  color: white;\n  text-decoration: none;\n  font-size: 2em;\n  text-transform: uppercase;\n  letter-spacing: 2px;\n  transition: 2s;\n}\nnav[data-v-1f42fb90] {\n  position: fixed;\n  top: 0;\n  left: 0;\n  width: 100%;\n  height: 65px;\n  display: flex;\n  justify-content: space-between;\n  align-items: center;\n  transition: 0.8s;\n  padding: 40px 100px;\n  opacity: 0;\n  z-index: 10;\n}\nnav ul[data-v-1f42fb90] {\n  position: relative;\n  display: flex;\n  justify-content: center;\n  align-items: center;\n  margin: 0;\n}\nnav ul li[data-v-1f42fb90] {\n  position: relative;\n  list-style: none;\n}\nnav ul li a[data-v-1f42fb90] {\n  position: relative;\n  margin: 0 15px;\n  text-decoration: none;\n  color: whitesmoke;\n  letter-spacing: 2px;\n  font-weight: 500px;\n  transition: 0.6s;\n}\nnav.sticky[data-v-1f42fb90] {\n  opacity: 1;\n  padding: 10px 100px;\n  background-image: linear-gradient(90deg, #ee3c4a, #fc8237);\n}\n#logo.sticky[data-v-1f42fb90] {\n  display: block;\n  position: fixed;\n  top: -0.5%;\n  left: 10.5%;\n}\n@media screen and (max-width: 1200px) {\n#logo.sticky[data-v-1f42fb90] {\n    position: fixed;\n    top: -0.5%;\n    left: 16.5%;\n}\n}\n@media screen and (max-width: 1755px) {\n#research[data-v-1f42fb90] {\n    display: none;\n}\n}", ""]);
 
 // exports
 
@@ -2705,7 +2694,7 @@ exports = module.exports = __webpack_require__(/*! ../../../node_modules/css-loa
 
 
 // module
-exports.push([module.i, ".badge-container[data-v-b3c5cf30] {\n  display: flex;\n  flex-direction: row;\n  overflow-x: scroll;\n}\n.badge-container .badge-category[data-v-b3c5cf30] {\n  display: flex;\n  flex-direction: row;\n  justify-content: center;\n  align-items: center;\n  width: 100px;\n  height: 50px;\n  padding: 0 30px;\n  border-radius: 10px;\n  background-color: #ee3c4a;\n  font-size: 18px;\n  color: white;\n  cursor: pointer;\n}\n#categorie[data-v-b3c5cf30] {\n  margin-top: 100px;\n}\n.main-page[data-v-b3c5cf30] {\n  padding-bottom: 150px;\n  height: auto;\n}\n.curvy[data-v-b3c5cf30] {\n  background-image: url(\"/img/main-wave.png\");\n  height: 100px;\n  width: 100%;\n  background-repeat: no-repeat;\n  background-size: cover;\n}\n.back-white[data-v-b3c5cf30] {\n  background-color: white;\n}\n.jumbotron[data-v-b3c5cf30] {\n  padding: 0;\n  margin: 0;\n  position: relative;\n  width: 100%;\n  height: 100vh;\n  background-color: transparent;\n  background-size: cover;\n  display: flex;\n  flex-direction: column-reverse;\n  align-items: center;\n}\n#scroll[data-v-b3c5cf30] {\n  margin-top: 260px;\n  opacity: 1;\n  transition: 0.8s;\n  display: flex;\n  flex-direction: column;\n  align-items: center;\n  color: white;\n}\n#scroll i[data-v-b3c5cf30] {\n  font-size: 60px;\n}\n#scroll.sticky[data-v-b3c5cf30] {\n  opacity: 0;\n}\n.central-jumbo[data-v-b3c5cf30] {\n  width: 100%;\n}\n.central-jumbo h3[data-v-b3c5cf30] {\n  text-transform: uppercase;\n  color: white;\n}\n.search-bar[data-v-b3c5cf30] {\n  position: relative;\n  background: white;\n  padding: 1rem;\n  box-shadow: 0 0 30px 2px linear-gradient(90deg, #ee3c4a, #fc8237);\n  border-radius: 50px;\n  width: 35%;\n  margin-bottom: 30px;\n}\n.search-bar i[data-v-b3c5cf30] {\n  position: absolute;\n  top: 50%;\n  right: 3%;\n  transform: translateY(-50%);\n  color: #fc8237;\n  font-size: 25px;\n}\n.sushi[data-v-b3c5cf30] {\n  margin-top: 25px;\n}\n.category-selection[data-v-b3c5cf30] {\n  width: 30%;\n}\n.category-selection a[data-v-b3c5cf30] {\n  width: 100px;\n  height: 100px;\n}\n.category-selection img[data-v-b3c5cf30] {\n  width: 100%;\n  -o-object-fit: cover;\n     object-fit: cover;\n  -o-object-position: center;\n     object-position: center;\n}\n.search-input[data-v-b3c5cf30] {\n  width: 90%;\n  border: none;\n  font-size: 18px;\n}\n.search-input[data-v-b3c5cf30]:focus {\n  border: none;\n  outline: none;\n}\n.card .img[data-v-b3c5cf30] {\n  transition: all 0.8s ease-in-out;\n  position: absolute;\n  height: 100%;\n  width: 100%;\n}\n.card[data-v-b3c5cf30] {\n  position: relative;\n  height: 200px;\n  width: 300px;\n  -o-object-fit: cover;\n     object-fit: cover;\n  border-radius: 5%;\n  margin-top: 30px;\n  margin-right: 30px;\n  margin-left: 30px;\n  overflow: hidden;\n}\n.card[data-v-b3c5cf30]:hover {\n  cursor: pointer;\n}\n.card:hover .img[data-v-b3c5cf30] {\n  transform: scale(1.1);\n}\n.card .container_name[data-v-b3c5cf30] {\n  background-color: rgba(0, 0, 0, 0.3);\n  border-radius: 10px;\n  /* width: 100%;\n  height: 100%; */\n  position: absolute;\n  top: 50%;\n  left: 50%;\n  transform: translate(-50%, -50%);\n}\n.card .container_name h4[data-v-b3c5cf30] {\n  /* opacity: 15%; */\n  color: white;\n  font-weight: 900;\n  font-size: 22px;\n  line-height: 22px;\n  margin: 0;\n  padding: 5px;\n}", ""]);
+exports.push([module.i, ".logo img[data-v-b3c5cf30] {\n  width: 60%;\n  height: 150px;\n}\n.badge-container[data-v-b3c5cf30] {\n  display: flex;\n  flex-direction: row;\n  overflow-x: scroll;\n}\n.badge-container .badge-category[data-v-b3c5cf30] {\n  display: flex;\n  flex-direction: row;\n  justify-content: center;\n  align-items: center;\n  width: 100px;\n  height: 50px;\n  padding: 0 30px;\n  border-radius: 10px;\n  background-color: #ee3c4a;\n  font-size: 18px;\n  color: white;\n  cursor: pointer;\n}\n.categorie[data-v-b3c5cf30] {\n  color: #f5f5f5;\n  text-transform: uppercase;\n}\n#categorie[data-v-b3c5cf30] {\n  margin-top: 100px;\n}\n.main-page[data-v-b3c5cf30] {\n  padding-bottom: 150px;\n  height: auto;\n}\n.curvy[data-v-b3c5cf30] {\n  background-image: url(\"/img/main-wave.png\");\n  height: 100px;\n  width: 100%;\n  background-repeat: no-repeat;\n  background-size: cover;\n}\n.back-white[data-v-b3c5cf30] {\n  background-color: white;\n}\n.jumbotron[data-v-b3c5cf30] {\n  padding: 0;\n  margin: 0;\n  position: relative;\n  width: 100%;\n  height: 100vh;\n  background-color: transparent;\n  background-size: cover;\n  display: flex;\n  flex-direction: column-reverse;\n  align-items: center;\n}\n#scroll[data-v-b3c5cf30] {\n  position: absolute;\n  bottom: 0%;\n  left: 50%;\n  transform: translateX(-50%);\n  opacity: 1;\n  transition: 0.8s;\n  display: flex;\n  flex-direction: column;\n  align-items: center;\n  color: white;\n}\n#scroll i[data-v-b3c5cf30] {\n  font-size: 60px;\n}\n#scroll.sticky[data-v-b3c5cf30] {\n  opacity: 0;\n}\n.sushi[data-v-b3c5cf30] {\n  margin-top: 25px;\n}\n.category-selection[data-v-b3c5cf30] {\n  width: 30%;\n}\n.category-selection a[data-v-b3c5cf30] {\n  width: 100px;\n  height: 100px;\n}\n.category-selection img[data-v-b3c5cf30] {\n  width: 100%;\n  -o-object-fit: cover;\n     object-fit: cover;\n  -o-object-position: center;\n     object-position: center;\n}\n.search-input[data-v-b3c5cf30] {\n  width: 90%;\n  border: none;\n  font-size: 18px;\n}\n.search-input[data-v-b3c5cf30]:focus {\n  border: none;\n  outline: none;\n}\n.card .img[data-v-b3c5cf30] {\n  transition: all 0.8s ease-in-out;\n  position: absolute;\n  height: 100%;\n  width: 100%;\n}\n.card[data-v-b3c5cf30] {\n  position: relative;\n  height: 200px;\n  width: 300px;\n  -o-object-fit: cover;\n     object-fit: cover;\n  border-radius: 5%;\n  margin-top: 30px;\n  margin-right: 30px;\n  margin-left: 30px;\n  overflow: hidden;\n}\n.card[data-v-b3c5cf30]:hover {\n  cursor: pointer;\n}\n.card:hover .img[data-v-b3c5cf30] {\n  transform: scale(1.1);\n}\n.card .container_name[data-v-b3c5cf30] {\n  background-color: rgba(0, 0, 0, 0.3);\n  border-radius: 10px;\n  /* width: 100%;\n  height: 100%; */\n  position: absolute;\n  top: 50%;\n  left: 50%;\n  transform: translate(-50%, -50%);\n}\n.card .container_name h4[data-v-b3c5cf30] {\n  /* opacity: 15%; */\n  color: white;\n  font-weight: 900;\n  font-size: 22px;\n  line-height: 22px;\n  margin: 0;\n  padding: 5px;\n}", ""]);
 
 // exports
 
@@ -4135,7 +4124,7 @@ var render = function() {
         _c("div", { staticClass: "row" }, [
           _c("div", { staticClass: "col" }, [
             _c("div", { staticClass: "col_background" }, [
-              _c("h3", [_vm._v("Scopri Deliveboo")]),
+              _c("h3", [_vm._v("Scoprici")]),
               _vm._v(" "),
               _c(
                 "ul",
@@ -4200,16 +4189,18 @@ var staticRenderFns = [
         _c("h3", [_vm._v("Seguici")]),
         _vm._v(" "),
         _c("ul", { staticClass: "my-ul" }, [
-          _c("a", { attrs: { href: "#" } }, [
-            _c("i", { staticClass: "fab fa-facebook-square" })
-          ]),
-          _vm._v(" "),
-          _c("a", { attrs: { href: "#" } }, [
-            _c("i", { staticClass: "fab fa-instagram-square" })
-          ]),
-          _vm._v(" "),
-          _c("a", { attrs: { href: "#" } }, [
-            _c("i", { staticClass: "fab fa-twitter-square" })
+          _c("li", [
+            _c("a", { attrs: { href: "#" } }, [
+              _c("i", { staticClass: "fab fa-facebook-square fa-2x" })
+            ]),
+            _vm._v(" "),
+            _c("a", { attrs: { href: "#" } }, [
+              _c("i", { staticClass: "fab fa-instagram-square fa-2x" })
+            ]),
+            _vm._v(" "),
+            _c("a", { attrs: { href: "#" } }, [
+              _c("i", { staticClass: "fab fa-twitter-square fa-2x" })
+            ])
           ]),
           _vm._v(" "),
           _c("li", [
@@ -4262,8 +4253,6 @@ var render = function() {
           _c("ul", { staticClass: "nav navbar-nav ml-auto" }, [
             _vm._m(1),
             _vm._v(" "),
-            _vm._m(2),
-            _vm._v(" "),
             _c(
               "li",
               [
@@ -4272,9 +4261,7 @@ var render = function() {
                 ])
               ],
               1
-            ),
-            _vm._v(" "),
-            _vm._m(3)
+            )
           ])
         ]
       )
@@ -4291,7 +4278,7 @@ var render = function() {
       1
     ),
     _vm._v(" "),
-    _vm._m(4)
+    _c("section", { attrs: { id: "research" } })
   ])
 }
 var staticRenderFns = [
@@ -4321,34 +4308,7 @@ var staticRenderFns = [
     var _c = _vm._self._c || _h
     return _c("li", [
       _c("a", { attrs: { href: "http://127.0.0.1:8000/login" } }, [
-        _vm._v("Ristoratori")
-      ])
-    ])
-  },
-  function() {
-    var _vm = this
-    var _h = _vm.$createElement
-    var _c = _vm._self._c || _h
-    return _c("li", [_c("a", { attrs: { href: "#" } }, [_vm._v("Contatti")])])
-  },
-  function() {
-    var _vm = this
-    var _h = _vm.$createElement
-    var _c = _vm._self._c || _h
-    return _c("li", [_c("a", { attrs: { href: "#" } }, [_vm._v("Contattaci")])])
-  },
-  function() {
-    var _vm = this
-    var _h = _vm.$createElement
-    var _c = _vm._self._c || _h
-    return _c("section", { attrs: { id: "research" } }, [
-      _c("input", {
-        staticClass: "search-input",
-        attrs: { type: "text", placeholder: "Search..." }
-      }),
-      _vm._v(" "),
-      _c("a", { attrs: { href: "" } }, [
-        _c("i", { staticClass: "fas fa-search" })
+        _vm._v("Diventa Partner")
       ])
     ])
   }
@@ -4526,34 +4486,30 @@ var staticRenderFns = [
     var _vm = this
     var _h = _vm.$createElement
     var _c = _vm._self._c || _h
-    return _c("div", { staticClass: "jumbotron" }, [
-      _c("div", { attrs: { id: "scroll" } }, [
-        _c("h4", [_vm._v("SCROLL DOWN")]),
+    return _c(
+      "div",
+      {
+        staticClass:
+          "jumbotron d-flex flex-column justify-content-center align-item-center"
+      },
+      [
+        _c("div", { staticClass: "mb-3 logo text-center" }, [
+          _c("img", { attrs: { src: "/img/jumbo-logo.png", alt: "logo" } })
+        ]),
         _vm._v(" "),
-        _c("i", { staticClass: "fas fa-chevron-down" })
-      ]),
-      _vm._v(" "),
-      _c(
-        "div",
-        { staticClass: "central-jumbo d-flex flex-column align-items-center" },
-        [
-          _c("div", { staticClass: "search-bar" }, [
-            _c("input", {
-              staticClass: "search-input",
-              attrs: { type: "text", placeholder: "Search..." }
-            }),
-            _vm._v(" "),
-            _c("a", { attrs: { href: "" } }, [
-              _c("i", { staticClass: "fas fa-search" })
-            ])
-          ]),
-          _vm._v(" "),
-          _c("a", { attrs: { href: "#categorie" } }, [
-            _c("h3", [_vm._v("vai alle categorie")])
+        _c("div", { staticClass: "mt-5" }, [
+          _c("a", { staticClass: "categorie", attrs: { href: "#categorie" } }, [
+            _c("h3", [_vm._v("Cerca per Categoria")])
           ])
-        ]
-      )
-    ])
+        ]),
+        _vm._v(" "),
+        _c("div", { attrs: { id: "scroll" } }, [
+          _c("h4", [_vm._v("SCROLL DOWN")]),
+          _vm._v(" "),
+          _c("i", { staticClass: "fas fa-chevron-down" })
+        ])
+      ]
+    )
   },
   function() {
     var _vm = this
@@ -4569,7 +4525,7 @@ var staticRenderFns = [
     var _c = _vm._self._c || _h
     return _c(
       "div",
-      { staticClass: "text-center", attrs: { id: "categorie" } },
+      { staticClass: "text-center mb-5", attrs: { id: "categorie" } },
       [
         _c("img", {
           attrs: { src: "/img/scegli-per-categoria.png", alt: "logo" }
