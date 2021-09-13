@@ -63,8 +63,12 @@
                 </tbody>
             </table>
             <div class="d-flex justify-content-between align-items-center">
-              <h4>Totale Prezzo: {{ totalPrice.toFixed(2) }} €</h4>
-              <button class="btn btn-gradient btn-sm">Paga</button>
+
+                <h4>Totale Prezzo: {{ totalPrice.toFixed(2) }} €</h4>
+                <a href="http://127.0.0.1:8000/payment" class="paga">
+                  <button class="btn btn-gradient btn-sm">Paga</button>
+                </a>
+
             </div>
           </div>
         </div>
@@ -105,7 +109,7 @@ export default {
         badge: '0',
         quantity: 2,
         totalPrice: 0,
-        esistente: false
+        esistente: false,
 
       }
     },
@@ -194,6 +198,7 @@ export default {
       },
       storeCart(){
           let parsed = JSON.stringify(this.carts);
+          
           localStorage.setItem('carts', parsed);
           this.viewCart();
       },
@@ -218,6 +223,10 @@ export default {
       this.getRestaurant(this.$route.params.slug);
       this.viewCart();
       //console.log(this.cart)
+    },
+    updated: function() {
+      let total = JSON.stringify(this.totalPrice);
+      localStorage.setItem('totalPrice', total);
     }
 }
 </script>
