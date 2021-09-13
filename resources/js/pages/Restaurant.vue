@@ -5,6 +5,7 @@
         <div class="row main-page">
           <div class="my-4 text-center col-xl-6 offset-xl-1 col-lg-8 offset-lg-2">
             <h2>{{ restaurant.name }}</h2>
+            <p>{{ restaurant.description }}</p>
             <div class="d-flex flex-wrap justify-content-between card-container">
               <div 
               v-for="plate in restaurant.plates" 
@@ -227,6 +228,10 @@ h2 {
   margin: 50px 0;
   font-size: 46px;
   text-transform: uppercase;
+  color: #ee3c4a;
+}
+h2+p {
+  font-style: italic;
 }
 .num {
   margin: 0 5px;

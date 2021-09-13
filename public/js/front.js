@@ -2475,6 +2475,7 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
 
 /* harmony default export */ __webpack_exports__["default"] = ({
   name: 'Restaurant',
@@ -2713,7 +2714,7 @@ exports = module.exports = __webpack_require__(/*! ../../../node_modules/css-loa
 
 
 // module
-exports.push([module.i, "h2[data-v-25de3706] {\n  margin: 50px 0;\n  font-size: 46px;\n  text-transform: uppercase;\n}\n.num[data-v-25de3706] {\n  margin: 0 5px;\n}\n.btn-quantita[data-v-25de3706] {\n  border: none;\n  background-color: white;\n}\n.sfondo[data-v-25de3706] {\n  height: auto;\n  background-color: white;\n}\n.fa-times[data-v-25de3706] {\n  color: red;\n  font-size: 23px;\n  cursor: pointer;\n  margin-left: 15px;\n}\n.wrapper[data-v-25de3706] {\n  margin-top: 100px;\n}\n.card[data-v-25de3706] {\n  display: flex;\n  padding: 5px;\n  flex-direction: column;\n  justify-content: space-between;\n  align-items: center;\n  width: calc(30%);\n  height: 325px;\n  border: 2px solid orangered;\n  border-radius: 15px;\n}\n.card button[data-v-25de3706] {\n  background: linear-gradient(90deg, #ee3c4a, #fc8237);\n  border: none;\n  color: white;\n}\n.title-container[data-v-25de3706] {\n  height: 70px;\n}\nimg[data-v-25de3706] {\n  width: 100%;\n  height: 60%;\n  -o-object-fit: contain;\n     object-fit: contain;\n}\n.cart[data-v-25de3706] {\n  padding-right: 50px;\n  margin-top: 100px;\n}\n.main_page[data-v-25de3706] {\n  padding-bottom: 50px;\n}\n.foglia[data-v-25de3706] {\n  color: green;\n}\n@media screen and (max-width: 1200px) {\n.main-page[data-v-25de3706] {\n    display: flex;\n    flex-direction: column-reverse;\n}\n}\n@media screen and (max-width: 650px) {\n.card[data-v-25de3706] {\n    width: 45%;\n}\n}\n@media screen and (max-width: 415px) {\n.card[data-v-25de3706] {\n    width: 80%;\n}\n.card-container[data-v-25de3706] {\n    justify-content: center !important;\n}\n}", ""]);
+exports.push([module.i, "h2[data-v-25de3706] {\n  margin: 50px 0;\n  font-size: 46px;\n  text-transform: uppercase;\n  color: #ee3c4a;\n}\nh2 + p[data-v-25de3706] {\n  font-style: italic;\n}\n.num[data-v-25de3706] {\n  margin: 0 5px;\n}\n.btn-quantita[data-v-25de3706] {\n  border: none;\n  background-color: white;\n}\n.sfondo[data-v-25de3706] {\n  height: auto;\n  background-color: white;\n}\n.fa-times[data-v-25de3706] {\n  color: red;\n  font-size: 23px;\n  cursor: pointer;\n  margin-left: 15px;\n}\n.wrapper[data-v-25de3706] {\n  margin-top: 100px;\n}\n.card[data-v-25de3706] {\n  display: flex;\n  padding: 5px;\n  flex-direction: column;\n  justify-content: space-between;\n  align-items: center;\n  width: calc(30%);\n  height: 325px;\n  border: 2px solid orangered;\n  border-radius: 15px;\n}\n.card button[data-v-25de3706] {\n  background: linear-gradient(90deg, #ee3c4a, #fc8237);\n  border: none;\n  color: white;\n}\n.title-container[data-v-25de3706] {\n  height: 70px;\n}\nimg[data-v-25de3706] {\n  width: 100%;\n  height: 60%;\n  -o-object-fit: contain;\n     object-fit: contain;\n}\n.cart[data-v-25de3706] {\n  padding-right: 50px;\n  margin-top: 100px;\n}\n.main_page[data-v-25de3706] {\n  padding-bottom: 50px;\n}\n.foglia[data-v-25de3706] {\n  color: green;\n}\n@media screen and (max-width: 1200px) {\n.main-page[data-v-25de3706] {\n    display: flex;\n    flex-direction: column-reverse;\n}\n}\n@media screen and (max-width: 650px) {\n.card[data-v-25de3706] {\n    width: 45%;\n}\n}\n@media screen and (max-width: 415px) {\n.card[data-v-25de3706] {\n    width: 80%;\n}\n.card-container[data-v-25de3706] {\n    justify-content: center !important;\n}\n}", ""]);
 
 // exports
 
@@ -4566,6 +4567,8 @@ var render = function() {
           },
           [
             _c("h2", [_vm._v(_vm._s(_vm.restaurant.name))]),
+            _vm._v(" "),
+            _c("p", [_vm._v(_vm._s(_vm.restaurant.description))]),
             _vm._v(" "),
             _c(
               "div",

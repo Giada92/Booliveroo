@@ -64,7 +64,7 @@
                       <div class="card">
                         <img :src="'storage/'+ item.cover" alt="item.name" class="img">
                         <div class="container_name">
-                            <h4 class="card-title">{{ item.name }}</h4>
+                          <h4 class="card-title">{{ item.name }}</h4>
                         </div>
                       </div>
                   </router-link>  
