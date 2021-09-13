@@ -2472,7 +2472,13 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
-
+//
+//
+//
+//
+//
+//
+//
 
 /* harmony default export */ __webpack_exports__["default"] = ({
   name: 'Restaurant',
@@ -4639,7 +4645,6 @@ var render = function() {
             _c("table", { staticClass: "table" }, [
               _vm._m(0),
               _vm._v(" "),
-
               _c(
                 "tbody",
                 _vm._l(_vm.carts, function(cart, n) {
@@ -4715,9 +4720,7 @@ var render = function() {
                   )
                 ]),
                 _vm._v(" "),
-                _c("button", { staticClass: "btn btn-gradient btn-sm" }, [
-                  _vm._v("Paga")
-                ])
+                _vm._m(1)
               ]
             )
           ]
@@ -20835,7 +20838,7 @@ var router = new vue_router__WEBPACK_IMPORTED_MODULE_1__["default"]({
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__(/*! C:\Users\Andrea Gorno\Desktop\laravel-prova\laravel-qualcosa\resources\js\front.js */"./resources/js/front.js");
+module.exports = __webpack_require__(/*! C:\Users\Giada\Desktop\laravel-qualcosa\resources\js\front.js */"./resources/js/front.js");
 
 
 /***/ })
