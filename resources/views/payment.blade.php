@@ -1,23 +1,18 @@
-<!DOCTYPE html>
-<html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
-    <head>
-        <meta charset="utf-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
+@extends('layouts.app')
 
-        <title>Laravel</title>
-
-        <!-- Fonts -->
-        <link href="https://fonts.googleapis.com/css?family=Nunito:200,600" rel="stylesheet">
-    </head>
+@section('content')
     <body>
-        <div class="content">
-            <form onsubmit="return false" action="{{ url('/checkout') }}"  method="POST" id="form2">
+        <div class="mb-5 text-center ">
+            <img src="{{asset('img/pagamento.png')}}" alt="title">
+        </div>
+        <div class="col-8 offset-2">
+            <form onsubmit="return false" action="{{ url('/checkout') }}"  method="POST" id="form2" class="text-center">
                 @csrf
-                <section>
-                    <label for="amount">
-                        <span class="input-label">Amount</span>
+                <section class="d-flex flex-column justify-content-center align-items-center">
+                    <label for="amount" class="text-center">
+                        <h5 class="input-label text-uppercase">Totale</h5>
                         <div class="input-wrapper amount-wrapper">
-                            <input id="amount" name="amount" type="tel" value="" readonly>
+                            <input class="total text-center font-weight-bold " id="amount" name="amount" type="tel" value="" readonly>
                         </div>
                     </label>
                     <div class="bt-drop-in-wrapper width">
@@ -25,10 +20,19 @@
                     </div>
                 </section>
                 <input id="nonce" name="payment_method_nonce" type="hidden" />
-                <button class="button" type="submit"><span>Test Transaction</span></button>
+                <button class="btn btn_color" type="submit">
+                    Paga
+                </button>
             </form>
         </div>
 
+        <style>
+            .total {
+                border: none;
+                font-size: 26px;
+            }
+        </style>
+        
         <script src="https://js.braintreegateway.com/web/dropin/1.31.2/js/dropin.min.js"></script>
         <script>
 
@@ -69,4 +73,4 @@
             });
         </script>
     </body>
-</html>
+@endsection
