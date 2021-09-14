@@ -1956,7 +1956,6 @@ module.exports = {
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _components_Header_vue__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./components/Header.vue */ "./resources/js/components/Header.vue");
-/* harmony import */ var _components_Footer_vue__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./components/Footer.vue */ "./resources/js/components/Footer.vue");
 //
 //
 //
@@ -1967,14 +1966,11 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
-//
-
 
 /* harmony default export */ __webpack_exports__["default"] = ({
   name: 'App',
   components: {
-    Header: _components_Header_vue__WEBPACK_IMPORTED_MODULE_0__["default"],
-    Footer: _components_Footer_vue__WEBPACK_IMPORTED_MODULE_1__["default"]
+    Header: _components_Header_vue__WEBPACK_IMPORTED_MODULE_0__["default"]
   }
 });
 
@@ -2039,6 +2035,89 @@ __webpack_require__.r(__webpack_exports__);
 /*!*****************************************************************************************************************************************************************!*\
   !*** ./node_modules/babel-loader/lib??ref--4-0!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/components/Footer.vue?vue&type=script&lang=js& ***!
   \*****************************************************************************************************************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+/* harmony default export */ __webpack_exports__["default"] = ({
+  name: 'Footer',
+  data: function data() {
+    return {
+      scopri: ['Chi siamo', 'Ristoranti', 'Altro', 'Il nostro blog', 'Programmazione', 'Design', 'Lavora con noi', 'Diventa nostro partner'],
+      note: ['Termini & Condizioni', 'Informativa sulla privacy', 'Cookies'],
+      interesse: ['Contatti', 'FAQ', 'Tipi di cucina', 'Mappa del sito'],
+      seguici: ['Facebook', 'Twitter', 'Instagram']
+    };
+  }
+});
+
+/***/ }),
+
+/***/ "./node_modules/babel-loader/lib/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/components/Footer2.vue?vue&type=script&lang=js&":
+/*!******************************************************************************************************************************************************************!*\
+  !*** ./node_modules/babel-loader/lib??ref--4-0!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/components/Footer2.vue?vue&type=script&lang=js& ***!
+  \******************************************************************************************************************************************************************/
 /*! exports provided: default */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
@@ -2226,6 +2305,7 @@ __webpack_require__.r(__webpack_exports__);
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _components_Footer2_vue__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../components/Footer2.vue */ "./resources/js/components/Footer2.vue");
 //
 //
 //
@@ -2339,8 +2419,15 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
+//
+
 /* harmony default export */ __webpack_exports__["default"] = ({
-  name: 'Chisiamo'
+  name: 'Chisiamo',
+  components: {
+    Footer2: _components_Footer2_vue__WEBPACK_IMPORTED_MODULE_0__["default"]
+  }
 });
 
 /***/ }),
@@ -2355,6 +2442,8 @@ __webpack_require__.r(__webpack_exports__);
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _components_Card_vue__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../components/Card.vue */ "./resources/js/components/Card.vue");
+/* harmony import */ var _components_Footer_vue__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../components/Footer.vue */ "./resources/js/components/Footer.vue");
+//
 //
 //
 //
@@ -2454,6 +2543,7 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 
+
 /* harmony default export */ __webpack_exports__["default"] = ({
   name: 'Home',
   beforeMount: function beforeMount() {
@@ -2463,7 +2553,8 @@ __webpack_require__.r(__webpack_exports__);
     });
   },
   components: {
-    Card: _components_Card_vue__WEBPACK_IMPORTED_MODULE_0__["default"]
+    Card: _components_Card_vue__WEBPACK_IMPORTED_MODULE_0__["default"],
+    Footer: _components_Footer_vue__WEBPACK_IMPORTED_MODULE_1__["default"]
   },
   data: function data() {
     return {
@@ -2520,6 +2611,8 @@ __webpack_require__.r(__webpack_exports__);
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _components_Button_Counter__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../components/Button-Counter */ "./resources/js/components/Button-Counter.vue");
+/* harmony import */ var _components_Footer__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../components/Footer */ "./resources/js/components/Footer.vue");
+//
 //
 //
 //
@@ -2600,10 +2693,12 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 
+
 /* harmony default export */ __webpack_exports__["default"] = ({
   name: 'Restaurant',
   components: {
-    Button: _components_Button_Counter__WEBPACK_IMPORTED_MODULE_0__["default"]
+    Button: _components_Button_Counter__WEBPACK_IMPORTED_MODULE_0__["default"],
+    Footer: _components_Footer__WEBPACK_IMPORTED_MODULE_1__["default"]
   },
   data: function data() {
     return {
@@ -2785,6 +2880,25 @@ exports = module.exports = __webpack_require__(/*! ../../../node_modules/css-loa
 
 // module
 exports.push([module.i, ".curvy[data-v-61a7c374] {\n  background-image: url(\"/img/footer-wave.png\");\n  height: 100px;\n  width: 100%;\n  background-repeat: no-repeat;\n  background-size: cover;\n}\n.footer[data-v-61a7c374] {\n  background-color: #1D1D1D;\n  color: white;\n}\n.col_background[data-v-61a7c374] {\n  padding: 30px 5px;\n  /* background-color: rgba(255,255,255, 0.1); */\n  width: calc(100% / 4 - 15px);\n  border-radius: 3px;\n  margin: 10px;\n  min-width: 224px;\n}\n.col_background[data-v-61a7c374]:first-child {\n  margin-left: 0px;\n}\n.col_background[data-v-61a7c374]:last-child {\n  margin-right: 0px;\n}\n.col_background h3[data-v-61a7c374] {\n  font-style: italic;\n  text-transform: uppercase;\n  color: #ee3c4a;\n}\n.col_background a[data-v-61a7c374] {\n  color: #f5f5f5;\n}\nimg[data-v-61a7c374] {\n  width: 60%;\n}\nul[data-v-61a7c374] {\n  list-style: none;\n  padding-left: 0;\n}", ""]);
+
+// exports
+
+
+/***/ }),
+
+/***/ "./node_modules/css-loader/index.js!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/postcss-loader/src/index.js?!./node_modules/sass-loader/dist/cjs.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/components/Footer2.vue?vue&type=style&index=0&id=166f53dc&lang=scss&scoped=true&":
+/*!*****************************************************************************************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/css-loader!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/postcss-loader/src??ref--7-2!./node_modules/sass-loader/dist/cjs.js??ref--7-3!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/components/Footer2.vue?vue&type=style&index=0&id=166f53dc&lang=scss&scoped=true& ***!
+  \*****************************************************************************************************************************************************************************************************************************************************************************************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+exports = module.exports = __webpack_require__(/*! ../../../node_modules/css-loader/lib/css-base.js */ "./node_modules/css-loader/lib/css-base.js")(false);
+// imports
+
+
+// module
+exports.push([module.i, ".curvy[data-v-166f53dc] {\n  background-image: url(\"/img/footer-wave1.png\");\n  height: 100px;\n  width: 100%;\n  background-repeat: no-repeat;\n  background-size: cover;\n}\n.footer[data-v-166f53dc] {\n  background-color: #1D1D1D;\n  color: white;\n}\n.col_background[data-v-166f53dc] {\n  padding: 30px 5px;\n  /* background-color: rgba(255,255,255, 0.1); */\n  width: calc(100% / 4 - 15px);\n  border-radius: 3px;\n  margin: 10px;\n  min-width: 224px;\n}\n.col_background[data-v-166f53dc]:first-child {\n  margin-left: 0px;\n}\n.col_background[data-v-166f53dc]:last-child {\n  margin-right: 0px;\n}\n.col_background h3[data-v-166f53dc] {\n  font-style: italic;\n  text-transform: uppercase;\n  color: #ee3c4a;\n}\n.col_background a[data-v-166f53dc] {\n  color: #f5f5f5;\n}\nimg[data-v-166f53dc] {\n  width: 60%;\n}\nul[data-v-166f53dc] {\n  list-style: none;\n  padding-left: 0;\n}", ""]);
 
 // exports
 
@@ -3405,6 +3519,36 @@ if(false) {}
 
 
 var content = __webpack_require__(/*! !../../../node_modules/css-loader!../../../node_modules/vue-loader/lib/loaders/stylePostLoader.js!../../../node_modules/postcss-loader/src??ref--7-2!../../../node_modules/sass-loader/dist/cjs.js??ref--7-3!../../../node_modules/vue-loader/lib??vue-loader-options!./Footer.vue?vue&type=style&index=0&id=61a7c374&lang=scss&scoped=true& */ "./node_modules/css-loader/index.js!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/postcss-loader/src/index.js?!./node_modules/sass-loader/dist/cjs.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/components/Footer.vue?vue&type=style&index=0&id=61a7c374&lang=scss&scoped=true&");
+
+if(typeof content === 'string') content = [[module.i, content, '']];
+
+var transform;
+var insertInto;
+
+
+
+var options = {"hmr":true}
+
+options.transform = transform
+options.insertInto = undefined;
+
+var update = __webpack_require__(/*! ../../../node_modules/style-loader/lib/addStyles.js */ "./node_modules/style-loader/lib/addStyles.js")(content, options);
+
+if(content.locals) module.exports = content.locals;
+
+if(false) {}
+
+/***/ }),
+
+/***/ "./node_modules/style-loader/index.js!./node_modules/css-loader/index.js!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/postcss-loader/src/index.js?!./node_modules/sass-loader/dist/cjs.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/components/Footer2.vue?vue&type=style&index=0&id=166f53dc&lang=scss&scoped=true&":
+/*!*********************************************************************************************************************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/style-loader!./node_modules/css-loader!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/postcss-loader/src??ref--7-2!./node_modules/sass-loader/dist/cjs.js??ref--7-3!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/components/Footer2.vue?vue&type=style&index=0&id=166f53dc&lang=scss&scoped=true& ***!
+  \*********************************************************************************************************************************************************************************************************************************************************************************************************************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+
+var content = __webpack_require__(/*! !../../../node_modules/css-loader!../../../node_modules/vue-loader/lib/loaders/stylePostLoader.js!../../../node_modules/postcss-loader/src??ref--7-2!../../../node_modules/sass-loader/dist/cjs.js??ref--7-3!../../../node_modules/vue-loader/lib??vue-loader-options!./Footer2.vue?vue&type=style&index=0&id=166f53dc&lang=scss&scoped=true& */ "./node_modules/css-loader/index.js!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/postcss-loader/src/index.js?!./node_modules/sass-loader/dist/cjs.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/components/Footer2.vue?vue&type=style&index=0&id=166f53dc&lang=scss&scoped=true&");
 
 if(typeof content === 'string') content = [[module.i, content, '']];
 
@@ -4177,13 +4321,7 @@ var render = function() {
   var _c = _vm._self._c || _h
   return _c(
     "div",
-    [
-      _c("Header"),
-      _vm._v(" "),
-      _c("div", [_c("router-view")], 1),
-      _vm._v(" "),
-      _c("Footer")
-    ],
+    [_c("Header"), _vm._v(" "), _c("div", [_c("router-view")], 1)],
     1
   )
 }
@@ -4282,6 +4420,130 @@ render._withStripped = true
 /*!*********************************************************************************************************************************************************************************************************************!*\
   !*** ./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/components/Footer.vue?vue&type=template&id=61a7c374&scoped=true& ***!
   \*********************************************************************************************************************************************************************************************************************/
+/*! exports provided: render, staticRenderFns */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "render", function() { return render; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "staticRenderFns", function() { return staticRenderFns; });
+var render = function() {
+  var _vm = this
+  var _h = _vm.$createElement
+  var _c = _vm._self._c || _h
+  return _c("div", [
+    _c("div", { staticClass: "curvy" }),
+    _vm._v(" "),
+    _c("div", { staticClass: "footer" }, [
+      _c("div", { staticClass: "container py-4" }, [
+        _c("div", { staticClass: "row" }, [
+          _c("div", { staticClass: "col" }, [
+            _c("div", { staticClass: "col_background" }, [
+              _c("h3", [_vm._v("Scoprici")]),
+              _vm._v(" "),
+              _c(
+                "ul",
+                { staticClass: "my-ul" },
+                _vm._l(_vm.scopri, function(link, index) {
+                  return _c("li", { key: index }, [
+                    _c("a", { attrs: { href: "#" } }, [_vm._v(_vm._s(link))])
+                  ])
+                }),
+                0
+              )
+            ])
+          ]),
+          _vm._v(" "),
+          _c("div", { staticClass: "col" }, [
+            _c("div", { staticClass: "col_background" }, [
+              _c("h3", [_vm._v("Note legali")]),
+              _vm._v(" "),
+              _c(
+                "ul",
+                { staticClass: "my-ul" },
+                _vm._l(_vm.note, function(link, index) {
+                  return _c("li", { key: index }, [
+                    _c("a", { attrs: { href: "#" } }, [_vm._v(_vm._s(link))])
+                  ])
+                }),
+                0
+              )
+            ])
+          ]),
+          _vm._v(" "),
+          _c("div", { staticClass: "col" }, [
+            _c("div", { staticClass: "col_background" }, [
+              _c("h3", [_vm._v("Aiuto")]),
+              _vm._v(" "),
+              _c(
+                "ul",
+                { staticClass: "my-ul" },
+                _vm._l(_vm.interesse, function(link, index) {
+                  return _c("li", { key: index }, [
+                    _c("a", { attrs: { href: "#" } }, [_vm._v(_vm._s(link))])
+                  ])
+                }),
+                0
+              )
+            ])
+          ]),
+          _vm._v(" "),
+          _vm._m(0)
+        ])
+      ])
+    ])
+  ])
+}
+var staticRenderFns = [
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("div", { staticClass: "col" }, [
+      _c("div", { staticClass: "col_background" }, [
+        _c("h3", [_vm._v("Seguici")]),
+        _vm._v(" "),
+        _c("ul", { staticClass: "my-ul" }, [
+          _c("li", [
+            _c("a", { attrs: { href: "#" } }, [
+              _c("i", { staticClass: "fab fa-facebook-square fa-2x" })
+            ]),
+            _vm._v(" "),
+            _c("a", { attrs: { href: "#" } }, [
+              _c("i", { staticClass: "fab fa-instagram-square fa-2x" })
+            ]),
+            _vm._v(" "),
+            _c("a", { attrs: { href: "#" } }, [
+              _c("i", { staticClass: "fab fa-twitter-square fa-2x" })
+            ])
+          ]),
+          _vm._v(" "),
+          _c("li", [
+            _c("a", { attrs: { href: "#" } }, [
+              _c("img", {
+                attrs: {
+                  src:
+                    "https://upload.wikimedia.org/wikipedia/commons/thumb/5/5f/Google_Play_Store_badge_IT.svg/1024px-Google_Play_Store_badge_IT.svg.png",
+                  alt: ""
+                }
+              })
+            ])
+          ])
+        ])
+      ])
+    ])
+  }
+]
+render._withStripped = true
+
+
+
+/***/ }),
+
+/***/ "./node_modules/vue-loader/lib/loaders/templateLoader.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/components/Footer2.vue?vue&type=template&id=166f53dc&scoped=true&":
+/*!**********************************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/components/Footer2.vue?vue&type=template&id=166f53dc&scoped=true& ***!
+  \**********************************************************************************************************************************************************************************************************************/
 /*! exports provided: render, staticRenderFns */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
@@ -4511,7 +4773,7 @@ var render = function() {
   var _vm = this
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
-  return _vm._m(0)
+  return _c("div", [_vm._m(0), _vm._v(" "), _c("Footer2")], 1)
 }
 var staticRenderFns = [
   function() {
@@ -4568,7 +4830,7 @@ var staticRenderFns = [
           _c("div", [
             _c("h2", { attrs: { id: "la-storia" } }, [
               _vm._v(
-                "\n                    La storia di Booliveroo\n                "
+                "\r\n                        La storia di Booliveroo\r\n                    "
               )
             ]),
             _vm._v(" "),
@@ -4576,20 +4838,22 @@ var staticRenderFns = [
             _vm._v(" "),
             _c("p", [
               _vm._v(
-                "\n                    Tutto ciò che facciamo ruota intorno ai nostri valori. Ci fanno da guida ogni giorno per lavorare in squadra e prendere decisioni importanti, dalle scelte che hanno un impatto sulle assunzioni e sullo sviluppo del personale, a quelle che scrivono il futuro dei prodotti Booliveroo.\n                "
+                "\r\n                        Tutto ciò che facciamo ruota intorno ai nostri valori. Ci fanno da guida ogni giorno per lavorare in squadra e prendere decisioni importanti, dalle scelte che hanno un impatto sulle assunzioni e sullo sviluppo del personale, a quelle che scrivono il futuro dei prodotti Booliveroo.\r\n                    "
               )
             ]),
             _vm._v(" "),
             _c("p", { attrs: { id: "i-valori" } }, [
               _vm._v(
-                "\n                    Offrendo una consegna veloce e affidabile, che il cliente può monitorare dal cellulare, Booliveroo ha visto una crescita dei ricavi di oltre il 650%. I nostri ristoranti partner riescono ad aumentare i loro ricavi del 30%, creando migliaia di posti di lavoro nel settore della ristorazione.\n                "
+                "\r\n                        Offrendo una consegna veloce e affidabile, che il cliente può monitorare dal cellulare, Booliveroo ha visto una crescita dei ricavi di oltre il 650%. I nostri ristoranti partner riescono ad aumentare i loro ricavi del 30%, creando migliaia di posti di lavoro nel settore della ristorazione.\r\n                    "
               )
             ])
           ]),
           _vm._v(" "),
           _c("div", [
             _c("h2", [
-              _vm._v("\n                    I nostri valori\n                ")
+              _vm._v(
+                "\r\n                        I nostri valori\r\n                    "
+              )
             ]),
             _vm._v(" "),
             _c("img", {
@@ -4601,27 +4865,29 @@ var staticRenderFns = [
             _vm._v(" "),
             _c("p", { attrs: { id: "clienti" } }, [
               _vm._v(
-                "\n                    Tutto ciò che facciamo ruota intorno ai nostri valori. Ci fanno da guida ogni giorno per lavorare in squadra e prendere decisioni importanti, dalle scelte che hanno un impatto sulle assunzioni e sullo sviluppo del personale, a quelle che scrivono il futuro dei prodotti Booliveroo.\n                "
+                "\r\n                        Tutto ciò che facciamo ruota intorno ai nostri valori. Ci fanno da guida ogni giorno per lavorare in squadra e prendere decisioni importanti, dalle scelte che hanno un impatto sulle assunzioni e sullo sviluppo del personale, a quelle che scrivono il futuro dei prodotti Booliveroo.\r\n                    "
               )
             ])
           ]),
           _vm._v(" "),
           _c("div", [
             _c("h2", [
-              _vm._v("\n                    Clienti\n                ")
+              _vm._v(
+                "\r\n                        Clienti\r\n                    "
+              )
             ]),
             _vm._v(" "),
             _c("img", { attrs: { src: "/img/clienti.jpg", alt: "clienti" } }),
             _vm._v(" "),
             _c("p", [
               _vm._v(
-                "\n                    La missione di Booliveroo è trasformare il modo in cui i clienti mangiano. Un ingrediente chiave del nostro successo è offrire ai nostri clienti la migliore selezione di ristoranti: che tu voglia sushi per cena, un’insalata per pranzo, o una brioche per colazione, ci pensiamo noi!\n                "
+                "\r\n                        La missione di Booliveroo è trasformare il modo in cui i clienti mangiano. Un ingrediente chiave del nostro successo è offrire ai nostri clienti la migliore selezione di ristoranti: che tu voglia sushi per cena, un’insalata per pranzo, o una brioche per colazione, ci pensiamo noi!\r\n                    "
               )
             ]),
             _vm._v(" "),
             _c("p", { attrs: { id: "tecnologia" } }, [
               _vm._v(
-                "\n                    Innovando ed espandendoci costantemente, offriamo la migliore scelta e convenienza. Il nostro obiettivo è consegnare ai nostri clienti i migliori piatti nel minor tempo possibile, spesso in meno di 30 minuti.\n                "
+                "\r\n                        Innovando ed espandendoci costantemente, offriamo la migliore scelta e convenienza. Il nostro obiettivo è consegnare ai nostri clienti i migliori piatti nel minor tempo possibile, spesso in meno di 30 minuti.\r\n                    "
               )
             ])
           ]),
@@ -4629,7 +4895,7 @@ var staticRenderFns = [
           _c("div", [
             _c("h2", [
               _vm._v(
-                "\n                    È la tecnologia che ci guida\n                "
+                "\r\n                        È la tecnologia che ci guida\r\n                    "
               )
             ]),
             _vm._v(" "),
@@ -4639,13 +4905,13 @@ var staticRenderFns = [
             _vm._v(" "),
             _c("p", [
               _vm._v(
-                "\n                    Booliveroo nasce nel Regno Unito e siamo orgogliosi di portare la nostra tecnologia in tutto il mondo. Il nostro algoritmo “Frank” si basa su una potente tecnologia predittiva che gestisce nel modo più efficiente l’assegnazione degli ordini in base alla posizione dei ristoranti, dei rider e dei clienti.\n                "
+                "\r\n                        Booliveroo nasce nel Regno Unito e siamo orgogliosi di portare la nostra tecnologia in tutto il mondo. Il nostro algoritmo “Frank” si basa su una potente tecnologia predittiva che gestisce nel modo più efficiente l’assegnazione degli ordini in base alla posizione dei ristoranti, dei rider e dei clienti.\r\n                    "
               )
             ]),
             _vm._v(" "),
             _c("p", { attrs: { id: "rider" } }, [
               _vm._v(
-                "\n                    L’apprendimento automatico aiuta a stimare il tempo necessario per la preparazione di un ordine, aiutando a ottimizzare l’esperienza complessiva. Booliveroo è riuscita a diminuire il tempo di consegna del 20%, così che i rider possano completare più consegne all’ora e aumentare i loro guadagni, i ristoranti possano aumentare le loro vendite e, ovviamente, i clienti possano ricevere il loro ordine in minor tempo. \n                "
+                "\r\n                        L’apprendimento automatico aiuta a stimare il tempo necessario per la preparazione di un ordine, aiutando a ottimizzare l’esperienza complessiva. Booliveroo è riuscita a diminuire il tempo di consegna del 20%, così che i rider possano completare più consegne all’ora e aumentare i loro guadagni, i ristoranti possano aumentare le loro vendite e, ovviamente, i clienti possano ricevere il loro ordine in minor tempo. \r\n                    "
               )
             ])
           ]),
@@ -4653,7 +4919,7 @@ var staticRenderFns = [
           _c("div", [
             _c("h2", [
               _vm._v(
-                "\n                    Booliveroo e i nostri rider\n                "
+                "\r\n                        Booliveroo e i nostri rider\r\n                    "
               )
             ]),
             _vm._v(" "),
@@ -4661,13 +4927,13 @@ var staticRenderFns = [
             _vm._v(" "),
             _c("p", [
               _vm._v(
-                "\n                    Booliveroo è orgogliosa di offrire un lavoro ben retribuito e flessibile ai rider, che sono il cuore del nostro servizio. Il loro lavoro alimenta la nostra crescita, e senza di loro non potremmo consegnare ai nostri clienti i piatti migliori e aiutare i ristoranti locali a crescere.\n                "
+                "\r\n                        Booliveroo è orgogliosa di offrire un lavoro ben retribuito e flessibile ai rider, che sono il cuore del nostro servizio. Il loro lavoro alimenta la nostra crescita, e senza di loro non potremmo consegnare ai nostri clienti i piatti migliori e aiutare i ristoranti locali a crescere.\r\n                    "
               )
             ]),
             _vm._v(" "),
             _c("p", { attrs: { id: "ristorante" } }, [
               _vm._v(
-                "\n                    I rider hanno accesso all’assicurazione, ma vogliamo fare di più Booliveroo è stata la prima società tech a chiedere la fine del compromesso tra flessibilità e sicurezza che esiste attualmente nel diritto del lavoro. Vogliamo collaborare con i governi in tutti i Paesi per raggiungere questo obiettivo. \n                "
+                "\r\n                        I rider hanno accesso all’assicurazione, ma vogliamo fare di più Booliveroo è stata la prima società tech a chiedere la fine del compromesso tra flessibilità e sicurezza che esiste attualmente nel diritto del lavoro. Vogliamo collaborare con i governi in tutti i Paesi per raggiungere questo obiettivo. \r\n                    "
               )
             ])
           ]),
@@ -4675,7 +4941,7 @@ var staticRenderFns = [
           _c("div", [
             _c("h2", [
               _vm._v(
-                "\n                    I ristoranti migliori, consegnati dove vuoi\n                "
+                "\r\n                        I ristoranti migliori, consegnati dove vuoi\r\n                    "
               )
             ]),
             _vm._v(" "),
@@ -4685,25 +4951,25 @@ var staticRenderFns = [
             _vm._v(" "),
             _c("p", [
               _vm._v(
-                "\n                    Il cibo è al centro di ogni attività di Booliveroo e la sua missione è dare ai clienti una maggiore scelta. Ci sono f antastici ristoranti da cui crediamo che tutti debbano poter ordinare. \n                "
+                "\r\n                        Il cibo è al centro di ogni attività di Booliveroo e la sua missione è dare ai clienti una maggiore scelta. Ci sono f antastici ristoranti da cui crediamo che tutti debbano poter ordinare. \r\n                    "
               )
             ]),
             _vm._v(" "),
             _c("p", [
               _vm._v(
-                "\n                    Ma l’obiettivo di Booliveroo non è solo di assicurarti che i ristoranti nella tua zona siano disponibili quando e dove vuoi. Vogliamo andare oltre e portare nuovi ristoranti nella tua zona così da ampliare la tua scelta.\n                "
+                "\r\n                        Ma l’obiettivo di Booliveroo non è solo di assicurarti che i ristoranti nella tua zona siano disponibili quando e dove vuoi. Vogliamo andare oltre e portare nuovi ristoranti nella tua zona così da ampliare la tua scelta.\r\n                    "
               )
             ]),
             _vm._v(" "),
             _c("p", [
               _vm._v(
-                "\n                    Booliveroo Editions è un progetto che nasce per portare i piatti di grandi chef, creati in esclusiva per Booliveroo, in tutte le case. Editions permette a chef e ristoranti di dar vita a nuovi concepts e raggiungere nuovi appassionati di cibo. Booliveroo offre ai ristoranti dati e insight che consentono loro di personalizzare i menù e i prezzi.\n                "
+                "\r\n                        Booliveroo Editions è un progetto che nasce per portare i piatti di grandi chef, creati in esclusiva per Booliveroo, in tutte le case. Editions permette a chef e ristoranti di dar vita a nuovi concepts e raggiungere nuovi appassionati di cibo. Booliveroo offre ai ristoranti dati e insight che consentono loro di personalizzare i menù e i prezzi.\r\n                    "
               )
             ]),
             _vm._v(" "),
             _c("p", [
               _vm._v(
-                "\n                    Questo è tutto ciò che dà vita alla missione di Booliveroo di offrire ai nostri clienti un mondo di piatti di alta qualità. Ogni cliente ha gusti diversi e il nostro compito è garantire che abbiano ciò che vogliono, quando vogliono e dove lo vogliono.\n                "
+                "\r\n                        Questo è tutto ciò che dà vita alla missione di Booliveroo di offrire ai nostri clienti un mondo di piatti di alta qualità. Ogni cliente ha gusti diversi e il nostro compito è garantire che abbiano ciò che vogliono, quando vogliono e dove lo vogliono.\r\n                    "
               )
             ])
           ])
@@ -4733,195 +4999,201 @@ var render = function() {
   var _vm = this
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
-  return _c("div", [
-    _c(
-      "div",
-      {
-        staticClass:
-          "jumbotron d-flex flex-column justify-content-center align-item-center"
-      },
-      [
-        _vm._m(0),
-        _vm._v(" "),
-        _c("div", { attrs: { id: "cate" } }, [
-          _c(
-            "a",
-            {
-              attrs: { id: "pizza", href: "#categorie" },
-              on: {
-                click: function($event) {
-                  return _vm.selectCategory("Pizza")
-                }
-              }
-            },
-            [
-              _c("img", {
-                attrs: {
-                  id: "pizza-categoria",
-                  src: __webpack_require__(/*! ../../../public/img/pizza-categoria.png */ "./public/img/pizza-categoria.png"),
-                  alt: "pizza"
-                }
-              }),
-              _vm._v(" "),
-              _c("h5", [_vm._v("Pizza")])
-            ]
-          ),
+  return _c(
+    "div",
+    [
+      _c(
+        "div",
+        {
+          staticClass:
+            "jumbotron d-flex flex-column justify-content-center align-item-center"
+        },
+        [
+          _vm._m(0),
           _vm._v(" "),
-          _c(
-            "a",
-            {
-              attrs: { id: "burger", href: "#categorie" },
-              on: {
-                click: function($event) {
-                  return _vm.selectCategory("Fast-Food")
-                }
-              }
-            },
-            [
-              _c("img", {
-                attrs: {
-                  src: __webpack_require__(/*! ../../../public/img/burger-categoria.png */ "./public/img/burger-categoria.png"),
-                  alt: "hamburger"
-                }
-              }),
-              _vm._v(" "),
-              _c("h5", [_vm._v("Burger")])
-            ]
-          ),
-          _vm._v(" "),
-          _c(
-            "a",
-            {
-              attrs: { id: "sushi", href: "#categorie" },
-              on: {
-                click: function($event) {
-                  return _vm.selectCategory("Sushi")
-                }
-              }
-            },
-            [
-              _c("img", {
-                attrs: {
-                  src: __webpack_require__(/*! ../../../public/img/sushi-categoria.png */ "./public/img/sushi-categoria.png"),
-                  alt: "sushi"
-                }
-              }),
-              _vm._v(" "),
-              _c("h5", [_vm._v("Sushi")])
-            ]
-          )
-        ]),
-        _vm._v(" "),
-        _vm._m(1),
-        _vm._v(" "),
-        _vm._m(2)
-      ]
-    ),
-    _vm._v(" "),
-    _c("div", { staticClass: "curvy" }),
-    _vm._v(" "),
-    _c("div", { staticClass: "back-white" }, [
-      _c("div", { staticClass: "container main-page" }, [
-        _vm._m(3),
-        _vm._v(" "),
-        _c(
-          "div",
-          { staticClass: "row justify-content-center" },
-          _vm._l(_vm.restaurants, function(restaurant) {
-            return _c("Card", {
-              key: restaurant.id,
-              attrs: { item: restaurant }
-            })
-          }),
-          1
-        ),
-        _vm._v(" "),
-        _vm._m(4),
-        _vm._v(" "),
-        _c(
-          "div",
-          { staticClass: "badge-container" },
-          _vm._l(_vm.categories, function(category, index) {
-            return _c(
-              "div",
+          _c("div", { attrs: { id: "cate" } }, [
+            _c(
+              "a",
               {
-                key: index,
-                staticClass: "badge-category m-2",
+                attrs: { id: "pizza", href: "#categorie" },
                 on: {
                   click: function($event) {
-                    return _vm.selectCategory(category.name)
+                    return _vm.selectCategory("Pizza")
                   }
                 }
               },
-              [_vm._v("\n          " + _vm._s(category.name) + "\n        ")]
+              [
+                _c("img", {
+                  attrs: {
+                    id: "pizza-categoria",
+                    src: __webpack_require__(/*! ../../../public/img/pizza-categoria.png */ "./public/img/pizza-categoria.png"),
+                    alt: "pizza"
+                  }
+                }),
+                _vm._v(" "),
+                _c("h5", [_vm._v("Pizza")])
+              ]
+            ),
+            _vm._v(" "),
+            _c(
+              "a",
+              {
+                attrs: { id: "burger", href: "#categorie" },
+                on: {
+                  click: function($event) {
+                    return _vm.selectCategory("Fast-Food")
+                  }
+                }
+              },
+              [
+                _c("img", {
+                  attrs: {
+                    src: __webpack_require__(/*! ../../../public/img/burger-categoria.png */ "./public/img/burger-categoria.png"),
+                    alt: "hamburger"
+                  }
+                }),
+                _vm._v(" "),
+                _c("h5", [_vm._v("Burger")])
+              ]
+            ),
+            _vm._v(" "),
+            _c(
+              "a",
+              {
+                attrs: { id: "sushi", href: "#categorie" },
+                on: {
+                  click: function($event) {
+                    return _vm.selectCategory("Sushi")
+                  }
+                }
+              },
+              [
+                _c("img", {
+                  attrs: {
+                    src: __webpack_require__(/*! ../../../public/img/sushi-categoria.png */ "./public/img/sushi-categoria.png"),
+                    alt: "sushi"
+                  }
+                }),
+                _vm._v(" "),
+                _c("h5", [_vm._v("Sushi")])
+              ]
             )
-          }),
-          0
-        ),
-        _vm._v(" "),
-        _c(
-          "div",
-          { staticClass: "d-flex" },
-          _vm._l(_vm.ristoranti_categorie, function(item, index) {
-            return _c(
-              "div",
-              { key: index },
-              _vm._l(item.categories, function(category, index) {
-                return _c("span", { key: index }, [
-                  _c(
-                    "div",
-                    {
-                      directives: [
-                        {
-                          name: "show",
-                          rawName: "v-show",
-                          value: _vm.categoriaScelta == category.name,
-                          expression: "categoriaScelta == category.name"
-                        }
-                      ]
-                    },
-                    [
-                      _c(
-                        "router-link",
-                        {
-                          attrs: {
-                            to: {
-                              name: "restaurant",
-                              params: { slug: item.slug }
-                            }
+          ]),
+          _vm._v(" "),
+          _vm._m(1),
+          _vm._v(" "),
+          _vm._m(2)
+        ]
+      ),
+      _vm._v(" "),
+      _c("div", { staticClass: "curvy" }),
+      _vm._v(" "),
+      _c("div", { staticClass: "back-white" }, [
+        _c("div", { staticClass: "container main-page" }, [
+          _vm._m(3),
+          _vm._v(" "),
+          _c(
+            "div",
+            { staticClass: "row justify-content-center" },
+            _vm._l(_vm.restaurants, function(restaurant) {
+              return _c("Card", {
+                key: restaurant.id,
+                attrs: { item: restaurant }
+              })
+            }),
+            1
+          ),
+          _vm._v(" "),
+          _vm._m(4),
+          _vm._v(" "),
+          _c(
+            "div",
+            { staticClass: "badge-container" },
+            _vm._l(_vm.categories, function(category, index) {
+              return _c(
+                "div",
+                {
+                  key: index,
+                  staticClass: "badge-category m-2",
+                  on: {
+                    click: function($event) {
+                      return _vm.selectCategory(category.name)
+                    }
+                  }
+                },
+                [_vm._v("\n          " + _vm._s(category.name) + "\n        ")]
+              )
+            }),
+            0
+          ),
+          _vm._v(" "),
+          _c(
+            "div",
+            { staticClass: "d-flex" },
+            _vm._l(_vm.ristoranti_categorie, function(item, index) {
+              return _c(
+                "div",
+                { key: index },
+                _vm._l(item.categories, function(category, index) {
+                  return _c("span", { key: index }, [
+                    _c(
+                      "div",
+                      {
+                        directives: [
+                          {
+                            name: "show",
+                            rawName: "v-show",
+                            value: _vm.categoriaScelta == category.name,
+                            expression: "categoriaScelta == category.name"
                           }
-                        },
-                        [
-                          _c("div", { staticClass: "card" }, [
-                            _c("img", {
-                              staticClass: "img",
-                              attrs: {
-                                src: "storage/" + item.cover,
-                                alt: "item.name"
+                        ]
+                      },
+                      [
+                        _c(
+                          "router-link",
+                          {
+                            attrs: {
+                              to: {
+                                name: "restaurant",
+                                params: { slug: item.slug }
                               }
-                            }),
-                            _vm._v(" "),
-                            _c("div", { staticClass: "container_name" }, [
-                              _c("h4", { staticClass: "card-title" }, [
-                                _vm._v(_vm._s(item.name))
+                            }
+                          },
+                          [
+                            _c("div", { staticClass: "card" }, [
+                              _c("img", {
+                                staticClass: "img",
+                                attrs: {
+                                  src: "storage/" + item.cover,
+                                  alt: "item.name"
+                                }
+                              }),
+                              _vm._v(" "),
+                              _c("div", { staticClass: "container_name" }, [
+                                _c("h4", { staticClass: "card-title" }, [
+                                  _vm._v(_vm._s(item.name))
+                                ])
                               ])
                             ])
-                          ])
-                        ]
-                      )
-                    ],
-                    1
-                  )
-                ])
-              }),
-              0
-            )
-          }),
-          0
-        )
-      ])
-    ])
-  ])
+                          ]
+                        )
+                      ],
+                      1
+                    )
+                  ])
+                }),
+                0
+              )
+            }),
+            0
+          )
+        ])
+      ]),
+      _vm._v(" "),
+      _c("Footer")
+    ],
+    1
+  )
 }
 var staticRenderFns = [
   function() {
@@ -4996,173 +5268,187 @@ var render = function() {
   var _vm = this
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
-  return _c("div", { staticClass: "sfondo" }, [
-    _c("div", { staticClass: "wrapper container-fluid" }, [
-      _c("div", { staticClass: "row main-page" }, [
-        _c(
-          "div",
-          {
-            staticClass:
-              "my-4 text-center col-xl-6 offset-xl-1 col-lg-8 offset-lg-2"
-          },
-          [
-            _c("h2", [_vm._v(_vm._s(_vm.restaurant.name))]),
-            _vm._v(" "),
-            _c("p", [_vm._v(_vm._s(_vm.restaurant.description))]),
-            _vm._v(" "),
-            _c(
-              "div",
-              {
-                staticClass:
-                  "d-flex flex-wrap justify-content-between card-container"
-              },
-              _vm._l(_vm.restaurant.plates, function(plate) {
-                return _c("div", { key: plate.id, staticClass: "card mb-3 " }, [
-                  _c("div", { staticClass: "title-container" }, [
-                    _c("h3", [
-                      _vm._v(_vm._s(plate.name) + "  "),
-                      plate.veg == 1
-                        ? _c("i", { staticClass: "fas fa-leaf foglia" })
-                        : _vm._e()
-                    ])
-                  ]),
-                  _vm._v(" "),
-                  _c("img", {
-                    attrs: { src: "/storage/" + plate.img, alt: plate.name }
-                  }),
-                  _vm._v(" "),
-                  _c("div", { staticClass: "font-weight-bold" }, [
-                    _vm._v(_vm._s(plate.price.toFixed(2)) + " €")
-                  ]),
-                  _vm._v(" "),
-                  _c(
-                    "button",
-                    {
-                      staticClass: "btn btn-sm",
-                      on: {
-                        click: function($event) {
-                          return _vm.controlla(plate)
-                        }
-                      }
-                    },
-                    [_vm._v("Aggiungi al carrello")]
-                  )
-                ])
-              }),
-              0
-            )
-          ]
-        ),
-        _vm._v(" "),
-        _c(
-          "div",
-          {
-            staticClass: "cart col-xl-4 offset-xl-1 col-lg-8 offset-lg-2 mb-5"
-          },
-          [
-            _c(
-              "div",
-              {
-                staticClass:
-                  "d-flex justify-content-between align-items-center mb-1"
-              },
-              [
-                _c("h3", [_vm._v("Il tuo carello")]),
-                _vm._v(" "),
-                _c("button", { staticClass: "btn btn-gradient" }, [
-                  _vm._v(
-                    "\n              " + _vm._s(_vm.badge) + "\n            "
-                  )
-                ])
-              ]
-            ),
-            _vm._v(" "),
-            _c("table", { staticClass: "table" }, [
-              _vm._m(0),
+  return _c(
+    "div",
+    { staticClass: "sfondo" },
+    [
+      _c("div", { staticClass: "wrapper container-fluid" }, [
+        _c("div", { staticClass: "row main-page" }, [
+          _c(
+            "div",
+            {
+              staticClass:
+                "my-4 text-center col-xl-6 offset-xl-1 col-lg-8 offset-lg-2"
+            },
+            [
+              _c("h2", [_vm._v(_vm._s(_vm.restaurant.name))]),
+              _vm._v(" "),
+              _c("p", [_vm._v(_vm._s(_vm.restaurant.description))]),
               _vm._v(" "),
               _c(
-                "tbody",
-                _vm._l(_vm.carts, function(cart, n) {
-                  return _c("tr", { key: cart.id }, [
-                    _c("td", [_vm._v(_vm._s(cart.name))]),
-                    _vm._v(" "),
-                    _c("td", [_vm._v(_vm._s(cart.price.toFixed(2)) + " €")]),
-                    _vm._v(" "),
-                    _c(
-                      "td",
-                      {
-                        staticClass:
-                          "d-flex justify-content-around align-items-center"
-                      },
-                      [
-                        _c(
-                          "button",
-                          {
-                            staticClass: "btn btn-quantita btn-sm",
-                            on: {
-                              click: function($event) {
-                                return _vm.removeQuantity(cart, n)
-                              }
+                "div",
+                {
+                  staticClass:
+                    "d-flex flex-wrap justify-content-between card-container"
+                },
+                _vm._l(_vm.restaurant.plates, function(plate) {
+                  return _c(
+                    "div",
+                    { key: plate.id, staticClass: "card mb-3 " },
+                    [
+                      _c("div", { staticClass: "title-container" }, [
+                        _c("h3", [
+                          _vm._v(_vm._s(plate.name) + "  "),
+                          plate.veg == 1
+                            ? _c("i", { staticClass: "fas fa-leaf foglia" })
+                            : _vm._e()
+                        ])
+                      ]),
+                      _vm._v(" "),
+                      _c("img", {
+                        attrs: { src: "/storage/" + plate.img, alt: plate.name }
+                      }),
+                      _vm._v(" "),
+                      _c("div", { staticClass: "font-weight-bold" }, [
+                        _vm._v(_vm._s(plate.price.toFixed(2)) + " €")
+                      ]),
+                      _vm._v(" "),
+                      _c(
+                        "button",
+                        {
+                          staticClass: "btn btn-sm",
+                          on: {
+                            click: function($event) {
+                              return _vm.controlla(plate)
                             }
-                          },
-                          [_vm._v("-")]
-                        ),
-                        _vm._v(" "),
-                        _c("span", { staticClass: "num" }, [
-                          _vm._v(_vm._s(cart.quantity))
-                        ]),
-                        _vm._v(" "),
-                        _c(
-                          "button",
-                          {
-                            staticClass: "btn btn-quantita btn-sm",
-                            on: {
-                              click: function($event) {
-                                return _vm.upQuantity(cart, n)
-                              }
-                            }
-                          },
-                          [_vm._v("+")]
-                        )
-                      ]
-                    ),
-                    _vm._v(" "),
-                    _c("td", [
-                      _c("i", {
-                        staticClass: "fas fa-times",
-                        on: {
-                          click: function($event) {
-                            return _vm.removeCart(n)
                           }
-                        }
-                      })
-                    ])
-                  ])
+                        },
+                        [_vm._v("Aggiungi al carrello")]
+                      )
+                    ]
+                  )
                 }),
                 0
               )
-            ]),
-            _vm._v(" "),
-            _c(
-              "div",
-              {
-                staticClass: "d-flex justify-content-between align-items-center"
-              },
-              [
-                _c("h4", [
-                  _vm._v(
-                    "Totale Prezzo: " + _vm._s(_vm.totalPrice.toFixed(2)) + " €"
-                  )
-                ]),
+            ]
+          ),
+          _vm._v(" "),
+          _c(
+            "div",
+            {
+              staticClass: "cart col-xl-4 offset-xl-1 col-lg-8 offset-lg-2 mb-5"
+            },
+            [
+              _c(
+                "div",
+                {
+                  staticClass:
+                    "d-flex justify-content-between align-items-center mb-1"
+                },
+                [
+                  _c("h3", [_vm._v("Il tuo carello")]),
+                  _vm._v(" "),
+                  _c("button", { staticClass: "btn btn-gradient" }, [
+                    _vm._v(
+                      "\n              " + _vm._s(_vm.badge) + "\n            "
+                    )
+                  ])
+                ]
+              ),
+              _vm._v(" "),
+              _c("table", { staticClass: "table" }, [
+                _vm._m(0),
                 _vm._v(" "),
-                _vm._m(1)
-              ]
-            )
-          ]
-        )
-      ])
-    ])
-  ])
+                _c(
+                  "tbody",
+                  _vm._l(_vm.carts, function(cart, n) {
+                    return _c("tr", { key: cart.id }, [
+                      _c("td", [_vm._v(_vm._s(cart.name))]),
+                      _vm._v(" "),
+                      _c("td", [_vm._v(_vm._s(cart.price.toFixed(2)) + " €")]),
+                      _vm._v(" "),
+                      _c(
+                        "td",
+                        {
+                          staticClass:
+                            "d-flex justify-content-around align-items-center"
+                        },
+                        [
+                          _c(
+                            "button",
+                            {
+                              staticClass: "btn btn-quantita btn-sm",
+                              on: {
+                                click: function($event) {
+                                  return _vm.removeQuantity(cart, n)
+                                }
+                              }
+                            },
+                            [_vm._v("-")]
+                          ),
+                          _vm._v(" "),
+                          _c("span", { staticClass: "num" }, [
+                            _vm._v(_vm._s(cart.quantity))
+                          ]),
+                          _vm._v(" "),
+                          _c(
+                            "button",
+                            {
+                              staticClass: "btn btn-quantita btn-sm",
+                              on: {
+                                click: function($event) {
+                                  return _vm.upQuantity(cart, n)
+                                }
+                              }
+                            },
+                            [_vm._v("+")]
+                          )
+                        ]
+                      ),
+                      _vm._v(" "),
+                      _c("td", [
+                        _c("i", {
+                          staticClass: "fas fa-times",
+                          on: {
+                            click: function($event) {
+                              return _vm.removeCart(n)
+                            }
+                          }
+                        })
+                      ])
+                    ])
+                  }),
+                  0
+                )
+              ]),
+              _vm._v(" "),
+              _c(
+                "div",
+                {
+                  staticClass:
+                    "d-flex justify-content-between align-items-center"
+                },
+                [
+                  _c("h4", [
+                    _vm._v(
+                      "Totale Prezzo: " +
+                        _vm._s(_vm.totalPrice.toFixed(2)) +
+                        " €"
+                    )
+                  ]),
+                  _vm._v(" "),
+                  _vm._m(1)
+                ]
+              )
+            ]
+          )
+        ])
+      ]),
+      _vm._v(" "),
+      _c("Footer")
+    ],
+    1
+  )
 }
 var staticRenderFns = [
   function() {
@@ -20900,6 +21186,93 @@ __webpack_require__.r(__webpack_exports__);
 
 /***/ }),
 
+/***/ "./resources/js/components/Footer2.vue":
+/*!*********************************************!*\
+  !*** ./resources/js/components/Footer2.vue ***!
+  \*********************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _Footer2_vue_vue_type_template_id_166f53dc_scoped_true___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./Footer2.vue?vue&type=template&id=166f53dc&scoped=true& */ "./resources/js/components/Footer2.vue?vue&type=template&id=166f53dc&scoped=true&");
+/* harmony import */ var _Footer2_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./Footer2.vue?vue&type=script&lang=js& */ "./resources/js/components/Footer2.vue?vue&type=script&lang=js&");
+/* empty/unused harmony star reexport *//* harmony import */ var _Footer2_vue_vue_type_style_index_0_id_166f53dc_lang_scss_scoped_true___WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./Footer2.vue?vue&type=style&index=0&id=166f53dc&lang=scss&scoped=true& */ "./resources/js/components/Footer2.vue?vue&type=style&index=0&id=166f53dc&lang=scss&scoped=true&");
+/* harmony import */ var _node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../../../node_modules/vue-loader/lib/runtime/componentNormalizer.js */ "./node_modules/vue-loader/lib/runtime/componentNormalizer.js");
+
+
+
+
+
+
+/* normalize component */
+
+var component = Object(_node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_3__["default"])(
+  _Footer2_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__["default"],
+  _Footer2_vue_vue_type_template_id_166f53dc_scoped_true___WEBPACK_IMPORTED_MODULE_0__["render"],
+  _Footer2_vue_vue_type_template_id_166f53dc_scoped_true___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"],
+  false,
+  null,
+  "166f53dc",
+  null
+  
+)
+
+/* hot reload */
+if (false) { var api; }
+component.options.__file = "resources/js/components/Footer2.vue"
+/* harmony default export */ __webpack_exports__["default"] = (component.exports);
+
+/***/ }),
+
+/***/ "./resources/js/components/Footer2.vue?vue&type=script&lang=js&":
+/*!**********************************************************************!*\
+  !*** ./resources/js/components/Footer2.vue?vue&type=script&lang=js& ***!
+  \**********************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _node_modules_babel_loader_lib_index_js_ref_4_0_node_modules_vue_loader_lib_index_js_vue_loader_options_Footer2_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../node_modules/babel-loader/lib??ref--4-0!../../../node_modules/vue-loader/lib??vue-loader-options!./Footer2.vue?vue&type=script&lang=js& */ "./node_modules/babel-loader/lib/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/components/Footer2.vue?vue&type=script&lang=js&");
+/* empty/unused harmony star reexport */ /* harmony default export */ __webpack_exports__["default"] = (_node_modules_babel_loader_lib_index_js_ref_4_0_node_modules_vue_loader_lib_index_js_vue_loader_options_Footer2_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__["default"]); 
+
+/***/ }),
+
+/***/ "./resources/js/components/Footer2.vue?vue&type=style&index=0&id=166f53dc&lang=scss&scoped=true&":
+/*!*******************************************************************************************************!*\
+  !*** ./resources/js/components/Footer2.vue?vue&type=style&index=0&id=166f53dc&lang=scss&scoped=true& ***!
+  \*******************************************************************************************************/
+/*! no static exports found */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _node_modules_style_loader_index_js_node_modules_css_loader_index_js_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_postcss_loader_src_index_js_ref_7_2_node_modules_sass_loader_dist_cjs_js_ref_7_3_node_modules_vue_loader_lib_index_js_vue_loader_options_Footer2_vue_vue_type_style_index_0_id_166f53dc_lang_scss_scoped_true___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../node_modules/style-loader!../../../node_modules/css-loader!../../../node_modules/vue-loader/lib/loaders/stylePostLoader.js!../../../node_modules/postcss-loader/src??ref--7-2!../../../node_modules/sass-loader/dist/cjs.js??ref--7-3!../../../node_modules/vue-loader/lib??vue-loader-options!./Footer2.vue?vue&type=style&index=0&id=166f53dc&lang=scss&scoped=true& */ "./node_modules/style-loader/index.js!./node_modules/css-loader/index.js!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/postcss-loader/src/index.js?!./node_modules/sass-loader/dist/cjs.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/components/Footer2.vue?vue&type=style&index=0&id=166f53dc&lang=scss&scoped=true&");
+/* harmony import */ var _node_modules_style_loader_index_js_node_modules_css_loader_index_js_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_postcss_loader_src_index_js_ref_7_2_node_modules_sass_loader_dist_cjs_js_ref_7_3_node_modules_vue_loader_lib_index_js_vue_loader_options_Footer2_vue_vue_type_style_index_0_id_166f53dc_lang_scss_scoped_true___WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_node_modules_style_loader_index_js_node_modules_css_loader_index_js_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_postcss_loader_src_index_js_ref_7_2_node_modules_sass_loader_dist_cjs_js_ref_7_3_node_modules_vue_loader_lib_index_js_vue_loader_options_Footer2_vue_vue_type_style_index_0_id_166f53dc_lang_scss_scoped_true___WEBPACK_IMPORTED_MODULE_0__);
+/* harmony reexport (unknown) */ for(var __WEBPACK_IMPORT_KEY__ in _node_modules_style_loader_index_js_node_modules_css_loader_index_js_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_postcss_loader_src_index_js_ref_7_2_node_modules_sass_loader_dist_cjs_js_ref_7_3_node_modules_vue_loader_lib_index_js_vue_loader_options_Footer2_vue_vue_type_style_index_0_id_166f53dc_lang_scss_scoped_true___WEBPACK_IMPORTED_MODULE_0__) if(["default"].indexOf(__WEBPACK_IMPORT_KEY__) < 0) (function(key) { __webpack_require__.d(__webpack_exports__, key, function() { return _node_modules_style_loader_index_js_node_modules_css_loader_index_js_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_postcss_loader_src_index_js_ref_7_2_node_modules_sass_loader_dist_cjs_js_ref_7_3_node_modules_vue_loader_lib_index_js_vue_loader_options_Footer2_vue_vue_type_style_index_0_id_166f53dc_lang_scss_scoped_true___WEBPACK_IMPORTED_MODULE_0__[key]; }) }(__WEBPACK_IMPORT_KEY__));
+
+
+/***/ }),
+
+/***/ "./resources/js/components/Footer2.vue?vue&type=template&id=166f53dc&scoped=true&":
+/*!****************************************************************************************!*\
+  !*** ./resources/js/components/Footer2.vue?vue&type=template&id=166f53dc&scoped=true& ***!
+  \****************************************************************************************/
+/*! exports provided: render, staticRenderFns */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_Footer2_vue_vue_type_template_id_166f53dc_scoped_true___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!../../../node_modules/vue-loader/lib??vue-loader-options!./Footer2.vue?vue&type=template&id=166f53dc&scoped=true& */ "./node_modules/vue-loader/lib/loaders/templateLoader.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/components/Footer2.vue?vue&type=template&id=166f53dc&scoped=true&");
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "render", function() { return _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_Footer2_vue_vue_type_template_id_166f53dc_scoped_true___WEBPACK_IMPORTED_MODULE_0__["render"]; });
+
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "staticRenderFns", function() { return _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_Footer2_vue_vue_type_template_id_166f53dc_scoped_true___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"]; });
+
+
+
+/***/ }),
+
 /***/ "./resources/js/components/Header.vue":
 /*!********************************************!*\
   !*** ./resources/js/components/Header.vue ***!
@@ -21324,9 +21697,7 @@ var router = new vue_router__WEBPACK_IMPORTED_MODULE_1__["default"]({
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-
-module.exports = __webpack_require__(/*! C:\Users\Andrea Gorno\Desktop\laravel-prova\laravel-qualcosa\resources\js\front.js */"./resources/js/front.js");
-
+module.exports = __webpack_require__(/*! C:\Users\Ale\Desktop\Progetto Finale\laravel-qualcosa\resources\js\front.js */"./resources/js/front.js");
 
 
 /***/ })

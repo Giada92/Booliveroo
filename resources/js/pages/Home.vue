@@ -93,11 +93,13 @@
 
       </div>
     </div>
+    <Footer />
   </div>
 </template>
 
 <script>
 import Card from '../components/Card.vue';
+import Footer from '../components/Footer.vue';
 
 export default {
     name: 'Home',
@@ -107,7 +109,8 @@ export default {
         scroll.classList.toggle('sticky', this.window.scrollY > 0)})
     },
     components:{
-      Card
+      Card,
+      Footer
     },
     data(){
       return{

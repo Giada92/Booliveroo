@@ -1,4 +1,5 @@
 <template>
+<div>
     <div class="container-fluid bg">
         <div class="mb-5 text-center">
             <img src="/img/chi-siamo.png" alt="logo">
@@ -108,12 +109,19 @@
             </div>
         </div>
     </div>
+    <Footer2 />
+</div>
         
 </template>
 
 <script>
+import Footer2 from '../components/Footer2.vue';
+
 export default({
     name: 'Chisiamo',
+    components: {
+        Footer2
+    }
 })
 </script>
 

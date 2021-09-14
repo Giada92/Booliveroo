@@ -73,16 +73,19 @@
           </div>
         </div>
       </div>
+      <Footer />
     </div>
 
 </template>
 
 <script>
 import Button from '../components/Button-Counter';
+import Footer from '../components/Footer';
 export default {
     name: 'Restaurant',
     components:{
         Button,
+        Footer
     },
     data(){
       return{
