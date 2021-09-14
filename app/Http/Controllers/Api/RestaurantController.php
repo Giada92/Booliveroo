@@ -39,8 +39,11 @@ class RestaurantController extends Controller
 
         $restaurant = Restaurant::where('slug', $request->slug)->with(['categories', 'plates'])->get();
 
-        
         // $plate = Plate::where('slug', $request->slug)->with(['types'])->get();
+        
+
+        // $plate = Plate::where('slug', $request->slug)->with(['types'])->get();
+
 
         /* $piatti = Plate::where('restaurant_id', $request->id)->get();
 
