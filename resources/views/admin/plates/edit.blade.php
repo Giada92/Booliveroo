@@ -76,9 +76,10 @@
             @error('img')
               <small class="text-danger">{{ $message }}</small>
             @enderror
-          </div>
-          {{-- /File  --}}
+        </div>
+        {{-- /File  --}}
         <button type="submit" class="btn btn_color">Modifica</button>
+        <a href="{{ route('admin.plates.index') }}" class="btn btn_color my-3">Annulla</a>
     </form>
     </div>
     

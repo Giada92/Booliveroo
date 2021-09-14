@@ -78,6 +78,7 @@
             </div>
             {{-- /File  --}}
           <button type="submit" class="btn btn_color">Crea</button>
+          <a href="{{ route('admin.plates.index') }}" class="btn btn_color my-3">Annulla</a>
       </form>
       </div>
       

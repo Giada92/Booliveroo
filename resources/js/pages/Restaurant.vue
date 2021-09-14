@@ -275,8 +275,8 @@ h2+p {
   align-items: center;
   width: calc(30%);
   height: 325px;
-  // margin: 3%;
   border: 2px solid orangered;
+  background-color: whitesmoke;
   border-radius: 15px;
   
   button {
