@@ -184,7 +184,7 @@ export default {
 
 .logo {
   img {
-    width: 60%;
+    width: 70%;
     height: 150px;
   }
 }
