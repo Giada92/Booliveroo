@@ -15,6 +15,7 @@ class RestaurantController extends Controller
         $restaurants = Restaurant::paginate(6);
         $prova = Restaurant::with(['categories'])->get();
 
+
         /* $categories = Category::all(); */
 
 
@@ -40,7 +41,10 @@ class RestaurantController extends Controller
 
         // $plate = Plate::where('slug', $request->slug)->with(['types'])->get();
         
-        
+
+        // $plate = Plate::where('slug', $request->slug)->with(['types'])->get();
+
+
         /* $piatti = Plate::where('restaurant_id', $request->id)->get();
 
          $data = [

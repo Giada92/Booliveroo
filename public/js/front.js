@@ -2703,6 +2703,7 @@ __webpack_require__.r(__webpack_exports__);
   data: function data() {
     return {
       restaurant: [],
+      restaurantID: '',
       plate: {
         id: '',
         name: '',
@@ -2826,6 +2827,7 @@ __webpack_require__.r(__webpack_exports__);
         // console.log(res.data[0].plates);
         //this.plates = res.data[0].plates;
         _this2.restaurant = res.data[0];
+        _this2.restaurantID = res.data[0].id;
 
         _this2.restaurant.plates.forEach(function (element) {
           element['quantity'] = 0;
@@ -2843,6 +2845,8 @@ __webpack_require__.r(__webpack_exports__);
   updated: function updated() {
     var total = JSON.stringify(this.totalPrice);
     localStorage.setItem('totalPrice', total);
+    var restaurantID = JSON.stringify(this.restaurantID);
+    localStorage.setItem('restaurantID', restaurantID);
   }
 });
 
@@ -5473,7 +5477,10 @@ var staticRenderFns = [
     var _c = _vm._self._c || _h
     return _c(
       "a",
-      { staticClass: "paga", attrs: { href: "http://127.0.0.1:8000/payment" } },
+      {
+        staticClass: "paga",
+        attrs: { href: "http://127.0.0.1:8000/form-cliente" }
+      },
       [
         _c("button", { staticClass: "btn btn-gradient btn-sm" }, [
           _vm._v("Paga")

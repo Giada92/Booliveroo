@@ -26,7 +26,7 @@ const router = new VueRouter({
             path:'/Chisiamo',
             name: 'Chisiamo',
             component: Chisiamo
-         }
+        }
     ]
 });
 

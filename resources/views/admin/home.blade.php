@@ -37,7 +37,7 @@
                 <div class="col-lg-4 d-flex flex-column justify-content-around align-items-center">
                     <a href="{{ route('admin.restaurants.edit', $newRestaurant->id) }}" class="btn bg">Modifica Locale</a>
                     <a href="{{ route('admin.plates.index') }}" class="btn bg">Visualizza il Menù</a>
-                    <a href="#" class="btn bg">I tuoi Ordini</a>
+                    <a href="{{ route('admin.orders.index') }}" class="btn bg">I tuoi Ordini</a>
                     <form action="{{ route('admin.restaurants.destroy', $newRestaurant->id) }}" method="POST" onSubmit="return confirm('Sei sicuro di voler eliminare questo Ristorante?')">
                         @csrf
                         @method('DELETE')
