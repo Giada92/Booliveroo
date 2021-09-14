@@ -2237,6 +2237,108 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
 /* harmony default export */ __webpack_exports__["default"] = ({
   name: 'Chisiamo'
 });
@@ -2401,6 +2503,7 @@ __webpack_require__.r(__webpack_exports__);
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _components_Button_Counter__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../components/Button-Counter */ "./resources/js/components/Button-Counter.vue");
+//
 //
 //
 //
@@ -2684,6 +2787,25 @@ exports = module.exports = __webpack_require__(/*! ../../../node_modules/css-loa
 
 // module
 exports.push([module.i, "#research[data-v-1f42fb90] {\n  position: fixed;\n  opacity: 0;\n  transition: 0.2s;\n  top: 10px;\n  left: 50%;\n  transform: translateX(-50%);\n  padding: 0.5rem;\n  box-shadow: 0 0 30px 2px linear-gradient(90deg, #ee3c4a, #fc8237);\n  border-radius: 50px;\n  width: 35%;\n  z-index: 11;\n}\n#research i[data-v-1f42fb90] {\n  position: absolute;\n  top: 50%;\n  right: 3%;\n  transform: translateY(-50%);\n  color: #fc8237;\n  font-size: 25px;\n}\n#research.sticky[data-v-1f42fb90] {\n  opacity: 1;\n}\n.search-input[data-v-1f42fb90] {\n  width: 90%;\n  border: none;\n  font-size: 18px;\n}\n.search-input[data-v-1f42fb90]:focus {\n  border: none;\n  outline: none;\n}\n#boot-logo[data-v-1f42fb90] {\n  opacity: 0;\n}\n#logo[data-v-1f42fb90] {\n  display: none;\n  color: white;\n  position: absolute;\n  top: 0;\n  left: 50%;\n  transform: translateX(-50%);\n  z-index: 11;\n  font-weight: 700;\n  color: white;\n  text-decoration: none;\n  font-size: 2em;\n  text-transform: uppercase;\n  letter-spacing: 2px;\n  transition: 2s;\n}\nnav[data-v-1f42fb90] {\n  position: fixed;\n  top: 0;\n  left: 0;\n  width: 100%;\n  height: 65px;\n  display: flex;\n  justify-content: space-between;\n  align-items: center;\n  transition: 0.8s;\n  padding: 40px 100px;\n  opacity: 0;\n  z-index: 10;\n}\nnav ul[data-v-1f42fb90] {\n  position: relative;\n  display: flex;\n  justify-content: center;\n  align-items: center;\n  margin: 0;\n}\nnav ul li[data-v-1f42fb90] {\n  position: relative;\n  list-style: none;\n}\nnav ul li a[data-v-1f42fb90] {\n  position: relative;\n  margin: 0 15px;\n  text-decoration: none;\n  color: whitesmoke;\n  letter-spacing: 2px;\n  font-weight: 500px;\n  transition: 0.6s;\n}\nnav.sticky[data-v-1f42fb90] {\n  opacity: 1;\n  padding: 10px 100px;\n  background-image: linear-gradient(90deg, #ee3c4a, #fc8237);\n}\n#logo.sticky[data-v-1f42fb90] {\n  display: block;\n  position: fixed;\n  top: -0.5%;\n  left: 10.5%;\n}\n@media screen and (max-width: 1200px) {\n#logo.sticky[data-v-1f42fb90] {\n    position: fixed;\n    top: -0.5%;\n    left: 16.5%;\n}\n}\n@media screen and (max-width: 1755px) {\n#research[data-v-1f42fb90] {\n    display: none;\n}\n}", ""]);
+
+// exports
+
+
+/***/ }),
+
+/***/ "./node_modules/css-loader/index.js!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/postcss-loader/src/index.js?!./node_modules/sass-loader/dist/cjs.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/pages/Chisiamo.vue?vue&type=style&index=0&id=46692792&lang=scss&scoped=true&":
+/*!*************************************************************************************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/css-loader!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/postcss-loader/src??ref--7-2!./node_modules/sass-loader/dist/cjs.js??ref--7-3!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/pages/Chisiamo.vue?vue&type=style&index=0&id=46692792&lang=scss&scoped=true& ***!
+  \*************************************************************************************************************************************************************************************************************************************************************************************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+exports = module.exports = __webpack_require__(/*! ../../../node_modules/css-loader/lib/css-base.js */ "./node_modules/css-loader/lib/css-base.js")(false);
+// imports
+
+
+// module
+exports.push([module.i, ".bg[data-v-46692792] {\n  margin-top: 200px;\n  max-width: 1800px;\n  margin-bottom: 100px;\n}\n.aside[data-v-46692792] {\n  display: flex;\n  flex-direction: column;\n  height: 400px;\n  background-color: #f5f5f5;\n  border-radius: 5px;\n}\n.aside div[data-v-46692792] {\n  padding: 20px 10px;\n  width: 100%;\n  border-bottom: 1px solid grey;\n}\n.aside div a[data-v-46692792] {\n  color: #ee3c4a;\n}\n.main[data-v-46692792] {\n  display: flex;\n  flex-direction: column;\n  background-color: #f5f5f5;\n  border-radius: 5px;\n  padding: 20px;\n  margin-left: 30px;\n}\n.main div[data-v-46692792] {\n  margin-bottom: 50px;\n}\n.main div img[data-v-46692792] {\n  width: 100%;\n  margin-bottom: 40px;\n}\n@media screen and (max-width: 767px) {\n.main[data-v-46692792] {\n    margin-left: 0;\n    margin-top: 50px;\n}\n}", ""]);
 
 // exports
 
@@ -3296,6 +3418,36 @@ if(false) {}
 
 
 var content = __webpack_require__(/*! !../../../node_modules/css-loader!../../../node_modules/vue-loader/lib/loaders/stylePostLoader.js!../../../node_modules/postcss-loader/src??ref--7-2!../../../node_modules/sass-loader/dist/cjs.js??ref--7-3!../../../node_modules/vue-loader/lib??vue-loader-options!./Header.vue?vue&type=style&index=0&id=1f42fb90&lang=scss&scoped=true& */ "./node_modules/css-loader/index.js!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/postcss-loader/src/index.js?!./node_modules/sass-loader/dist/cjs.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/components/Header.vue?vue&type=style&index=0&id=1f42fb90&lang=scss&scoped=true&");
+
+if(typeof content === 'string') content = [[module.i, content, '']];
+
+var transform;
+var insertInto;
+
+
+
+var options = {"hmr":true}
+
+options.transform = transform
+options.insertInto = undefined;
+
+var update = __webpack_require__(/*! ../../../node_modules/style-loader/lib/addStyles.js */ "./node_modules/style-loader/lib/addStyles.js")(content, options);
+
+if(content.locals) module.exports = content.locals;
+
+if(false) {}
+
+/***/ }),
+
+/***/ "./node_modules/style-loader/index.js!./node_modules/css-loader/index.js!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/postcss-loader/src/index.js?!./node_modules/sass-loader/dist/cjs.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/pages/Chisiamo.vue?vue&type=style&index=0&id=46692792&lang=scss&scoped=true&":
+/*!*****************************************************************************************************************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/style-loader!./node_modules/css-loader!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/postcss-loader/src??ref--7-2!./node_modules/sass-loader/dist/cjs.js??ref--7-3!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/pages/Chisiamo.vue?vue&type=style&index=0&id=46692792&lang=scss&scoped=true& ***!
+  \*****************************************************************************************************************************************************************************************************************************************************************************************************************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+
+var content = __webpack_require__(/*! !../../../node_modules/css-loader!../../../node_modules/vue-loader/lib/loaders/stylePostLoader.js!../../../node_modules/postcss-loader/src??ref--7-2!../../../node_modules/sass-loader/dist/cjs.js??ref--7-3!../../../node_modules/vue-loader/lib??vue-loader-options!./Chisiamo.vue?vue&type=style&index=0&id=46692792&lang=scss&scoped=true& */ "./node_modules/css-loader/index.js!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/postcss-loader/src/index.js?!./node_modules/sass-loader/dist/cjs.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/pages/Chisiamo.vue?vue&type=style&index=0&id=46692792&lang=scss&scoped=true&");
 
 if(typeof content === 'string') content = [[module.i, content, '']];
 
@@ -4349,13 +4501,196 @@ var staticRenderFns = [
     var _vm = this
     var _h = _vm.$createElement
     var _c = _vm._self._c || _h
-    return _c("div", { staticClass: "container" }, [
-      _c("h2", [_vm._v("Chi siamo")]),
+    return _c("div", { staticClass: "container-fluid bg" }, [
+      _c("div", { staticClass: "mb-5 text-center" }, [
+        _c("img", { attrs: { src: "/img/chi-siamo.png", alt: "logo" } })
+      ]),
       _vm._v(" "),
-      _c("p", [
-        _vm._v(
-          "Siamo un'azienda di delivery, specializzata nella vendita al dettaglio di cibo consegnato a domicilio.\n        La nostra chiave di forza è la celerità nelle consegne, correlata ad ottimi prezzi e continue offerte settimanali.\n        Tutto ciò ti consentirà di gustare ciò che vuoi, dove vuoi, ordinando il tutto comodamente dal divano.\n        Pensa a ciò che vuoi mangiare, al resto ci pensiamo noi!\n    "
-        )
+      _c("div", { staticClass: "d-flex flex-wrap" }, [
+        _c(
+          "div",
+          { staticClass: "col-sm-12 col-md-4 col-lg-3 offset-lg-1 aside" },
+          [
+            _c("div", [
+              _c("a", { attrs: { href: "#la-storia" } }, [
+                _vm._v("La storia di Booliveroo")
+              ])
+            ]),
+            _vm._v(" "),
+            _c("div", [
+              _c("a", { attrs: { href: "#i-valori" } }, [
+                _vm._v("I nostri valori")
+              ])
+            ]),
+            _vm._v(" "),
+            _c("div", [
+              _c("a", { attrs: { href: "#clienti" } }, [_vm._v("Clienti")])
+            ]),
+            _vm._v(" "),
+            _c("div", [
+              _c("a", { attrs: { href: "#tecnologia" } }, [
+                _vm._v("E' la tecnologia che ci guida")
+              ])
+            ]),
+            _vm._v(" "),
+            _c("div", [
+              _c("a", { attrs: { href: "#rider" } }, [
+                _vm._v("Booliveroo e i nostri rider")
+              ])
+            ]),
+            _vm._v(" "),
+            _c("div", [
+              _c("a", { attrs: { href: "#ristorante" } }, [
+                _vm._v("I ristoranti migliori, consegnati dove vuoi")
+              ])
+            ])
+          ]
+        ),
+        _vm._v(" "),
+        _c("div", { staticClass: "col-sm-12 col-md-7 main" }, [
+          _c("div", [
+            _c("h2", { attrs: { id: "la-storia" } }, [
+              _vm._v(
+                "\n                    La storia di Booliveroo\n                "
+              )
+            ]),
+            _vm._v(" "),
+            _c("img", { attrs: { src: "/img/founder.jpg", alt: "founder" } }),
+            _vm._v(" "),
+            _c("p", [
+              _vm._v(
+                "\n                    Tutto ciò che facciamo ruota intorno ai nostri valori. Ci fanno da guida ogni giorno per lavorare in squadra e prendere decisioni importanti, dalle scelte che hanno un impatto sulle assunzioni e sullo sviluppo del personale, a quelle che scrivono il futuro dei prodotti Booliveroo.\n                "
+              )
+            ]),
+            _vm._v(" "),
+            _c("p", { attrs: { id: "i-valori" } }, [
+              _vm._v(
+                "\n                    Offrendo una consegna veloce e affidabile, che il cliente può monitorare dal cellulare, Booliveroo ha visto una crescita dei ricavi di oltre il 650%. I nostri ristoranti partner riescono ad aumentare i loro ricavi del 30%, creando migliaia di posti di lavoro nel settore della ristorazione.\n                "
+              )
+            ])
+          ]),
+          _vm._v(" "),
+          _c("div", [
+            _c("h2", [
+              _vm._v("\n                    I nostri valori\n                ")
+            ]),
+            _vm._v(" "),
+            _c("img", {
+              attrs: {
+                src: "/img/valori-aziendali.jpg",
+                alt: "valori-aziendali"
+              }
+            }),
+            _vm._v(" "),
+            _c("p", { attrs: { id: "clienti" } }, [
+              _vm._v(
+                "\n                    Tutto ciò che facciamo ruota intorno ai nostri valori. Ci fanno da guida ogni giorno per lavorare in squadra e prendere decisioni importanti, dalle scelte che hanno un impatto sulle assunzioni e sullo sviluppo del personale, a quelle che scrivono il futuro dei prodotti Booliveroo.\n                "
+              )
+            ])
+          ]),
+          _vm._v(" "),
+          _c("div", [
+            _c("h2", [
+              _vm._v("\n                    Clienti\n                ")
+            ]),
+            _vm._v(" "),
+            _c("img", { attrs: { src: "/img/clienti.jpg", alt: "clienti" } }),
+            _vm._v(" "),
+            _c("p", [
+              _vm._v(
+                "\n                    La missione di Booliveroo è trasformare il modo in cui i clienti mangiano. Un ingrediente chiave del nostro successo è offrire ai nostri clienti la migliore selezione di ristoranti: che tu voglia sushi per cena, un’insalata per pranzo, o una brioche per colazione, ci pensiamo noi!\n                "
+              )
+            ]),
+            _vm._v(" "),
+            _c("p", { attrs: { id: "tecnologia" } }, [
+              _vm._v(
+                "\n                    Innovando ed espandendoci costantemente, offriamo la migliore scelta e convenienza. Il nostro obiettivo è consegnare ai nostri clienti i migliori piatti nel minor tempo possibile, spesso in meno di 30 minuti.\n                "
+              )
+            ])
+          ]),
+          _vm._v(" "),
+          _c("div", [
+            _c("h2", [
+              _vm._v(
+                "\n                    È la tecnologia che ci guida\n                "
+              )
+            ]),
+            _vm._v(" "),
+            _c("img", {
+              attrs: { src: "/img/tecnologia.jpg", alt: "tecnologia" }
+            }),
+            _vm._v(" "),
+            _c("p", [
+              _vm._v(
+                "\n                    Booliveroo nasce nel Regno Unito e siamo orgogliosi di portare la nostra tecnologia in tutto il mondo. Il nostro algoritmo “Frank” si basa su una potente tecnologia predittiva che gestisce nel modo più efficiente l’assegnazione degli ordini in base alla posizione dei ristoranti, dei rider e dei clienti.\n                "
+              )
+            ]),
+            _vm._v(" "),
+            _c("p", { attrs: { id: "rider" } }, [
+              _vm._v(
+                "\n                    L’apprendimento automatico aiuta a stimare il tempo necessario per la preparazione di un ordine, aiutando a ottimizzare l’esperienza complessiva. Booliveroo è riuscita a diminuire il tempo di consegna del 20%, così che i rider possano completare più consegne all’ora e aumentare i loro guadagni, i ristoranti possano aumentare le loro vendite e, ovviamente, i clienti possano ricevere il loro ordine in minor tempo. \n                "
+              )
+            ])
+          ]),
+          _vm._v(" "),
+          _c("div", [
+            _c("h2", [
+              _vm._v(
+                "\n                    Booliveroo e i nostri rider\n                "
+              )
+            ]),
+            _vm._v(" "),
+            _c("img", { attrs: { src: "/img/riders.png", alt: "riders" } }),
+            _vm._v(" "),
+            _c("p", [
+              _vm._v(
+                "\n                    Booliveroo è orgogliosa di offrire un lavoro ben retribuito e flessibile ai rider, che sono il cuore del nostro servizio. Il loro lavoro alimenta la nostra crescita, e senza di loro non potremmo consegnare ai nostri clienti i piatti migliori e aiutare i ristoranti locali a crescere.\n                "
+              )
+            ]),
+            _vm._v(" "),
+            _c("p", { attrs: { id: "ristorante" } }, [
+              _vm._v(
+                "\n                    I rider hanno accesso all’assicurazione, ma vogliamo fare di più Booliveroo è stata la prima società tech a chiedere la fine del compromesso tra flessibilità e sicurezza che esiste attualmente nel diritto del lavoro. Vogliamo collaborare con i governi in tutti i Paesi per raggiungere questo obiettivo. \n                "
+              )
+            ])
+          ]),
+          _vm._v(" "),
+          _c("div", [
+            _c("h2", [
+              _vm._v(
+                "\n                    I ristoranti migliori, consegnati dove vuoi\n                "
+              )
+            ]),
+            _vm._v(" "),
+            _c("img", {
+              attrs: { src: "/img/ristorante.jpg", alt: "ristorante" }
+            }),
+            _vm._v(" "),
+            _c("p", [
+              _vm._v(
+                "\n                    Il cibo è al centro di ogni attività di Booliveroo e la sua missione è dare ai clienti una maggiore scelta. Ci sono f antastici ristoranti da cui crediamo che tutti debbano poter ordinare. \n                "
+              )
+            ]),
+            _vm._v(" "),
+            _c("p", [
+              _vm._v(
+                "\n                    Ma l’obiettivo di Booliveroo non è solo di assicurarti che i ristoranti nella tua zona siano disponibili quando e dove vuoi. Vogliamo andare oltre e portare nuovi ristoranti nella tua zona così da ampliare la tua scelta.\n                "
+              )
+            ]),
+            _vm._v(" "),
+            _c("p", [
+              _vm._v(
+                "\n                    Booliveroo Editions è un progetto che nasce per portare i piatti di grandi chef, creati in esclusiva per Booliveroo, in tutte le case. Editions permette a chef e ristoranti di dar vita a nuovi concepts e raggiungere nuovi appassionati di cibo. Booliveroo offre ai ristoranti dati e insight che consentono loro di personalizzare i menù e i prezzi.\n                "
+              )
+            ]),
+            _vm._v(" "),
+            _c("p", [
+              _vm._v(
+                "\n                    Questo è tutto ciò che dà vita alla missione di Booliveroo di offrire ai nostri clienti un mondo di piatti di alta qualità. Ogni cliente ha gusti diversi e il nostro compito è garantire che abbiano ciò che vogliono, quando vogliono e dove lo vogliono.\n                "
+              )
+            ])
+          ])
+        ])
       ])
     ])
   }
@@ -4653,7 +4988,7 @@ var render = function() {
                   return _c("tr", { key: cart.id }, [
                     _c("td", [_vm._v(_vm._s(cart.name))]),
                     _vm._v(" "),
-                    _c("td", [_vm._v(_vm._s(cart.price) + " €")]),
+                    _c("td", [_vm._v(_vm._s(cart.price.toFixed(2)) + " €")]),
                     _vm._v(" "),
                     _c(
                       "td",
@@ -20559,7 +20894,9 @@ var app = new Vue({
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _Chisiamo_vue_vue_type_template_id_46692792_scoped_true___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./Chisiamo.vue?vue&type=template&id=46692792&scoped=true& */ "./resources/js/pages/Chisiamo.vue?vue&type=template&id=46692792&scoped=true&");
 /* harmony import */ var _Chisiamo_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./Chisiamo.vue?vue&type=script&lang=js& */ "./resources/js/pages/Chisiamo.vue?vue&type=script&lang=js&");
-/* empty/unused harmony star reexport *//* harmony import */ var _node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../../node_modules/vue-loader/lib/runtime/componentNormalizer.js */ "./node_modules/vue-loader/lib/runtime/componentNormalizer.js");
+/* empty/unused harmony star reexport *//* harmony import */ var _Chisiamo_vue_vue_type_style_index_0_id_46692792_lang_scss_scoped_true___WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./Chisiamo.vue?vue&type=style&index=0&id=46692792&lang=scss&scoped=true& */ "./resources/js/pages/Chisiamo.vue?vue&type=style&index=0&id=46692792&lang=scss&scoped=true&");
+/* harmony import */ var _node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../../../node_modules/vue-loader/lib/runtime/componentNormalizer.js */ "./node_modules/vue-loader/lib/runtime/componentNormalizer.js");
+
 
 
 
@@ -20567,7 +20904,7 @@ __webpack_require__.r(__webpack_exports__);
 
 /* normalize component */
 
-var component = Object(_node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_2__["default"])(
+var component = Object(_node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_3__["default"])(
   _Chisiamo_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__["default"],
   _Chisiamo_vue_vue_type_template_id_46692792_scoped_true___WEBPACK_IMPORTED_MODULE_0__["render"],
   _Chisiamo_vue_vue_type_template_id_46692792_scoped_true___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"],
@@ -20596,6 +20933,22 @@ component.options.__file = "resources/js/pages/Chisiamo.vue"
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _node_modules_babel_loader_lib_index_js_ref_4_0_node_modules_vue_loader_lib_index_js_vue_loader_options_Chisiamo_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../node_modules/babel-loader/lib??ref--4-0!../../../node_modules/vue-loader/lib??vue-loader-options!./Chisiamo.vue?vue&type=script&lang=js& */ "./node_modules/babel-loader/lib/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/pages/Chisiamo.vue?vue&type=script&lang=js&");
 /* empty/unused harmony star reexport */ /* harmony default export */ __webpack_exports__["default"] = (_node_modules_babel_loader_lib_index_js_ref_4_0_node_modules_vue_loader_lib_index_js_vue_loader_options_Chisiamo_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__["default"]); 
+
+/***/ }),
+
+/***/ "./resources/js/pages/Chisiamo.vue?vue&type=style&index=0&id=46692792&lang=scss&scoped=true&":
+/*!***************************************************************************************************!*\
+  !*** ./resources/js/pages/Chisiamo.vue?vue&type=style&index=0&id=46692792&lang=scss&scoped=true& ***!
+  \***************************************************************************************************/
+/*! no static exports found */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _node_modules_style_loader_index_js_node_modules_css_loader_index_js_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_postcss_loader_src_index_js_ref_7_2_node_modules_sass_loader_dist_cjs_js_ref_7_3_node_modules_vue_loader_lib_index_js_vue_loader_options_Chisiamo_vue_vue_type_style_index_0_id_46692792_lang_scss_scoped_true___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../node_modules/style-loader!../../../node_modules/css-loader!../../../node_modules/vue-loader/lib/loaders/stylePostLoader.js!../../../node_modules/postcss-loader/src??ref--7-2!../../../node_modules/sass-loader/dist/cjs.js??ref--7-3!../../../node_modules/vue-loader/lib??vue-loader-options!./Chisiamo.vue?vue&type=style&index=0&id=46692792&lang=scss&scoped=true& */ "./node_modules/style-loader/index.js!./node_modules/css-loader/index.js!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/postcss-loader/src/index.js?!./node_modules/sass-loader/dist/cjs.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/pages/Chisiamo.vue?vue&type=style&index=0&id=46692792&lang=scss&scoped=true&");
+/* harmony import */ var _node_modules_style_loader_index_js_node_modules_css_loader_index_js_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_postcss_loader_src_index_js_ref_7_2_node_modules_sass_loader_dist_cjs_js_ref_7_3_node_modules_vue_loader_lib_index_js_vue_loader_options_Chisiamo_vue_vue_type_style_index_0_id_46692792_lang_scss_scoped_true___WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_node_modules_style_loader_index_js_node_modules_css_loader_index_js_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_postcss_loader_src_index_js_ref_7_2_node_modules_sass_loader_dist_cjs_js_ref_7_3_node_modules_vue_loader_lib_index_js_vue_loader_options_Chisiamo_vue_vue_type_style_index_0_id_46692792_lang_scss_scoped_true___WEBPACK_IMPORTED_MODULE_0__);
+/* harmony reexport (unknown) */ for(var __WEBPACK_IMPORT_KEY__ in _node_modules_style_loader_index_js_node_modules_css_loader_index_js_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_postcss_loader_src_index_js_ref_7_2_node_modules_sass_loader_dist_cjs_js_ref_7_3_node_modules_vue_loader_lib_index_js_vue_loader_options_Chisiamo_vue_vue_type_style_index_0_id_46692792_lang_scss_scoped_true___WEBPACK_IMPORTED_MODULE_0__) if(["default"].indexOf(__WEBPACK_IMPORT_KEY__) < 0) (function(key) { __webpack_require__.d(__webpack_exports__, key, function() { return _node_modules_style_loader_index_js_node_modules_css_loader_index_js_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_postcss_loader_src_index_js_ref_7_2_node_modules_sass_loader_dist_cjs_js_ref_7_3_node_modules_vue_loader_lib_index_js_vue_loader_options_Chisiamo_vue_vue_type_style_index_0_id_46692792_lang_scss_scoped_true___WEBPACK_IMPORTED_MODULE_0__[key]; }) }(__WEBPACK_IMPORT_KEY__));
+
 
 /***/ }),
 
@@ -20840,7 +21193,7 @@ var router = new vue_router__WEBPACK_IMPORTED_MODULE_1__["default"]({
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__(/*! C:\Users\Giada\Desktop\laravel-qualcosa\resources\js\front.js */"./resources/js/front.js");
+module.exports = __webpack_require__(/*! C:\Users\Andrea Gorno\Desktop\laravel-prova\laravel-qualcosa\resources\js\front.js */"./resources/js/front.js");
 
 
 /***/ })
