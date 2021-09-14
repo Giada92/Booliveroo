@@ -48,7 +48,7 @@
                     <tr v-for="(cart, n) in carts" :key="cart.id">
                       <td>{{ cart.name }}</td>
 
-                      <td>{{ cart.price }} €</td>
+                      <td>{{ cart.price.toFixed(2) }} €</td>
 
                       <td class="d-flex justify-content-around align-items-center">
                         <button class="btn btn-quantita btn-sm" @click="removeQuantity(cart, n)">-</button>

@@ -17,13 +17,28 @@
                     {{ __("Hai eseguito l'accesso!") }}
                 </div>
 
-                {{-- <div class="my-4">
-                    <button>
-                        <a href="{{ route('admin.restaurants.home') }}" class="btn bg">Il Tuo Locale</a>
-                    </button>
-                </div> --}}
             </div>
+
+            <div class="text-center my-3 btn bg">
+                <a href="{{ route('admin.index') }}">Il tuo Ristorante</a>
+            </div>
+                
         </div>
     </div>
 </div>
+
+<style>
+    .bg {
+        background-image: linear-gradient(90deg, #ee3c4a, #fc8237);
+        
+    }
+
+    a {
+        color: white;
+    }
+
+    a:hover {
+        color: white;
+    }
+</style>
 @endsection
