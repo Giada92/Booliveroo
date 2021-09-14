@@ -65,9 +65,10 @@
             <div class="d-flex justify-content-between align-items-center">
 
                 <h4>Totale Prezzo: {{ totalPrice.toFixed(2) }} €</h4>
-                <a href="http://127.0.0.1:8000/payment" class="paga">
+                <a href="http://127.0.0.1:8000/form-cliente" class="paga">
                   <button class="btn btn-gradient btn-sm">Paga</button>
                 </a>
+                <!-- <router-link  :to="{ name: 'Form' }">Continua</router-link> -->
 
             </div>
           </div>
@@ -87,6 +88,7 @@ export default {
     data(){
       return{
         restaurant: [],
+        restaurantID: '',
         plate: {
           id: '',
           name: '',
@@ -209,6 +211,7 @@ export default {
           // console.log(res.data[0].plates);
           //this.plates = res.data[0].plates;
           this.restaurant = res.data[0];
+          this.restaurantID = res.data[0].id;
           this.restaurant.plates.forEach(element => {
               element['quantity'] = 0;
           });
@@ -227,6 +230,9 @@ export default {
     updated: function() {
       let total = JSON.stringify(this.totalPrice);
       localStorage.setItem('totalPrice', total);
+
+      let restaurantID = JSON.stringify(this.restaurantID);
+      localStorage.setItem('restaurantID', restaurantID);
     }
 }
 </script>

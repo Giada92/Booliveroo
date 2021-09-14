@@ -81,11 +81,20 @@ Route::middleware('auth')
     ->name('admin.')
     ->group(function() {
 
-    Route::get('/', 'HomeController@showRestaurant')->name('index');
+    Route::get('/', 'HomeController@showRestaurant')->name('index');    
     Route::resource('restaurants', 'RestaurantController');
     Route::resource('plates', 'PlateController');
     // Route::get('pay', 'HomeController@pay')->name('pay');
 });
+
+
+
+Route::resource('orders', 'OrderController');
+
+Route::get('/form-cliente', function () {
+    return view('form-cliente');
+});
+
 
 
 //rotte pubbliche

@@ -13,4 +13,16 @@ class Order extends Model
     public function client(){
         return $this->belongsTo('App\Client');
     }
+
+    protected $fillable = [
+        'state',
+        'payment',
+        'price',
+        'name',
+        'restaurant_id',
+        'lastname',
+        'address',
+        'phone',
+        'email'
+    ];
 }

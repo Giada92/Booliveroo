@@ -7,12 +7,14 @@ use Illuminate\Http\Request;
 use App\Restaurant;
 use App\Category;
 use App\Plate;
+use App\Type;
 
 class RestaurantController extends Controller
 {
     public function index(){
         $restaurants = Restaurant::paginate(6);
         $prova = Restaurant::with(['categories'])->get();
+
 
         /* $categories = Category::all(); */
 
@@ -36,12 +38,10 @@ class RestaurantController extends Controller
     public function show(Request $request){
 
         $restaurant = Restaurant::where('slug', $request->slug)->with(['categories', 'plates'])->get();
+
         
         // $plate = Plate::where('slug', $request->slug)->with(['types'])->get();
 
-        
-
-        
         /* $piatti = Plate::where('restaurant_id', $request->id)->get();
 
          $data = [
@@ -49,6 +49,6 @@ class RestaurantController extends Controller
             'piatti' => $piatti
         ];
         */
-        return response()->json($restaurant, );
+        return response()->json($restaurant);
     }
 }
