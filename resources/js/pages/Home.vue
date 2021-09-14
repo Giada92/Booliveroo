@@ -5,9 +5,25 @@
       <div class="mb-3 logo text-center" >
         <img src="/img/jumbo-logo.png" alt="logo">
       </div>
-      <div class="mt-5">
+
+      <div id="cate">
+        <a id="pizza" href="#categorie" @click="selectCategory('Pizza')">
+          <img id="pizza-categoria" src="../../../public/img/pizza-categoria.png" alt="pizza">
+          <h5>Pizza</h5>
+        </a>
+        <a id="burger" href="#categorie" @click="selectCategory('Fast-Food')">
+          <img src="../../../public/img/burger-categoria.png" alt="hamburger">
+          <h5>Burger</h5>
+        </a>
+        <a id="sushi" href="#categorie" @click="selectCategory('Sushi')">
+          <img src="../../../public/img/sushi-categoria.png" alt="sushi">
+          <h5>Sushi</h5>
+        </a>
+      </div>
+
+      <div>
         <a href='#categorie' class="categorie">
-          <h3>Cerca per Categoria</h3>
+          <h3>Tutte le Categorie</h3>
         </a>
       </div>
       
@@ -36,7 +52,7 @@
 
         <div class="badge-container">
           <div 
-          class="badge-category m-4" 
+          class="badge-category m-2" 
           v-for="category, index in categories" 
           :key="index" 
           @click="selectCategory(category.name)"
@@ -47,8 +63,8 @@
 
         <div class="d-flex">
             <div 
-            v-for="item in ristoranti_categorie"
-            :key="`${item.id}-al`"
+            v-for="item, index in ristoranti_categorie"
+            :key="index"
 
             >
               <!-- {{ item.name }}
@@ -105,6 +121,7 @@ export default {
         selectCategory(index){
           // console.log(index);
           this.categoriaScelta = index;
+          console.log(this.categoriaScelta);
       },
       getRestaurants: function(){
         axios.
@@ -139,6 +156,32 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+
+#cate a{
+  position: relative;
+  color: white;
+}
+
+#pizza h5 {
+  position:absolute;
+  top: 57px;
+  left: 41px;
+}
+#burger h5 {
+  position:absolute;
+  top: 57px;
+  left: 82px;
+}
+#sushi h5 {
+  position:absolute;
+  top: 57px;
+  left: 53px;
+}
+
+#pizza-categoria {
+  width: 130px;
+}
+
 .logo {
   img {
     width: 60%;
@@ -149,7 +192,10 @@ export default {
 .badge-container {
   display: flex;
   flex-direction: row;
-  overflow-x: scroll;
+  flex-wrap: wrap;
+  width: 100%;
+  margin-left: 30px;
+  //overflow-x: scroll;
 
   .badge-category {
     display: flex;
