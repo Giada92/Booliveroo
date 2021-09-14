@@ -2479,8 +2479,6 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
-//
-//
 
 /* harmony default export */ __webpack_exports__["default"] = ({
   name: 'Restaurant',
@@ -20626,17 +20624,6 @@ __webpack_require__.r(__webpack_exports__);
 
 /***/ }),
 
-/***/ "./resources/js/pages/Form.vue":
-/*!*************************************!*\
-  !*** ./resources/js/pages/Form.vue ***!
-  \*************************************/
-/*! exports provided: default */
-/***/ (function(module, exports) {
-
-throw new Error("Module build failed (from ./node_modules/vue-loader/lib/index.js):\nError: ENOENT: no such file or directory, open 'C:\\Users\\Giada\\Desktop\\laravel-qualcosa\\resources\\js\\pages\\Form.vue'");
-
-/***/ }),
-
 /***/ "./resources/js/pages/Home.vue":
 /*!*************************************!*\
   !*** ./resources/js/pages/Home.vue ***!
@@ -20826,11 +20813,9 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _pages_Home__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./pages/Home */ "./resources/js/pages/Home.vue");
 /* harmony import */ var _pages_Restaurant__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./pages/Restaurant */ "./resources/js/pages/Restaurant.vue");
 /* harmony import */ var _pages_Chisiamo__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./pages/Chisiamo */ "./resources/js/pages/Chisiamo.vue");
-/* harmony import */ var _pages_Form__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./pages/Form */ "./resources/js/pages/Form.vue");
 
 
 vue__WEBPACK_IMPORTED_MODULE_0___default.a.use(vue_router__WEBPACK_IMPORTED_MODULE_1__["default"]);
-
 
 
 
@@ -20849,10 +20834,6 @@ var router = new vue_router__WEBPACK_IMPORTED_MODULE_1__["default"]({
     path: '/Chisiamo',
     name: 'Chisiamo',
     component: _pages_Chisiamo__WEBPACK_IMPORTED_MODULE_4__["default"]
-  }, {
-    path: '/Form',
-    name: 'Form',
-    component: _pages_Form__WEBPACK_IMPORTED_MODULE_5__["default"]
   }]
 });
 /* harmony default export */ __webpack_exports__["default"] = (router);

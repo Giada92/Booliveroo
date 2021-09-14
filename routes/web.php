@@ -84,6 +84,7 @@ Route::middleware('auth')
     Route::get('/', 'HomeController@showRestaurant')->name('index');    
     Route::resource('restaurants', 'RestaurantController');
     Route::resource('plates', 'PlateController');
+    Route::resource('orders', 'OrderController');    
     // Route::get('pay', 'HomeController@pay')->name('pay');
 });
 
@@ -95,6 +96,9 @@ Route::get('/form-cliente', function () {
     return view('form-cliente');
 });
 
+Route::get('/Successo', function () {
+    return view('Successo');
+});
 
 
 //rotte pubbliche

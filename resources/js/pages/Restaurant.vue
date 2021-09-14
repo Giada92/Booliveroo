@@ -68,8 +68,6 @@
                 <a href="http://127.0.0.1:8000/form-cliente" class="paga">
                   <button class="btn btn-gradient btn-sm">Paga</button>
                 </a>
-                <!-- <router-link  :to="{ name: 'Form' }">Continua</router-link> -->
-
             </div>
           </div>
         </div>

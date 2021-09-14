@@ -4,6 +4,8 @@ namespace App\Http\Controllers;
 
 use App\Order;
 use Illuminate\Http\Request;
+use App\Plate;
+use App\Restaurant;
 
 class OrderController extends Controller
 {
@@ -17,7 +19,8 @@ class OrderController extends Controller
             'lastname' => 'required',
             'address' => 'required',
             'phone' => 'required|numeric',
-            'email' => 'required'
+            'email' => 'required',
+            'riepilogo' => 'required'
         ]);
 
         $newOrder = new Order();
@@ -25,8 +28,8 @@ class OrderController extends Controller
         $newOrder->fill($data);
        
         $newOrder->save();
-
-        /* return redirect()
-            ->route('payment'); */
+    
+       return redirect('/payment');
     }
+
 }

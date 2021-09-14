@@ -6,8 +6,6 @@ Vue.use(VueRouter);
 import Home from './pages/Home';
 import Restaurant from './pages/Restaurant';
 import Chisiamo from './pages/Chisiamo';
-import Form from './pages/Form';
-
 
 
 const router = new VueRouter({
@@ -28,12 +26,7 @@ const router = new VueRouter({
             path:'/Chisiamo',
             name: 'Chisiamo',
             component: Chisiamo
-         },
-         {
-            path:'/Form',
-            name: 'Form',
-            component: Form
-         }
+        }
     ]
 });
 

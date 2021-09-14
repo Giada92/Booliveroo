@@ -59,19 +59,32 @@
 
                 <div class="form-group">
                     <label for="price"></label>
-                    <input type="text" class="form-control" id="price" name="price" value="">
+                    <input type="hidden" class="form-control" id="price" name="price" value="">
                 </div>
-                <button type="submit">Salva</button>
+
+                <div class="form-group">
+                    <label for="riepilogo"></label>
+                    <input type="hidden" class="form-control" id="riepilogo" name="riepilogo" value="">
+                </div>
+                    <button type="submit">Salva</button>
             </form>
         </div>
 
         <script>
             var restaurantId = JSON.parse(localStorage.getItem('restaurantID'));
             var price = JSON.parse(localStorage.getItem('totalPrice'));
+            var carts = JSON.parse(localStorage.getItem('carts'));
+
+            var piatto = '';
+            for(let i=0; i<carts.length; i++){
+                piatto += carts[i].name + ' ->' + carts[i].quantity + '; ';
+            }
 
             window.addEventListener('DOMContentLoaded', (event) => {
                 document.querySelector('#restaurant_id').value = restaurantId;
                 document.querySelector('#price').value = price;
+                document.querySelector('#riepilogo').value = piatto;
+                console.log(piatto);
             });
 
             function datiCliente(){

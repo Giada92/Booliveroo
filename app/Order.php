@@ -23,6 +23,7 @@ class Order extends Model
         'lastname',
         'address',
         'phone',
-        'email'
+        'email',
+        'riepilogo'
     ];
 }

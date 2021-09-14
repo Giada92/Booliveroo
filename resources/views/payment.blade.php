@@ -25,10 +25,8 @@
                     </div>
                 </section>
                 <input id="nonce" name="payment_method_nonce" type="hidden" />
-                
+                <button class="button" type="submit"><span>Test Transaction</span></button>
             </form>
-
-            <button class="button" type="submit"><span>Test Transaction</span></button>
         </div>
 
         <script src="https://js.braintreegateway.com/web/dropin/1.31.2/js/dropin.min.js"></script>
@@ -63,7 +61,10 @@
                 // Add the nonce to the form and submit
                 document.querySelector('#nonce').value = payload.nonce;
                 form.submit();
+
+                setInterval(function(){window.location.href = "http://127.0.0.1:8000/Successo";}, 1000);
                 });
+                
             });
             });
         </script>
