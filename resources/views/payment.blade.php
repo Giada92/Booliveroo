@@ -3,7 +3,7 @@
 @section('content')
     <body>
         <div class="mb-5 text-center ">
-            <img src="{{asset('img/pagamento.png')}}" alt="title">
+            <img id="tit" src="{{asset('img/pagamento.png')}}" alt="title">
         </div>
         <div class="col-8 offset-2">
             <form onsubmit="return false" action="{{ url('/checkout') }}"  method="POST" id="form2" class="text-center">
@@ -27,6 +27,9 @@
         </div>
 
         <style>
+            #tit {
+                margin-top: 20px;
+            }
             .total {
                 border: none;
                 font-size: 26px;
