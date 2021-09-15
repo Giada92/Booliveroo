@@ -14,12 +14,12 @@ class UpdateOrdersTable extends Migration
     public function up()
     {
         Schema::table('orders', function (Blueprint $table) {
-            $table->unsignedBigInteger('restaurant_id');
-            $table->string('name');
-            $table->string('lastname');
-            $table->string('address');
-            $table->string('phone');
-            $table->string('email');
+            // $table->unsignedBigInteger('restaurant_id');
+            // $table->string('name');
+            // $table->string('lastname');
+            // $table->string('address');
+            // $table->string('phone');
+            // $table->string('email');
         });
     }
 
@@ -31,8 +31,8 @@ class UpdateOrdersTable extends Migration
     public function down()
     {
         Schema::table('orders', function (Blueprint $table) {
-            $table->dropForeign('orders_client_id_foreign');
-            $table->dropColumn(['restaurant_id', 'name', 'lastname', 'address', 'phone', 'email']);
+            // $table->dropForeign('orders_client_id_foreign');
+            // $table->dropColumn(['restaurant_id', 'name', 'lastname', 'address', 'phone', 'email']);
         });
     }
 }

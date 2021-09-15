@@ -1,35 +1,37 @@
-<!DOCTYPE html>
-<html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
-    <head>
-        <meta charset="utf-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
+@extends('layouts.app')
 
-        <title>Laravel</title>
-
-        <!-- Fonts -->
-        <link href="https://fonts.googleapis.com/css?family=Nunito:200,600" rel="stylesheet">
-    </head>
+@section('content')
     <body>
-        <div class="container">
+        
+        <div class="col-8 offset-2">
+            <div class="mb-5 text-center ">
+                <img src="{{asset('img/le-tue-info.png')}}" alt="title">
+            </div>
             <form action="{{ route('orders.store') }}"  method="POST" id="form1" enctype="multipart/form-data">
                 @csrf
                 @method('POST')
                 <div class="form-group">
-                  <label for="name">Inserisci il tuo Nome</label>
+                    <label for="name" class="font-weight-bold text-uppercase">
+                      Nome
+                    </label>
                   <input type="text" class="form-control" id="name" placeholder="Inserisci il tuo nome" name="name">
                 </div>
                 @error('name')
                       <small class="text-danger">{{ $message }}</small>
                 @enderror
                 <div class="form-group">
-                    <label for="lastname">Inserisci il tuo Cognome</label>
+                    <label for="lastname" class="font-weight-bold text-uppercase">
+                        Cognome
+                    </label>
                     <input type="text" class="form-control" id="lastname" placeholder="Inserisci il tuo cognome" name="lastname">
                   </div>
                 @error('lastname')
                     <small class="text-danger">{{ $message }}</small>
                 @enderror
                 <div class="form-group">
-                    <label for="address">Inserisci il tuo indirizzo di consegna</label>
+                    <label for="address" class="font-weight-bold text-uppercase">
+                        Indirizzo
+                    </label>
                     <input type="text" class="form-control" id="address" placeholder="Inserisci il tuo indirizzo di consegna" name="address">
                   </div>
                 @error('address')
@@ -37,7 +39,9 @@
                 @enderror
 
                 <div class="form-group">
-                    <label for="phone">Inserisci il tuo numero di telefono</label>
+                    <label for="phone" class="font-weight-bold text-uppercase">
+                        Numero di telefono
+                    </label>
                     <input type="text" class="form-control" id="phone" placeholder="Inserisci il tuo numero di telefono" name="phone">
                   </div>
                 @error('phone')
@@ -45,30 +49,40 @@
                 @enderror
 
                 <div class="form-group">
-                    <label for="email">Inserisci la tua mail</label>
+                    <label for="email" class="font-weight-bold text-uppercase">
+                        Mail
+                    </label>
                     <input type="email" class="form-control" id="email" placeholder="Inserisci la tua mail" name="email">
                   </div>
                 @error('email')
                     <small class="text-danger">{{ $message }}</small>
                 @enderror
 
-                <div class="form-group">
+                <div class="form-group d-none">
                     <label for="restaurant_id"></label>
                     <input type="hidden" class="form-control" id="restaurant_id" placeholder="Inserisci la tua mail" name="restaurant_id" value="">
                 </div>
 
-                <div class="form-group">
+                <div class="form-group d-none">
                     <label for="price"></label>
                     <input type="hidden" class="form-control" id="price" name="price" value="">
                 </div>
 
-                <div class="form-group">
+                <div class="form-group d-none">
                     <label for="riepilogo"></label>
                     <input type="hidden" class="form-control" id="riepilogo" name="riepilogo" value="">
                 </div>
-                    <button type="submit">Salva</button>
+                <button type="submit" class="btn btn_color">
+                    Vai al Pagamento
+                </button>
             </form>
         </div>
+
+        <style scoped>
+            label {
+                color: #EE3C4A;
+            }
+        </style>
 
         <script>
             var restaurantId = JSON.parse(localStorage.getItem('restaurantID'));
@@ -96,4 +110,4 @@
 
         </script>
     </body>
-</html>
+@endsection

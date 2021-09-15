@@ -11,7 +11,11 @@
         <p>Nesun Ristorante associato</p>
     @endif --}}
     @if ($newRestaurant)
-        <h2 class="title green">Il tuo Ristorante</h2>
+        {{-- <h2 class="title green mt-5">Il tuo Ristorante</h2> --}}
+        <div class="my-5 text-center">
+            <img src="{{asset('img/il-tuo-ristorante.png')}}" alt="title" >
+        </div>
+        
         <div class="container">
             <div class="row">
                 <div class="col-lg-4">
