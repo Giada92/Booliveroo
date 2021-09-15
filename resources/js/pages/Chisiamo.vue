@@ -1,5 +1,6 @@
 <template>
 <div>
+    <Header />
     <div class="container-fluid bg">
         <div class="mb-5 text-center">
             <img src="/img/chi-siamo.png" alt="logo">
@@ -116,11 +117,13 @@
 
 <script>
 import Footer2 from '../components/Footer2.vue';
+import Header from '../components/Header.vue';
 
 export default({
     name: 'Chisiamo',
     components: {
-        Footer2
+        Footer2,
+        Header
     }
 })
 </script>

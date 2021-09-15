@@ -27,6 +27,7 @@
     "dependencies": {
         "@fortawesome/fontawesome-free": "^5.15.4",
         "bootstrap-italia": "^1.4.3",
+        "sweetalert": "^2.1.2",
         "vue": "^1.0.0-security",
         "vue-router": "^3.5.2"
     }

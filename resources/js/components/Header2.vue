@@ -53,7 +53,7 @@
                 </ul>
             </div>
         </nav>
-        <section id="logo" class="pt-3">
+        <section id="logo" >
             <router-link :to="{ name: 'home'}">
                 <img src="/img/logo.png" alt="logo">
             </router-link>
@@ -69,15 +69,15 @@
 export default {
     name: 'Header',
 
-    beforeMount() {
-    window.addEventListener('scroll', function(){
-        var nav = this.document.querySelector('nav');
-        var logo = this.document.getElementById('logo');
-        var research = this.document.getElementById('research');
-        nav.classList.toggle('sticky', this.window.scrollY > 0)
-        research.classList.toggle('sticky', this.window.scrollY > 430)
-        logo.classList.toggle('sticky', this.window.scrollY > 0)})
-    },
+    // beforeMount() {
+    // window.addEventListener('scroll', function(){
+    //     var nav = this.document.querySelector('nav');
+    //     var logo = this.document.getElementById('logo');
+    //     var research = this.document.getElementById('research');
+    //     nav.classList.toggle('sticky', this.window.scrollY >= 0)
+    //     research.classList.toggle('sticky', this.window.scrollY > 430)
+    //     logo.classList.toggle('sticky', this.window.scrollY >= 0)})
+    // },
     methods: {
         getYPosition: function(){
         var top  = window.pageYOffset || document.documentElement.scrollTop
@@ -132,8 +132,6 @@ export default {
     display: none;
     color: white;
     position: absolute;
-    top: 0;
-    left: 50%;
     transform: translateX(-50%);
     z-index: 11;
     font-weight: 700;
@@ -142,21 +140,24 @@ export default {
     font-size: 2em;
     text-transform: uppercase;
     letter-spacing: 2px;
-    transition: 2s;
+    display: block;
+    position: fixed;
+    top: 2%;
+    left: 10.5%;
 }
 nav {
     position: fixed;
     top: 0;
     left: 0;
     width: 100%;
-    height: 75px;
+    height: 100px;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    transition: 0.8s;
     padding: 40px 100px;
-    opacity: 0;
+    opacity: 1;
     z-index: 10;
+    background-image: linear-gradient(90deg, #ee3c4a, #fc8237);
 
 }
 
@@ -183,11 +184,6 @@ nav ul {
     }
 }
 
-nav.sticky {
-    opacity: 1;
-    padding: 10px 100px;
-    background-image: linear-gradient(90deg, #ee3c4a, #fc8237);
-}
 
 #logo.sticky {
     display: block;
@@ -197,7 +193,7 @@ nav.sticky {
 }
 
 @media screen and (max-width: 1200px) {
-  #logo.sticky {
+  #logo {
     
     position: fixed;
     top: -0.5%;

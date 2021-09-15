@@ -1,6 +1,7 @@
 <template>
+<div>
+  <Header />
   <div class="sfondo">
-
       <div class="wrapper container-fluid">
         <div class="row main-page">
           <div class="my-4 text-center col-xl-6 offset-xl-1 col-lg-8 offset-lg-2">
@@ -66,25 +67,30 @@
 
                 <h4>Totale Prezzo: {{ totalPrice.toFixed(2) }} €</h4>
                 <a href="http://127.0.0.1:8000/form-cliente" class="paga">
-                  <button class="btn btn-gradient btn-sm">Paga</button>
+                  <button class="btn btn-gradient btn-sm" @click='vuoto()'>Paga</button>
                 </a>
             </div>
           </div>
         </div>
       </div>
-      <Footer />
     </div>
+    <Footer />
+</div>
 
 </template>
 
 <script>
+import swal from 'sweetalert';
 import Button from '../components/Button-Counter';
 import Footer from '../components/Footer';
+import Header from '../components/Header2';
+
 export default {
     name: 'Restaurant',
     components:{
         Button,
-        Footer
+        Footer,
+        Header
     },
     data(){
       return{
@@ -113,10 +119,16 @@ export default {
         quantity: 2,
         totalPrice: 0,
         esistente: false,
+        r : '',
 
       }
     },
     methods: {
+      vuoto() {
+        this.carts = [];
+        this.totalPrice = 0;
+        this.storeCart();
+      },
       viewCart(){
           if(localStorage.getItem('carts')){
             this.carts = JSON.parse(localStorage.getItem('carts'));
@@ -155,7 +167,7 @@ export default {
           this.cartAdd.restaurant_id = plate.restaurant_id;
           this.carts.push(this.cartAdd);
           this.storeCart();
-        }else if(this.carts.length != 0 && this.restaurant.plates[0].restaurant_id == this.carts[0].restaurant_id){
+        }else if (this.carts.length != 0 && this.restaurant.plates[0].restaurant_id == this.carts[0].restaurant_id){
               this.cartAdd.id = plate.id;
               this.cartAdd.name = plate.name;
               this.cartAdd.price = plate.price;
@@ -163,9 +175,53 @@ export default {
               this.cartAdd.restaurant_id = plate.restaurant_id;
               this.carts.push(this.cartAdd);
               this.storeCart();
+        } else {
+          swal('error');
+        }
+        // else {
+        //   var domanda = confirm('Se aggiungi un piatto da un diverso ristorante, si svuoterà il carrello!');
+        //   if(domanda == true){
+        //     this.carts = [];
+        //     this.totalPrice = 0;
+        //     this.cartAdd.id = plate.id;
+        //     this.cartAdd.name = plate.name;
+        //     this.cartAdd.price = plate.price;
+        //     this.cartAdd.quantity = 1;
+        //     this.cartAdd.restaurant_id = plate.restaurant_id;
+        //     this.carts.push(this.cartAdd);
+        //     this.storeCart();
+        //   }else {
+        //     alert('Torna al ristorante precedente');
+        //     this.esistente = true;
+        //   }
+        // }
+          
+      },
+      controlla(plate){
+        this.carts.forEach(el=>{
+          if(el.id == plate.id || el.restaurant_id != plate.restaurant_id){
+            this.esistente = true;
+            console.log(this.esistente);
+          }
+        });
+
+        if(this.esistente == false){
+          this.addCart(plate); 
+          console.log('aggiunto');  
+          swal("Aggiunto Al Carrello!", plate.name, "success");
+
         }else {
-            var domanda = confirm('Se aggiungi un piatto da un diverso ristorante, si svuoterà il carrello!');
-            if(domanda == true){
+          if (plate.restaurant_id != this.carts[0].restaurant_id) {
+
+            swal({
+              title: "Sei sicuro?",
+              text: "Se aggiungi un piatto di un diverso ristorante, il carrello si svuoterà !",
+              icon: "warning",
+              buttons: true,
+              dangerMode: true,
+            })
+            .then((willDelete) => {
+              if (willDelete) {
                 this.carts = [];
                 this.totalPrice = 0;
                 this.cartAdd.id = plate.id;
@@ -175,24 +231,34 @@ export default {
                 this.cartAdd.restaurant_id = plate.restaurant_id;
                 this.carts.push(this.cartAdd);
                 this.storeCart();
-            }else {
-                alert('Torna al ristorante precedente');
-            }
-        }
-          
-      },
-      controlla(plate){
-        this.carts.forEach(el=>{
-            if(el.id == plate.id){
-              this.esistente = true;
-            }
-          });
+                swal("Il tuo carrello e' stato svuotato", {
+                  icon: "success",
+                });
+              } else {
+                swal("Torna al ristorante precendente");
+              }
+            });
 
-        if(this.esistente == false){
-            this.addCart(plate);
-        }else {
-          alert('Cambia la quantità dal carrello');
-          this.esistente = false;
+            // var domanda = confirm('Se aggiungi un piatto da un diverso ristorante, si svuoterà il carrello!');
+            // if(domanda == true){
+            //   this.carts = [];
+            //   this.totalPrice = 0;
+            //   this.cartAdd.id = plate.id;
+            //   this.cartAdd.name = plate.name;
+            //   this.cartAdd.price = plate.price;
+            //   this.cartAdd.quantity = 1;
+            //   this.cartAdd.restaurant_id = plate.restaurant_id;
+            //   this.carts.push(this.cartAdd);
+            //   this.storeCart();
+            //   swal("Aggiunto Al Carrello!", plate.name, "success");
+            // }else {
+            //   alert('Torna al ristorante precedente');
+            //   this.esistente = true;
+            // }
+          } else {
+            swal('Cambia la quantità dal carrello', "", "error");
+            this.esistente = false;
+          }
         }
       },
       removeCart(plate){

@@ -1,5 +1,6 @@
 <template>
   <div>
+    <Header />
     <div class="jumbotron d-flex flex-column justify-content-center align-item-center">
       
       <div class="mb-3 logo text-center" >
@@ -100,6 +101,7 @@
 <script>
 import Card from '../components/Card.vue';
 import Footer from '../components/Footer.vue';
+import Header from '../components/Header.vue';
 
 export default {
     name: 'Home',
@@ -110,7 +112,8 @@ export default {
     },
     components:{
       Card,
-      Footer
+      Footer,
+      Header
     },
     data(){
       return{
