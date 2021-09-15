@@ -3086,7 +3086,7 @@ exports = module.exports = __webpack_require__(/*! ../../../node_modules/css-loa
 
 
 // module
-exports.push([module.i, "#research[data-v-1f42fb90] {\n  position: fixed;\n  opacity: 0;\n  transition: 0.2s;\n  top: 10px;\n  left: 50%;\n  transform: translateX(-50%);\n  padding: 0.5rem;\n  box-shadow: 0 0 30px 2px linear-gradient(90deg, #ee3c4a, #fc8237);\n  border-radius: 50px;\n  width: 35%;\n  z-index: 11;\n}\n#research i[data-v-1f42fb90] {\n  position: absolute;\n  top: 50%;\n  right: 3%;\n  transform: translateY(-50%);\n  color: #fc8237;\n  font-size: 25px;\n}\n#research.sticky[data-v-1f42fb90] {\n  opacity: 1;\n}\n.search-input[data-v-1f42fb90] {\n  width: 90%;\n  border: none;\n  font-size: 18px;\n}\n.search-input[data-v-1f42fb90]:focus {\n  border: none;\n  outline: none;\n}\n#boot-logo[data-v-1f42fb90] {\n  opacity: 0;\n}\n#logo[data-v-1f42fb90] {\n  display: none;\n  color: white;\n  position: absolute;\n  top: 0;\n  left: 50%;\n  transform: translateX(-50%);\n  z-index: 11;\n  font-weight: 700;\n  color: white;\n  text-decoration: none;\n  font-size: 2em;\n  text-transform: uppercase;\n  letter-spacing: 2px;\n  transition: 2s;\n}\nnav[data-v-1f42fb90] {\n  position: fixed;\n  top: 0;\n  left: 0;\n  width: 100%;\n  height: 75px;\n  display: flex;\n  justify-content: space-between;\n  align-items: center;\n  transition: 0.8s;\n  padding: 40px 100px;\n  opacity: 0;\n  z-index: 10;\n}\nnav ul[data-v-1f42fb90] {\n  position: relative;\n  display: flex;\n  justify-content: center;\n  align-items: center;\n  margin: 0;\n}\nnav ul li[data-v-1f42fb90] {\n  position: relative;\n  list-style: none;\n}\nnav ul li a[data-v-1f42fb90] {\n  position: relative;\n  margin: 0 15px;\n  text-decoration: none;\n  color: whitesmoke;\n  letter-spacing: 2px;\n  font-weight: 500px;\n  transition: 0.6s;\n}\nnav.sticky[data-v-1f42fb90] {\n  opacity: 1;\n  padding: 10px 100px;\n  background-image: linear-gradient(90deg, #ee3c4a, #fc8237);\n}\n#logo.sticky[data-v-1f42fb90] {\n  display: block;\n  position: fixed;\n  top: 1%;\n  left: 10.5%;\n}\n@media screen and (max-width: 700px) {\n#logo[data-v-1f42fb90] {\n    position: fixed;\n    top: 3%;\n    left: 25%;\n}\n#logo img[data-v-1f42fb90] {\n    height: 35px;\n}\n}\n@media screen and (max-width: 1200px) {\n#logo.sticky[data-v-1f42fb90] {\n    font-size: 15px;\n    position: fixed;\n    top: 1%;\n    left: 20%;\n}\n}\n@media screen and (max-width: 1755px) {\n#research[data-v-1f42fb90] {\n    display: none;\n}\n}", ""]);
+exports.push([module.i, "#research[data-v-1f42fb90] {\n  position: fixed;\n  opacity: 0;\n  transition: 0.2s;\n  top: 10px;\n  left: 50%;\n  transform: translateX(-50%);\n  padding: 0.5rem;\n  box-shadow: 0 0 30px 2px linear-gradient(90deg, #ee3c4a, #fc8237);\n  border-radius: 50px;\n  width: 35%;\n  z-index: 11;\n}\n#research i[data-v-1f42fb90] {\n  position: absolute;\n  top: 50%;\n  right: 3%;\n  transform: translateY(-50%);\n  color: #fc8237;\n  font-size: 25px;\n}\n#research.sticky[data-v-1f42fb90] {\n  opacity: 1;\n}\n.search-input[data-v-1f42fb90] {\n  width: 90%;\n  border: none;\n  font-size: 18px;\n}\n.search-input[data-v-1f42fb90]:focus {\n  border: none;\n  outline: none;\n}\n#boot-logo[data-v-1f42fb90] {\n  opacity: 0;\n}\n#logo[data-v-1f42fb90] {\n  display: none;\n  color: white;\n  position: absolute;\n  top: 0;\n  left: 50%;\n  transform: translateX(-50%);\n  z-index: 11;\n  font-weight: 700;\n  color: white;\n  text-decoration: none;\n  font-size: 2em;\n  text-transform: uppercase;\n  letter-spacing: 2px;\n  transition: 2s;\n}\nnav[data-v-1f42fb90] {\n  position: fixed;\n  top: 0;\n  left: 0;\n  width: 100%;\n  height: 75px;\n  display: flex;\n  justify-content: space-between;\n  align-items: center;\n  transition: 0.8s;\n  padding: 40px 100px;\n  opacity: 0;\n  z-index: 10;\n}\nnav ul[data-v-1f42fb90] {\n  position: relative;\n  display: flex;\n  justify-content: center;\n  align-items: center;\n  margin: 0;\n}\nnav ul li[data-v-1f42fb90] {\n  position: relative;\n  list-style: none;\n}\nnav ul li a[data-v-1f42fb90] {\n  position: relative;\n  margin: 0 15px;\n  text-decoration: none;\n  color: whitesmoke;\n  letter-spacing: 2px;\n  font-weight: 500px;\n  transition: 0.6s;\n}\nnav.sticky[data-v-1f42fb90] {\n  opacity: 1;\n  padding: 10px 100px;\n  background-image: linear-gradient(90deg, #ee3c4a, #fc8237);\n}\n#logo.sticky[data-v-1f42fb90] {\n  display: block;\n  position: fixed;\n  top: 1%;\n  left: 10.5%;\n}\n@media screen and (max-width: 700px) {\nnav.sticky[data-v-1f42fb90] {\n    padding: 10px 30px;\n}\nnav[data-v-1f42fb90] {\n    padding: 10px 0;\n}\n#logo[data-v-1f42fb90] {\n    position: fixed;\n    top: 3%;\n    left: 25%;\n}\n#logo img[data-v-1f42fb90] {\n    height: 35px;\n    margin-left: 120px;\n}\n}\n@media screen and (max-width: 1200px) and (min-width: 700px) {\n#logo.sticky[data-v-1f42fb90] {\n    font-size: 15px;\n    position: fixed;\n    top: 1%;\n    left: 20%;\n}\n}\n@media screen and (max-width: 1755px) and (min-width: 1200px) {\n#research[data-v-1f42fb90] {\n    display: none;\n}\n}", ""]);
 
 // exports
 
@@ -3105,7 +3105,7 @@ exports = module.exports = __webpack_require__(/*! ../../../node_modules/css-loa
 
 
 // module
-exports.push([module.i, "#research[data-v-1b896e2a] {\n  position: fixed;\n  opacity: 0;\n  transition: 0.2s;\n  top: 10px;\n  left: 50%;\n  transform: translateX(-50%);\n  padding: 0.5rem;\n  box-shadow: 0 0 30px 2px linear-gradient(90deg, #ee3c4a, #fc8237);\n  border-radius: 50px;\n  width: 35%;\n  z-index: 11;\n}\n#research i[data-v-1b896e2a] {\n  position: absolute;\n  top: 50%;\n  right: 3%;\n  transform: translateY(-50%);\n  color: #fc8237;\n  font-size: 25px;\n}\n#research.sticky[data-v-1b896e2a] {\n  opacity: 1;\n}\n.search-input[data-v-1b896e2a] {\n  width: 90%;\n  border: none;\n  font-size: 18px;\n}\n.search-input[data-v-1b896e2a]:focus {\n  border: none;\n  outline: none;\n}\n#boot-logo[data-v-1b896e2a] {\n  opacity: 0;\n}\n#logo[data-v-1b896e2a] {\n  display: none;\n  color: white;\n  position: absolute;\n  transform: translateX(-50%);\n  z-index: 11;\n  font-weight: 700;\n  color: white;\n  text-decoration: none;\n  font-size: 2em;\n  text-transform: uppercase;\n  letter-spacing: 2px;\n  display: block;\n  position: fixed;\n  top: 2%;\n  left: 10.5%;\n}\nnav[data-v-1b896e2a] {\n  position: fixed;\n  top: 0;\n  left: 0;\n  width: 100%;\n  height: 100px;\n  display: flex;\n  justify-content: space-between;\n  align-items: center;\n  padding: 40px 100px;\n  opacity: 1;\n  z-index: 10;\n  background-image: linear-gradient(90deg, #ee3c4a, #fc8237);\n}\nnav ul[data-v-1b896e2a] {\n  position: relative;\n  display: flex;\n  justify-content: center;\n  align-items: center;\n  margin: 0;\n}\nnav ul li[data-v-1b896e2a] {\n  position: relative;\n  list-style: none;\n}\nnav ul li a[data-v-1b896e2a] {\n  position: relative;\n  margin: 0 15px;\n  text-decoration: none;\n  color: whitesmoke;\n  letter-spacing: 2px;\n  font-weight: 500px;\n  transition: 0.6s;\n}\n#logo.sticky[data-v-1b896e2a] {\n  display: block;\n  position: fixed;\n  top: -0.5%;\n  left: 10.5%;\n}\n@media screen and (max-width: 1200px) {\n#logo[data-v-1b896e2a] {\n    position: fixed;\n    top: -0.5%;\n    left: 16.5%;\n}\n}\n@media screen and (max-width: 1755px) {\n#research[data-v-1b896e2a] {\n    display: none;\n}\n}", ""]);
+exports.push([module.i, "#research[data-v-1b896e2a] {\n  position: fixed;\n  opacity: 0;\n  transition: 0.2s;\n  top: 10px;\n  left: 50%;\n  transform: translateX(-50%);\n  padding: 0.5rem;\n  box-shadow: 0 0 30px 2px linear-gradient(90deg, #ee3c4a, #fc8237);\n  border-radius: 50px;\n  width: 35%;\n  z-index: 11;\n}\n#research i[data-v-1b896e2a] {\n  position: absolute;\n  top: 50%;\n  right: 3%;\n  transform: translateY(-50%);\n  color: #fc8237;\n  font-size: 25px;\n}\n#research.sticky[data-v-1b896e2a] {\n  opacity: 1;\n}\n.search-input[data-v-1b896e2a] {\n  width: 90%;\n  border: none;\n  font-size: 18px;\n}\n.search-input[data-v-1b896e2a]:focus {\n  border: none;\n  outline: none;\n}\n#boot-logo[data-v-1b896e2a] {\n  opacity: 0;\n}\n#logo[data-v-1b896e2a] {\n  display: block;\n  color: white;\n  position: fixed;\n  transform: translateX(-50%);\n  z-index: 11;\n  font-weight: 700;\n  color: white;\n  text-decoration: none;\n  font-size: 2em;\n  text-transform: uppercase;\n  letter-spacing: 2px;\n  display: block;\n  position: fixed;\n  top: 2%;\n  left: 10.5%;\n}\nnav[data-v-1b896e2a] {\n  position: fixed;\n  top: 0;\n  left: 0;\n  width: 100%;\n  height: 100px;\n  display: flex;\n  justify-content: space-between;\n  align-items: center;\n  padding: 40px 100px;\n  opacity: 1;\n  z-index: 10;\n  background-image: linear-gradient(90deg, #ee3c4a, #fc8237);\n}\nnav ul[data-v-1b896e2a] {\n  position: relative;\n  display: flex;\n  justify-content: center;\n  align-items: center;\n  margin: 0;\n}\nnav ul li[data-v-1b896e2a] {\n  position: relative;\n  list-style: none;\n}\nnav ul li a[data-v-1b896e2a] {\n  position: relative;\n  margin: 0 15px;\n  text-decoration: none;\n  color: whitesmoke;\n  letter-spacing: 2px;\n  font-weight: 500px;\n  transition: 0.6s;\n}\n@media screen and (max-width: 1200px) {\n#logo[data-v-1b896e2a] {\n    position: fixed;\n    top: 2%;\n    left: 20%;\n}\n}\n@media screen and (max-width: 1755px) {\n#research[data-v-1b896e2a] {\n    display: none;\n}\n}", ""]);
 
 // exports
 
@@ -3143,7 +3143,7 @@ exports = module.exports = __webpack_require__(/*! ../../../node_modules/css-loa
 
 
 // module
-exports.push([module.i, "#cate a[data-v-b3c5cf30] {\n  position: relative;\n  color: white;\n}\n#pizza h5[data-v-b3c5cf30] {\n  position: absolute;\n  top: 57px;\n  left: 41px;\n}\n#burger h5[data-v-b3c5cf30] {\n  position: absolute;\n  top: 57px;\n  left: 82px;\n}\n#sushi h5[data-v-b3c5cf30] {\n  position: absolute;\n  top: 57px;\n  left: 53px;\n}\n#pizza-categoria[data-v-b3c5cf30] {\n  width: 130px;\n}\n.logo img[data-v-b3c5cf30] {\n  width: 70%;\n  height: 150px;\n}\n.badge-container[data-v-b3c5cf30] {\n  display: flex;\n  flex-direction: row;\n  flex-wrap: wrap;\n  width: 100%;\n  margin-left: 30px;\n}\n.badge-container .badge-category[data-v-b3c5cf30] {\n  display: flex;\n  flex-direction: row;\n  justify-content: center;\n  align-items: center;\n  width: 100px;\n  height: 50px;\n  padding: 0 30px;\n  border-radius: 10px;\n  background-color: #ee3c4a;\n  font-size: 18px;\n  color: white;\n  cursor: pointer;\n}\n.categorie[data-v-b3c5cf30] {\n  color: #f5f5f5;\n  text-transform: uppercase;\n}\n#categorie[data-v-b3c5cf30] {\n  margin-top: 100px;\n}\n.main-page[data-v-b3c5cf30] {\n  padding-bottom: 150px;\n  height: auto;\n}\n.curvy[data-v-b3c5cf30] {\n  background-image: url(\"/img/main-wave.png\");\n  height: 100px;\n  width: 100%;\n  background-repeat: no-repeat;\n  background-size: cover;\n}\n.back-white[data-v-b3c5cf30] {\n  background-color: white;\n}\n.jumbotron[data-v-b3c5cf30] {\n  padding: 0;\n  margin: 0;\n  position: relative;\n  width: 100%;\n  height: 100vh;\n  background-color: transparent;\n  background-size: cover;\n  display: flex;\n  flex-direction: column-reverse;\n  align-items: center;\n}\n#scroll[data-v-b3c5cf30] {\n  position: absolute;\n  bottom: 0%;\n  left: 50%;\n  transform: translateX(-50%);\n  opacity: 1;\n  transition: 0.8s;\n  display: flex;\n  flex-direction: column;\n  align-items: center;\n  color: white;\n}\n#scroll i[data-v-b3c5cf30] {\n  font-size: 60px;\n}\n#scroll.sticky[data-v-b3c5cf30] {\n  opacity: 0;\n}\n.sushi[data-v-b3c5cf30] {\n  margin-top: 25px;\n}\n.category-selection[data-v-b3c5cf30] {\n  width: 30%;\n}\n.category-selection a[data-v-b3c5cf30] {\n  width: 100px;\n  height: 100px;\n}\n.category-selection img[data-v-b3c5cf30] {\n  width: 100%;\n  -o-object-fit: cover;\n     object-fit: cover;\n  -o-object-position: center;\n     object-position: center;\n}\n.search-input[data-v-b3c5cf30] {\n  width: 90%;\n  border: none;\n  font-size: 18px;\n}\n.search-input[data-v-b3c5cf30]:focus {\n  border: none;\n  outline: none;\n}\n.card .img[data-v-b3c5cf30] {\n  transition: all 0.8s ease-in-out;\n  position: absolute;\n  height: 100%;\n  width: 100%;\n}\n.card[data-v-b3c5cf30] {\n  position: relative;\n  height: 200px;\n  width: 300px;\n  -o-object-fit: cover;\n     object-fit: cover;\n  border-radius: 5%;\n  margin-top: 30px;\n  margin-right: 30px;\n  margin-left: 30px;\n  overflow: hidden;\n}\n.card[data-v-b3c5cf30]:hover {\n  cursor: pointer;\n}\n.card:hover .img[data-v-b3c5cf30] {\n  transform: scale(1.1);\n}\n.card .container_name[data-v-b3c5cf30] {\n  background-color: rgba(0, 0, 0, 0.3);\n  border-radius: 10px;\n  /* width: 100%;\n  height: 100%; */\n  position: absolute;\n  top: 50%;\n  left: 50%;\n  transform: translate(-50%, -50%);\n}\n.card .container_name h4[data-v-b3c5cf30] {\n  /* opacity: 15%; */\n  color: white;\n  font-weight: 900;\n  font-size: 22px;\n  line-height: 22px;\n  margin: 0;\n  padding: 5px;\n}", ""]);
+exports.push([module.i, "#cate a[data-v-b3c5cf30] {\n  position: relative;\n  color: white;\n}\n#pizza h5[data-v-b3c5cf30] {\n  position: absolute;\n  top: 57px;\n  left: 41px;\n}\n#burger h5[data-v-b3c5cf30] {\n  position: absolute;\n  top: 57px;\n  left: 82px;\n}\n#sushi h5[data-v-b3c5cf30] {\n  position: absolute;\n  top: 57px;\n  left: 53px;\n}\n#pizza-categoria[data-v-b3c5cf30] {\n  width: 130px;\n}\n.logo img[data-v-b3c5cf30] {\n  width: 70%;\n  height: 150px;\n}\n.badge-container[data-v-b3c5cf30] {\n  display: flex;\n  flex-direction: row;\n  flex-wrap: wrap;\n  width: 100%;\n  margin-left: 30px;\n}\n.badge-container .badge-category[data-v-b3c5cf30] {\n  display: flex;\n  flex-direction: row;\n  justify-content: center;\n  align-items: center;\n  width: 100px;\n  height: 50px;\n  padding: 0 30px;\n  border-radius: 10px;\n  background-color: #ee3c4a;\n  font-size: 18px;\n  color: white;\n  cursor: pointer;\n  margin: 8px;\n}\n.categorie[data-v-b3c5cf30] {\n  color: #f5f5f5;\n  text-transform: uppercase;\n}\n#categorie[data-v-b3c5cf30] {\n  margin-top: 100px;\n}\n.main-page[data-v-b3c5cf30] {\n  padding-bottom: 150px;\n  height: auto;\n}\n.curvy[data-v-b3c5cf30] {\n  background-image: url(\"/img/main-wave.png\");\n  height: 100px;\n  width: 100%;\n  background-repeat: no-repeat;\n  background-size: cover;\n}\n.back-white[data-v-b3c5cf30] {\n  background-color: white;\n}\n.jumbotron[data-v-b3c5cf30] {\n  padding: 0;\n  margin: 0;\n  position: relative;\n  width: 100%;\n  height: 100vh;\n  background-color: transparent;\n  background-size: cover;\n  display: flex;\n  flex-direction: column-reverse;\n  align-items: center;\n}\n#scroll[data-v-b3c5cf30] {\n  position: absolute;\n  bottom: 0%;\n  left: 50%;\n  transform: translateX(-50%);\n  opacity: 1;\n  transition: 0.8s;\n  display: flex;\n  flex-direction: column;\n  align-items: center;\n  color: white;\n}\n#scroll i[data-v-b3c5cf30] {\n  font-size: 60px;\n}\n#scroll.sticky[data-v-b3c5cf30] {\n  opacity: 0;\n}\n.sushi[data-v-b3c5cf30] {\n  margin-top: 25px;\n}\n.category-selection[data-v-b3c5cf30] {\n  width: 30%;\n}\n.category-selection a[data-v-b3c5cf30] {\n  width: 100px;\n  height: 100px;\n}\n.category-selection img[data-v-b3c5cf30] {\n  width: 100%;\n  -o-object-fit: cover;\n     object-fit: cover;\n  -o-object-position: center;\n     object-position: center;\n}\n.search-input[data-v-b3c5cf30] {\n  width: 90%;\n  border: none;\n  font-size: 18px;\n}\n.search-input[data-v-b3c5cf30]:focus {\n  border: none;\n  outline: none;\n}\n.card .img[data-v-b3c5cf30] {\n  transition: all 0.8s ease-in-out;\n  position: absolute;\n  height: 100%;\n  width: 100%;\n}\n.card[data-v-b3c5cf30] {\n  position: relative;\n  height: 200px;\n  width: 300px;\n  -o-object-fit: cover;\n     object-fit: cover;\n  border-radius: 5%;\n  margin-top: 30px;\n  margin-right: 30px;\n  margin-left: 30px;\n  overflow: hidden;\n}\n.card[data-v-b3c5cf30]:hover {\n  cursor: pointer;\n}\n.card:hover .img[data-v-b3c5cf30] {\n  transform: scale(1.1);\n}\n.card .container_name[data-v-b3c5cf30] {\n  background-color: rgba(0, 0, 0, 0.3);\n  border-radius: 10px;\n  /* width: 100%;\n  height: 100%; */\n  position: absolute;\n  top: 50%;\n  left: 50%;\n  transform: translate(-50%, -50%);\n}\n.card .container_name h4[data-v-b3c5cf30] {\n  /* opacity: 15%; */\n  color: white;\n  font-weight: 900;\n  font-size: 22px;\n  line-height: 22px;\n  margin: 0;\n  padding: 5px;\n}\n@media screen and (max-width: 700px) {\n.badge-category[data-v-b3c5cf30] {\n    margin: 4px;\n}\n#jumbo-logo[data-v-b3c5cf30] {\n    height: 80px;\n}\n#cate[data-v-b3c5cf30] {\n    display: none;\n}\n#scroll[data-v-b3c5cf30] {\n    color: black;\n}\n#scroll h4[data-v-b3c5cf30] {\n    font-weight: 700;\n}\n}", ""]);
 
 // exports
 
@@ -5440,7 +5440,7 @@ var render = function() {
                 "div",
                 {
                   key: index,
-                  staticClass: "badge-category m-2",
+                  staticClass: "badge-category",
                   on: {
                     click: function($event) {
                       return _vm.selectCategory(category.name)
@@ -5527,7 +5527,9 @@ var staticRenderFns = [
     var _h = _vm.$createElement
     var _c = _vm._self._c || _h
     return _c("div", { staticClass: "mb-3 logo text-center" }, [
-      _c("img", { attrs: { src: "/img/jumbo-logo.png", alt: "logo" } })
+      _c("img", {
+        attrs: { id: "jumbo-logo", src: "/img/jumbo-logo.png", alt: "logo" }
+      })
     ])
   },
   function() {
@@ -5773,27 +5775,7 @@ var render = function() {
                       )
                     ]),
                     _vm._v(" "),
-                    _c(
-                      "a",
-                      {
-                        staticClass: "paga",
-                        attrs: { href: "http://127.0.0.1:8000/form-cliente" }
-                      },
-                      [
-                        _c(
-                          "button",
-                          {
-                            staticClass: "btn btn-gradient btn-sm",
-                            on: {
-                              click: function($event) {
-                                return _vm.vuoto()
-                              }
-                            }
-                          },
-                          [_vm._v("Paga")]
-                        )
-                      ]
-                    )
+                    _vm._m(1)
                   ]
                 )
               ]
@@ -5823,6 +5805,23 @@ var staticRenderFns = [
         _c("th", [_vm._v("Elimina")])
       ])
     ])
+  },
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c(
+      "a",
+      {
+        staticClass: "paga",
+        attrs: { href: "http://127.0.0.1:8000/form-cliente" }
+      },
+      [
+        _c("button", { staticClass: "btn btn-gradient btn-sm" }, [
+          _vm._v("Paga")
+        ])
+      ]
+    )
   }
 ]
 render._withStripped = true
