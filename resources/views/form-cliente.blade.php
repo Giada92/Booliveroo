@@ -5,7 +5,7 @@
         
         <div class="col-8 offset-2">
             <div class="mb-5 text-center ">
-                <img src="{{asset('img/le-tue-info.png')}}" alt="title">
+                <img id="tit" src="{{asset('img/le-tue-info.png')}}" alt="title">
             </div>
             <form action="{{ route('orders.store') }}"  method="POST" id="form1" enctype="multipart/form-data">
                 @csrf
@@ -79,6 +79,9 @@
         </div>
 
         <style scoped>
+            #tit {
+                margin-top: 20px;
+            }
             label {
                 color: #EE3C4A;
             }
