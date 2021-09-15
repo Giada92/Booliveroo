@@ -54,9 +54,9 @@
         
         
     @else
-        <p>Non ci sono ristoranti</p>
+        <h4>Non ci sono ristoranti</h4>
 
-        <a href="{{ route('admin.restaurants.create') }}" class="btn btn_color">Crea</a>
+        <a href="{{ route('admin.restaurants.create') }}" class="btn btn_color">Crea Il Tuo Ristorante</a>
 
     @endif
 </div>    
@@ -82,6 +82,10 @@
 
     .wrapper_link > a {
         margin: 0 10px;        
+    }
+
+    h4 {
+        margin: 15px 0
     }
 </style>
     
