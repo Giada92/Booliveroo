@@ -186,7 +186,23 @@ nav ul {
 
 
 
+@media screen and (max-width: 700px) {
+    nav {
+        padding: 10px 10px;
 
+    }
+  #logo {
+    
+    position: fixed;
+    top: 3%;
+    left: 25%;
+}
+    #logo img {
+        height: 35px;
+        margin-left: 60px;
+        margin-top: 15px;
+    }
+}
 @media screen and (max-width: 1200px) {
   #logo {
     

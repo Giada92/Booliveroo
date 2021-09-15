@@ -62,7 +62,7 @@
           </div>
         </div>
 
-        <div class="d-flex">
+        <div class="d-flex" id="choice">
             <div 
             v-for="item, index in ristoranti_categorie"
             :key="index"
@@ -199,8 +199,8 @@ export default {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
+  justify-content: center;
   width: 100%;
-  margin-left: 30px;
   //overflow-x: scroll;
 
   .badge-category {
@@ -377,7 +377,7 @@ export default {
 
 @media screen and (max-width: 700px) {
   .badge-category {
-    margin: 4px;
+    margin: 4px !important;
   }
   #jumbo-logo {
     height: 80px;
@@ -392,6 +392,9 @@ export default {
     h4 {
       font-weight: 700;
     }
+  }
+  #choice {
+    flex-direction: column;
   }
 }
 
