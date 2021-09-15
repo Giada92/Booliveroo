@@ -3,7 +3,7 @@
 @section('content')
 <div class="container ">
     <div class=" d-flex flex-column align-items-center justify-content-center">
-        <img src="{{asset('img/h1-menu.png')}}" alt="title">
+        <img id="tit" src="{{asset('img/h1-menu.png')}}" alt="title">
         <a href="{{ route('admin.plates.create') }}" class="btn btn-create my-3">Crea Piatto</a>
         <a href="{{ route('admin.restaurants.index') }}" class="btn btn-go-back">Torna al Ristorante</a>
     </div>
@@ -21,6 +21,9 @@
 </div>  
 
 <style lang="scss" scoped>
+    #tit {
+        margin-top: 20px
+    }
     h1 {
         margin: 30px;
     }

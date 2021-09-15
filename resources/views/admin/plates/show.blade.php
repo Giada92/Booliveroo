@@ -2,7 +2,7 @@
 
 @section('content')
     <div class="container d-flex flex-column align-items-center justify-content-top">
-        <img src="{{asset('img/h1-piatto.png')}}" alt="title">
+        <img id="tit" src="{{asset('img/h1-piatto.png')}}" alt="title">
         {{-- @dd($plate->types) --}}
         <span>Nome Del Piatto</span>
         <h3>{{ $plate->name }}</h3>
@@ -56,7 +56,9 @@
     </div>
 
     <style scoped>
-
+        #tit {
+            margin-top: 20px;
+        }
     span {
         margin-top: 40px;
         color: #703d50;
@@ -85,7 +87,7 @@
     }
 
     body {
-    background-image: linear-gradient(90deg, #ee3c4a, #fc8237);
+    background-color: whitesmoke;
     }
 
     </style>
