@@ -53,7 +53,7 @@
                 </ul>
             </div>
         </nav>
-        <section id="logo" class="pt-3">
+        <section id="logo">
             <router-link :to="{ name: 'home'}">
                 <img src="/img/logo.png" alt="logo">
             </router-link>
@@ -192,16 +192,27 @@ nav.sticky {
 #logo.sticky {
     display: block;
     position: fixed;
-    top: -0.5%;
+    top: 1%;
     left: 10.5%;
 }
 
-@media screen and (max-width: 1200px) {
-  #logo.sticky {
+@media screen and (max-width: 700px) {
+  #logo {
     
     position: fixed;
-    top: -0.5%;
-    left: 16.5%;
+    top: 3%;
+    left: 25%;
+}
+    #logo img {
+        height: 35px;
+    }
+}
+@media screen and (max-width: 1200px) {
+  #logo.sticky {
+    font-size: 15px;
+    position: fixed;
+    top:1%;
+    left: 20%;
 }
 }
 

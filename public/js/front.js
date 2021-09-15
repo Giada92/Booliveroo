@@ -2947,6 +2947,7 @@ __webpack_require__.r(__webpack_exports__);
 
               _this.storeCart();
 
+              _this.esistente = false;
               sweetalert__WEBPACK_IMPORTED_MODULE_0___default()("Il tuo carrello e' stato svuotato", {
                 icon: "success"
               });
@@ -2969,7 +2970,7 @@ __webpack_require__.r(__webpack_exports__);
           //   alert('Torna al ristorante precedente');
           //   this.esistente = true;
           // }
-        } else {
+        } else if (this.esistente == true) {
           sweetalert__WEBPACK_IMPORTED_MODULE_0___default()('Cambia la quantità dal carrello', "", "error");
           this.esistente = false;
         }
@@ -3085,7 +3086,7 @@ exports = module.exports = __webpack_require__(/*! ../../../node_modules/css-loa
 
 
 // module
-exports.push([module.i, "#research[data-v-1f42fb90] {\n  position: fixed;\n  opacity: 0;\n  transition: 0.2s;\n  top: 10px;\n  left: 50%;\n  transform: translateX(-50%);\n  padding: 0.5rem;\n  box-shadow: 0 0 30px 2px linear-gradient(90deg, #ee3c4a, #fc8237);\n  border-radius: 50px;\n  width: 35%;\n  z-index: 11;\n}\n#research i[data-v-1f42fb90] {\n  position: absolute;\n  top: 50%;\n  right: 3%;\n  transform: translateY(-50%);\n  color: #fc8237;\n  font-size: 25px;\n}\n#research.sticky[data-v-1f42fb90] {\n  opacity: 1;\n}\n.search-input[data-v-1f42fb90] {\n  width: 90%;\n  border: none;\n  font-size: 18px;\n}\n.search-input[data-v-1f42fb90]:focus {\n  border: none;\n  outline: none;\n}\n#boot-logo[data-v-1f42fb90] {\n  opacity: 0;\n}\n#logo[data-v-1f42fb90] {\n  display: none;\n  color: white;\n  position: absolute;\n  top: 0;\n  left: 50%;\n  transform: translateX(-50%);\n  z-index: 11;\n  font-weight: 700;\n  color: white;\n  text-decoration: none;\n  font-size: 2em;\n  text-transform: uppercase;\n  letter-spacing: 2px;\n  transition: 2s;\n}\nnav[data-v-1f42fb90] {\n  position: fixed;\n  top: 0;\n  left: 0;\n  width: 100%;\n  height: 75px;\n  display: flex;\n  justify-content: space-between;\n  align-items: center;\n  transition: 0.8s;\n  padding: 40px 100px;\n  opacity: 0;\n  z-index: 10;\n}\nnav ul[data-v-1f42fb90] {\n  position: relative;\n  display: flex;\n  justify-content: center;\n  align-items: center;\n  margin: 0;\n}\nnav ul li[data-v-1f42fb90] {\n  position: relative;\n  list-style: none;\n}\nnav ul li a[data-v-1f42fb90] {\n  position: relative;\n  margin: 0 15px;\n  text-decoration: none;\n  color: whitesmoke;\n  letter-spacing: 2px;\n  font-weight: 500px;\n  transition: 0.6s;\n}\nnav.sticky[data-v-1f42fb90] {\n  opacity: 1;\n  padding: 10px 100px;\n  background-image: linear-gradient(90deg, #ee3c4a, #fc8237);\n}\n#logo.sticky[data-v-1f42fb90] {\n  display: block;\n  position: fixed;\n  top: -0.5%;\n  left: 10.5%;\n}\n@media screen and (max-width: 1200px) {\n#logo.sticky[data-v-1f42fb90] {\n    position: fixed;\n    top: -0.5%;\n    left: 16.5%;\n}\n}\n@media screen and (max-width: 1755px) {\n#research[data-v-1f42fb90] {\n    display: none;\n}\n}", ""]);
+exports.push([module.i, "#research[data-v-1f42fb90] {\n  position: fixed;\n  opacity: 0;\n  transition: 0.2s;\n  top: 10px;\n  left: 50%;\n  transform: translateX(-50%);\n  padding: 0.5rem;\n  box-shadow: 0 0 30px 2px linear-gradient(90deg, #ee3c4a, #fc8237);\n  border-radius: 50px;\n  width: 35%;\n  z-index: 11;\n}\n#research i[data-v-1f42fb90] {\n  position: absolute;\n  top: 50%;\n  right: 3%;\n  transform: translateY(-50%);\n  color: #fc8237;\n  font-size: 25px;\n}\n#research.sticky[data-v-1f42fb90] {\n  opacity: 1;\n}\n.search-input[data-v-1f42fb90] {\n  width: 90%;\n  border: none;\n  font-size: 18px;\n}\n.search-input[data-v-1f42fb90]:focus {\n  border: none;\n  outline: none;\n}\n#boot-logo[data-v-1f42fb90] {\n  opacity: 0;\n}\n#logo[data-v-1f42fb90] {\n  display: none;\n  color: white;\n  position: absolute;\n  top: 0;\n  left: 50%;\n  transform: translateX(-50%);\n  z-index: 11;\n  font-weight: 700;\n  color: white;\n  text-decoration: none;\n  font-size: 2em;\n  text-transform: uppercase;\n  letter-spacing: 2px;\n  transition: 2s;\n}\nnav[data-v-1f42fb90] {\n  position: fixed;\n  top: 0;\n  left: 0;\n  width: 100%;\n  height: 75px;\n  display: flex;\n  justify-content: space-between;\n  align-items: center;\n  transition: 0.8s;\n  padding: 40px 100px;\n  opacity: 0;\n  z-index: 10;\n}\nnav ul[data-v-1f42fb90] {\n  position: relative;\n  display: flex;\n  justify-content: center;\n  align-items: center;\n  margin: 0;\n}\nnav ul li[data-v-1f42fb90] {\n  position: relative;\n  list-style: none;\n}\nnav ul li a[data-v-1f42fb90] {\n  position: relative;\n  margin: 0 15px;\n  text-decoration: none;\n  color: whitesmoke;\n  letter-spacing: 2px;\n  font-weight: 500px;\n  transition: 0.6s;\n}\nnav.sticky[data-v-1f42fb90] {\n  opacity: 1;\n  padding: 10px 100px;\n  background-image: linear-gradient(90deg, #ee3c4a, #fc8237);\n}\n#logo.sticky[data-v-1f42fb90] {\n  display: block;\n  position: fixed;\n  top: 1%;\n  left: 10.5%;\n}\n@media screen and (max-width: 700px) {\n#logo[data-v-1f42fb90] {\n    position: fixed;\n    top: 3%;\n    left: 25%;\n}\n#logo img[data-v-1f42fb90] {\n    height: 35px;\n}\n}\n@media screen and (max-width: 1200px) {\n#logo.sticky[data-v-1f42fb90] {\n    font-size: 15px;\n    position: fixed;\n    top: 1%;\n    left: 20%;\n}\n}\n@media screen and (max-width: 1755px) {\n#research[data-v-1f42fb90] {\n    display: none;\n}\n}", ""]);
 
 // exports
 
@@ -4933,7 +4934,7 @@ var render = function() {
     _vm._v(" "),
     _c(
       "section",
-      { staticClass: "pt-3", attrs: { id: "logo" } },
+      { attrs: { id: "logo" } },
       [
         _c("router-link", { attrs: { to: { name: "home" } } }, [
           _c("img", { attrs: { src: "/img/logo.png", alt: "logo" } })

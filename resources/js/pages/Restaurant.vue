@@ -207,7 +207,8 @@ export default {
 
         if(this.esistente == false){
           this.addCart(plate); 
-          console.log('aggiunto');  
+          console.log('aggiunto'); 
+
           swal("Aggiunto Al Carrello!", plate.name, "success");
 
         }else {
@@ -231,6 +232,7 @@ export default {
                 this.cartAdd.restaurant_id = plate.restaurant_id;
                 this.carts.push(this.cartAdd);
                 this.storeCart();
+                this.esistente = false;
                 swal("Il tuo carrello e' stato svuotato", {
                   icon: "success",
                 });
@@ -255,7 +257,7 @@ export default {
             //   alert('Torna al ristorante precedente');
             //   this.esistente = true;
             // }
-          } else {
+          } else if (this.esistente == true) {
             swal('Cambia la quantità dal carrello', "", "error");
             this.esistente = false;
           }
