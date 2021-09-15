@@ -4,7 +4,7 @@
     <div class="jumbotron d-flex flex-column justify-content-center align-item-center">
       
       <div class="mb-3 logo text-center" >
-        <img src="/img/jumbo-logo.png" alt="logo">
+        <img id="jumbo-logo" src="/img/jumbo-logo.png" alt="logo">
       </div>
 
       <div id="cate">
@@ -53,7 +53,7 @@
 
         <div class="badge-container">
           <div 
-          class="badge-category m-2" 
+          class="badge-category" 
           v-for="category, index in categories" 
           :key="index" 
           @click="selectCategory(category.name)"
@@ -216,6 +216,7 @@ export default {
     font-size: 18px;
     color: white;
     cursor: pointer;
+    margin: 8px;
     // padding: 20px 10px;
   }
   
@@ -372,6 +373,26 @@ export default {
             padding: 5px;
         }
     }
+}
+
+@media screen and (max-width: 700px) {
+  .badge-category {
+    margin: 4px;
+  }
+  #jumbo-logo {
+    height: 80px;
+  }
+
+  #cate {
+    display: none;
+  }
+
+  #scroll {
+    color: black;
+    h4 {
+      font-weight: 700;
+    }
+  }
 }
 
 

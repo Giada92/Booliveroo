@@ -197,6 +197,12 @@ nav.sticky {
 }
 
 @media screen and (max-width: 700px) {
+    nav.sticky {
+        padding: 10px 30px;
+    }
+    nav {
+        padding: 10px 0;
+    }
   #logo {
     
     position: fixed;
@@ -205,9 +211,10 @@ nav.sticky {
 }
     #logo img {
         height: 35px;
+        margin-left: 120px;
     }
 }
-@media screen and (max-width: 1200px) {
+@media screen and (max-width: 1200px) and (min-width: 700px) {
   #logo.sticky {
     font-size: 15px;
     position: fixed;
@@ -216,7 +223,7 @@ nav.sticky {
 }
 }
 
-@media screen and (max-width: 1755px) {
+@media screen and (max-width: 1755px) and (min-width: 1200px){
   #research {
       display: none;
   }

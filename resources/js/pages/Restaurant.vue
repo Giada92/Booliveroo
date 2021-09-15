@@ -67,7 +67,7 @@
 
                 <h4>Totale Prezzo: {{ totalPrice.toFixed(2) }} €</h4>
                 <a href="http://127.0.0.1:8000/form-cliente" class="paga">
-                  <button class="btn btn-gradient btn-sm" @click='vuoto()'>Paga</button>
+                  <button class="btn btn-gradient btn-sm">Paga</button>
                 </a>
             </div>
           </div>

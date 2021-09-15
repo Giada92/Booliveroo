@@ -129,9 +129,9 @@ export default {
     opacity: 0;
 }
 #logo {
-    display: none;
+    display: block;
     color: white;
-    position: absolute;
+    position: fixed;
     transform: translateX(-50%);
     z-index: 11;
     font-weight: 700;
@@ -185,19 +185,14 @@ nav ul {
 }
 
 
-#logo.sticky {
-    display: block;
-    position: fixed;
-    top: -0.5%;
-    left: 10.5%;
-}
+
 
 @media screen and (max-width: 1200px) {
   #logo {
     
     position: fixed;
-    top: -0.5%;
-    left: 16.5%;
+    top: 2%;
+    left: 20%;
 }
 }
 
